@@ -9,16 +9,27 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DiseñoAMAC
+namespace AMAC.Views.FormatManagement.SearchTableView
 {
-    public partial class BuscarEnTabla : DevExpress.XtraEditors.XtraForm
+    public partial class SearchTableView : DevExpress.XtraEditors.XtraForm, ISearchTableView
     {
-        public BuscarEnTabla()
+        public string FilterText => tbFilterText.Text;
+        public DataTable DataSource { get => (DataTable)dgvData.DataSource; set => dgvData.DataSource = value; }
+
+        public event EventHandler OnClickCloseButton;
+        public event EventHandler OnChangeFilterTextTextBox;
+        public SearchTableView()
         {
             InitializeComponent();
+            AssociateAndRaisedEvents();
         }
 
-        private void btRegresar_Click(object sender, EventArgs e)
+        private void AssociateAndRaisedEvents()
+        {
+            btnClose.Click += delegate { OnClickCloseButton.Invoke(btnClose, EventArgs.Empty); };
+            tbFilterText.TextChanged += delegate { OnChangeFilterTextTextBox.Invoke(btnClose, EventArgs.Empty); };
+        }
+        public void CloseTab()
         {
             this.Close();
         }

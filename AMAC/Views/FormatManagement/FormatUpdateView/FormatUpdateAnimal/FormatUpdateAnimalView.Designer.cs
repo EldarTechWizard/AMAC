@@ -1,16 +1,16 @@
-﻿namespace DiseñoAMAC
+﻿namespace AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateAnimal
 {
-    partial class ModificarDoc_Animal
+    partial class FormatUpdateAnimalView
     {
-        /// <summary> 
-        /// Variable del diseñador necesaria.
+        /// <summary>
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
-        /// Limpiar los recursos que se estén usando.
+        /// <summary>
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true si los recursos administrados se deben desechar; false en caso contrario.</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,39 +20,42 @@
             base.Dispose(disposing);
         }
 
-        #region Código generado por el Diseñador de componentes
+        #region Windows Form Designer generated code
 
-        /// <summary> 
-        /// Método necesario para admitir el Diseñador. No se puede modificar
-        /// el contenido de este método con el editor de código.
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarDoc_Animal));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.btGenerar = new System.Windows.Forms.Button();
+            this.btnClearFields = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.chbSterilized = new System.Windows.Forms.CheckBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cbSex = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.tbName = new DevExpress.XtraEditors.TextEdit();
+            this.tbAnimalType = new DevExpress.XtraEditors.TextEdit();
+            this.tbAnimalBreed = new DevExpress.XtraEditors.TextEdit();
+            this.tbAge = new DevExpress.XtraEditors.TextEdit();
+            this.tbAdditionalInformation = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbAnimalType.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbAnimalBreed.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbAge.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,8 +64,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1263, 601);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(1263, 597);
+            this.panel1.TabIndex = 1;
             // 
             // tableLayoutPanel1
             // 
@@ -74,7 +77,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1263, 601);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1263, 597);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // groupControl1
@@ -83,39 +86,69 @@
             this.groupControl1.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.groupControl1.Appearance.Options.UseBackColor = true;
             this.groupControl1.Appearance.Options.UseBorderColor = true;
-            this.groupControl1.CaptionImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("groupControl1.CaptionImageOptions.SvgImage")));
-            this.groupControl1.Controls.Add(this.button3);
-            this.groupControl1.Controls.Add(this.btGenerar);
+            this.groupControl1.Controls.Add(this.tbAdditionalInformation);
+            this.groupControl1.Controls.Add(this.tbAge);
+            this.groupControl1.Controls.Add(this.tbAnimalBreed);
+            this.groupControl1.Controls.Add(this.tbAnimalType);
+            this.groupControl1.Controls.Add(this.tbName);
+            this.groupControl1.Controls.Add(this.btnClearFields);
+            this.groupControl1.Controls.Add(this.btnSave);
             this.groupControl1.Controls.Add(this.label10);
-            this.groupControl1.Controls.Add(this.textBox6);
             this.groupControl1.Controls.Add(this.label5);
-            this.groupControl1.Controls.Add(this.checkBox1);
+            this.groupControl1.Controls.Add(this.chbSterilized);
             this.groupControl1.Controls.Add(this.label11);
-            this.groupControl1.Controls.Add(this.comboBox3);
+            this.groupControl1.Controls.Add(this.cbSex);
             this.groupControl1.Controls.Add(this.label21);
-            this.groupControl1.Controls.Add(this.comboBox2);
             this.groupControl1.Controls.Add(this.label23);
-            this.groupControl1.Controls.Add(this.textBox3);
             this.groupControl1.Controls.Add(this.label24);
-            this.groupControl1.Controls.Add(this.textBox2);
             this.groupControl1.Controls.Add(this.label25);
-            this.groupControl1.Controls.Add(this.textBox1);
             this.groupControl1.Controls.Add(this.label26);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(3, 3);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1257, 595);
+            this.groupControl1.Size = new System.Drawing.Size(1257, 591);
             this.groupControl1.TabIndex = 15;
             this.groupControl1.Text = "Datos de la mascota que se esta adoptando";
             // 
-            // textBox6
+            // btnClearFields
             // 
-            this.textBox6.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(824, 98);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(428, 89);
-            this.textBox6.TabIndex = 252;
+            this.btnClearFields.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnClearFields.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClearFields.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.btnClearFields.ForeColor = System.Drawing.Color.White;
+            this.btnClearFields.Location = new System.Drawing.Point(17, 221);
+            this.btnClearFields.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClearFields.Name = "btnClearFields";
+            this.btnClearFields.Size = new System.Drawing.Size(162, 64);
+            this.btnClearFields.TabIndex = 304;
+            this.btnClearFields.Text = "LIMPIAR CAMPOS";
+            this.btnClearFields.UseVisualStyleBackColor = false;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSave.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(187, 221);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(162, 64);
+            this.btnSave.TabIndex = 303;
+            this.btnSave.Text = "GUARDAR";
+            this.btnSave.UseVisualStyleBackColor = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(359, 242);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(138, 23);
+            this.label10.TabIndex = 302;
+            this.label10.Text = "label AVISOS";
+            this.label10.Visible = false;
             // 
             // label5
             // 
@@ -130,14 +163,14 @@
             this.label5.TabIndex = 251;
             this.label5.Text = "INFORMACION ADICIONAL:";
             // 
-            // checkBox1
+            // chbSterilized
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(454, 116);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(18, 17);
-            this.checkBox1.TabIndex = 250;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chbSterilized.AutoSize = true;
+            this.chbSterilized.Location = new System.Drawing.Point(454, 116);
+            this.chbSterilized.Name = "chbSterilized";
+            this.chbSterilized.Size = new System.Drawing.Size(18, 17);
+            this.chbSterilized.TabIndex = 250;
+            this.chbSterilized.UseVisualStyleBackColor = true;
             // 
             // label11
             // 
@@ -145,25 +178,25 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(252, 111);
+            this.label11.Location = new System.Drawing.Point(276, 111);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(171, 23);
             this.label11.TabIndex = 249;
             this.label11.Text = "ESTERELIZADO:";
             // 
-            // comboBox3
+            // cbSex
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cbSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSex.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSex.FormattingEnabled = true;
+            this.cbSex.Items.AddRange(new object[] {
             "Hembra",
             "Macho"});
-            this.comboBox3.Location = new System.Drawing.Point(103, 108);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(142, 29);
-            this.comboBox3.TabIndex = 248;
+            this.cbSex.Location = new System.Drawing.Point(103, 108);
+            this.cbSex.Name = "cbSex";
+            this.cbSex.Size = new System.Drawing.Size(142, 29);
+            this.cbSex.TabIndex = 248;
             // 
             // label21
             // 
@@ -178,21 +211,6 @@
             this.label21.TabIndex = 247;
             this.label21.Text = "SEXO:";
             // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Cachorro (0-1 año)",
-            "Adulto Joven (1-7 años)",
-            "Adulto (7-10 años)",
-            "Senior (10+ años)"});
-            this.comboBox2.Location = new System.Drawing.Point(103, 163);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(274, 29);
-            this.comboBox2.TabIndex = 246;
-            // 
             // label23
             // 
             this.label23.AutoSize = true;
@@ -205,14 +223,6 @@
             this.label23.Size = new System.Drawing.Size(73, 23);
             this.label23.TabIndex = 245;
             this.label23.Text = "EDAD:";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(961, 56);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(225, 28);
-            this.textBox3.TabIndex = 244;
             // 
             // label24
             // 
@@ -227,15 +237,6 @@
             this.label24.TabIndex = 243;
             this.label24.Text = "RAZA:";
             // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(571, 55);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(290, 29);
-            this.textBox2.TabIndex = 242;
-            // 
             // label25
             // 
             this.label25.AutoSize = true;
@@ -245,18 +246,9 @@
             this.label25.Location = new System.Drawing.Point(437, 56);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(118, 23);
+            this.label25.Size = new System.Drawing.Size(180, 23);
             this.label25.TabIndex = 241;
-            this.label25.Text = "MASCOTA:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(134, 55);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(290, 29);
-            this.textBox1.TabIndex = 240;
+            this.label25.Text = "TIPO DE ANIMAL:";
             // 
             // label26
             // 
@@ -271,59 +263,61 @@
             this.label26.TabIndex = 239;
             this.label26.Text = "NOMBRE:";
             // 
-            // button3
+            // tbName
             // 
-            this.button3.BackColor = System.Drawing.Color.MidnightBlue;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(17, 221);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(162, 64);
-            this.button3.TabIndex = 304;
-            this.button3.Text = "LIMPIAR CAMPOS";
-            this.button3.UseVisualStyleBackColor = false;
+            this.tbName.Location = new System.Drawing.Point(134, 57);
+            this.tbName.Name = "tbName";
+            this.tbName.Size = new System.Drawing.Size(275, 22);
+            this.tbName.TabIndex = 305;
             // 
-            // btGenerar
+            // tbAnimalType
             // 
-            this.btGenerar.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btGenerar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btGenerar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.btGenerar.ForeColor = System.Drawing.Color.White;
-            this.btGenerar.Location = new System.Drawing.Point(187, 221);
-            this.btGenerar.Margin = new System.Windows.Forms.Padding(4);
-            this.btGenerar.Name = "btGenerar";
-            this.btGenerar.Size = new System.Drawing.Size(162, 64);
-            this.btGenerar.TabIndex = 303;
-            this.btGenerar.Text = "GUARDAR";
-            this.btGenerar.UseVisualStyleBackColor = false;
+            this.tbAnimalType.Location = new System.Drawing.Point(614, 57);
+            this.tbAnimalType.Name = "tbAnimalType";
+            this.tbAnimalType.Size = new System.Drawing.Size(232, 22);
+            this.tbAnimalType.TabIndex = 306;
             // 
-            // label10
+            // tbAnimalBreed
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(359, 242);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(138, 23);
-            this.label10.TabIndex = 302;
-            this.label10.Text = "label AVISOS";
-            this.label10.Visible = false;
+            this.tbAnimalBreed.Location = new System.Drawing.Point(956, 58);
+            this.tbAnimalBreed.Name = "tbAnimalBreed";
+            this.tbAnimalBreed.Size = new System.Drawing.Size(209, 22);
+            this.tbAnimalBreed.TabIndex = 307;
             // 
-            // ModificarDoc_Animal
+            // tbAge
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.tbAge.Location = new System.Drawing.Point(94, 161);
+            this.tbAge.Name = "tbAge";
+            this.tbAge.Size = new System.Drawing.Size(151, 22);
+            this.tbAge.TabIndex = 308;
+            // 
+            // tbAdditionalInformation
+            // 
+            this.tbAdditionalInformation.Location = new System.Drawing.Point(785, 116);
+            this.tbAdditionalInformation.Name = "tbAdditionalInformation";
+            this.tbAdditionalInformation.Size = new System.Drawing.Size(380, 119);
+            this.tbAdditionalInformation.TabIndex = 309;
+            this.tbAdditionalInformation.Text = "";
+            // 
+            // FormatUpdateAnimalView
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1263, 597);
             this.Controls.Add(this.panel1);
-            this.Name = "ModificarDoc_Animal";
-            this.Size = new System.Drawing.Size(1263, 601);
-            this.SizeChanged += new System.EventHandler(this.ModificarDoc_Animal_SizeChanged);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FormatUpdateAnimalView";
+            this.Text = "ModificarDoc_Mascota";
+            this.SizeChanged += new System.EventHandler(this.ModificarDoc_Mascota_SizeChanged);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbAnimalType.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbAnimalBreed.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbAge.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -333,22 +327,22 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btGenerar;
+        private System.Windows.Forms.Button btnClearFields;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox chbSterilized;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox cbSex;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.RichTextBox tbAdditionalInformation;
+        private DevExpress.XtraEditors.TextEdit tbAge;
+        private DevExpress.XtraEditors.TextEdit tbAnimalBreed;
+        private DevExpress.XtraEditors.TextEdit tbAnimalType;
+        private DevExpress.XtraEditors.TextEdit tbName;
     }
 }

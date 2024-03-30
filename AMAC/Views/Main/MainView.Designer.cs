@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -146,7 +145,6 @@
             this.btnAdopterManagement.Appearance.Options.UseBorderColor = true;
             this.btnAdopterManagement.Appearance.Options.UseFont = true;
             this.btnAdopterManagement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAdopterManagement.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAdopterManagement.ImageOptions.SvgImage")));
             this.btnAdopterManagement.Location = new System.Drawing.Point(0, 0);
             this.btnAdopterManagement.Name = "btnAdopterManagement";
             this.btnAdopterManagement.Size = new System.Drawing.Size(252, 131);
@@ -172,7 +170,6 @@
             this.btnFormatManagement.Appearance.Options.UseBorderColor = true;
             this.btnFormatManagement.Appearance.Options.UseFont = true;
             this.btnFormatManagement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnFormatManagement.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnFormatManagement.ImageOptions.SvgImage")));
             this.btnFormatManagement.Location = new System.Drawing.Point(0, 0);
             this.btnFormatManagement.Name = "btnFormatManagement";
             this.btnFormatManagement.Size = new System.Drawing.Size(252, 131);
@@ -198,7 +195,6 @@
             this.btnRecordManagement.Appearance.Options.UseBorderColor = true;
             this.btnRecordManagement.Appearance.Options.UseFont = true;
             this.btnRecordManagement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnRecordManagement.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRecordManagement.ImageOptions.SvgImage")));
             this.btnRecordManagement.Location = new System.Drawing.Point(0, 0);
             this.btnRecordManagement.Name = "btnRecordManagement";
             this.btnRecordManagement.Size = new System.Drawing.Size(252, 131);
@@ -224,7 +220,6 @@
             this.btnAnimalManagement.Appearance.Options.UseBorderColor = true;
             this.btnAnimalManagement.Appearance.Options.UseFont = true;
             this.btnAnimalManagement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAnimalManagement.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnAnimalManagement.ImageOptions.SvgImage")));
             this.btnAnimalManagement.Location = new System.Drawing.Point(0, 0);
             this.btnAnimalManagement.Name = "btnAnimalManagement";
             this.btnAnimalManagement.Size = new System.Drawing.Size(252, 131);
@@ -293,7 +288,6 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(252, 118);
@@ -316,7 +310,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1509, 814);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("MainView.IconOptions.SvgImage")));
             this.Name = "MainView";
             this.Text = "AMAC AC GUASAVE - BIENVENIDO";
             this.tableLayoutPanel1.ResumeLayout(false);

@@ -9,57 +9,40 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DiseñoAMAC
+namespace AMAC.Views.FormatManagement.FormatManagementView
 {
-    public partial class generarFormato : DevExpress.XtraEditors.XtraForm
+    public partial class FormatManagementView : DevExpress.XtraEditors.XtraForm, IFormatManagementView
     {
-        public generarFormato()
+        private Form currentTab;
+
+        public event EventHandler OnClickNewAdoptionFormatButton;
+        public event EventHandler OnClickUpdateAdoptionFormatButton;
+        public FormatManagementView()
         {
             InitializeComponent();
+            AssociateAndRaisedEvents();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void AssociateAndRaisedEvents()
         {
-
+            btnCreateNewAdoptionFormat.Click += delegate { OnClickNewAdoptionFormatButton.Invoke(btnCreateNewAdoptionFormat, EventArgs.Empty); };
+            btnUpdateAdoptionFormat.Click += delegate { OnClickUpdateAdoptionFormatButton.Invoke(btnUpdateAdoptionFormat, EventArgs.Empty); };
         }
 
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        public void ChangeTab(Form tab)
         {
-
-        }
-
-        private Form currentChildForm;
-
-
-        private void OpenChildForm(Form childForm)
-        {
-            if (currentChildForm != null)
+            panel1.Controls.Clear();
+            if (tab != null)
             {
-                currentChildForm.Close();
+                tab.Close();
             }
-            childForm.TopLevel = false;
-            currentChildForm = childForm;
-            panelventana.Controls.Add(currentChildForm);
-            currentChildForm.Dock = DockStyle.Fill;
-            currentChildForm.Show();
+            tab.TopLevel = false;
+            currentTab = tab;
+            panel1.Controls.Add(currentTab);
+            currentTab.Dock = DockStyle.Fill;
+            currentTab.Show();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            panelventana.Controls.Clear();
-            OpenChildForm(new crearFormato());
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            panelventana.Controls.Clear();
-            ModificarDoc userControl1 = new ModificarDoc();
-            // Suscribirse al evento SizeChanged del panel
-            panelventana.SizeChanged += (s, ev) =>
-            {
-                userControl1.Size = panelventana.Size;
-            };
-            panelventana.Controls.Add(userControl1);
-        }
+        
     }
 }

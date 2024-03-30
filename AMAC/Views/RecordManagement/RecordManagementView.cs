@@ -11,23 +11,37 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DiseñoAMAC
+namespace AMAC.Views.RecordManagement
 {
-    public partial class consultarRegistro : DevExpress.XtraEditors.XtraForm
+    public partial class RecordManagementView : DevExpress.XtraEditors.XtraForm, IRecordManagementView
     {
-        public consultarRegistro()
+        public DataTable DataSource { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public string FilterText => throw new NotImplementedException();
+
+        public RecordManagementView()
         {
             InitializeComponent();
+            AssociateAndRaisedEvents();
 
         }
 
-  
+        public event EventHandler OnClickUpdateRecordPictureEdit;
+        public event EventHandler OnClickDeleteRecordPictureEdit;
+        public event EventHandler OnClickSearchRecordPictureEdit;
+        public event EventHandler OnClickLoadRecordsPictureEdit;
+
+        private void AssociateAndRaisedEvents()
+        {
+         
+        }
+
 
         private void pbEditar_Click_1(object sender, EventArgs e)
         {
             panel1.BackColor = Color.Blue;
             label5.Text = "EDITAR REGISTRO";
-            dgvRegistros.ReadOnly = false;
+            dgvRecords.ReadOnly = false;
         }
 
         private void pbBorrar_Click_1(object sender, EventArgs e)
@@ -40,22 +54,12 @@ namespace DiseñoAMAC
         {
             panel1.BackColor = Color.MidnightBlue;
             label5.Text = "CONSULTAR INFORMACION";
-            dgvRegistros.ReadOnly = true;
+            dgvRecords.ReadOnly = true;
         }
 
-        private void groupControl1_Paint(object sender, PaintEventArgs e)
+        public void ChangeActiveHeader()
         {
-
-        }
-
-        private void pbEditar_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pbConsultar_EditValueChanged(object sender, EventArgs e)
-        {
-
+            throw new NotImplementedException();
         }
     }
 }

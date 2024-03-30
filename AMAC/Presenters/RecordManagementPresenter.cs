@@ -18,6 +18,12 @@ namespace AMAC.Presenters
         {
             this.view = view;
             this.repository = repository;
+            AssociateAndRaisedEvents();
+        }
+
+        private void AssociateAndRaisedEvents()
+        {
+
         }
     }
 }

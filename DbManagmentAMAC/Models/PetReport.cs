@@ -12,6 +12,7 @@ namespace DbManagmentAMAC.Models
         private string diagnostic;
         private string tempHome;
         private string vet;
+
         public PetReport() { }
         public PetReport(Animal animal) 
         {
@@ -24,11 +25,13 @@ namespace DbManagmentAMAC.Models
             this.animalType = animal.AnimalType;
             this.sterilized = animal.Sterilized;
             this.additionalInformation = animal.AdditionalInformation;
+            this.rescuer = animal.Rescuer;
         }
 
         public string RescueDate { get => rescueDate; set => rescueDate = value; }
         public string Diagnostic { get => diagnostic; set => diagnostic = value; }
         public string TempHome { get => tempHome; set => tempHome = value; }
         public string Vet { get => vet; set => vet = value; }
+        
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace DiseñoAMAC
+﻿namespace AMAC.Views.FormatManagement.SearchTableView
 {
-    partial class BuscarEnTabla
+    partial class SearchTableView
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,16 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btRegresar = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.dgvData = new System.Windows.Forms.DataGridView();
+            this.tbFilterText = new DevExpress.XtraEditors.TextEdit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbFilterText.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -59,22 +60,13 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox6);
+            this.panel1.Controls.Add(this.tbFilterText);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(803, 135);
             this.panel1.TabIndex = 1;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(115, 62);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(509, 29);
-            this.textBox6.TabIndex = 312;
             // 
             // label14
             // 
@@ -91,54 +83,61 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btRegresar);
-            this.panel2.Controls.Add(this.dataGridView1);
+            this.panel2.Controls.Add(this.btnClose);
+            this.panel2.Controls.Add(this.dgvData);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 144);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(803, 571);
             this.panel2.TabIndex = 2;
             // 
-            // dataGridView1
+            // btnClose
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(803, 571);
-            this.dataGridView1.TabIndex = 0;
+            this.btnClose.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClose.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(4, 503);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(162, 64);
+            this.btnClose.TabIndex = 313;
+            this.btnClose.Text = "REGRESAR";
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
-            // btRegresar
+            // dgvData
             // 
-            this.btRegresar.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btRegresar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btRegresar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.btRegresar.ForeColor = System.Drawing.Color.White;
-            this.btRegresar.Location = new System.Drawing.Point(4, 503);
-            this.btRegresar.Margin = new System.Windows.Forms.Padding(4);
-            this.btRegresar.Name = "btRegresar";
-            this.btRegresar.Size = new System.Drawing.Size(162, 64);
-            this.btRegresar.TabIndex = 313;
-            this.btRegresar.Text = "REGRESAR";
-            this.btRegresar.UseVisualStyleBackColor = false;
-            this.btRegresar.Click += new System.EventHandler(this.btRegresar_Click);
+            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvData.Location = new System.Drawing.Point(0, 0);
+            this.dgvData.Name = "dgvData";
+            this.dgvData.RowHeadersWidth = 51;
+            this.dgvData.RowTemplate.Height = 24;
+            this.dgvData.Size = new System.Drawing.Size(803, 571);
+            this.dgvData.TabIndex = 0;
             // 
-            // BuscarEnTabla
+            // tbFilterText
+            // 
+            this.tbFilterText.Location = new System.Drawing.Point(118, 66);
+            this.tbFilterText.Name = "tbFilterText";
+            this.tbFilterText.Size = new System.Drawing.Size(626, 22);
+            this.tbFilterText.TabIndex = 313;
+            // 
+            // SearchTableView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 718);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "BuscarEnTabla";
+            this.Name = "SearchTableView";
             this.Text = "BuscarEnTabla";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbFilterText.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -147,10 +146,10 @@
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button btRegresar;
+        private System.Windows.Forms.DataGridView dgvData;
+        private System.Windows.Forms.Button btnClose;
+        private DevExpress.XtraEditors.TextEdit tbFilterText;
     }
 }

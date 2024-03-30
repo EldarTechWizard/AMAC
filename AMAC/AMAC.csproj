@@ -33,22 +33,36 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.CodeParser.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.Desktop.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v22.2.UI, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Diagram.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Dialogs.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Drawing.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v22.2.Drawing, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v22.2.Core, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v22.2.UI, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraDiagram.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraDialogs.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraGrid.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraLayout.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPdfViewer.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v22.2, Version=22.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -71,16 +85,81 @@
     </Compile>
     <Compile Include="Presenters\AdopterManagementPresenter.cs" />
     <Compile Include="Presenters\AnimalManagementPresenter.cs" />
+    <Compile Include="Presenters\FormatPreviewPresenter.cs" />
+    <Compile Include="Presenters\FormatUpdatePresenter.cs" />
     <Compile Include="Presenters\FormatManagementPresenter.cs" />
+    <Compile Include="Presenters\FormatUpdateAdopterPresenter.cs" />
+    <Compile Include="Presenters\FormatUpdateAnimalPresenter.cs" />
+    <Compile Include="Presenters\FormatUpdateVolunterPresenter.cs" />
     <Compile Include="Presenters\LoginPresenter.cs" />
     <Compile Include="Presenters\MainPresenter.cs" />
     <Compile Include="Presenters\RecordManagementPresenter.cs" />
+    <Compile Include="Presenters\SearchTablePresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\AdopterManagement\AdopterManagementView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AdopterManagement\AdopterManagementView.Designer.cs">
+      <DependentUpon>AdopterManagementView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\AdopterManagement\IAdopterManagementView.cs" />
+    <Compile Include="Views\AnimalManagement\AnimalManagementView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AnimalManagement\AnimalManagementView.Designer.cs">
+      <DependentUpon>AnimalManagementView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\AnimalManagement\IAnimalManagementView.cs" />
+    <Compile Include="Views\FormatManagement\FormatManagementView\FormatMangementView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormatManagement\FormatManagementView\FormatMangementView.Designer.cs">
+      <DependentUpon>FormatMangementView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FormatManagement\FormatManagementView\IFormatManagementView.cs" />
+    <Compile Include="Views\FormatManagement\FormatPreviewView\FormatPreviewView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormatManagement\FormatPreviewView\FormatPreviewView.Designer.cs">
+      <DependentUpon>FormatPreviewView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormatManagement\FormatPreviewView\IFormatPreviewView.cs" />
+    <Compile Include="Views\FormatManagement\FormatUpdateView\FormatUpdateAdopter\FormatUpdateAdopterView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormatManagement\FormatUpdateView\FormatUpdateAdopter\FormatUpdateAdopterView.Designer.cs">
+      <DependentUpon>FormatUpdateAdopterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormatManagement\FormatUpdateView\FormatUpdateAdopter\IFormatUpdateAdopterView.cs" />
+    <Compile Include="Views\FormatManagement\FormatUpdateView\FormatUpdateAnimal\FormatUpdateAnimalView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormatManagement\FormatUpdateView\FormatUpdateAnimal\FormatUpdateAnimalView.Designer.cs">
+      <DependentUpon>FormatUpdateAnimalView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormatManagement\FormatUpdateView\FormatUpdateAnimal\IFormatUpdateAnimalView.cs" />
+    <Compile Include="Views\FormatManagement\FormatUpdateView\FormatUpdateView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormatManagement\FormatUpdateView\FormatUpdateView.Designer.cs">
+      <DependentUpon>FormatUpdateView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormatManagement\FormatUpdateView\FormatUpdateVolunter\IFormatUpdateVolunterView.cs" />
+    <Compile Include="Views\FormatManagement\FormatUpdateView\FormatUpdateVolunter\FormatUpdateVolunterView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormatManagement\FormatUpdateView\FormatUpdateVolunter\FormatUpdateVolunterView.Designer.cs">
+      <DependentUpon>FormatUpdateVolunterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormatManagement\FormatUpdateView\IFormatUpdateView.cs" />
     <Compile Include="Views\FormatManagement\SearchTableView\ISearchTableView.cs" />
+    <Compile Include="Views\FormatManagement\SearchTableView\SearchTableView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormatManagement\SearchTableView\SearchTableView.Designer.cs">
+      <DependentUpon>SearchTableView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Login\ILoginView.cs" />
     <Compile Include="Views\Login\LoginView.cs">
       <SubType>Form</SubType>
@@ -96,6 +175,12 @@
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\RecordManagement\IRecordManagementView.cs" />
+    <Compile Include="Views\RecordManagement\RecordManagementView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RecordManagement\RecordManagementView.Designer.cs">
+      <DependentUpon>RecordManagementView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -109,8 +194,32 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\FormatManagement\FormatPreviewView\FormatPreviewView.resx">
+      <DependentUpon>FormatPreviewView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormatManagement\FormatUpdateView\FormatUpdateAdopter\FormatUpdateAdopterView.resx">
+      <DependentUpon>FormatUpdateAdopterView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormatManagement\FormatUpdateView\FormatUpdateAnimal\FormatUpdateAnimalView.resx">
+      <DependentUpon>FormatUpdateAnimalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormatManagement\FormatUpdateView\FormatUpdateView.resx">
+      <DependentUpon>FormatUpdateView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormatManagement\FormatUpdateView\FormatUpdateVolunter\FormatUpdateVolunterView.resx">
+      <DependentUpon>FormatUpdateVolunterView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormatManagement\SearchTableView\SearchTableView.resx">
+      <DependentUpon>SearchTableView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Login\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Main\MainView.resx">
+      <DependentUpon>MainView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RecordManagement\RecordManagementView.resx">
+      <DependentUpon>RecordManagementView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -125,9 +234,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\FormatManagement\UserControls\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\DbManagmentAMAC\DbManagementAMAC.csproj">
       <Project>{e7cbafe9-8031-47f1-bb98-96300e9c944e}</Project>

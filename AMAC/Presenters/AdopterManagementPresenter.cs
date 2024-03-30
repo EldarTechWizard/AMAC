@@ -17,6 +17,36 @@ namespace AMAC.Presenters
         {
             this.view = view;
             this.repository = repository;
+            AssociateAndRaisedEvents();
+        }
+
+        private void AssociateAndRaisedEvents()
+        {
+            view.OnClickDeleteButton += OnClickDeleteButton;
+            view.OnClickSaveAndEditButton += OnClickSaveAndEditButton;
+            view.OnClickSearchPictureEdit += OnClickSearchPictureEdit;
+            view.OnLoadForm += OnLoadForm;
+        }
+
+        private void OnLoadForm(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void OnClickSearchPictureEdit(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void OnClickSaveAndEditButton(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void OnClickDeleteButton(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }
+

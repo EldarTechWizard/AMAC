@@ -10,8 +10,8 @@ namespace DbManagmentAMAC.Models
     {
         private PetReport report;
         private Adopter adopter;
-        private string volunter;
         private string adoptionName;
+        private string volunter;
         public PdfFormat() { }
         public PdfFormat(PetReport petReport, Adopter adopter) 
         {
@@ -21,7 +21,7 @@ namespace DbManagmentAMAC.Models
 
         public PetReport Report { get => report; set => report = value; }
         public Adopter Adopter { get => adopter; set => adopter = value; }
-        public string Volunter { get => volunter; set => volunter = value; }
         public string AdoptionName { get => adoptionName; set => adoptionName = value; }
+        public string Volunter { get => volunter; set => volunter = value; }
     }
 }
