@@ -1,4 +1,4 @@
-﻿namespace AMAC.Views.FormatManagement.FormatManagementView 
+﻿namespace AMAC.Views.FormatManagement
 {
     partial class FormatManagementView
     {

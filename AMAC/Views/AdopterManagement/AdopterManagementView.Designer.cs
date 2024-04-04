@@ -36,17 +36,17 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.dgvAdopter = new System.Windows.Forms.DataGridView();
+            this.dgvAdopter = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.tbId = new DevExpress.XtraEditors.TextEdit();
             this.tbAge = new DevExpress.XtraEditors.TextEdit();
             this.tbEmail = new DevExpress.XtraEditors.TextEdit();
             this.tbAddress = new DevExpress.XtraEditors.TextEdit();
             this.tbNumber = new DevExpress.XtraEditors.TextEdit();
             this.tbName = new DevExpress.XtraEditors.TextEdit();
-            this.peSearch = new DevExpress.XtraEditors.PictureEdit();
             this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnSaveAndEdit = new System.Windows.Forms.Button();
@@ -62,15 +62,16 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdopter)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbId.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAge.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbEmail.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbNumber.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.peSearch.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -166,15 +167,21 @@
             // 
             // dgvAdopter
             // 
-            this.dgvAdopter.BackgroundColor = System.Drawing.Color.White;
-            this.dgvAdopter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAdopter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvAdopter.Location = new System.Drawing.Point(0, 0);
+            this.dgvAdopter.MainView = this.gridView1;
             this.dgvAdopter.Name = "dgvAdopter";
-            this.dgvAdopter.RowHeadersWidth = 51;
-            this.dgvAdopter.RowTemplate.Height = 24;
             this.dgvAdopter.Size = new System.Drawing.Size(1263, 354);
             this.dgvAdopter.TabIndex = 0;
+            this.dgvAdopter.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.dgvAdopter;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsView.ShowIndicator = false;
             // 
             // panel4
             // 
@@ -191,14 +198,13 @@
             this.groupControl1.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.groupControl1.Appearance.Options.UseBackColor = true;
             this.groupControl1.Appearance.Options.UseBorderColor = true;
+            this.groupControl1.Controls.Add(this.tbId);
             this.groupControl1.Controls.Add(this.tbAge);
             this.groupControl1.Controls.Add(this.tbEmail);
             this.groupControl1.Controls.Add(this.tbAddress);
             this.groupControl1.Controls.Add(this.tbNumber);
             this.groupControl1.Controls.Add(this.tbName);
-            this.groupControl1.Controls.Add(this.peSearch);
             this.groupControl1.Controls.Add(this.label11);
-            this.groupControl1.Controls.Add(this.label10);
             this.groupControl1.Controls.Add(this.label5);
             this.groupControl1.Controls.Add(this.btnDelete);
             this.groupControl1.Controls.Add(this.btnSaveAndEdit);
@@ -213,9 +219,16 @@
             this.groupControl1.TabIndex = 158;
             this.groupControl1.Text = "Nuevo Adoptante";
             // 
+            // tbId
+            // 
+            this.tbId.Location = new System.Drawing.Point(194, 60);
+            this.tbId.Name = "tbId";
+            this.tbId.Size = new System.Drawing.Size(93, 22);
+            this.tbId.TabIndex = 336;
+            // 
             // tbAge
             // 
-            this.tbAge.Location = new System.Drawing.Point(387, 123);
+            this.tbAge.Location = new System.Drawing.Point(426, 105);
             this.tbAge.Name = "tbAge";
             this.tbAge.Size = new System.Drawing.Size(296, 22);
             this.tbAge.TabIndex = 335;
@@ -229,33 +242,24 @@
             // 
             // tbAddress
             // 
-            this.tbAddress.Location = new System.Drawing.Point(913, 165);
+            this.tbAddress.Location = new System.Drawing.Point(914, 161);
             this.tbAddress.Name = "tbAddress";
             this.tbAddress.Size = new System.Drawing.Size(296, 22);
             this.tbAddress.TabIndex = 332;
             // 
             // tbNumber
             // 
-            this.tbNumber.Location = new System.Drawing.Point(912, 115);
+            this.tbNumber.Location = new System.Drawing.Point(913, 111);
             this.tbNumber.Name = "tbNumber";
             this.tbNumber.Size = new System.Drawing.Size(295, 22);
             this.tbNumber.TabIndex = 331;
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(387, 64);
+            this.tbName.Location = new System.Drawing.Point(426, 60);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(296, 22);
             this.tbName.TabIndex = 330;
-            // 
-            // peSearch
-            // 
-            this.peSearch.Location = new System.Drawing.Point(537, 218);
-            this.peSearch.Name = "peSearch";
-            this.peSearch.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.peSearch.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.peSearch.Size = new System.Drawing.Size(89, 64);
-            this.peSearch.TabIndex = 329;
             // 
             // label11
             // 
@@ -263,25 +267,12 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(307, 118);
+            this.label11.Location = new System.Drawing.Point(346, 100);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(73, 23);
             this.label11.TabIndex = 298;
             this.label11.Text = "EDAD:";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label10.Location = new System.Drawing.Point(182, 63);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(47, 23);
-            this.label10.TabIndex = 297;
-            this.label10.Text = "{ID}";
             // 
             // label5
             // 
@@ -289,7 +280,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(11, 63);
+            this.label5.Location = new System.Drawing.Point(11, 57);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(176, 23);
@@ -299,10 +290,11 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnDelete.Enabled = false;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(78, 218);
+            this.btnDelete.Location = new System.Drawing.Point(53, 185);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(151, 64);
@@ -316,12 +308,12 @@
             this.btnSaveAndEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSaveAndEdit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnSaveAndEdit.ForeColor = System.Drawing.Color.White;
-            this.btnSaveAndEdit.Location = new System.Drawing.Point(279, 218);
+            this.btnSaveAndEdit.Location = new System.Drawing.Point(244, 185);
             this.btnSaveAndEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveAndEdit.Name = "btnSaveAndEdit";
             this.btnSaveAndEdit.Size = new System.Drawing.Size(202, 64);
             this.btnSaveAndEdit.TabIndex = 290;
-            this.btnSaveAndEdit.Text = "GUARDAR:";
+            this.btnSaveAndEdit.Text = "GUARDAR";
             this.btnSaveAndEdit.UseVisualStyleBackColor = false;
             // 
             // label2
@@ -343,7 +335,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(779, 112);
+            this.label8.Location = new System.Drawing.Point(780, 108);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(126, 23);
@@ -356,7 +348,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(781, 164);
+            this.label7.Location = new System.Drawing.Point(782, 160);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(125, 23);
@@ -369,7 +361,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(275, 63);
+            this.label6.Location = new System.Drawing.Point(314, 59);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(105, 23);
@@ -394,16 +386,17 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdopter)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbId.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAge.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbEmail.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbNumber.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.peSearch.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -415,7 +408,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dgvAdopter;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label8;
@@ -423,18 +415,19 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnSaveAndEdit;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private DevExpress.XtraEditors.PictureEdit peSearch;
     private DevExpress.XtraEditors.TextEdit tbAge;
     private DevExpress.XtraEditors.TextEdit tbEmail;
     private DevExpress.XtraEditors.TextEdit tbAddress;
     private DevExpress.XtraEditors.TextEdit tbNumber;
     private DevExpress.XtraEditors.TextEdit tbName;
-}
+        private DevExpress.XtraGrid.GridControl dgvAdopter;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.TextEdit tbId;
+    }
 }

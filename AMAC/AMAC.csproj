@@ -85,6 +85,7 @@
     </Compile>
     <Compile Include="Presenters\AdopterManagementPresenter.cs" />
     <Compile Include="Presenters\AnimalManagementPresenter.cs" />
+    <Compile Include="Presenters\FormatNewAdoptionPresenter.cs" />
     <Compile Include="Presenters\FormatPreviewPresenter.cs" />
     <Compile Include="Presenters\FormatUpdatePresenter.cs" />
     <Compile Include="Presenters\FormatManagementPresenter.cs" />
@@ -111,13 +112,20 @@
       <DependentUpon>AnimalManagementView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\AnimalManagement\IAnimalManagementView.cs" />
-    <Compile Include="Views\FormatManagement\FormatManagementView\FormatMangementView.cs">
+    <Compile Include="Views\FormatManagement\FormatMangementView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\FormatManagement\FormatManagementView\FormatMangementView.Designer.cs">
+    <Compile Include="Views\FormatManagement\FormatMangementView.Designer.cs">
       <DependentUpon>FormatMangementView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\FormatManagement\FormatManagementView\IFormatManagementView.cs" />
+    <Compile Include="Views\FormatManagement\FormatNewAdoptionView\FormatNewAdoptionView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormatManagement\FormatNewAdoptionView\FormatNewAdoptionView.Designer.cs">
+      <DependentUpon>FormatNewAdoptionView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormatManagement\FormatNewAdoptionView\IFormatNewAdoptionView.cs" />
+    <Compile Include="Views\FormatManagement\IFormatManagementView.cs" />
     <Compile Include="Views\FormatManagement\FormatPreviewView\FormatPreviewView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +202,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\AdopterManagement\AdopterManagementView.resx">
+      <DependentUpon>AdopterManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AnimalManagement\AnimalManagementView.resx">
+      <DependentUpon>AnimalManagementView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormatManagement\FormatNewAdoptionView\FormatNewAdoptionView.resx">
+      <DependentUpon>FormatNewAdoptionView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FormatManagement\FormatPreviewView\FormatPreviewView.resx">
       <DependentUpon>FormatPreviewView.cs</DependentUpon>
     </EmbeddedResource>

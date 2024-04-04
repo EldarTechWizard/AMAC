@@ -27,30 +27,133 @@ namespace DbManagmentAMAC.Repository
             this.connectionString = connectionString;
         }
 
-        public bool DeleteAdopter()
+        public bool DeleteAdopter(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "spDeleteAdopter";
+                    cmd.CommandTimeout = 120;
+
+                    cmd.Parameters.AddWithValue("@adopterId", id);
+       
+
+                    cmd.ExecuteNonQuery();
+
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                lastError = ex.Message;
+                return false;
+            }
         }
 
-        public bool DeleteAnimal()
+
+        public bool DeleteRecord(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "spDeleteRecord";
+                    cmd.CommandTimeout = 120;
+
+                    cmd.Parameters.AddWithValue("@animalId", id);
+
+
+                    cmd.ExecuteNonQuery();
+
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                lastError = ex.Message;
+                return false;
+            }
         }
 
-        public bool DeleteRecord()
+        public bool InsertRecord(PetReport record)
         {
-            throw new NotImplementedException();
-        }
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "spInsertRecord";
+                    cmd.CommandTimeout = 120;
 
+                    cmd.Parameters.AddWithValue("@Photo", record.PicturePath);
+                    cmd.Parameters.AddWithValue("@Name", record.Name);
+                    cmd.Parameters.AddWithValue("@Breed", record.AnimalBreed);
+                    cmd.Parameters.AddWithValue("@Age", record.Age);
+                    cmd.Parameters.AddWithValue("@Sex", record.Sex);
+                    cmd.Parameters.AddWithValue("@Sterilized", record.Sterilized);
+                    cmd.Parameters.AddWithValue("@AnimalType", record.AnimalType);
+                    cmd.Parameters.AddWithValue("@Status", record.Status);
+                    cmd.Parameters.AddWithValue("@AdditionalInformation", record.AdditionalInformation);
+                    cmd.Parameters.AddWithValue("@RescueDate", record.RescueDate);
+                    cmd.Parameters.AddWithValue("@TemporaryHome", record.TempHome);
+                    cmd.Parameters.AddWithValue("@Rescuer", record.Rescuer);
+                    cmd.Parameters.AddWithValue("@Veterinarian", record.Vet);
+                    cmd.Parameters.AddWithValue("@Diagnostic", record.Diagnostic);
+
+                    cmd.ExecuteNonQuery();
+
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                lastError = ex.Message;
+                return false;
+            }
+        }
         public bool InsertAdopter(Adopter adopter)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "spInsertAdopter";
+                    cmd.CommandTimeout = 120;
+
+                    cmd.Parameters.AddWithValue("@name", adopter.Name);
+                    cmd.Parameters.AddWithValue("@age", adopter.Age);
+                    cmd.Parameters.AddWithValue("@address", adopter.Address);
+                    cmd.Parameters.AddWithValue("@phone", adopter.Number);
+                    cmd.Parameters.AddWithValue("@email", adopter.Email);
+
+                    cmd.ExecuteNonQuery();
+
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                lastError = ex.Message;
+                return false;
+            }
         }
 
-        public bool InsertAnimal(Animal animal)
-        {
-            throw new NotImplementedException();
-        }
 
         public bool Login(string username, string password)
         {
@@ -76,30 +179,123 @@ namespace DbManagmentAMAC.Repository
         }
         public bool SelectAdopter(DataTable data)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.CommandText = $"Select * from adopterView";
+                    data.Load(cmd.ExecuteReader());
+                }
+
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                lastError = ex.Message;
+                return false;
+            }
         }
-        public bool SelectAnimal(DataTable data)
-        {
-            throw new NotImplementedException();
-        }
+
         public bool SelectRecord(DataTable data)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.CommandText = $"Select * from animalAndPetReportView";
+                    data.Load(cmd.ExecuteReader());
+                }
+
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                lastError = ex.Message;
+                return false;
+            }
         }
 
-        public bool UpdateAdopter(Adopter data)
+        public bool UpdateAdopter(Adopter adopter)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "spUpdateAdopter";
+                    cmd.CommandTimeout = 120;
+
+                    cmd.Parameters.AddWithValue("@adopterId", adopter.Id);
+                    cmd.Parameters.AddWithValue("@name", adopter.Name);
+                    cmd.Parameters.AddWithValue("@age", adopter.Age);
+                    cmd.Parameters.AddWithValue("@address", adopter.Address);
+                    cmd.Parameters.AddWithValue("@phone", adopter.Number);
+                    cmd.Parameters.AddWithValue("@email", adopter.Email);
+
+                    cmd.ExecuteNonQuery();
+
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                lastError = ex.Message;
+                return false;
+            }
         }
 
-        public bool UpdateAnimal(Animal animal)
+        public bool UpdateRecord(PetReport record)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "spUpdateRecord";
+                    cmd.CommandTimeout = 120;
+
+                    cmd.Parameters.AddWithValue("@animalId", record.PicturePath);
+                    cmd.Parameters.AddWithValue("@photo", record.PicturePath);
+                    cmd.Parameters.AddWithValue("@name", record.Name);
+                    cmd.Parameters.AddWithValue("@breed", record.AnimalBreed);
+                    cmd.Parameters.AddWithValue("@age", record.Age);
+                    cmd.Parameters.AddWithValue("@sex", record.Sex);
+                    cmd.Parameters.AddWithValue("@sterilized", record.Sterilized);
+                    cmd.Parameters.AddWithValue("@animalType", record.AnimalType);
+                    cmd.Parameters.AddWithValue("@status", record.Status);
+                    cmd.Parameters.AddWithValue("@additionalInfo", record.AdditionalInformation);
+                    cmd.Parameters.AddWithValue("@rescueDate", record.RescueDate);
+                    cmd.Parameters.AddWithValue("@temporaryHome", record.TempHome);
+                    cmd.Parameters.AddWithValue("@rescuer", record.Rescuer);
+                    cmd.Parameters.AddWithValue("@veterinarian", record.Vet);
+                    cmd.Parameters.AddWithValue("@diagnostic", record.Diagnostic);
+
+                    cmd.ExecuteNonQuery();
+
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                lastError = ex.Message;
+                return false;
+            }
         }
 
-        public bool UpdateRecord(PetReport petReport)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

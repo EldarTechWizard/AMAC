@@ -10,19 +10,23 @@ namespace AMAC.Views.AdopterManagement
     public interface IAdopterManagementView
     {
         DataTable DataSource { get; set; }
-        bool EditMode { get; }
-        string Name { get; }
-        string Age { get; }
-        string Address { get; }
-        string Number { get; }
-        string Email { get; }
+        bool EditMode { get; set; }
+        int Id { get; set; }
+        string NameA { get; set; }
+        int Age { get; set; }
+        string Address { get; set; }
+        string Number { get; set; }
+        string Email { get; set; }
 
+        event EventHandler OnClickSelectRowGridControl;
         event EventHandler OnClickSaveAndEditButton;
         event EventHandler OnClickDeleteButton;
-        event EventHandler OnClickSearchPictureEdit;
+        event EventHandler OnChangedAdopterIdTextBox;
         event EventHandler OnLoadForm;
-        void ChangeEditMode();
+
+        void ChangeEditMode(bool aux);
         void ClearFields();
+        void LoadInfoFromSelectedRow();
 
     }
 }

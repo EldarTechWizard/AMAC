@@ -41,10 +41,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.peReload = new DevExpress.XtraEditors.PictureEdit();
-            this.peSearch = new DevExpress.XtraEditors.PictureEdit();
-            this.peDelete = new DevExpress.XtraEditors.PictureEdit();
-            this.peEdit = new DevExpress.XtraEditors.PictureEdit();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -66,10 +62,6 @@
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecords)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.peReload.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.peSearch.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.peDelete.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.peEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRecargar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox2)).BeginInit();
@@ -185,10 +177,6 @@
             // 
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.label26);
-            this.panel3.Controls.Add(this.peReload);
-            this.panel3.Controls.Add(this.peSearch);
-            this.panel3.Controls.Add(this.peDelete);
-            this.panel3.Controls.Add(this.peEdit);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label8);
@@ -224,50 +212,6 @@
             this.label26.Size = new System.Drawing.Size(257, 23);
             this.label26.TabIndex = 241;
             this.label26.Text = "BUSQUEDA POR FILTRO:";
-            // 
-            // peReload
-            // 
-            this.peReload.Location = new System.Drawing.Point(1166, 15);
-            this.peReload.Name = "peReload";
-            this.peReload.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.peReload.Properties.Appearance.Options.UseBackColor = true;
-            this.peReload.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.peReload.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.peReload.Size = new System.Drawing.Size(85, 85);
-            this.peReload.TabIndex = 157;
-            // 
-            // peSearch
-            // 
-            this.peSearch.Location = new System.Drawing.Point(1075, 15);
-            this.peSearch.Name = "peSearch";
-            this.peSearch.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.peSearch.Properties.Appearance.Options.UseBackColor = true;
-            this.peSearch.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.peSearch.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.peSearch.Size = new System.Drawing.Size(85, 85);
-            this.peSearch.TabIndex = 156;
-            // 
-            // peDelete
-            // 
-            this.peDelete.Location = new System.Drawing.Point(984, 15);
-            this.peDelete.Name = "peDelete";
-            this.peDelete.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.peDelete.Properties.Appearance.Options.UseBackColor = true;
-            this.peDelete.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.peDelete.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.peDelete.Size = new System.Drawing.Size(85, 85);
-            this.peDelete.TabIndex = 155;
-            // 
-            // peEdit
-            // 
-            this.peEdit.Location = new System.Drawing.Point(893, 15);
-            this.peEdit.Name = "peEdit";
-            this.peEdit.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.peEdit.Properties.Appearance.Options.UseBackColor = true;
-            this.peEdit.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.peEdit.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.peEdit.Size = new System.Drawing.Size(85, 84);
-            this.peEdit.TabIndex = 154;
             // 
             // label10
             // 
@@ -405,10 +349,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecords)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.peReload.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.peSearch.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.peDelete.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.peEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRecargar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox2)).EndInit();
@@ -432,10 +372,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label26;
-        private DevExpress.XtraEditors.PictureEdit peReload;
-        private DevExpress.XtraEditors.PictureEdit peSearch;
-        private DevExpress.XtraEditors.PictureEdit peDelete;
-        private DevExpress.XtraEditors.PictureEdit peEdit;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;

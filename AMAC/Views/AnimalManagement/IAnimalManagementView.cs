@@ -10,23 +10,42 @@ namespace AMAC.Views.AnimalManagement
     public interface IAnimalManagementView
     {
         DataTable DataSource { get; set; }
-        string PicturePath { get; }
-        string NameA { get; }
-        string AnimalBreed { get; }
-        int Age { get; }
-        string Sex { get; }
-        bool Sterilized {  get; }
-        string AnimalType { get; }
-        string AdditionalInformation { get; }
-        bool EditMode { get; }
+
+
+        //Animal Propierties
+        int Id { get; set; }
+        string PicturePath { get; set; }
+        string NameA { get; set; }
+        string AnimalBreed { get; set; }
+        int Age { get; set; }
+        string Sex { get; set; }
+        bool Sterilized {  get; set; }
+        string AnimalType { get; set; }
+        string AdditionalInformation { get; set; }
+        string Status {  get; set; }
+
+        //PetReport Propierties
+
+        DateTime RescuedDate { get; set; }
+        string TemporaryHome { get; set; }
+        string Rescuer {  get; set; }
+        string Veterinarian { get; set; }
+        string Diagnostic {  get; set; }
+
+        //Form Propierties
+        bool EditMode { get; set; }
 
         event EventHandler OnLoadForm;
         event EventHandler OnClickSaveAndEditAnimalButton;
         event EventHandler OnClickDeleteAnimalButton;
         event EventHandler OnClickChoosePhotoButton;
-        event EventHandler OnClickSearchPictureEdit;
 
-        void ChangeEditMode();
+        event EventHandler OnChangedAdopterIdTextBox;
+        event EventHandler OnClickSelectRowGridControl;
+        void ChooseImage();
+        void ChangeEditMode(bool aux);
+        void LoadInfoFromSelectedRow();
         void ClearFields();
+
     }
 }

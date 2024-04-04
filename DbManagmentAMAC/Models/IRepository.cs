@@ -13,16 +13,13 @@ namespace DbManagmentAMAC.Models
         string LastError { get; }
 
         bool Login(string username, string password);  
-        bool InsertAnimal(Animal animal);
-        bool SelectAnimal(DataTable data);
-        bool DeleteAnimal();
-        bool UpdateAnimal(Animal animal);
         bool InsertAdopter(Adopter adopter);
         bool SelectAdopter(DataTable data);
-        bool DeleteAdopter();
+        bool DeleteAdopter(int id);
         bool UpdateAdopter(Adopter data);
+        bool InsertRecord(PetReport record);
         bool SelectRecord(DataTable data);
-        bool DeleteRecord();
+        bool DeleteRecord(int id);
         bool UpdateRecord(PetReport petReport);
 
     }

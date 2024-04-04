@@ -1,4 +1,9 @@
-﻿using System;
+﻿using AMAC.Presenters;
+using AMAC.Views.AdopterManagement;
+using AMAC.Views.AnimalManagement;
+using DbManagmentAMAC.Models;
+using DbManagmentAMAC.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +21,11 @@ namespace AMAC
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            IAnimalManagementView view = new AnimalManagementView();
+            IRepository repository = new SqlServer("Server=ASUSTUF;Database=AMAC;Trusted_Connection=True;");
+            new AnimalManagementPresenter(view,repository);
+            Application.Run((Form)view);
         }
     }
 }

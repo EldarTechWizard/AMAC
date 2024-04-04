@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AMAC.Views.FormatManagement.FormatManagementView
+namespace AMAC.Views.FormatManagement
 {
     public partial class FormatManagementView : DevExpress.XtraEditors.XtraForm, IFormatManagementView
     {
