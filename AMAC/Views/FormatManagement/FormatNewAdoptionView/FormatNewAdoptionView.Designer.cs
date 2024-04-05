@@ -174,7 +174,7 @@
             this.btnClearField.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClearField.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnClearField.ForeColor = System.Drawing.Color.White;
-            this.btnClearField.Location = new System.Drawing.Point(41, 132);
+            this.btnClearField.Location = new System.Drawing.Point(28, 132);
             this.btnClearField.Margin = new System.Windows.Forms.Padding(4);
             this.btnClearField.Name = "btnClearField";
             this.btnClearField.Size = new System.Drawing.Size(162, 64);
@@ -188,7 +188,7 @@
             this.btnGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGenerate.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnGenerate.ForeColor = System.Drawing.Color.White;
-            this.btnGenerate.Location = new System.Drawing.Point(211, 132);
+            this.btnGenerate.Location = new System.Drawing.Point(222, 132);
             this.btnGenerate.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(162, 64);
@@ -201,7 +201,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(402, 153);
+            this.label10.Location = new System.Drawing.Point(444, 153);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(138, 23);
             this.label10.TabIndex = 289;

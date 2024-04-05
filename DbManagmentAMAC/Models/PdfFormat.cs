@@ -8,20 +8,16 @@ namespace DbManagmentAMAC.Models
 {
     public class PdfFormat 
     {
-        private PetReport report;
-        private Adopter adopter;
-        private string adoptionName;
+        private int animalId;
+        private int adopterId;
+        private DateTime adoptionDate;
         private string volunter;
         public PdfFormat() { }
-        public PdfFormat(PetReport petReport, Adopter adopter) 
-        {
-            this.report = petReport;
-            this.adopter = adopter;
-        }
 
-        public PetReport Report { get => report; set => report = value; }
-        public Adopter Adopter { get => adopter; set => adopter = value; }
-        public string AdoptionName { get => adoptionName; set => adoptionName = value; }
+
+        public int AnimalId { get => animalId; set => animalId = value; }
+        public int AdopterId { get => adopterId; set => adopterId = value; }
+        public DateTime AdoptionDate { get => adoptionDate; set => adoptionDate = value; }
         public string Volunter { get => volunter; set => volunter = value; }
     }
 }

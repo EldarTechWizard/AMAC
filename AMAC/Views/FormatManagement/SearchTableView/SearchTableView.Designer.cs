@@ -30,16 +30,18 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tbFilterText = new DevExpress.XtraEditors.TextEdit();
             this.label14 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
-            this.dgvData = new System.Windows.Forms.DataGridView();
-            this.tbFilterText = new DevExpress.XtraEditors.TextEdit();
+            this.dgvData = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbFilterText.Properties)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbFilterText.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -68,6 +70,13 @@
             this.panel1.Size = new System.Drawing.Size(803, 135);
             this.panel1.TabIndex = 1;
             // 
+            // tbFilterText
+            // 
+            this.tbFilterText.Location = new System.Drawing.Point(118, 66);
+            this.tbFilterText.Name = "tbFilterText";
+            this.tbFilterText.Size = new System.Drawing.Size(626, 22);
+            this.tbFilterText.TabIndex = 313;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -83,8 +92,8 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnClose);
             this.panel2.Controls.Add(this.dgvData);
+            this.panel2.Controls.Add(this.btnClose);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 144);
             this.panel2.Name = "panel2";
@@ -107,21 +116,21 @@
             // 
             // dgvData
             // 
-            this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvData.Location = new System.Drawing.Point(0, 0);
+            this.dgvData.MainView = this.gridView1;
             this.dgvData.Name = "dgvData";
-            this.dgvData.RowHeadersWidth = 51;
-            this.dgvData.RowTemplate.Height = 24;
             this.dgvData.Size = new System.Drawing.Size(803, 571);
-            this.dgvData.TabIndex = 0;
+            this.dgvData.TabIndex = 314;
+            this.dgvData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
             // 
-            // tbFilterText
+            // gridView1
             // 
-            this.tbFilterText.Location = new System.Drawing.Point(118, 66);
-            this.tbFilterText.Name = "tbFilterText";
-            this.tbFilterText.Size = new System.Drawing.Size(626, 22);
-            this.tbFilterText.TabIndex = 313;
+            this.gridView1.GridControl = this.dgvData;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.OptionsView.ShowIndicator = false;
             // 
             // SearchTableView
             // 
@@ -135,9 +144,10 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbFilterText.Properties)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbFilterText.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -148,8 +158,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridView dgvData;
         private System.Windows.Forms.Button btnClose;
         private DevExpress.XtraEditors.TextEdit tbFilterText;
+        private DevExpress.XtraGrid.GridControl dgvData;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }
 }

@@ -128,11 +128,15 @@
             // 
             // pdfViewer1
             // 
+            this.pdfViewer1.AllowCommentFiltering = false;
+            this.pdfViewer1.AllowCommentReplies = false;
+            this.pdfViewer1.AllowCommentSorting = false;
             this.pdfViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pdfViewer1.Location = new System.Drawing.Point(0, 0);
             this.pdfViewer1.Name = "pdfViewer1";
             this.pdfViewer1.Size = new System.Drawing.Size(943, 800);
             this.pdfViewer1.TabIndex = 281;
+            this.pdfViewer1.ZoomMode = DevExpress.XtraPdfViewer.PdfZoomMode.FitToVisible;
             // 
             // FormatPreviewView
             // 
@@ -142,6 +146,7 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormatPreviewView";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VistaPrevia";
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);

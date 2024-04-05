@@ -16,8 +16,8 @@ namespace AMAC.Presenters
         private IFormatNewAdoptionView view;
         private IRepository repository;
 
-        private DataTable AnimalData;
-        private DataTable AdopterData;
+        private DataTable AnimalData = new DataTable();
+        private DataTable AdopterData = new DataTable();
         public FormatNewAdoptionPresenter(IFormatNewAdoptionView view, IRepository repository)
         {
             this.view = view;
@@ -34,7 +34,10 @@ namespace AMAC.Presenters
             view.OnClickClearFieldsButton += OnClickClearFieldsButton;
             view.OnClickSearchAnimalPictureEdit += OnClickSearchAnimalPictureEdit;
             view.OnClickSearchAdopterPictureEdit += OnClickSearchAdopterPictureEdit;
+
         }
+
+
 
         private void OnLoadForm(object sender, EventArgs e)
         {
@@ -72,8 +75,71 @@ namespace AMAC.Presenters
 
         private void OnClickGenerateNewAdoptionFormatButton(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            try
+            {
+                PdfGenerator generator = GetGeneratorWithAtributtes();
+                if(!view.OpenPreviewTab(generator)) return;
+
+                view.SavePdf();
+                InsertFormatIntoDataBase();
+                MessageBox.Show("Correcto");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+
+        private PdfGenerator GetGeneratorWithAtributtes()
+        {
+            Animal animal = new Animal()
+            {
+                Id = view.AnimalId,
+                Name = view.AnimalName,
+                Age = view.AnimalAge,
+                Sex = view.AnimalSex,
+                AnimalType = view.AnimalType,
+                AnimalBreed = view.AnimalBreed,
+                Sterilized = view.AnimalSterilized,
+                AdditionalInformation = view.AnimalAdditionalInformation,
+                Status = view.AnimalStatus,                      
+            };
+
+            Adopter adopter = new Adopter()
+            {
+                Id = view.AdopterId,
+                Name = view.AdopterNamA,
+                Address = view.AdopterAddress,
+                Age = view.AdopterAge,
+                Email = view.AdopterEmail,
+                Number = view.AdopterNumber,
+            };
+
+            PdfFormat pdfFormat = new PdfFormat()
+            {
+                AnimalId = view.AnimalId,
+                AdopterId = view.AdopterId,
+                AdoptionDate = view.AdoptionDate,
+                Volunter = view.VolunterName         
+            };
+
+            return new PdfGenerator(animal, adopter, pdfFormat);
+        }
+
+        private void InsertFormatIntoDataBase()
+        {
+            PdfFormat format = new PdfFormat()
+            {
+                AdopterId = view.AdopterId,
+                AnimalId = view.AnimalId,
+                AdoptionDate = view.AdoptionDate,
+                Volunter = view.VolunterName
+            };
+
+            if (!repository.InsertPdfFormat(format)) throw new Exception(repository.LastError);
+        }
+
+        
 
         private void OnChangeAdopterIdTextBox(object sender, EventArgs e)
         {
@@ -105,7 +171,7 @@ namespace AMAC.Presenters
         {
             try
             {
-                DataRow row = AnimalData.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAnimal") == (int)view.Id);
+                DataRow row = AnimalData.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAnimal") == (int)view.AdopterId);
 
                 if (row != null)
                 {

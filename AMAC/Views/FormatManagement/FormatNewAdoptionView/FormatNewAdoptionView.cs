@@ -1,9 +1,13 @@
-﻿using DevExpress.XtraEditors;
+﻿using AMAC.Presenters;
+using AMAC.Views.FormatManagement.FormatPreviewView;
+using DevExpress.Utils.CommonDialogs;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +35,21 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
         }
         public string AnimalName { get => tbAnimalId.Text; set => tbAnimalId.Text = value; }
         public string AnimalBreed { get => tbAnimalBreed.Text; set => tbAnimalBreed.Text = value; }
-        public int AnimalAge { get => int.Parse(tbAnimalAge.Text); set => tbAnimalAge.Text = value.ToString(); }
+        public int AnimalAge 
+        {
+            get
+            {
+                int value = 0;
+
+                if (int.TryParse(tbAnimalAge.Text, out value))
+                {
+                    return value;
+                }
+
+                return -1;
+            }
+            set => tbAnimalAge.Text = value.ToString(); 
+        }
         public string AnimalSex { get => tbAnimalSex.Text; set => tbAnimalSex.Text = value; }
         public bool AnimalSterilized { get => chbSterilized.Checked; set => chbSterilized.Checked = value; }
         public string AnimalType { get => tbAnimalType.Text; set => tbAnimalType.Text = value; }
@@ -54,7 +72,20 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
             set => tbAdopterId.Text = value.ToString();
         }
         public string AdopterNamA { get => tbAdopterName.Text; set => tbAdopterName.Text = value; }
-        public int AdopterAge { get => int.Parse(tbAdopterAge.Text); set => tbAdopterAge.Text = value.ToString(); }
+        public int AdopterAge {
+            get
+            {
+                int value = 0;
+
+                if (int.TryParse(tbAnimalAge.Text, out value))
+                {
+                    return value;
+                }
+
+                return -1;
+            }
+
+            set => tbAdopterAge.Text = value.ToString(); }
         public string AdopterAddress { get => tbAdopterAddress.Text; set => tbAdopterAddress.Text = value; }
         public string AdopterNumber { get => tbAdopterNumber.Text; set => tbAdopterNumber.Text = value; }
         public string AdopterEmail { get => tbAdopterEmail.Text; set => tbAdopterEmail.Text = value; }
@@ -68,6 +99,7 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
         public event EventHandler OnChangeAnimalIdTextBox;
         public event EventHandler OnChangeAdopterIdTextBox;
         public event EventHandler OnLoadForm;
+
 
         public FormatNewAdoptionView()
         {
@@ -112,6 +144,37 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
             tbAnimalStatus.Text = string.Empty;
             tbAnimalAge.Text = string.Empty;
             tbAnimalAdditionalInformation.Text = string.Empty;
+        }
+
+        public void SavePdf()
+        {
+            string path = "";
+
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.InitialDirectory = @"C:\";
+            saveFileDialog1.Title = "Save";
+            saveFileDialog1.DefaultExt = "pdf";
+            saveFileDialog1.RestoreDirectory = true;
+            saveFileDialog1.FileName = "Formato de adopcion";
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                path = saveFileDialog1.FileName;
+
+                File.Copy("temp.pdf", path);
+            }
+
+
+        }
+
+        public bool OpenPreviewTab(PdfGenerator generator)
+        {
+            IFormatPreviewView view = new FormatPreviewView.FormatPreviewView();
+            new FormatPreviewPresenter(view, generator);
+            Form temp = (Form)view;
+            temp.ShowDialog();
+
+            return view.IsCorrect;
         }
     }
 }

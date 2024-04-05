@@ -1,4 +1,4 @@
-﻿using AMAC.Views.FormatManagement.FormatManagementView;
+﻿
 using AMAC.Views.FormatManagement.SearchTableView;
 using DbManagmentAMAC.Models;
 using System;

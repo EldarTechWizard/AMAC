@@ -1,6 +1,5 @@
 ﻿using AMAC.Views.AdopterManagement;
 using AMAC.Views.AnimalManagement;
-using AMAC.Views.FormatManagement.FormatManagementView;
 using AMAC.Views.Main;
 using AMAC.Views.RecordManagement;
 using DbManagmentAMAC.Models;
@@ -58,9 +57,10 @@ namespace AMAC.Presenters
 
                     break;
                 case "Format":
+                    /*
                     IFormatManagementView formatTab = null;
                     new FormatManagementPresenter(formatTab, repository);
-                    tab = (Form)formatTab;
+                    tab = (Form)formatTab;*/
 
                     break;
                 case "Record":

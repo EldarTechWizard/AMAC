@@ -22,5 +22,9 @@ namespace DbManagmentAMAC.Models
         bool DeleteRecord(int id);
         bool UpdateRecord(PetReport petReport);
 
+        bool InsertPdfFormat(PdfFormat format);
+        bool DeletePdfFormat(int id);
+        bool UpdatePdfFormat(PdfFormat format);
+
     }
 }

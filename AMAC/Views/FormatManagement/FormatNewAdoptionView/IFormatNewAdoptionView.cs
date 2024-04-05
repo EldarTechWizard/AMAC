@@ -40,9 +40,13 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
         event EventHandler OnClickSearchAdopterPictureEdit;
         event EventHandler OnChangeAnimalIdTextBox;
         event EventHandler OnChangeAdopterIdTextBox;
+ 
 
+        void SavePdf();
         void ClearFields();
         void ClearAdopterFields();
         void ClearAnimalFields();
+
+        bool OpenPreviewTab(PdfGenerator generator);
     }
 }

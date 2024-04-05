@@ -296,6 +296,44 @@ namespace DbManagmentAMAC.Repository
             }
         }
 
-       
+        public bool InsertPdfFormat(PdfFormat format)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "spInsertAdoptionFormPDF";
+                    cmd.CommandTimeout = 120;
+
+                    cmd.Parameters.AddWithValue("@idAnimal", format.AdopterId);
+                    cmd.Parameters.AddWithValue("@idAdopter", format.AnimalId);
+                    cmd.Parameters.AddWithValue("@volunteerInCharge", format.AnimalId);
+                    cmd.Parameters.AddWithValue("@adoptionDate", format.AdoptionDate);
+
+                    cmd.ExecuteNonQuery();
+
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                lastError = ex.Message;
+                return false;
+            }
+        }
+
+        public bool DeletePdfFormat(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool UpdatePdfFormat(PdfFormat format)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
