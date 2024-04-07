@@ -9,9 +9,6 @@ namespace AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateVolunter
     public interface IFormatUpdateVolunterView
     {
         string Volunter { get; set; }
-        string Date { get; set; }
-
-        event EventHandler OnClickSaveButton;
-        event EventHandler OnClickClearFieldsButton;
+        DateTime Date { get; set; }
     }
 }

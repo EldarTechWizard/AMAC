@@ -1,4 +1,5 @@
 ﻿using DbManagmentAMAC.Models;
+using Microsoft.SqlServer.Server;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -328,12 +329,85 @@ namespace DbManagmentAMAC.Repository
 
         public bool DeletePdfFormat(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "spDeleteAdoptionFormPDF";
+                    cmd.CommandTimeout = 120;
+
+                    cmd.Parameters.AddWithValue("@formId", id);
+
+
+                    cmd.ExecuteNonQuery();
+
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                lastError = ex.Message;
+                return false;
+            }
         }
 
         public bool UpdatePdfFormat(PdfFormat format)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.CommandText = "spUpdateAdoptionFormPDF";
+                    cmd.CommandTimeout =120 ;
+
+                    cmd.Parameters.AddWithValue("@formId",format.Id);
+                    cmd.Parameters.AddWithValue("@idAnimal", format.AnimalId);
+                    cmd.Parameters.AddWithValue("@idAdopter", format.AdopterId);
+                    cmd.Parameters.AddWithValue("@volunteerInCharge", format.Volunter);
+                    cmd.Parameters.AddWithValue("@adoptionDate", format.AdoptionDate);
+
+
+                    cmd.ExecuteNonQuery();
+
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                lastError = ex.Message;
+                return false;
+            }
+        }
+
+        public bool SelectPdfFormat(DataTable data)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.CommandText = $"Select * from adoptionFormatView";
+                    data.Load(cmd.ExecuteReader());
+                }
+
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                lastError = ex.Message;
+                return false;
+            }
         }
     }
 }

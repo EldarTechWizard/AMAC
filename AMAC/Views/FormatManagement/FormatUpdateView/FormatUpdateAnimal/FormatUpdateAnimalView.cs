@@ -1,4 +1,6 @@
-﻿using DevExpress.XtraEditors;
+﻿using AMAC.Presenters;
+using AMAC.Views.FormatManagement.SearchTableView;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,17 +15,49 @@ namespace AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateAnimal
 {
     public partial class FormatUpdateAnimalView : DevExpress.XtraEditors.XtraForm, IFormatUpdateAnimalView
     {
-        private int id;
-        public int Id { get => id; set => id = value; }
+
+        public int Id
+        {
+            get
+            {
+                int value = 0;
+
+                if (int.TryParse(tbId.Text, out value))
+                {
+                    return value;
+                }
+
+                return -1;
+            }
+
+            set => tbId.Text = value.ToString();
+        }
         public string NameA { get => tbName.Text; set => tbName.Text = value; }
         public string AnimalType { get => tbAnimalType.Text; set => tbAnimalType.Text = value; }
         public string AnimalBreed { get => tbAnimalBreed.Text; set => tbAnimalBreed.Text = value; }
-        public string Sex { get => cbSex.Text; set => cbSex.Text = value; }
+        public string Sex { get => tbSex.Text; set => tbSex.Text = value; }
         public bool Sterilized { get => chbSterilized.Checked; set => chbSterilized.Checked = value; }
         public string AdditionalInformation { get => tbAdditionalInformation.Text; set => tbAdditionalInformation.Text = value; }
+        public int Age
+        {
+            get
+            {
+                int value = 0;
 
-        public event EventHandler OnClickSaveButton;
-        public event EventHandler OnClickClearFieldsButton;
+                if (int.TryParse(tbAge.Text, out value))
+                {
+                    return value;
+                }
+
+                return -1;
+            }
+            set => tbAge.Text = value.ToString();
+        }
+        public string Status { get => tbStatus.Text; set => tbStatus.Text = value; }
+
+        public event EventHandler OnChangeAdopterIdTextBox;
+        public event EventHandler OnClickSearchAdopterPictureEdit;
+
         public FormatUpdateAnimalView()
         {
             InitializeComponent();
@@ -32,24 +66,31 @@ namespace AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateAnimal
 
         private void AssociateAndRaisedEvents()
         {
-            btnSave.Click += delegate { OnClickSaveButton.Invoke(btnSave, EventArgs.Empty); };
-            btnClearFields.Click += delegate { OnClickClearFieldsButton.Invoke(btnSave, EventArgs.Empty); };
+            tbId.TextChanged += delegate { OnChangeAdopterIdTextBox.Invoke(tbId, EventArgs.Empty); };
+            peSeachAnimal.Click += delegate { OnClickSearchAdopterPictureEdit.Invoke(peSeachAnimal, EventArgs.Empty); };
         }
 
-        
+       
 
-        public void LoadFields()
+        public DataRow OpenSearchTableTab(DataTable data)
         {
-            throw new NotImplementedException();
+            ISearchTableView view = new SearchTableView.SearchTableView();
+            new SearchTablePresenter(view, data);
+            Form temp = (Form)view;
+            temp.ShowDialog();
+
+            return view.DataRow;
         }
 
-        private void ModificarDoc_Mascota_SizeChanged(object sender, EventArgs e)
+        public void ClearAnimalFields()
         {
-            if (this.Parent != null)
-            {
-                this.Size = this.Parent.Size;
-                this.Location = new System.Drawing.Point(0, 0);
-            }
+            tbAnimalType.Text = string.Empty;
+            tbSex.Text = string.Empty;
+            tbAnimalBreed.Text = string.Empty;
+            tbAnimalType.Text = string.Empty;
+            tbStatus.Text = string.Empty;
+            tbAge.Text = string.Empty;
+            tbAdditionalInformation.Text = string.Empty;
         }
     }
 }

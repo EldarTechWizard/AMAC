@@ -3,37 +3,72 @@ using AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateVolunter;
 using DbManagmentAMAC.Models;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AMAC.Presenters
 {
     public class FormatUpdateAdopterPresenter
     {
         private IFormatUpdateAdopterView view;
-        private IRepository repository;
-        public FormatUpdateAdopterPresenter(IFormatUpdateAdopterView view, IRepository repository)
+        private DataTable adopters;
+        public FormatUpdateAdopterPresenter(IFormatUpdateAdopterView view, DataTable data)
         {
             this.view = view;
-            this.repository = repository;
+            this.adopters = data;
             AssociateAndRaisedEvents();
         }
 
         private void AssociateAndRaisedEvents()
         {
-            view.OnClickSaveButton += OnClickSaveButton;
-            view.OnClickClearFieldsButton += OnClickClearFieldsButton;
+            view.OnClickSearchAdopterPictureEdit += OnClickSearchAdopterPictureEdit;
+            view.OnChangeAdopterIdTextBox += OnChangeAdopterIdTextBox;
         }
 
-        private void OnClickClearFieldsButton(object sender, EventArgs e)
+        private void OnChangeAdopterIdTextBox(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            try
+            {
+                DataRow row = adopters.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAdopter") == (int)view.Id);
+
+                if (row == null)
+                {
+                    view.ClearAdopterFields();
+                    return;
+                }
+
+                LoadAdopterFields(row);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
-        private void OnClickSaveButton(object sender, EventArgs e)
+        private void LoadAdopterFields(DataRow row)
         {
-            throw new NotImplementedException();
+            view.NameA = (string)row["name"];
+            view.Age = (int)row["age"];
+            view.Email = (string)row["email"];
+            view.Address = (string)row["address"];
+            view.Number = (string)row["phone"];
+        }
+        private void OnClickSearchAdopterPictureEdit(object sender, EventArgs e)
+        {
+            try
+            {
+                DataRow row = view.OpenSearchTableTab(adopters);
+                if (row == null) return;
+
+                view.Id = (int)row["idAdopter"];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

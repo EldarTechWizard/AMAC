@@ -194,11 +194,11 @@ namespace AMAC.Presenters
         {
             view.AnimalName = (string)row["name"];
             view.AnimalAge = (int)row["age"];
-            view.AnimalAge = (int)row["age"];
             view.AnimalSex = (string)row["sex"];
             view.AnimalBreed = (string)row["breed"];
             view.AnimalType = (string)row["animalType"];
             view.AnimalStatus = (string)row["status"];
+            view.AnimalSterilized = (bool)row["sterilized"];
             view.AnimalAdditionalInformation = (string)row["additionalInformation"];
         }
 

@@ -8,6 +8,7 @@ namespace DbManagmentAMAC.Models
 {
     public class PdfFormat 
     {
+        private int id;
         private int animalId;
         private int adopterId;
         private DateTime adoptionDate;
@@ -19,5 +20,6 @@ namespace DbManagmentAMAC.Models
         public int AdopterId { get => adopterId; set => adopterId = value; }
         public DateTime AdoptionDate { get => adoptionDate; set => adoptionDate = value; }
         public string Volunter { get => volunter; set => volunter = value; }
+        public int Id { get => id; set => id = value; }
     }
 }

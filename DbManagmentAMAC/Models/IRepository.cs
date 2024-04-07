@@ -23,6 +23,7 @@ namespace DbManagmentAMAC.Models
         bool UpdateRecord(PetReport petReport);
 
         bool InsertPdfFormat(PdfFormat format);
+        bool SelectPdfFormat(DataTable data);
         bool DeletePdfFormat(int id);
         bool UpdatePdfFormat(PdfFormat format);
 

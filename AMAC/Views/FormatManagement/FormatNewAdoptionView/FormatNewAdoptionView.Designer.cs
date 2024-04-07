@@ -76,6 +76,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -104,6 +105,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbAnimalSex.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAnimalBreed.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAnimalType.Properties)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -117,18 +119,21 @@
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.Control;
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel5, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.69347F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.01842F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.28811F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 94F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1269, 693);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
@@ -136,9 +141,9 @@
             // 
             this.panel4.Controls.Add(this.groupControl3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 465);
+            this.panel4.Location = new System.Drawing.Point(3, 455);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1263, 225);
+            this.panel4.Size = new System.Drawing.Size(1263, 139);
             this.panel4.TabIndex = 2;
             // 
             // groupControl3
@@ -148,16 +153,13 @@
             this.groupControl3.Appearance.Options.UseBackColor = true;
             this.groupControl3.Appearance.Options.UseBorderColor = true;
             this.groupControl3.Controls.Add(this.tbVolunterName);
-            this.groupControl3.Controls.Add(this.btnClearField);
-            this.groupControl3.Controls.Add(this.btnGenerate);
-            this.groupControl3.Controls.Add(this.label10);
             this.groupControl3.Controls.Add(this.dtpDate);
             this.groupControl3.Controls.Add(this.label3);
             this.groupControl3.Controls.Add(this.label4);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1263, 225);
+            this.groupControl3.Size = new System.Drawing.Size(1263, 139);
             this.groupControl3.TabIndex = 291;
             this.groupControl3.Text = "Responsabilidades del Voluntario";
             // 
@@ -174,7 +176,7 @@
             this.btnClearField.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClearField.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnClearField.ForeColor = System.Drawing.Color.White;
-            this.btnClearField.Location = new System.Drawing.Point(28, 132);
+            this.btnClearField.Location = new System.Drawing.Point(38, 16);
             this.btnClearField.Margin = new System.Windows.Forms.Padding(4);
             this.btnClearField.Name = "btnClearField";
             this.btnClearField.Size = new System.Drawing.Size(162, 64);
@@ -188,7 +190,7 @@
             this.btnGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGenerate.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnGenerate.ForeColor = System.Drawing.Color.White;
-            this.btnGenerate.Location = new System.Drawing.Point(222, 132);
+            this.btnGenerate.Location = new System.Drawing.Point(232, 16);
             this.btnGenerate.Margin = new System.Windows.Forms.Padding(4);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(162, 64);
@@ -201,7 +203,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(444, 153);
+            this.label10.Location = new System.Drawing.Point(454, 37);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(138, 23);
             this.label10.TabIndex = 289;
@@ -250,7 +252,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 234);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1263, 225);
+            this.panel3.Size = new System.Drawing.Size(1263, 215);
             this.panel3.TabIndex = 1;
             // 
             // groupControl2
@@ -275,7 +277,7 @@
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1263, 225);
+            this.groupControl2.Size = new System.Drawing.Size(1263, 215);
             this.groupControl2.TabIndex = 264;
             this.groupControl2.Text = "Datos generales del Adoptante";
             // 
@@ -655,6 +657,17 @@
             this.label26.TabIndex = 239;
             this.label26.Text = "ID:";
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btnGenerate);
+            this.panel5.Controls.Add(this.btnClearField);
+            this.panel5.Controls.Add(this.label10);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(3, 600);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1263, 90);
+            this.panel5.TabIndex = 3;
+            // 
             // FormatNewAdoptionView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -695,6 +708,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbAnimalSex.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAnimalBreed.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAnimalType.Properties)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -748,5 +763,6 @@
         private System.Windows.Forms.Label label13;
         private DevExpress.XtraEditors.PictureEdit peSearchAdopter;
         private DevExpress.XtraEditors.PictureEdit peSeachAnimal;
+        private System.Windows.Forms.Panel panel5;
     }
 }

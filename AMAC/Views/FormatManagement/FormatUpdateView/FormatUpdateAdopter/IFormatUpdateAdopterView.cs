@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,12 +14,13 @@ namespace AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateAdopter
         int Age { get; set; }
         string Address { get; set; }
         string Email { get; set; }
-        string AdditionaInformation { get; set; }
+        string Number { get; set; }
 
-        event EventHandler OnClickSaveButton;
-        event EventHandler OnClickClearFieldsButton;
+        event EventHandler OnChangeAdopterIdTextBox;
+        event EventHandler OnClickSearchAdopterPictureEdit;
 
-        void ClearFields();
-        void LoadFields();
+        DataRow OpenSearchTableTab(DataTable data);
+        void ClearAdopterFields();
+
     }
 }
