@@ -1,5 +1,6 @@
 ﻿using AMAC.Presenters;
 using AMAC.Views.FormatManagement.FormatPreviewView;
+using AMAC.Views.FormatManagement.SearchTableView;
 using DevExpress.Utils.CommonDialogs;
 using DevExpress.XtraEditors;
 using System;
@@ -33,7 +34,7 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
 
             set => tbAnimalId.Text = value.ToString();
         }
-        public string AnimalName { get => tbAnimalId.Text; set => tbAnimalId.Text = value; }
+        public string AnimalName { get => tbAnimalName.Text; set => tbAnimalName.Text = value; }
         public string AnimalBreed { get => tbAnimalBreed.Text; set => tbAnimalBreed.Text = value; }
         public int AnimalAge 
         {
@@ -161,6 +162,11 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
             {
                 path = saveFileDialog1.FileName;
 
+                if(File.Exists(path))
+                {
+                    File.Delete(path);
+                }
+
                 File.Copy("temp.pdf", path);
             }
 
@@ -175,6 +181,16 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
             temp.ShowDialog();
 
             return view.IsCorrect;
+        }
+
+        public DataRow OpenSearchTableTab(DataTable data)
+        {
+            ISearchTableView view = new SearchTableView.SearchTableView();
+            new SearchTablePresenter(view, data);
+            Form temp = (Form)view;
+            temp.ShowDialog();
+
+            return view.DataRow;
         }
     }
 }

@@ -1,9 +1,11 @@
 ﻿using AMAC.Views.AdopterManagement;
 using AMAC.Views.AnimalManagement;
+using AMAC.Views.FormatManagement;
 using AMAC.Views.Main;
 using AMAC.Views.RecordManagement;
 using DbManagmentAMAC.Models;
 using DbManagmentAMAC.Repository;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,29 +40,29 @@ namespace AMAC.Presenters
 
         private void OnClickTabButtons(object sender, EventArgs e)
         {
-            string buttonTag = ((Button)sender).Tag.ToString();
+            string buttonTag = ((SimpleButton)sender).Tag.ToString();
 
             Form tab = null;
 
             switch (buttonTag)
             {
                 case "Animal":
-                    IAnimalManagementView animalTab = null;
+                    IAnimalManagementView animalTab = new AnimalManagementView();
                     new AnimalManagementPresenter(animalTab, repository);
                     tab = (Form)animalTab;
 
                     break;
                 case "Adopter":
-                    IAdopterManagementView adopterTab = null;
+                    IAdopterManagementView adopterTab = new AdopterManagementView();
                     new AdopterManagementPresenter(adopterTab, repository);
                     tab = (Form)adopterTab;
 
                     break;
                 case "Format":
-                    /*
-                    IFormatManagementView formatTab = null;
+                    
+                    IFormatManagementView formatTab = new FormatManagementView();
                     new FormatManagementPresenter(formatTab, repository);
-                    tab = (Form)formatTab;*/
+                    tab = (Form)formatTab;
 
                     break;
                 case "Record":

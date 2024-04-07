@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,7 +47,7 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
         void ClearFields();
         void ClearAdopterFields();
         void ClearAnimalFields();
-
         bool OpenPreviewTab(PdfGenerator generator);
+        DataRow OpenSearchTableTab(DataTable data);
     }
 }

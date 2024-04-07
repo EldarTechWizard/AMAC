@@ -164,26 +164,54 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
 
                             col.Item().Row(row =>
                             {
-                                row.RelativeItem().Text($"NOMBRE: {animal.Name}").FontSize(8).FontColor("#2F3872");
-                                row.RelativeItem().Text($"TIPO DE ANIMAL: {animal.AnimalType}").FontSize(8).FontColor("#2F3872"); ;
-                                row.RelativeItem().Text($"RAZA: {animal.AnimalBreed}").FontSize(8).FontColor("#2F3872");
+                                row.RelativeItem().Text(text =>
+                                {
+                                    text.Span($"NOMBRE: ").FontSize(8).FontColor("#2F3872");
+                                    text.Span($"{animal.Name}").FontSize(8).FontColor("#2F3872").Bold();
+                                });
+                                row.RelativeItem().Text(text =>
+                                {
+                                    text.Span($"TIPO DE ANIMAL: ").FontSize(8).FontColor("#2F3872");
+                                    text.Span($"{animal.AnimalType}").FontSize(8).FontColor("#2F3872").Bold();
+                                });
+                                row.RelativeItem().Text(text =>
+                                {
+                                    text.Span($"RAZA: ").FontSize(8).FontColor("#2F3872");
+                                    text.Span($"{animal.AnimalBreed}").FontSize(8).FontColor("#2F3872").Bold();
+                                });
                             });
 
                             string animalAge = (animal.Age == -1)? "" : animal.Age.ToString();
 
                             col.Item().Row(row =>
                             {
-                                row.RelativeItem().Text($"EDAD: {animalAge}").FontSize(8).FontColor("#2F3872");
-                                row.RelativeItem().Text($"SEXO: {animal.Sex}").FontSize(8).FontColor("#2F3872");
+                                row.RelativeItem().Text(text =>
+                                {
+                                    text.Span($"EDAD: ").FontSize(8).FontColor("#2F3872");
+                                    text.Span($"{animal.Age}").FontSize(8).FontColor("#2F3872").Bold();
+                                });
+                                row.RelativeItem().Text(text =>
+                                {
+                                    text.Span($"SEXO: ").FontSize(8).FontColor("#2F3872");
+                                    text.Span($"{animal.Sex}").FontSize(8).FontColor("#2F3872").Bold();
+                                });
 
                                 string s = (animal.Sterilized) ? "SI" : "NO";
 
-                                row.RelativeItem().Text($"ESTERILIZADO: {s}").FontSize(8).FontColor("#2F3872");
+                                row.RelativeItem().Text(text =>
+                                {
+                                    text.Span($"ESTERILIZADO: ").FontSize(8).FontColor("#2F3872");
+                                    text.Span($"{s}").FontSize(8).FontColor("#2F3872").Bold();
+                                });
                             });
 
                             col.Item().Row(row =>
                             {
-                                row.RelativeItem().Text($"INFORMACION ADICIONAL: {animal.AdditionalInformation}").FontSize(8).FontColor("#2F3872");
+                                row.RelativeItem().Text(text =>
+                                {
+                                    text.Span($"INFORMACION ADICIONAL: ").FontSize(8).FontColor("#2F3872");
+                                    text.Span($"{animal.AdditionalInformation}").FontSize(8).FontColor("#2F3872").Bold();
+                                });
                             });
 
                         });
@@ -222,29 +250,49 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
 
                             col.Item().Row(row =>
                             {
-                                row.RelativeItem().Text($"NOMBRE: {adopter.Name}").FontSize(8).FontColor("#2F3872");
+                                row.RelativeItem().Text(text => 
+                                {
+                                    text.Span($"NOMBRE: ").FontSize(8).FontColor("#2F3872");
+                                    text.Span($"{adopter.Name}").FontSize(8).FontColor("#2F3872").Bold();
+                                });
                             });
 
                             string adopterAge = (adopter.Age == -1) ? "" : adopter.Age.ToString();
 
                             col.Item().Row(row =>
                             {
-                                row.RelativeItem().Text($"EDAD: {adopterAge}").FontSize(8).FontColor("#2F3872");
+                                row.RelativeItem().Text(text =>
+                                {
+                                    text.Span($"EDAD: ").FontSize(8).FontColor("#2F3872");
+                                    text.Span($"{adopter.Age}").FontSize(8).FontColor("#2F3872").Bold();
+                                });
                             });
 
                             col.Item().Row(row =>
                             {
-                                row.RelativeItem().Text($"DOMICILIO: {adopter.Address}").FontSize(8).FontColor("#2F3872");
+                                row.RelativeItem().Text(text =>
+                                {
+                                    text.Span($"DOMICILIO: ").FontSize(8).FontColor("#2F3872");
+                                    text.Span($"{adopter.Address}").FontSize(8).FontColor("#2F3872").Bold();
+                                });
                             });
 
                             col.Item().Row(row =>
                             {
-                                row.RelativeItem().Text($"TELEFONO: {adopter.Number}").FontSize(8).FontColor("#2F3872");
+                                row.RelativeItem().Text(text =>
+                                {
+                                    text.Span($"TELEFONO: ").FontSize(8).FontColor("#2F3872");
+                                    text.Span($"{adopter.Number}").FontSize(8).FontColor("#2F3872").Bold();
+                                });
                             });
 
                             col.Item().Row(row =>
                             {
-                                row.RelativeItem().Text($"EMAIL: {adopter.Email}").FontSize(8).FontColor("#2F3872");
+                                row.RelativeItem().Text(text =>
+                                {
+                                    text.Span($"EMAIL: ").FontSize(8).FontColor("#2F3872");
+                                    text.Span($"{adopter.Email}").FontSize(8).FontColor("#2F3872").Bold();
+                                });
                             });
 
                         });
@@ -298,9 +346,13 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
                             {
                                 row.RelativeItem()
                                     .PaddingTop(1)
-                                    .Text($"-El (la) adoptante se compromete a dar el animal buena alimentacion; convivir con el animalito, atenciones que requiera; darle un lugar adecuado: seguro, protegido del frio, lluvia o sol, etc, donde vivir.{Environment.NewLine}-La mascota {animal.Name} recibira siempre la atencion medica necesaria; y estos gastos son a partir de hoy, a cargo del adoptante, salvo otros acuerdos (especificar)________________________________")
-                                    .FontSize(8)
-                                    .FontColor("#2F3872");
+                                    .Text(text =>
+                                    {
+                                        text.Span($"-El (la) adoptante se compromete a dar el animal buena alimentacion; convivir con el animalito, atenciones que requiera; darle un lugar adecuado: seguro, protegido del frio, lluvia o sol, etc, donde vivir.{Environment.NewLine}-La mascota ").FontSize(8).FontColor("#2F3872");
+                                        text.Span($"{animal.Name}").FontSize(8).Bold().FontColor("#2F3872");
+                                        text.Span($" recibira siempre la atencion medica necesaria; y estos gastos son a partir de hoy, a cargo del adoptante, salvo otros acuerdos (especificar)________________________________").FontSize(8).FontColor("#2F3872");
+                                    });
+       
                             });
 
                             col.Item().Row(row =>
@@ -381,9 +433,17 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
                            {
                                row.RelativeItem()
                                    .PaddingTop(1)
-                                   .Text($"Guasave, Sin, a {pdfFormat.AdoptionDate.Day} de {pdfFormat.AdoptionDate.ToString("MMMM")} de {pdfFormat.AdoptionDate.Year} ")
-                                   .FontSize(8)
-                                   .FontColor("#2F3872");
+                                   .Text(text =>
+                                   {
+                                       text.Span("Guasave, Sin, a ").FontSize(8).FontColor("#2F3872");
+                                       text.Span($"{pdfFormat.AdoptionDate.Day}").FontSize(8).FontColor("#2F3872").Bold();
+                                       text.Span($" de ").FontSize(8).FontColor("#2F3872");
+                                       text.Span($"{pdfFormat.AdoptionDate.ToString("MMMM")}").FontSize(8).FontColor("#2F3872").Bold();
+                                       text.Span($" de ").FontSize(8).FontColor("#2F3872");
+                                       text.Span($"{pdfFormat.AdoptionDate.Year}").FontSize(8).FontColor("#2F3872").Bold();
+                                   });
+                                   
+                                   
                            });
 
                            col.Item()

@@ -309,8 +309,8 @@ namespace DbManagmentAMAC.Repository
                     cmd.CommandText = "spInsertAdoptionFormPDF";
                     cmd.CommandTimeout = 120;
 
-                    cmd.Parameters.AddWithValue("@idAnimal", format.AdopterId);
-                    cmd.Parameters.AddWithValue("@idAdopter", format.AnimalId);
+                    cmd.Parameters.AddWithValue("@idAnimal", format.AnimalId);
+                    cmd.Parameters.AddWithValue("@idAdopter", format.AdopterId);
                     cmd.Parameters.AddWithValue("@volunteerInCharge", format.AnimalId);
                     cmd.Parameters.AddWithValue("@adoptionDate", format.AdoptionDate);
 

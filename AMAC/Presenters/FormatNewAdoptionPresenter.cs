@@ -146,20 +146,15 @@ namespace AMAC.Presenters
             try
             {
   
-                DataRow row = AnimalData.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAdopter") == (int)view.AnimalId);
+                DataRow row = AdopterData.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAdopter") == (int)view.AdopterId);
 
-                if (row != null)
+                if (row == null) 
                 {
-                    view.AdopterNamA = (string)row["name"];
-                    view.AdopterAge = (int)row["age"];
-                    view.AdopterEmail = (string)row["email"];
-                    view.AdopterAddress = (string)row["address"];
-                    view.AdopterNumber = (string)row["phone"];
-
+                    view.ClearAdopterFields();
                     return;
                 }
 
-                view.ClearAdopterFields();
+                LoadAdopterFields(row);
             }
             catch (Exception ex)
             {
@@ -167,27 +162,27 @@ namespace AMAC.Presenters
             }
         }
 
+        private void LoadAdopterFields(DataRow row)
+        {
+            view.AdopterNamA = (string)row["name"];
+            view.AdopterAge = (int)row["age"];
+            view.AdopterEmail = (string)row["email"];
+            view.AdopterAddress = (string)row["address"];
+            view.AdopterNumber = (string)row["phone"];
+        }
         private void OnChangeAnimalIdTextBox(object sender, EventArgs e)
         {
             try
             {
-                DataRow row = AnimalData.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAnimal") == (int)view.AdopterId);
+                DataRow row = AnimalData.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAnimal") == (int)view.AnimalId);
 
-                if (row != null)
+                if (row == null)
                 {
-                    view.AnimalName = (string)row["name"];
-                    view.AnimalAge = (int)row["age"];
-                    view.AnimalAge = (int)row["age"];
-                    view.AnimalSex = (string)row["sex"];
-                    view.AnimalBreed = (string)row["breed"];
-                    view.AnimalType = (string)row["animalType"];
-                    view.AnimalStatus = (string)row["status"];
-                    view.AnimalAdditionalInformation = (string)row["additionalInformation"];
-
+                    view.ClearAnimalFields();
                     return;
                 }
 
-                view.ClearAnimalFields();
+                LoadAnimalFields(row);
             }
             catch (Exception ex)
             {
@@ -195,14 +190,47 @@ namespace AMAC.Presenters
             }
         }
 
+        private void LoadAnimalFields(DataRow row)
+        {
+            view.AnimalName = (string)row["name"];
+            view.AnimalAge = (int)row["age"];
+            view.AnimalAge = (int)row["age"];
+            view.AnimalSex = (string)row["sex"];
+            view.AnimalBreed = (string)row["breed"];
+            view.AnimalType = (string)row["animalType"];
+            view.AnimalStatus = (string)row["status"];
+            view.AnimalAdditionalInformation = (string)row["additionalInformation"];
+        }
+
         private void OnClickSearchAdopterPictureEdit(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            try
+            {
+                DataRow row = view.OpenSearchTableTab(AdopterData);
+                if (row == null) return;
+
+                view.AdopterId = (int)row["idAdopter"];             
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void OnClickSearchAnimalPictureEdit(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            try
+            {
+                DataRow row = view.OpenSearchTableTab(AnimalData);
+                if (row == null) return;
+
+                view.AnimalId = (int)row["idAnimal"];
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

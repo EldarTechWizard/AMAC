@@ -570,6 +570,7 @@
             // chbSterilized
             // 
             this.chbSterilized.AutoSize = true;
+            this.chbSterilized.Enabled = false;
             this.chbSterilized.Location = new System.Drawing.Point(551, 185);
             this.chbSterilized.Name = "chbSterilized";
             this.chbSterilized.Size = new System.Drawing.Size(18, 17);

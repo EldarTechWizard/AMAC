@@ -30,14 +30,17 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbColumns = new DevExpress.XtraEditors.LookUpEdit();
+            this.label1 = new System.Windows.Forms.Label();
             this.tbFilterText = new DevExpress.XtraEditors.TextEdit();
             this.label14 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnClose = new System.Windows.Forms.Button();
             this.dgvData = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.btnClose = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbColumns.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbFilterText.Properties)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
@@ -62,6 +65,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cbColumns);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.tbFilterText);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -70,11 +75,35 @@
             this.panel1.Size = new System.Drawing.Size(803, 135);
             this.panel1.TabIndex = 1;
             // 
+            // cbColumns
+            // 
+            this.cbColumns.EditValue = " ";
+            this.cbColumns.Location = new System.Drawing.Point(520, 66);
+            this.cbColumns.Name = "cbColumns";
+            this.cbColumns.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbColumns.Properties.NullText = "";
+            this.cbColumns.Size = new System.Drawing.Size(258, 22);
+            this.cbColumns.TabIndex = 316;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(516, 40);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(184, 23);
+            this.label1.TabIndex = 315;
+            this.label1.Text = "DE LA COLUMNA:";
+            // 
             // tbFilterText
             // 
-            this.tbFilterText.Location = new System.Drawing.Point(118, 66);
+            this.tbFilterText.Location = new System.Drawing.Point(28, 66);
             this.tbFilterText.Name = "tbFilterText";
-            this.tbFilterText.Size = new System.Drawing.Size(626, 22);
+            this.tbFilterText.Size = new System.Drawing.Size(453, 22);
             this.tbFilterText.TabIndex = 313;
             // 
             // label14
@@ -83,12 +112,12 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label14.Location = new System.Drawing.Point(10, 65);
+            this.label14.Location = new System.Drawing.Point(24, 40);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(101, 23);
+            this.label14.Size = new System.Drawing.Size(221, 23);
             this.label14.TabIndex = 311;
-            this.label14.Text = "FILTRAR:";
+            this.label14.Text = "FILTRAR POR TEXTO:";
             // 
             // panel2
             // 
@@ -99,20 +128,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(803, 571);
             this.panel2.TabIndex = 2;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClose.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(4, 503);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(162, 64);
-            this.btnClose.TabIndex = 313;
-            this.btnClose.Text = "REGRESAR";
-            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // dgvData
             // 
@@ -129,8 +144,28 @@
             // 
             this.gridView1.GridControl = this.dgvData;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsBehavior.KeepGroupExpandedOnSorting = false;
+            this.gridView1.OptionsCustomization.AllowColumnMoving = false;
+            this.gridView1.OptionsCustomization.AllowGroup = false;
+            this.gridView1.OptionsMenu.EnableColumnMenu = false;
+            this.gridView1.OptionsSelection.UseIndicatorForSelection = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.OptionsView.ShowIndicator = false;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClose.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.btnClose.ForeColor = System.Drawing.Color.White;
+            this.btnClose.Location = new System.Drawing.Point(4, 503);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(162, 64);
+            this.btnClose.TabIndex = 313;
+            this.btnClose.Text = "REGRESAR";
+            this.btnClose.UseVisualStyleBackColor = false;
             // 
             // SearchTableView
             // 
@@ -138,12 +173,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 718);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "SearchTableView";
             this.Text = "BuscarEnTabla";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbColumns.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbFilterText.Properties)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
@@ -162,5 +198,7 @@
         private DevExpress.XtraEditors.TextEdit tbFilterText;
         private DevExpress.XtraGrid.GridControl dgvData;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraEditors.LookUpEdit cbColumns;
     }
 }

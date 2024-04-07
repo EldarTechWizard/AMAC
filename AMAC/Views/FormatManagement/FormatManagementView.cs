@@ -32,9 +32,9 @@ namespace AMAC.Views.FormatManagement
         public void ChangeTab(Form tab)
         {
             panel1.Controls.Clear();
-            if (tab != null)
+            if (currentTab != null)
             {
-                tab.Close();
+                currentTab.Close();
             }
             tab.TopLevel = false;
             currentTab = tab;

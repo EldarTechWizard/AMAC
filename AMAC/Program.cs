@@ -2,6 +2,7 @@
 using AMAC.Views.AdopterManagement;
 using AMAC.Views.AnimalManagement;
 using AMAC.Views.FormatManagement.FormatNewAdoptionView;
+using AMAC.Views.Main;
 using DbManagmentAMAC.Models;
 using DbManagmentAMAC.Repository;
 using QuestPDF.Infrastructure;
@@ -24,9 +25,9 @@ namespace AMAC
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             QuestPDF.Settings.License = LicenseType.Community;
-            IFormatNewAdoptionView view = new FormatNewAdoptionView();
+            IMainView view = new MainView();
             IRepository repository = new SqlServer("Server=ASUSTUF;Database=AMAC;Trusted_Connection=True;");
-            new FormatNewAdoptionPresenter(view,repository);
+            new MainPresenter(view,repository);
             Application.Run((Form)view);
         }
     }
