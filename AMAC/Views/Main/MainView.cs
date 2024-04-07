@@ -22,10 +22,6 @@ namespace AMAC.Views.Main
         public string UserName { get => userName; set => userName = value; }
 
         public event EventHandler OnLoadMain;
-        public event EventHandler OnClickAdopterManagementButton;
-        public event EventHandler OnClickAnimalManagementButton;
-        public event EventHandler OnClickFormatManagementButton;
-        public event EventHandler OnClickRecordManagementButton;
         public event EventHandler OnClickCloseSesionButton;
         public event EventHandler OnClickTabButtons;
 

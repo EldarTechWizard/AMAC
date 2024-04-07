@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateAdopter
+namespace AMAC.Views.FormatManagement.FormatControls.FormatAdopterView
 {
-    public interface IFormatUpdateAdopterView
+    public interface IFormatAdopterView
     {
         int Id { get; set; }
         string NameA { get; set; }
@@ -21,6 +21,5 @@ namespace AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateAdopter
 
         DataRow OpenSearchTableTab(DataTable data);
         void ClearAdopterFields();
-
     }
 }

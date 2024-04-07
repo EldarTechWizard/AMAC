@@ -1,11 +1,11 @@
 ﻿using AMAC.Views.AdopterManagement;
 using AMAC.Views.AnimalManagement;
 using AMAC.Views.FormatManagement;
+using AMAC.Views.FormatManagement.FormatControls.FormatAdopterView;
+using AMAC.Views.FormatManagement.FormatControls.FormatAnimalView;
+using AMAC.Views.FormatManagement.FormatControls.FormatVolunterView;
 using AMAC.Views.FormatManagement.FormatNewAdoptionView;
 using AMAC.Views.FormatManagement.FormatUpdateView;
-using AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateAdopter;
-using AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateAnimal;
-using AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateVolunter;
 using AMAC.Views.RecordManagement;
 using DbManagmentAMAC.Models;
 using DevExpress.XtraEditors;
@@ -149,18 +149,18 @@ namespace AMAC.Presenters
             {
                 case "Animal":
 
-                    ((IFormatUpdateAnimalView)view.CurrentTab).Id = view.AnimalId;
+                    ((IFormatAnimalView)view.CurrentTab).Id = view.AnimalId;
 
                     break;
                 case "Adopter":
-                    ((IFormatUpdateAdopterView)view.CurrentTab).Id = view.AdopterId;
+                    ((IFormatAdopterView)view.CurrentTab).Id = view.AdopterId;
 
                     break;
                 case "Responsability":
-
-                    ((IFormatUpdateVolunterView)view.CurrentTab).Volunter = view.Volunter;
-                    ((IFormatUpdateVolunterView)view.CurrentTab).Date = view.AdoptionDate;
-
+   
+                    ((IFormatVolunterView)view.CurrentTab).Volunter = view.Volunter;
+                    ((IFormatVolunterView)view.CurrentTab).Date = view.AdoptionDate;
+                    
                     break;
 
                 default:
@@ -240,23 +240,23 @@ namespace AMAC.Presenters
             switch (buttonTag)
             {
                 case "Animal":
-                    IFormatUpdateAnimalView animalTab = new FormatUpdateAnimalView();
-                    new FormatUpdateAnimalPresenter(animalTab, animalData);
+                    IFormatAnimalView animalTab = new FormatAnimalView();
+                    new FormatAnimalPresenter(animalTab, animalData);
                     tab = (Form)animalTab;
 
                     break;
                 case "Adopter":
-                    IFormatUpdateAdopterView adopterTab = new FormatUpdateAdopterView();
-                    new FormatUpdateAdopterPresenter(adopterTab, adopterData);
+                    IFormatAdopterView adopterTab = new FormatAdopterView();
+                    new FormatAdopterPresenter(adopterTab, adopterData);
                     tab = (Form)adopterTab;
 
                     break;
                 case "Responsability":
-
-                    IFormatUpdateVolunterView responsabilityTab = new FormatUpdateVolunterView();
-                    new FormatUpdateVolunterPresenter(responsabilityTab);
+                    
+                    IFormatVolunterView responsabilityTab = new FormatVolunterView();
+                    new FormatVolunterPresenter(responsabilityTab);
                     tab = (Form)responsabilityTab;
-
+                    
                     break;
 
                 default:
@@ -280,18 +280,18 @@ namespace AMAC.Presenters
             {
                 case "Animal":
 
-                    view.AnimalId = ((IFormatUpdateAnimalView)view.CurrentTab).Id;
+                    view.AnimalId = ((IFormatAnimalView)view.CurrentTab).Id;
 
                     break;
                 case "Adopter":
-                    view.AdopterId = ((IFormatUpdateAdopterView)view.CurrentTab).Id;
+                    view.AdopterId = ((IFormatAdopterView)view.CurrentTab).Id;
 
                     break;
                 case "Responsability":
-
-                    view.Volunter = ((IFormatUpdateVolunterView)view.CurrentTab).Volunter;
-                    view.AdoptionDate = ((IFormatUpdateVolunterView)view.CurrentTab).Date;
-
+                    
+                    view.Volunter = ((IFormatVolunterView)view.CurrentTab).Volunter;
+                    view.AdoptionDate = ((IFormatVolunterView)view.CurrentTab).Date;
+                    
                     break;
 
                 default:

@@ -1,6 +1,6 @@
-﻿namespace AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateAdopter
+﻿namespace AMAC.Views.FormatManagement.FormatControls.FormatAdopterView
 {
-    partial class FormatUpdateAdopterView
+    partial class FormatAdopterView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormatUpdateAdopterView));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormatAdopterView));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.peSeachAdopter = new DevExpress.XtraEditors.PictureEdit();

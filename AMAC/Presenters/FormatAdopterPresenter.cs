@@ -1,5 +1,5 @@
-﻿using AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateAdopter;
-using AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateVolunter;
+﻿
+using AMAC.Views.FormatManagement.FormatControls.FormatAdopterView;
 using DbManagmentAMAC.Models;
 using System;
 using System.Collections.Generic;
@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace AMAC.Presenters
 {
-    public class FormatUpdateAdopterPresenter
+    public class FormatAdopterPresenter
     {
-        private IFormatUpdateAdopterView view;
+        private IFormatAdopterView view;
         private DataTable adopters;
-        public FormatUpdateAdopterPresenter(IFormatUpdateAdopterView view, DataTable data)
+        public FormatAdopterPresenter(IFormatAdopterView view, DataTable data)
         {
             this.view = view;
             this.adopters = data;
@@ -39,7 +39,7 @@ namespace AMAC.Presenters
                     view.ClearAdopterFields();
                     return;
                 }
-
+              
                 LoadAdopterFields(row);
             }
             catch (Exception ex)

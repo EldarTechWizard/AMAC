@@ -1,4 +1,5 @@
-﻿using AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateVolunter;
+﻿
+using AMAC.Views.FormatManagement.FormatControls.FormatVolunterView;
 using AMAC.Views.Main;
 using DbManagmentAMAC.Models;
 using System;
@@ -9,10 +10,10 @@ using System.Threading.Tasks;
 
 namespace AMAC.Presenters
 {
-    public class FormatUpdateVolunterPresenter
+    public class FormatVolunterPresenter
     {
-        private IFormatUpdateVolunterView view;
-        public FormatUpdateVolunterPresenter(IFormatUpdateVolunterView view)
+        private IFormatVolunterView view;
+        public FormatVolunterPresenter(IFormatVolunterView view)
         {
             this.view = view;
             AssociateAndRaisedEvents();
@@ -21,6 +22,6 @@ namespace AMAC.Presenters
         private void AssociateAndRaisedEvents()
         {
         }
-
+        
     }
 }

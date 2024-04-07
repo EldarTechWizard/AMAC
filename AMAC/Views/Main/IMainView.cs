@@ -15,10 +15,6 @@ namespace AMAC.Views.Main
 
         event EventHandler OnLoadMain;
         event EventHandler OnClickTabButtons;
-        event EventHandler OnClickAdopterManagementButton;
-        event EventHandler OnClickAnimalManagementButton;
-        event EventHandler OnClickFormatManagementButton;
-        event EventHandler OnClickRecordManagementButton;
         event EventHandler OnClickCloseSesionButton;
         void ChangeTab(Form view);
         void CloseSesion();

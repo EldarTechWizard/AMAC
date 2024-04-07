@@ -1,6 +1,6 @@
-﻿namespace AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateAnimal
+﻿namespace AMAC.Views.FormatManagement.FormatControls.FormatAnimalView
 {
-    partial class FormatUpdateAnimalView
+    partial class FormatAnimalView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormatUpdateAnimalView));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormatAnimalView));
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();

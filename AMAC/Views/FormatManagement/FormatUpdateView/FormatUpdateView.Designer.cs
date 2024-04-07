@@ -41,10 +41,10 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.cbPdfFormats = new DevExpress.XtraEditors.LookUpEdit();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -207,6 +207,20 @@
             this.panel5.Size = new System.Drawing.Size(1263, 124);
             this.panel5.TabIndex = 6;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelete.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(19, 32);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(162, 68);
+            this.btnDelete.TabIndex = 309;
+            this.btnDelete.Text = "ELIMINAR";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            // 
             // btnPrint
             // 
             this.btnPrint.Appearance.BackColor = System.Drawing.Color.MidnightBlue;
@@ -243,20 +257,6 @@
             this.label10.TabIndex = 305;
             this.label10.Text = "label AVISOS";
             this.label10.Visible = false;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDelete.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(19, 32);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(162, 68);
-            this.btnDelete.TabIndex = 309;
-            this.btnDelete.Text = "ELIMINAR";
-            this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // FormatUpdateView
             // 

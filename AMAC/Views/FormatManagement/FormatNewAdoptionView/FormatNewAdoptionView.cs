@@ -1,5 +1,9 @@
 ﻿using AMAC.Presenters;
+using AMAC.Views.FormatManagement.FormatControls.FormatAdopterView;
+using AMAC.Views.FormatManagement.FormatControls.FormatAnimalView;
+using AMAC.Views.FormatManagement.FormatControls.FormatVolunterView;
 using AMAC.Views.FormatManagement.FormatPreviewView;
+
 using AMAC.Views.FormatManagement.SearchTableView;
 using DevExpress.Utils.CommonDialogs;
 using DevExpress.XtraEditors;
@@ -13,92 +17,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
 {
     public partial class FormatNewAdoptionView : DevExpress.XtraEditors.XtraForm, IFormatNewAdoptionView
     {
-        public int AnimalId 
-        {
-            get
-            {
-                int value = 0;
+        private Form animalForm = null;
+        private Form adopterForm = null;
+        private Form responsabilityForm = null;    
+        public Form AnimalForm => animalForm;
 
-                if (int.TryParse(tbAnimalId.Text, out value))
-                {
-                    return value;
-                }
+        public Form AdopterForm => adopterForm;
 
-                return -1;
-            }
+        public Form ResponsabilityForm => responsabilityForm;
 
-            set => tbAnimalId.Text = value.ToString();
-        }
-        public string AnimalName { get => tbAnimalName.Text; set => tbAnimalName.Text = value; }
-        public string AnimalBreed { get => tbAnimalBreed.Text; set => tbAnimalBreed.Text = value; }
-        public int AnimalAge 
-        {
-            get
-            {
-                int value = 0;
-
-                if (int.TryParse(tbAnimalAge.Text, out value))
-                {
-                    return value;
-                }
-
-                return -1;
-            }
-            set => tbAnimalAge.Text = value.ToString(); 
-        }
-        public string AnimalSex { get => tbAnimalSex.Text; set => tbAnimalSex.Text = value; }
-        public bool AnimalSterilized { get => chbSterilized.Checked; set => chbSterilized.Checked = value; }
-        public string AnimalType { get => tbAnimalType.Text; set => tbAnimalType.Text = value; }
-        public string AnimalAdditionalInformation { get => tbAnimalAdditionalInformation.Text; set => tbAnimalAdditionalInformation.Text = value; }
-        public string AnimalStatus { get => tbAnimalStatus.Text; set => tbAnimalStatus.Text = value; }
-        public int AdopterId 
-        {
-            get
-            {
-                int value = 0;
-
-                if (int.TryParse(tbAdopterId.Text, out value))
-                {
-                    return value;
-                }
-
-                return -1;
-            }
-
-            set => tbAdopterId.Text = value.ToString();
-        }
-        public string AdopterNamA { get => tbAdopterName.Text; set => tbAdopterName.Text = value; }
-        public int AdopterAge {
-            get
-            {
-                int value = 0;
-
-                if (int.TryParse(tbAnimalAge.Text, out value))
-                {
-                    return value;
-                }
-
-                return -1;
-            }
-
-            set => tbAdopterAge.Text = value.ToString(); }
-        public string AdopterAddress { get => tbAdopterAddress.Text; set => tbAdopterAddress.Text = value; }
-        public string AdopterNumber { get => tbAdopterNumber.Text; set => tbAdopterNumber.Text = value; }
-        public string AdopterEmail { get => tbAdopterEmail.Text; set => tbAdopterEmail.Text = value; }
-        public string VolunterName { get => tbVolunterName.Text; set => tbVolunterName.Text = value; }
-        public DateTime AdoptionDate { get => dtpDate.Value; set => dtpDate.Value = value; }
 
         public event EventHandler OnClickGenerateNewAdoptionFormatButton;
         public event EventHandler OnClickClearFieldsButton;
-        public event EventHandler OnClickSearchAnimalPictureEdit;
-        public event EventHandler OnClickSearchAdopterPictureEdit;
-        public event EventHandler OnChangeAnimalIdTextBox;
-        public event EventHandler OnChangeAdopterIdTextBox;
         public event EventHandler OnLoadForm;
 
 
@@ -112,40 +48,9 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
         {
             this.Load += delegate { OnLoadForm.Invoke(this, EventArgs.Empty); };
             btnGenerate.Click += delegate { OnClickGenerateNewAdoptionFormatButton.Invoke(btnGenerate, EventArgs.Empty); };
-            btnClearField.Click += delegate { OnClickClearFieldsButton.Invoke(btnClearField, EventArgs.Empty); };
-            peSeachAnimal.Click += delegate { OnClickSearchAnimalPictureEdit.Invoke(peSeachAnimal, EventArgs.Empty); };
-            peSearchAdopter.Click += delegate { OnClickSearchAdopterPictureEdit.Invoke(peSearchAdopter, EventArgs.Empty); };
-            tbAnimalId.TextChanged += delegate { OnChangeAnimalIdTextBox.Invoke(tbAnimalId, EventArgs.Empty); };
-            tbAdopterId.TextChanged += delegate { OnChangeAdopterIdTextBox.Invoke(tbAdopterId, EventArgs.Empty); };
         }
 
-        public void ClearFields()
-        {
-            tbAnimalId.Text = string.Empty;
-            tbAdopterId.Text = string.Empty;
-            tbVolunterName.Text = string.Empty;
-            dtpDate.Value = DateTime.Now;
-        }
-
-        public void ClearAdopterFields()
-        {
-            tbAdopterName.Text = string.Empty;
-            tbAdopterAge.Text = string.Empty;
-            tbAdopterAddress.Text = string.Empty;
-            tbAdopterEmail.Text = string.Empty;
-            tbAdopterNumber.Text = string.Empty;
-        }
-
-        public void ClearAnimalFields()
-        {
-            tbAnimalName.Text = string.Empty;
-            tbAnimalSex.Text = string.Empty;
-            tbAnimalBreed.Text = string.Empty;
-            tbAnimalType.Text = string.Empty;
-            tbAnimalStatus.Text = string.Empty;
-            tbAnimalAge.Text = string.Empty;
-            tbAnimalAdditionalInformation.Text = string.Empty;
-        }
+        
 
         public void SavePdf()
         {
@@ -191,6 +96,51 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
             temp.ShowDialog();
 
             return view.DataRow;
+        }
+
+        public void LoadTabs(ref DataTable animalData, ref DataTable adopterData)
+        {
+            LoadAnimalTab(ref animalData);
+            LoadAdopterTab(ref adopterData);
+            LoadResponsabilityTab();
+        }
+
+        private void LoadAnimalTab(ref DataTable animalData)
+        {
+            IFormatAnimalView animalTab = new FormatAnimalView();
+            new FormatAnimalPresenter(animalTab, animalData);
+            this.animalForm = (Form)animalTab;
+
+            animalForm.TopLevel = false;
+            panel2.Controls.Add(animalForm);
+            animalForm.Dock = DockStyle.Fill;
+            animalForm.Show();
+        }
+
+        private void LoadAdopterTab(ref DataTable adopterData)
+        {
+            IFormatAdopterView adopterTab = new FormatAdopterView();
+            new FormatAdopterPresenter(adopterTab, adopterData);
+            this.adopterForm = (Form)adopterTab;
+
+
+            adopterForm.TopLevel = false;
+            panel3.Controls.Add(adopterForm);
+            adopterForm.Dock = DockStyle.Fill;
+            adopterForm.Show();
+        }
+
+        private void LoadResponsabilityTab()
+        {
+            IFormatVolunterView responsabilityTab = new FormatVolunterView();
+            new FormatVolunterPresenter(responsabilityTab);
+            this.responsabilityForm = (Form)responsabilityTab;
+            
+            responsabilityForm.TopLevel = false;
+            panel4.Controls.Add(responsabilityForm);
+            responsabilityForm.Dock = DockStyle.Fill;
+            responsabilityForm.Show();
+
         }
     }
 }

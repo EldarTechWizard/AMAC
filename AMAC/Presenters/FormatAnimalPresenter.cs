@@ -1,5 +1,5 @@
-﻿using AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateAnimal;
-using AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateVolunter;
+﻿
+using AMAC.Views.FormatManagement.FormatControls.FormatAnimalView;
 using DbManagmentAMAC.Models;
 using System;
 using System.Collections.Generic;
@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace AMAC.Presenters
 {
-    public class FormatUpdateAnimalPresenter
+    public class FormatAnimalPresenter
     {
-        private IFormatUpdateAnimalView view;
+        private IFormatAnimalView view;
         private DataTable animals;
-        public FormatUpdateAnimalPresenter(IFormatUpdateAnimalView view, DataTable animals)
+        public FormatAnimalPresenter(IFormatAnimalView view, DataTable animals)
         {
             this.view = view;
             this.animals = animals;

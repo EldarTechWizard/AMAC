@@ -30,10 +30,6 @@ namespace AMAC.Presenters
         {
             view.OnLoadMain += OnLoadMain;
             view.OnClickTabButtons += OnClickTabButtons;
-            view.OnClickAnimalManagementButton += OnClickAnimalManagementButton;
-            view.OnClickAdopterManagementButton += OnClickAdopterManagementButton;
-            view.OnClickFormatManagementButton += OnClickFormatManagementButton;
-            view.OnClickRecordManagementButton += OnClickRecordManagementButton;
             view.OnClickCloseSesionButton += OnClickCloseSesionButton;
 
         }
@@ -84,26 +80,6 @@ namespace AMAC.Presenters
         }
 
         
-        private void OnClickRecordManagementButton(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void OnClickFormatManagementButton(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void OnClickAdopterManagementButton(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void OnClickAnimalManagementButton(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
 
         private void OnClickCloseSesionButton(object sender, EventArgs e)
         {

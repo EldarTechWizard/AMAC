@@ -11,9 +11,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateAnimal
+namespace AMAC.Views.FormatManagement.FormatControls.FormatAnimalView
 {
-    public partial class FormatUpdateAnimalView : DevExpress.XtraEditors.XtraForm, IFormatUpdateAnimalView
+    public partial class FormatAnimalView : DevExpress.XtraEditors.XtraForm, IFormatAnimalView
     {
 
         public int Id
@@ -58,7 +58,7 @@ namespace AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateAnimal
         public event EventHandler OnChangeAdopterIdTextBox;
         public event EventHandler OnClickSearchAdopterPictureEdit;
 
-        public FormatUpdateAnimalView()
+        public FormatAnimalView()
         {
             InitializeComponent();
             AssociateAndRaisedEvents();

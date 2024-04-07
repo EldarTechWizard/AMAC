@@ -1,4 +1,5 @@
 ﻿using AMAC.Presenters;
+using AMAC.Views.FormatManagement.FormatControls.FormatAnimalView;
 using AMAC.Views.FormatManagement.SearchTableView;
 using DevExpress.ClipboardSource.SpreadsheetML;
 using DevExpress.XtraEditors;
@@ -12,9 +13,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateAdopter
+namespace AMAC.Views.FormatManagement.FormatControls.FormatAdopterView
 {
-    public partial class FormatUpdateAdopterView : DevExpress.XtraEditors.XtraForm , IFormatUpdateAdopterView
+    public partial class FormatAdopterView : DevExpress.XtraEditors.XtraForm , IFormatAdopterView
     {
         public int Id
         {
@@ -53,7 +54,7 @@ namespace AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateAdopter
         public string Number { get => tbNumber.Text; set => tbNumber.Text = value; }
 
 
-        public FormatUpdateAdopterView()
+        public FormatAdopterView()
         {
             InitializeComponent();
             AssociateAndRaisedEvents();

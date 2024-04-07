@@ -1,6 +1,6 @@
-﻿namespace AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateVolunter
+﻿namespace AMAC.Views.FormatManagement.FormatControls.FormatVolunterView
 {
-    partial class FormatUpdateVolunterView
+    partial class FormatVolunterView
     {
         /// <summary>
         /// Required designer variable.

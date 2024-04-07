@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateVolunter
+namespace AMAC.Views.FormatManagement.FormatControls.FormatVolunterView
 {
-    public interface IFormatUpdateVolunterView
+    public interface IFormatVolunterView
     {
         string Volunter { get; set; }
         DateTime Date { get; set; }

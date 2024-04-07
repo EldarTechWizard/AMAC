@@ -1,5 +1,6 @@
 ﻿using AMAC.Views.AnimalManagement;
 using AMAC.Views.FormatManagement.FormatNewAdoptionView;
+using AMAC.Views.FormatManagement.FormatUpdateView;
 using DbManagmentAMAC.Models;
 using System;
 using System.Collections.Generic;
@@ -28,16 +29,8 @@ namespace AMAC.Presenters
         private void AssociateAndRaisedEvents()
         {
             view.OnLoadForm += OnLoadForm;
-            view.OnChangeAnimalIdTextBox += OnChangeAnimalIdTextBox;
-            view.OnChangeAdopterIdTextBox += OnChangeAdopterIdTextBox;
             view.OnClickGenerateNewAdoptionFormatButton += OnClickGenerateNewAdoptionFormatButton;
-            view.OnClickClearFieldsButton += OnClickClearFieldsButton;
-            view.OnClickSearchAnimalPictureEdit += OnClickSearchAnimalPictureEdit;
-            view.OnClickSearchAdopterPictureEdit += OnClickSearchAdopterPictureEdit;
-
         }
-
-
 
         private void OnLoadForm(object sender, EventArgs e)
         {
@@ -45,6 +38,7 @@ namespace AMAC.Presenters
             {
                 LoadAnimalInfo();
                 LoadAdopterInfo();
+                view.LoadTabs(ref AnimalData, ref AdopterData);
             }
             catch (Exception ex)
             {
@@ -62,17 +56,7 @@ namespace AMAC.Presenters
             if (!repository.SelectAdopter(AdopterData)) throw new Exception(repository.LastError);
         }
 
-        private void OnClickClearFieldsButton(object sender, EventArgs e)
-        {
-            try
-            {
-                view.ClearFields();
-            }catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
+      
         private void OnClickGenerateNewAdoptionFormatButton(object sender, EventArgs e)
         {
             try
@@ -90,10 +74,13 @@ namespace AMAC.Presenters
             }
         }
 
+        
         private PdfGenerator GetGeneratorWithAtributtes()
         {
+
+
             Animal animal = new Animal()
-            {
+            {/*
                 Id = view.AnimalId,
                 Name = view.AnimalName,
                 Age = view.AnimalAge,
@@ -102,32 +89,32 @@ namespace AMAC.Presenters
                 AnimalBreed = view.AnimalBreed,
                 Sterilized = view.AnimalSterilized,
                 AdditionalInformation = view.AnimalAdditionalInformation,
-                Status = view.AnimalStatus,                      
+                Status = view.AnimalStatus,  */                    
             };
 
             Adopter adopter = new Adopter()
-            {
+            {/*
                 Id = view.AdopterId,
                 Name = view.AdopterNamA,
                 Address = view.AdopterAddress,
                 Age = view.AdopterAge,
                 Email = view.AdopterEmail,
-                Number = view.AdopterNumber,
+                Number = view.AdopterNumber,*/
             };
 
             PdfFormat pdfFormat = new PdfFormat()
-            {
+            {/*
                 AnimalId = view.AnimalId,
                 AdopterId = view.AdopterId,
                 AdoptionDate = view.AdoptionDate,
-                Volunter = view.VolunterName         
+                Volunter = view.VolunterName    */     
             };
 
             return new PdfGenerator(animal, adopter, pdfFormat);
         }
 
         private void InsertFormatIntoDataBase()
-        {
+        {/*
             PdfFormat format = new PdfFormat()
             {
                 AdopterId = view.AdopterId,
@@ -136,101 +123,9 @@ namespace AMAC.Presenters
                 Volunter = view.VolunterName
             };
 
-            if (!repository.InsertPdfFormat(format)) throw new Exception(repository.LastError);
+            if (!repository.InsertPdfFormat(format)) throw new Exception(repository.LastError);*/
         }
 
-        
-
-        private void OnChangeAdopterIdTextBox(object sender, EventArgs e)
-        {
-            try
-            {
   
-                DataRow row = AdopterData.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAdopter") == (int)view.AdopterId);
-
-                if (row == null) 
-                {
-                    view.ClearAdopterFields();
-                    return;
-                }
-
-                LoadAdopterFields(row);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void LoadAdopterFields(DataRow row)
-        {
-            view.AdopterNamA = (string)row["name"];
-            view.AdopterAge = (int)row["age"];
-            view.AdopterEmail = (string)row["email"];
-            view.AdopterAddress = (string)row["address"];
-            view.AdopterNumber = (string)row["phone"];
-        }
-        private void OnChangeAnimalIdTextBox(object sender, EventArgs e)
-        {
-            try
-            {
-                DataRow row = AnimalData.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAnimal") == (int)view.AnimalId);
-
-                if (row == null)
-                {
-                    view.ClearAnimalFields();
-                    return;
-                }
-
-                LoadAnimalFields(row);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void LoadAnimalFields(DataRow row)
-        {
-            view.AnimalName = (string)row["name"];
-            view.AnimalAge = (int)row["age"];
-            view.AnimalSex = (string)row["sex"];
-            view.AnimalBreed = (string)row["breed"];
-            view.AnimalType = (string)row["animalType"];
-            view.AnimalStatus = (string)row["status"];
-            view.AnimalSterilized = (bool)row["sterilized"];
-            view.AnimalAdditionalInformation = (string)row["additionalInformation"];
-        }
-
-        private void OnClickSearchAdopterPictureEdit(object sender, EventArgs e)
-        {
-            try
-            {
-                DataRow row = view.OpenSearchTableTab(AdopterData);
-                if (row == null) return;
-
-                view.AdopterId = (int)row["idAdopter"];             
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            
-        }
-
-        private void OnClickSearchAnimalPictureEdit(object sender, EventArgs e)
-        {
-            try
-            {
-                DataRow row = view.OpenSearchTableTab(AnimalData);
-                if (row == null) return;
-
-                view.AnimalId = (int)row["idAnimal"];
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
     }
 }

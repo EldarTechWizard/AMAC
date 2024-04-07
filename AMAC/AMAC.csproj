@@ -116,9 +116,9 @@
     <Compile Include="Presenters\FormatPreviewPresenter.cs" />
     <Compile Include="Presenters\FormatUpdatePresenter.cs" />
     <Compile Include="Presenters\FormatManagementPresenter.cs" />
-    <Compile Include="Presenters\FormatUpdateAdopterPresenter.cs" />
-    <Compile Include="Presenters\FormatUpdateAnimalPresenter.cs" />
-    <Compile Include="Presenters\FormatUpdateVolunterPresenter.cs" />
+    <Compile Include="Presenters\FormatAdopterPresenter.cs" />
+    <Compile Include="Presenters\FormatAnimalPresenter.cs" />
+    <Compile Include="Presenters\FormatVolunterPresenter.cs" />
     <Compile Include="Presenters\LoginPresenter.cs" />
     <Compile Include="Presenters\MainPresenter.cs" />
     <Compile Include="Presenters\RecordManagementPresenter.cs" />
@@ -139,6 +139,27 @@
       <DependentUpon>AnimalManagementView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\AnimalManagement\IAnimalManagementView.cs" />
+    <Compile Include="Views\FormatManagement\FormatControls\FormatAdopterView\FormatAdopterView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormatManagement\FormatControls\FormatAdopterView\FormatAdopterView.Designer.cs">
+      <DependentUpon>FormatAdopterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormatManagement\FormatControls\FormatAdopterView\IFormatAdopterView.cs" />
+    <Compile Include="Views\FormatManagement\FormatControls\FormatAnimalView\FormatAnimalView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormatManagement\FormatControls\FormatAnimalView\FormatAnimalView.Designer.cs">
+      <DependentUpon>FormatAnimalView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormatManagement\FormatControls\FormatAnimalView\IFormatAnimalView.cs" />
+    <Compile Include="Views\FormatManagement\FormatControls\FormatVolunterView\FormatVolunterView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormatManagement\FormatControls\FormatVolunterView\FormatVolunterView.Designer.cs">
+      <DependentUpon>FormatVolunterView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormatManagement\FormatControls\FormatVolunterView\IFormatVolunterView.cs" />
     <Compile Include="Views\FormatManagement\FormatManagementView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,32 +182,11 @@
       <DependentUpon>FormatPreviewView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FormatManagement\FormatPreviewView\IFormatPreviewView.cs" />
-    <Compile Include="Views\FormatManagement\FormatUpdateView\FormatUpdateAdopter\FormatUpdateAdopterView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\FormatManagement\FormatUpdateView\FormatUpdateAdopter\FormatUpdateAdopterView.Designer.cs">
-      <DependentUpon>FormatUpdateAdopterView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\FormatManagement\FormatUpdateView\FormatUpdateAdopter\IFormatUpdateAdopterView.cs" />
-    <Compile Include="Views\FormatManagement\FormatUpdateView\FormatUpdateAnimal\FormatUpdateAnimalView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\FormatManagement\FormatUpdateView\FormatUpdateAnimal\FormatUpdateAnimalView.Designer.cs">
-      <DependentUpon>FormatUpdateAnimalView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\FormatManagement\FormatUpdateView\FormatUpdateAnimal\IFormatUpdateAnimalView.cs" />
     <Compile Include="Views\FormatManagement\FormatUpdateView\FormatUpdateView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\FormatManagement\FormatUpdateView\FormatUpdateView.Designer.cs">
       <DependentUpon>FormatUpdateView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\FormatManagement\FormatUpdateView\FormatUpdateVolunter\IFormatUpdateVolunterView.cs" />
-    <Compile Include="Views\FormatManagement\FormatUpdateView\FormatUpdateVolunter\FormatUpdateVolunterView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\FormatManagement\FormatUpdateView\FormatUpdateVolunter\FormatUpdateVolunterView.Designer.cs">
-      <DependentUpon>FormatUpdateVolunterView.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\FormatManagement\FormatUpdateView\IFormatUpdateView.cs" />
     <Compile Include="Views\FormatManagement\SearchTableView\ISearchTableView.cs" />
@@ -237,23 +237,23 @@
     <EmbeddedResource Include="Views\AnimalManagement\AnimalManagementView.resx">
       <DependentUpon>AnimalManagementView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormatManagement\FormatControls\FormatAdopterView\FormatAdopterView.resx">
+      <DependentUpon>FormatAdopterView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormatManagement\FormatControls\FormatAnimalView\FormatAnimalView.resx">
+      <DependentUpon>FormatAnimalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormatManagement\FormatControls\FormatVolunterView\FormatVolunterView.resx">
+      <DependentUpon>FormatVolunterView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FormatManagement\FormatNewAdoptionView\FormatNewAdoptionView.resx">
       <DependentUpon>FormatNewAdoptionView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormatManagement\FormatPreviewView\FormatPreviewView.resx">
       <DependentUpon>FormatPreviewView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormatManagement\FormatUpdateView\FormatUpdateAdopter\FormatUpdateAdopterView.resx">
-      <DependentUpon>FormatUpdateAdopterView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormatManagement\FormatUpdateView\FormatUpdateAnimal\FormatUpdateAnimalView.resx">
-      <DependentUpon>FormatUpdateAnimalView.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Views\FormatManagement\FormatUpdateView\FormatUpdateView.resx">
       <DependentUpon>FormatUpdateView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\FormatManagement\FormatUpdateView\FormatUpdateVolunter\FormatUpdateVolunterView.resx">
-      <DependentUpon>FormatUpdateVolunterView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FormatManagement\SearchTableView\SearchTableView.resx">
       <DependentUpon>SearchTableView.cs</DependentUpon>

@@ -9,14 +9,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AMAC.Views.FormatManagement.FormatUpdateView.FormatUpdateVolunter
+namespace AMAC.Views.FormatManagement.FormatControls.FormatVolunterView
 {
-    public partial class FormatUpdateVolunterView : DevExpress.XtraEditors.XtraForm, IFormatUpdateVolunterView
+    public partial class FormatVolunterView : DevExpress.XtraEditors.XtraForm, IFormatVolunterView
     {
         public string Volunter { get => tbVolunter.Text; set => tbVolunter.Text = value; }
         public DateTime Date { get => dtpDate.Value; set => dtpDate.Value = value; }
 
-        public FormatUpdateVolunterView()
+        public FormatVolunterView()
         {
             InitializeComponent();
             AssociateAndRaisedEvents();
