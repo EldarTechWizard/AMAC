@@ -3,7 +3,6 @@ using AMAC.Views.FormatManagement.FormatControls.FormatAdopterView;
 using AMAC.Views.FormatManagement.FormatControls.FormatAnimalView;
 using AMAC.Views.FormatManagement.FormatControls.FormatVolunterView;
 using AMAC.Views.FormatManagement.FormatPreviewView;
-
 using AMAC.Views.FormatManagement.SearchTableView;
 using DevExpress.Utils.CommonDialogs;
 using DevExpress.XtraEditors;
@@ -63,16 +62,18 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
             saveFileDialog1.RestoreDirectory = true;
             saveFileDialog1.FileName = "Formato de adopcion";
 
+            
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 path = saveFileDialog1.FileName;
 
-                if(File.Exists(path))
-                {
+                if (File.Exists(path))
+                {                   
                     File.Delete(path);
                 }
 
                 File.Copy("temp.pdf", path);
+                
             }
 
 
@@ -85,6 +86,7 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
             Form temp = (Form)view;
             temp.ShowDialog();
 
+            temp.Dispose();
             return view.IsCorrect;
         }
 

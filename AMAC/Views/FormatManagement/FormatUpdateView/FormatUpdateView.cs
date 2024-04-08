@@ -117,6 +117,7 @@ namespace AMAC.Views.FormatManagement.FormatUpdateView
             Form temp = (Form)view;
             temp.ShowDialog();
 
+            temp.Dispose();
             return view.IsCorrect;
         }
 

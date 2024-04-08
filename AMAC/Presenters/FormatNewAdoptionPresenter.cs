@@ -1,4 +1,7 @@
 ﻿using AMAC.Views.AnimalManagement;
+using AMAC.Views.FormatManagement.FormatControls.FormatAdopterView;
+using AMAC.Views.FormatManagement.FormatControls.FormatAnimalView;
+using AMAC.Views.FormatManagement.FormatControls.FormatVolunterView;
 using AMAC.Views.FormatManagement.FormatNewAdoptionView;
 using AMAC.Views.FormatManagement.FormatUpdateView;
 using DbManagmentAMAC.Models;
@@ -19,6 +22,8 @@ namespace AMAC.Presenters
 
         private DataTable AnimalData = new DataTable();
         private DataTable AdopterData = new DataTable();
+
+        private PdfFormat temp = null;
         public FormatNewAdoptionPresenter(IFormatNewAdoptionView view, IRepository repository)
         {
             this.view = view;
@@ -67,6 +72,7 @@ namespace AMAC.Presenters
                 view.SavePdf();
                 InsertFormatIntoDataBase();
                 MessageBox.Show("Correcto");
+                temp = null;
             }
             catch (Exception ex)
             {
@@ -77,53 +83,24 @@ namespace AMAC.Presenters
         
         private PdfGenerator GetGeneratorWithAtributtes()
         {
+            Animal animal = ((IFormatAnimalView)view.AnimalForm).GetAnimal();
 
+            Adopter adopter = ((IFormatAdopterView)view.AdopterForm).GetAdopter();
 
-            Animal animal = new Animal()
-            {/*
-                Id = view.AnimalId,
-                Name = view.AnimalName,
-                Age = view.AnimalAge,
-                Sex = view.AnimalSex,
-                AnimalType = view.AnimalType,
-                AnimalBreed = view.AnimalBreed,
-                Sterilized = view.AnimalSterilized,
-                AdditionalInformation = view.AnimalAdditionalInformation,
-                Status = view.AnimalStatus,  */                    
+            temp = new PdfFormat()
+            {
+                AnimalId = animal.Id,
+                AdopterId = adopter.Id,
+                AdoptionDate = ((IFormatVolunterView)view.ResponsabilityForm).Date,
+                Volunter = ((IFormatVolunterView)view.ResponsabilityForm).Volunter,
             };
 
-            Adopter adopter = new Adopter()
-            {/*
-                Id = view.AdopterId,
-                Name = view.AdopterNamA,
-                Address = view.AdopterAddress,
-                Age = view.AdopterAge,
-                Email = view.AdopterEmail,
-                Number = view.AdopterNumber,*/
-            };
-
-            PdfFormat pdfFormat = new PdfFormat()
-            {/*
-                AnimalId = view.AnimalId,
-                AdopterId = view.AdopterId,
-                AdoptionDate = view.AdoptionDate,
-                Volunter = view.VolunterName    */     
-            };
-
-            return new PdfGenerator(animal, adopter, pdfFormat);
+            return new PdfGenerator(animal, adopter, temp);
         }
 
         private void InsertFormatIntoDataBase()
-        {/*
-            PdfFormat format = new PdfFormat()
-            {
-                AdopterId = view.AdopterId,
-                AnimalId = view.AnimalId,
-                AdoptionDate = view.AdoptionDate,
-                Volunter = view.VolunterName
-            };
-
-            if (!repository.InsertPdfFormat(format)) throw new Exception(repository.LastError);*/
+        {
+            if (!repository.InsertPdfFormat(temp)) throw new Exception(repository.LastError);
         }
 
   

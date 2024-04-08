@@ -1,5 +1,6 @@
 ﻿using AMAC.Presenters;
 using AMAC.Views.FormatManagement.SearchTableView;
+using DbManagmentAMAC.Models;
 using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
@@ -85,12 +86,31 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAnimalView
         public void ClearAnimalFields()
         {
             tbAnimalType.Text = string.Empty;
+            tbName.Text = string.Empty;
             tbSex.Text = string.Empty;
             tbAnimalBreed.Text = string.Empty;
             tbAnimalType.Text = string.Empty;
             tbStatus.Text = string.Empty;
             tbAge.Text = string.Empty;
             tbAdditionalInformation.Text = string.Empty;
+        }
+
+        public Animal GetAnimal()
+        {
+            Animal animal = new Animal()
+            {
+                Id = this.Id,
+                Name = this.NameA,
+                Age = this.Age,
+                Sex = this.Sex,
+                AnimalType = this.AnimalType,
+                AnimalBreed = this.AnimalBreed,
+                Status = this.Status,
+                Sterilized = this.Sterilized,
+                AdditionalInformation = this.AdditionalInformation,
+            };
+
+            return animal;
         }
     }
 }

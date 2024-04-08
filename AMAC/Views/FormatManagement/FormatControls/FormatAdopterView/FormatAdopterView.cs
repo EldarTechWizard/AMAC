@@ -1,6 +1,7 @@
 ﻿using AMAC.Presenters;
 using AMAC.Views.FormatManagement.FormatControls.FormatAnimalView;
 using AMAC.Views.FormatManagement.SearchTableView;
+using DbManagmentAMAC.Models;
 using DevExpress.ClipboardSource.SpreadsheetML;
 using DevExpress.XtraEditors;
 using System;
@@ -86,6 +87,21 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAdopterView
             temp.ShowDialog();
 
             return view.DataRow;
+        }
+
+        public Adopter GetAdopter()
+        {
+            Adopter adopter = new Adopter()
+            {
+                Id = this.Id,
+                Name = this.NameA,
+                Age = this.Age,
+                Address = this.Address,
+                Email = this.Email,
+                Number = this.Number,
+            };
+
+            return adopter;
         }
     }
 }

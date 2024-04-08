@@ -312,7 +312,7 @@ namespace DbManagmentAMAC.Repository
 
                     cmd.Parameters.AddWithValue("@idAnimal", format.AnimalId);
                     cmd.Parameters.AddWithValue("@idAdopter", format.AdopterId);
-                    cmd.Parameters.AddWithValue("@volunteerInCharge", format.AnimalId);
+                    cmd.Parameters.AddWithValue("@volunteerInCharge", format.Volunter);
                     cmd.Parameters.AddWithValue("@adoptionDate", format.AdoptionDate);
 
                     cmd.ExecuteNonQuery();

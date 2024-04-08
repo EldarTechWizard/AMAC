@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DbManagmentAMAC.Models;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -22,6 +23,7 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAnimalView
         event EventHandler OnChangeAdopterIdTextBox;
         event EventHandler OnClickSearchAdopterPictureEdit;
         DataRow OpenSearchTableTab(DataTable data);
+        Animal GetAnimal();
         void ClearAnimalFields();
     }
 }

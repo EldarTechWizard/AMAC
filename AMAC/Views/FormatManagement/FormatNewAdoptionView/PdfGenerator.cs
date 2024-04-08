@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DbManagmentAMAC.Models;
+using DevExpress.Data.Filtering.Helpers;
 using QuestPDF.Fluent;
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
@@ -28,16 +29,19 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
             this.adopter = _adopter;
             this.pdfFormat = _pdfFormat;
         }
-      
+
+        
+
         public bool GeneratePdf(string path)
         {
             try
-            {    
-                if(File.Exists(path))
+            {
+                
+                if (File.Exists(path))
                 {
                     File.Delete(path);
                 }
-                
+                              
                 var document = Document.Create(container =>
                 {
                     container.Page(page =>
