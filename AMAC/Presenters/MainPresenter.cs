@@ -6,6 +6,7 @@ using AMAC.Views.RecordManagement;
 using DbManagmentAMAC.Models;
 using DbManagmentAMAC.Repository;
 using DevExpress.XtraEditors;
+using DevExpress.XtraEditors.Frames;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -62,7 +63,7 @@ namespace AMAC.Presenters
 
                     break;
                 case "Record":
-                    IRecordManagementView recordTab = null;
+                    IRecordManagementView recordTab = new RecordManagementView();
                     new RecordManagementPresenter(recordTab, repository);
                     tab = (Form)recordTab;
 

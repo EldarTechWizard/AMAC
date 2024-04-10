@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -37,10 +35,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dgvRecords = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -52,7 +47,12 @@
             this.pbRecargar = new DevExpress.XtraEditors.PictureEdit();
             this.repositoryItemComboBox3 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.repositoryItemComboBox2 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tbFilterText = new DevExpress.XtraEditors.TextEdit();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dgvData = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.cbColumns = new DevExpress.XtraEditors.ComboBoxEdit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -60,11 +60,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecords)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRecargar.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbFilterText.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbColumns.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -154,29 +157,19 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.dgvRecords);
+            this.panel4.Controls.Add(this.dgvData);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(2, 28);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1265, 527);
             this.panel4.TabIndex = 144;
             // 
-            // dgvRecords
-            // 
-            this.dgvRecords.BackgroundColor = System.Drawing.Color.White;
-            this.dgvRecords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRecords.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvRecords.Location = new System.Drawing.Point(0, 0);
-            this.dgvRecords.Name = "dgvRecords";
-            this.dgvRecords.RowHeadersWidth = 51;
-            this.dgvRecords.RowTemplate.Height = 24;
-            this.dgvRecords.Size = new System.Drawing.Size(1265, 527);
-            this.dgvRecords.TabIndex = 0;
-            // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.label26);
+            this.panel3.Controls.Add(this.cbColumns);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.tbFilterText);
+            this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.label8);
@@ -191,34 +184,12 @@
             this.panel3.Size = new System.Drawing.Size(1265, 138);
             this.panel3.TabIndex = 143;
             // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(265, 26);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(569, 29);
-            this.textBox1.TabIndex = 242;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label26.Location = new System.Drawing.Point(12, 30);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(257, 23);
-            this.label26.TabIndex = 241;
-            this.label26.Text = "BUSQUEDA POR FILTRO:";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.label10.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label10.Location = new System.Drawing.Point(539, 76);
+            this.label10.Location = new System.Drawing.Point(553, 85);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(52, 23);
             this.label10.TabIndex = 153;
@@ -229,7 +200,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.label9.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label9.Location = new System.Drawing.Point(782, 77);
+            this.label9.Location = new System.Drawing.Point(796, 86);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(52, 23);
             this.label9.TabIndex = 152;
@@ -240,7 +211,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.label8.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label8.Location = new System.Drawing.Point(349, 76);
+            this.label8.Location = new System.Drawing.Point(363, 85);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(52, 23);
             this.label8.TabIndex = 151;
@@ -251,7 +222,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.label7.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label7.Location = new System.Drawing.Point(156, 76);
+            this.label7.Location = new System.Drawing.Point(170, 85);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(52, 23);
             this.label7.TabIndex = 150;
@@ -261,7 +232,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.label4.Location = new System.Drawing.Point(614, 77);
+            this.label4.Location = new System.Drawing.Point(628, 86);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(162, 23);
             this.label4.TabIndex = 149;
@@ -271,7 +242,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.label3.Location = new System.Drawing.Point(418, 76);
+            this.label3.Location = new System.Drawing.Point(432, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(115, 23);
             this.label3.TabIndex = 148;
@@ -281,7 +252,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.label2.Location = new System.Drawing.Point(220, 77);
+            this.label2.Location = new System.Drawing.Point(234, 86);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 23);
             this.label2.TabIndex = 147;
@@ -291,7 +262,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.label1.Location = new System.Drawing.Point(12, 76);
+            this.label1.Location = new System.Drawing.Point(26, 85);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(139, 23);
             this.label1.TabIndex = 146;
@@ -326,6 +297,86 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemComboBox2.Name = "repositoryItemComboBox2";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(518, 22);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(184, 23);
+            this.label6.TabIndex = 319;
+            this.label6.Text = "DE LA COLUMNA:";
+            // 
+            // tbFilterText
+            // 
+            this.tbFilterText.Location = new System.Drawing.Point(30, 48);
+            this.tbFilterText.Name = "tbFilterText";
+            this.tbFilterText.Size = new System.Drawing.Size(453, 22);
+            this.tbFilterText.TabIndex = 318;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label14.Location = new System.Drawing.Point(26, 22);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(221, 23);
+            this.label14.TabIndex = 317;
+            this.label14.Text = "FILTRAR POR TEXTO:";
+            // 
+            // dgvData
+            // 
+            this.dgvData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvData.Location = new System.Drawing.Point(0, 0);
+            this.dgvData.MainView = this.gridView1;
+            this.dgvData.Name = "dgvData";
+            this.dgvData.Size = new System.Drawing.Size(1265, 527);
+            this.dgvData.TabIndex = 315;
+            this.dgvData.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.dgvData;
+            this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsBehavior.KeepGroupExpandedOnSorting = false;
+            this.gridView1.OptionsCustomization.AllowColumnMoving = false;
+            this.gridView1.OptionsCustomization.AllowGroup = false;
+            this.gridView1.OptionsMenu.EnableColumnMenu = false;
+            this.gridView1.OptionsSelection.UseIndicatorForSelection = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridView1.OptionsView.ShowIndicator = false;
+            // 
+            // cbColumns
+            // 
+            this.cbColumns.Location = new System.Drawing.Point(522, 48);
+            this.cbColumns.Name = "cbColumns";
+            this.cbColumns.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbColumns.Properties.Items.AddRange(new object[] {
+            "id",
+            "nombre",
+            "edad",
+            "raza",
+            "tipo de animal",
+            "sexo",
+            "esterilizados",
+            "estado",
+            "informacion adicional",
+            "fecha de rescate",
+            "rescatista",
+            "veterinario",
+            "diagnostico"});
+            this.cbColumns.Size = new System.Drawing.Size(326, 22);
+            this.cbColumns.TabIndex = 321;
+            // 
             // RecordManagementView
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -337,7 +388,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "RecordManagementView";
             this.Text = "consultarRegistro";
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -346,18 +396,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRecords)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbRecargar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tbFilterText.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbColumns.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraEditors.PictureEdit pbRecargar;
@@ -368,10 +420,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dgvRecords;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -380,5 +429,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label6;
+        private DevExpress.XtraEditors.TextEdit tbFilterText;
+        private System.Windows.Forms.Label label14;
+        private DevExpress.XtraGrid.GridControl dgvData;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.ComboBoxEdit cbColumns;
     }
 }

@@ -35,7 +35,7 @@ namespace AMAC.Presenters
                 DataRow row = view.OpenSearchTableTab(animals);
                 if (row == null) return;
 
-                view.Id = (int)row["idAnimal"];
+                view.Id = (int)row["id"];
             }
             catch (Exception ex)
             {
@@ -47,7 +47,7 @@ namespace AMAC.Presenters
         {
             try
             {
-                DataRow row = animals.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAnimal") == (int)view.Id);
+                DataRow row = animals.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("id") == (int)view.Id);
 
                 if (row == null)
                 {
@@ -65,14 +65,14 @@ namespace AMAC.Presenters
 
         private void LoadAnimalFields(DataRow row)
         {
-            view.NameA = (string)row["name"];
-            view.Age = (int)row["age"];
-            view.Sex = (string)row["sex"];
-            view.AnimalBreed = (string)row["breed"];
-            view.AnimalType = (string)row["animalType"];
-            view.Sterilized = (bool)row["sterilized"];
-            view.Status = (string)row["status"];
-            view.AdditionalInformation = (string)row["additionalInformation"];
+            view.NameA = (string)row["nombre"];
+            view.Age = (int)row["edad"];
+            view.Sex = (string)row["sexo"];
+            view.AnimalBreed = (string)row["raza"];
+            view.AnimalType = (string)row["tipo de animal"];
+            view.Sterilized = (bool)row["esterilizado"];
+            view.Status = (string)row["estado"];
+            view.AdditionalInformation = (string)row["informacion adicional"];
         }
 
 

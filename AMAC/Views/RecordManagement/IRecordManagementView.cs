@@ -10,13 +10,11 @@ namespace AMAC.Views.RecordManagement
     public interface IRecordManagementView
     {
         DataTable DataSource { get; set; }
+        string SelectedColumn { get; }
         string FilterText { get; }
 
-        event EventHandler OnClickUpdateRecordPictureEdit;
-        event EventHandler OnClickDeleteRecordPictureEdit;
-        event EventHandler OnClickSearchRecordPictureEdit;
-        event EventHandler OnClickLoadRecordsPictureEdit;
+        event EventHandler OnLoadForm;
+        event EventHandler OnChangeFilterTextTextBox;
 
-        void ChangeActiveHeader();
     }
 }

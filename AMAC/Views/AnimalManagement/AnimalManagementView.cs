@@ -121,7 +121,7 @@ namespace AMAC.Views.AnimalManagement
             foreach (int i in gridView1.GetSelectedRows())
             {
                 DataRow row = gridView1.GetDataRow(i);
-                this.Id = (int)row["idAnimal"];              
+                this.Id = (int)row["id"];              
             }
         }
 

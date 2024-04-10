@@ -15,51 +15,24 @@ namespace AMAC.Views.RecordManagement
 {
     public partial class RecordManagementView : DevExpress.XtraEditors.XtraForm, IRecordManagementView
     {
-        public DataTable DataSource { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DataTable DataSource { get => (DataTable)dgvData.DataSource; set => dgvData.DataSource = value; }
+        public string SelectedColumn => cbColumns.Text;
+        public string FilterText => tbFilterText.Text;
 
-        public string FilterText => throw new NotImplementedException();
+        public event EventHandler OnLoadForm;
+        public event EventHandler OnChangeFilterTextTextBox;
 
         public RecordManagementView()
         {
             InitializeComponent();
             AssociateAndRaisedEvents();
 
-        }
-
-        public event EventHandler OnClickUpdateRecordPictureEdit;
-        public event EventHandler OnClickDeleteRecordPictureEdit;
-        public event EventHandler OnClickSearchRecordPictureEdit;
-        public event EventHandler OnClickLoadRecordsPictureEdit;
-
+        }             
         private void AssociateAndRaisedEvents()
         {
-         
+            this.Load += delegate { OnLoadForm.Invoke(this, EventArgs.Empty); };
+            tbFilterText.TextChanged += delegate { OnChangeFilterTextTextBox.Invoke(tbFilterText, EventArgs.Empty); };
         }
-
-
-        private void pbEditar_Click_1(object sender, EventArgs e)
-        {
-            panel1.BackColor = Color.Blue;
-            label5.Text = "EDITAR REGISTRO";
-            dgvRecords.ReadOnly = false;
-        }
-
-        private void pbBorrar_Click_1(object sender, EventArgs e)
-        {
-            panel1.BackColor = Color.Brown;
-            label5.Text = "ELIMINAR REGISTRO";
-        }
-
-        private void pbConsultar_Click_1(object sender, EventArgs e)
-        {
-            panel1.BackColor = Color.MidnightBlue;
-            label5.Text = "CONSULTAR INFORMACION";
-            dgvRecords.ReadOnly = true;
-        }
-
-        public void ChangeActiveHeader()
-        {
-            throw new NotImplementedException();
-        }
+             
     }
 }

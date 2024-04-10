@@ -53,9 +53,9 @@ namespace AMAC.Views.FormatManagement.SearchTableView
         }
 
         public void SetCbColumnsPropierties()
-        {
+        {/*
             cbColumns.Properties.ValueMember = "Item1";
-            cbColumns.Properties.DisplayMember = "Item1";
+            cbColumns.Properties.DisplayMember = "Item1";*/
         }
     }
 }

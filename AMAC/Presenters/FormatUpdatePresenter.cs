@@ -84,24 +84,24 @@ namespace AMAC.Presenters
             Animal animal = new Animal()
             {
                 Id = view.AnimalId,
-                Name = (string)animalRow["name"],
-                Age = (int)animalRow["age"],
-                Sex = (string)animalRow["sex"],
-                AnimalType = (string)animalRow["animalType"],
-                AnimalBreed = (string)animalRow["breed"],
-                Sterilized = (bool)animalRow["sterilized"],
-                AdditionalInformation = (string)animalRow["additionalInformation"],
-                Status = (string)animalRow["status"],
+                Name = (string)animalRow["nombre"],
+                Age = (int)animalRow["edad"],
+                Sex = (string)animalRow["sexo"],
+                AnimalType = (string)animalRow["tipo de animal"],
+                AnimalBreed = (string)animalRow["raza"],
+                Sterilized = (bool)animalRow["esterilizado"],
+                AdditionalInformation = (string)animalRow["informacion adicional"],
+                Status = (string)animalRow["estado"],
             };
 
             Adopter adopter = new Adopter()
             {
                 Id = view.AdopterId,
-                Name = (string)adopterRow["name"],
-                Address = (string)adopterRow["address"],
-                Age = (int)adopterRow["age"],
-                Email = (string)adopterRow["email"],
-                Number = (string)adopterRow["phone"],
+                Name = (string)adopterRow["nombre"],
+                Address = (string)adopterRow["domicilio"],
+                Age = (int)adopterRow["edad"],
+                Email = (string)adopterRow["correo"],
+                Number = (string)adopterRow["numero"],
             };
 
             PdfFormat pdfFormat = new PdfFormat()
@@ -135,8 +135,8 @@ namespace AMAC.Presenters
             view.Id = (int)row["idAdoptionForm"];
             view.AdopterId = (int)row["idAdopter"];
             view.AnimalId = (int)row["idAnimal"];
-            view.Volunter = (string)row["volunteerInCharge"];
-            view.AdoptionDate = (DateTime)row["adoptionDate"];
+            view.Volunter = (string)row["voluntario"];
+            view.AdoptionDate = (DateTime)row["fecha de adopcion"];
         }
 
         private void SetDataInsideTab()

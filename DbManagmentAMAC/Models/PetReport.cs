@@ -15,19 +15,7 @@ namespace DbManagmentAMAC.Models
         private string rescuer;
 
         public PetReport() { }
-        public PetReport(Animal animal) 
-        {
-            this.id = animal.Id;
-            this.picturePath = animal.PicturePath;
-            this.name = animal.Name;
-            this.animalBreed = animal.AnimalBreed;
-            this.age = animal.Age;
-            this.sex = animal.Sex;
-            this.animalType = animal.AnimalType;
-            this.sterilized = animal.Sterilized;
-            this.additionalInformation = animal.AdditionalInformation;
-            
-        }
+        
 
         public DateTime RescueDate { get => rescueDate; set => rescueDate = value; }
         public string Diagnostic { get => diagnostic; set => diagnostic = value; }
