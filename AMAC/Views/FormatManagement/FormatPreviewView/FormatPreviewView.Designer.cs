@@ -81,6 +81,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::AMAC.Properties.Resources.AMACPNG;
             this.pictureBox1.Location = new System.Drawing.Point(391, 10);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(128, 80);

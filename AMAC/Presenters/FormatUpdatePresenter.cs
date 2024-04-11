@@ -78,8 +78,8 @@ namespace AMAC.Presenters
 
         private PdfGenerator GetGeneratorWithAtributtes()
         {
-            DataRow animalRow = animalData.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAnimal") == (int)view.AnimalId);
-            DataRow adopterRow = adopterData.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAdopter") == (int)view.AdopterId);
+            DataRow animalRow = animalData.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("id") == (int)view.AnimalId);
+            DataRow adopterRow = adopterData.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("id") == (int)view.AdopterId);
 
             Animal animal = new Animal()
             {

@@ -157,6 +157,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::AMAC.Properties.Resources.AMACPNG;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(200, 108);
@@ -597,13 +598,21 @@
             this.gridView1.GridControl = this.dgvAnimal;
             this.gridView1.GroupPanelText = "Presiona la lupa para abrir el buscador:";
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.AutoSelectAllInEditor = false;
             this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsCustomization.AllowColumnMoving = false;
             this.gridView1.OptionsCustomization.AllowFilter = false;
+            this.gridView1.OptionsCustomization.AllowGroup = false;
+            this.gridView1.OptionsCustomization.AllowSort = false;
             this.gridView1.OptionsDetail.EnableMasterViewMode = false;
             this.gridView1.OptionsFilter.AllowColumnMRUFilterList = false;
+            this.gridView1.OptionsFilter.InHeaderSearchMode = DevExpress.XtraGrid.Views.Grid.GridInHeaderSearchMode.TextFilter;
             this.gridView1.OptionsHint.ShowCellHints = false;
+            this.gridView1.OptionsHint.ShowColumnHeaderHints = false;
             this.gridView1.OptionsMenu.EnableColumnMenu = false;
             this.gridView1.OptionsMenu.EnableFooterMenu = false;
+            this.gridView1.OptionsMenu.EnableGroupPanelMenu = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.OptionsView.ShowIndicator = false;
             // 
             // AnimalManagementView

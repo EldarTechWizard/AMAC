@@ -9,6 +9,8 @@ namespace AMAC.Views.Login
     public interface ILoginView
     {
         bool IsLogged {  get; set; }
+        
+        string LabelWarning { set; }
         string UserName { get; }
         string Password { get; }
 
@@ -16,8 +18,8 @@ namespace AMAC.Views.Login
         event EventHandler OnClickCancelButton;
         event EventHandler OnClickHidePasswordPb;
         void CloseForm();
-        void Hide();
+        void HidePassword();
 
-
+        void ShowErrorMessage();
     }
 }

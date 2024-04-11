@@ -44,6 +44,7 @@
             this.groupControl3.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.groupControl3.Appearance.Options.UseBackColor = true;
             this.groupControl3.Appearance.Options.UseBorderColor = true;
+            this.groupControl3.CaptionImageOptions.SvgImage = global::AMAC.Properties.Resources.security_personalid;
             this.groupControl3.Controls.Add(this.tbVolunter);
             this.groupControl3.Controls.Add(this.dtpDate);
             this.groupControl3.Controls.Add(this.label3);
@@ -97,14 +98,14 @@
             this.label4.TabIndex = 283;
             this.label4.Text = "VOLUNTARIO A CARGO:";
             // 
-            // FormatUpdateVolunterView
+            // FormatVolunterView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1263, 139);
             this.Controls.Add(this.groupControl3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormatUpdateVolunterView";
+            this.Name = "FormatVolunterView";
             this.Text = "ModificarDoc_Resp";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);

@@ -71,6 +71,7 @@
             this.groupControl2.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.groupControl2.Appearance.Options.UseBackColor = true;
             this.groupControl2.Appearance.Options.UseBorderColor = true;
+            this.groupControl2.CaptionImageOptions.SvgImage = global::AMAC.Properties.Resources.bo_employee1;
             this.groupControl2.Controls.Add(this.peSeachAdopter);
             this.groupControl2.Controls.Add(this.tbAdopterlId);
             this.groupControl2.Controls.Add(this.tbEmail);
@@ -226,14 +227,14 @@
             this.label16.TabIndex = 305;
             this.label16.Text = "NOMBRE:";
             // 
-            // FormatUpdateAdopterView
+            // FormatAdopterView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1263, 215);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormatUpdateAdopterView";
+            this.Name = "FormatAdopterView";
             this.Text = "ModificarDoc_Adopt";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();

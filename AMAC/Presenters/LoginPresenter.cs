@@ -28,7 +28,7 @@ namespace AMAC.Presenters
 
         private void OnClickHidePasswordPb(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            view.HidePassword();
         }
 
         private void OnClickCancelButton(object sender, EventArgs e)
@@ -49,7 +49,8 @@ namespace AMAC.Presenters
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                //MessageBox.Show(ex.Message);
+                view.ShowErrorMessage();
             }
         }
     }

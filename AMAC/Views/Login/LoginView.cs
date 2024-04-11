@@ -12,12 +12,12 @@ namespace AMAC.Views.Login
     public partial class LoginView : DevExpress.XtraEditors.XtraForm, ILoginView
     {
         private bool isLogged = false;
-
         public string UserName => tbUser.Text;
 
         public string Password => tbPassword.Text;
 
         public bool IsLogged { get => isLogged; set => isLogged = true; }
+        public string LabelWarning { set => label2.Text = value; }
 
         public LoginView()
         {
@@ -37,22 +37,29 @@ namespace AMAC.Views.Login
             pbShow.Click += delegate { OnClickHidePasswordPb.Invoke(pbShow, EventArgs.Empty); };
         }
 
-
-        private void pbShow_Click(object sender, EventArgs e)
-        {
-            pbHide.Visible = true;
-            pbShow.Visible = false;
-        }
-
-        private void pbHide_Click(object sender, EventArgs e)
-        {
-            pbShow.Visible = true;
-            pbHide.Visible = false;
-        }
-
+       
         public void CloseForm()
         {
             this.Close();
+        }
+
+        public void HidePassword()
+        {
+            if(tbPassword.UseSystemPasswordChar)
+            {
+                tbPassword.UseSystemPasswordChar = false;
+                pbHide.Image = AMAC.Properties.Resources.visible;
+                return;
+            }
+
+            tbPassword.UseSystemPasswordChar = true;
+            pbHide.Image = AMAC.Properties.Resources.invisible;
+        }
+
+        public void ShowErrorMessage()
+        {
+            label2.Visible = true;
+            label2.Text = "Usuario y/o Contraseña incorrectos";
         }
     }
 }

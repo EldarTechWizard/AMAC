@@ -142,6 +142,7 @@ namespace AMAC.Presenters
                     AnimalBreed = view.AnimalBreed,
                     AnimalType = view.AnimalType,
                     Status = view.Status,
+                    Sterilized = view.Sterilized,
                     AdditionalInformation = view.AdditionalInformation,
                     RescueDate = view.RescuedDate,
                     TempHome = view.TemporaryHome,

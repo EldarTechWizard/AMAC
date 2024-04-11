@@ -94,6 +94,7 @@
             this.groupControl1.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.groupControl1.Appearance.Options.UseBackColor = true;
             this.groupControl1.Appearance.Options.UseBorderColor = true;
+            this.groupControl1.CaptionImageOptions.SvgImage = global::AMAC.Properties.Resources.actions_addcircled1;
             this.groupControl1.Controls.Add(this.peSeachAnimal);
             this.groupControl1.Controls.Add(this.tbAdditionalInformation);
             this.groupControl1.Controls.Add(this.label12);
@@ -320,14 +321,14 @@
             this.label26.TabIndex = 294;
             this.label26.Text = "ID:";
             // 
-            // FormatUpdateAnimalView
+            // FormatAnimalView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1263, 225);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormatUpdateAnimalView";
+            this.Name = "FormatAnimalView";
             this.Text = "ModificarDoc_Mascota";
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);

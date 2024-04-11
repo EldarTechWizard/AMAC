@@ -246,6 +246,9 @@
     <EmbeddedResource Include="Views\FormatManagement\FormatControls\FormatVolunterView\FormatVolunterView.resx">
       <DependentUpon>FormatVolunterView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormatManagement\FormatManagementView.resx">
+      <DependentUpon>FormatManagementView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FormatManagement\FormatNewAdoptionView\FormatNewAdoptionView.resx">
       <DependentUpon>FormatNewAdoptionView.cs</DependentUpon>
     </EmbeddedResource>
@@ -289,6 +292,42 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AMACLOGO.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\45198380_1450879211681317_1012344617963618304_n-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\see_eye_visible_icon_187826.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no_see_visible_hidde_icon_187886.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gender_Neutral_User_icon-icons.com_55902.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_addcircled.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_employee.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_contact.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\showprintpreview.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bo_employee1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_addcircled1.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\security_personalid.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0.1\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets" Condition="Exists('..\packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0.1\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets')" />

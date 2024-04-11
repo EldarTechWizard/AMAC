@@ -148,6 +148,8 @@
             this.gridView1.OptionsBehavior.KeepGroupExpandedOnSorting = false;
             this.gridView1.OptionsCustomization.AllowColumnMoving = false;
             this.gridView1.OptionsCustomization.AllowGroup = false;
+            this.gridView1.OptionsCustomization.AllowSort = false;
+            this.gridView1.OptionsFilter.InHeaderSearchMode = DevExpress.XtraGrid.Views.Grid.GridInHeaderSearchMode.TextFilter;
             this.gridView1.OptionsMenu.EnableColumnMenu = false;
             this.gridView1.OptionsSelection.UseIndicatorForSelection = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;

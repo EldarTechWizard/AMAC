@@ -34,11 +34,8 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.btnCloseSesion = new DevExpress.XtraEditors.SimpleButton();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.btnAdopterManagement = new DevExpress.XtraEditors.SimpleButton();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.btnFormatManagement = new DevExpress.XtraEditors.SimpleButton();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btnRecordManagement = new DevExpress.XtraEditors.SimpleButton();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnAnimalManagement = new DevExpress.XtraEditors.SimpleButton();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -46,8 +43,11 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAdopterManagement = new DevExpress.XtraEditors.SimpleButton();
+            this.btnFormatManagement = new DevExpress.XtraEditors.SimpleButton();
+            this.btnRecordManagement = new DevExpress.XtraEditors.SimpleButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -129,28 +129,12 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.btnAdopterManagement);
+            this.panel8.Controls.Add(this.btnRecordManagement);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 393);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(252, 131);
             this.panel8.TabIndex = 3;
-            // 
-            // btnAdopterManagement
-            // 
-            this.btnAdopterManagement.Appearance.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnAdopterManagement.Appearance.BorderColor = System.Drawing.Color.White;
-            this.btnAdopterManagement.Appearance.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdopterManagement.Appearance.Options.UseBackColor = true;
-            this.btnAdopterManagement.Appearance.Options.UseBorderColor = true;
-            this.btnAdopterManagement.Appearance.Options.UseFont = true;
-            this.btnAdopterManagement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAdopterManagement.Location = new System.Drawing.Point(0, 0);
-            this.btnAdopterManagement.Name = "btnAdopterManagement";
-            this.btnAdopterManagement.Size = new System.Drawing.Size(252, 131);
-            this.btnAdopterManagement.TabIndex = 95;
-            this.btnAdopterManagement.Tag = "Adopter";
-            this.btnAdopterManagement.Text = "GESTOR DE \r\nADOPTANTES";
             // 
             // panel7
             // 
@@ -161,46 +145,14 @@
             this.panel7.Size = new System.Drawing.Size(252, 131);
             this.panel7.TabIndex = 2;
             // 
-            // btnFormatManagement
-            // 
-            this.btnFormatManagement.Appearance.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnFormatManagement.Appearance.BorderColor = System.Drawing.Color.White;
-            this.btnFormatManagement.Appearance.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFormatManagement.Appearance.Options.UseBackColor = true;
-            this.btnFormatManagement.Appearance.Options.UseBorderColor = true;
-            this.btnFormatManagement.Appearance.Options.UseFont = true;
-            this.btnFormatManagement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnFormatManagement.Location = new System.Drawing.Point(0, 0);
-            this.btnFormatManagement.Name = "btnFormatManagement";
-            this.btnFormatManagement.Size = new System.Drawing.Size(252, 131);
-            this.btnFormatManagement.TabIndex = 94;
-            this.btnFormatManagement.Tag = "Format";
-            this.btnFormatManagement.Text = "GENERAR\r\n FORMATO\r\nDE ADOPCION\r\n";
-            // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.btnRecordManagement);
+            this.panel6.Controls.Add(this.btnAdopterManagement);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 131);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(252, 131);
             this.panel6.TabIndex = 1;
-            // 
-            // btnRecordManagement
-            // 
-            this.btnRecordManagement.Appearance.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnRecordManagement.Appearance.BorderColor = System.Drawing.Color.White;
-            this.btnRecordManagement.Appearance.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecordManagement.Appearance.Options.UseBackColor = true;
-            this.btnRecordManagement.Appearance.Options.UseBorderColor = true;
-            this.btnRecordManagement.Appearance.Options.UseFont = true;
-            this.btnRecordManagement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnRecordManagement.Location = new System.Drawing.Point(0, 0);
-            this.btnRecordManagement.Name = "btnRecordManagement";
-            this.btnRecordManagement.Size = new System.Drawing.Size(252, 131);
-            this.btnRecordManagement.TabIndex = 92;
-            this.btnRecordManagement.Tag = "Record";
-            this.btnRecordManagement.Text = "CONSULTAR \r\nADOPCIONES";
             // 
             // panel5
             // 
@@ -220,6 +172,7 @@
             this.btnAnimalManagement.Appearance.Options.UseBorderColor = true;
             this.btnAnimalManagement.Appearance.Options.UseFont = true;
             this.btnAnimalManagement.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAnimalManagement.ImageOptions.SvgImage = global::AMAC.Properties.Resources.actions_addcircled;
             this.btnAnimalManagement.Location = new System.Drawing.Point(0, 0);
             this.btnAnimalManagement.Name = "btnAnimalManagement";
             this.btnAnimalManagement.Size = new System.Drawing.Size(252, 131);
@@ -285,16 +238,6 @@
             this.panel2.Size = new System.Drawing.Size(252, 118);
             this.panel2.TabIndex = 1;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(252, 118);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 89;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -303,6 +246,68 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1245, 684);
             this.panel1.TabIndex = 0;
+            // 
+            // btnAdopterManagement
+            // 
+            this.btnAdopterManagement.Appearance.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnAdopterManagement.Appearance.BorderColor = System.Drawing.Color.White;
+            this.btnAdopterManagement.Appearance.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdopterManagement.Appearance.Options.UseBackColor = true;
+            this.btnAdopterManagement.Appearance.Options.UseBorderColor = true;
+            this.btnAdopterManagement.Appearance.Options.UseFont = true;
+            this.btnAdopterManagement.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAdopterManagement.ImageOptions.SvgImage = global::AMAC.Properties.Resources.bo_employee;
+            this.btnAdopterManagement.Location = new System.Drawing.Point(0, 0);
+            this.btnAdopterManagement.Name = "btnAdopterManagement";
+            this.btnAdopterManagement.Size = new System.Drawing.Size(252, 131);
+            this.btnAdopterManagement.TabIndex = 96;
+            this.btnAdopterManagement.Tag = "Adopter";
+            this.btnAdopterManagement.Text = "GESTOR DE \r\nADOPTANTES";
+            // 
+            // btnFormatManagement
+            // 
+            this.btnFormatManagement.Appearance.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnFormatManagement.Appearance.BorderColor = System.Drawing.Color.White;
+            this.btnFormatManagement.Appearance.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFormatManagement.Appearance.Options.UseBackColor = true;
+            this.btnFormatManagement.Appearance.Options.UseBorderColor = true;
+            this.btnFormatManagement.Appearance.Options.UseFont = true;
+            this.btnFormatManagement.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnFormatManagement.ImageOptions.SvgImage = global::AMAC.Properties.Resources.bo_contact;
+            this.btnFormatManagement.Location = new System.Drawing.Point(0, 0);
+            this.btnFormatManagement.Name = "btnFormatManagement";
+            this.btnFormatManagement.Size = new System.Drawing.Size(252, 131);
+            this.btnFormatManagement.TabIndex = 96;
+            this.btnFormatManagement.Tag = "Format";
+            this.btnFormatManagement.Text = "GENERAR\r\n FORMATO\r\nDE ADOPCION\r\n";
+            // 
+            // btnRecordManagement
+            // 
+            this.btnRecordManagement.Appearance.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnRecordManagement.Appearance.BorderColor = System.Drawing.Color.White;
+            this.btnRecordManagement.Appearance.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecordManagement.Appearance.Options.UseBackColor = true;
+            this.btnRecordManagement.Appearance.Options.UseBorderColor = true;
+            this.btnRecordManagement.Appearance.Options.UseFont = true;
+            this.btnRecordManagement.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnRecordManagement.ImageOptions.SvgImage = global::AMAC.Properties.Resources.showprintpreview;
+            this.btnRecordManagement.Location = new System.Drawing.Point(0, 0);
+            this.btnRecordManagement.Name = "btnRecordManagement";
+            this.btnRecordManagement.Size = new System.Drawing.Size(252, 131);
+            this.btnRecordManagement.TabIndex = 97;
+            this.btnRecordManagement.Tag = "Record";
+            this.btnRecordManagement.Text = "CONSULTAR \r\nADOPCIONES";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::AMAC.Properties.Resources.AMACPNG;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(252, 118);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 89;
+            this.pictureBox1.TabStop = false;
             // 
             // MainView
             // 
@@ -342,14 +347,14 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
         private DevExpress.XtraEditors.SimpleButton btnAnimalManagement;
-        private DevExpress.XtraEditors.SimpleButton btnRecordManagement;
-        private DevExpress.XtraEditors.SimpleButton btnFormatManagement;
         public System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel10;
-        private DevExpress.XtraEditors.SimpleButton btnAdopterManagement;
         private System.Windows.Forms.Panel panel11;
         private DevExpress.XtraEditors.SimpleButton btnCloseSesion;
+        private DevExpress.XtraEditors.SimpleButton btnAdopterManagement;
+        private DevExpress.XtraEditors.SimpleButton btnRecordManagement;
+        private DevExpress.XtraEditors.SimpleButton btnFormatManagement;
     }
 }

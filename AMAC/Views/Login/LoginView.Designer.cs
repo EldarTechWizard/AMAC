@@ -107,9 +107,9 @@
             this.tbPassword.Location = new System.Drawing.Point(500, 454);
             this.tbPassword.Margin = new System.Windows.Forms.Padding(4);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(362, 31);
             this.tbPassword.TabIndex = 2;
+            this.tbPassword.UseSystemPasswordChar = true;
             // 
             // tbUser
             // 
@@ -144,6 +144,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::AMAC.Properties.Resources.AMACAZUL;
             this.pictureBox1.Location = new System.Drawing.Point(69, 144);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(314, 304);
@@ -166,6 +167,7 @@
             // 
             // pbHide
             // 
+            this.pbHide.Image = global::AMAC.Properties.Resources.invisible;
             this.pbHide.Location = new System.Drawing.Point(870, 454);
             this.pbHide.Margin = new System.Windows.Forms.Padding(4);
             this.pbHide.Name = "pbHide";
@@ -173,7 +175,6 @@
             this.pbHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbHide.TabIndex = 85;
             this.pbHide.TabStop = false;
-            this.pbHide.Visible = false;
             // 
             // pbShow
             // 
@@ -188,6 +189,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::AMAC.Properties.Resources.Gender_Neutral_User_icon_icons_com_55902;
             this.pictureBox2.Location = new System.Drawing.Point(560, 77);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";

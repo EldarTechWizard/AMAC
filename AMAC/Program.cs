@@ -2,6 +2,7 @@
 using AMAC.Views.AdopterManagement;
 using AMAC.Views.AnimalManagement;
 using AMAC.Views.FormatManagement.FormatNewAdoptionView;
+using AMAC.Views.Login;
 using AMAC.Views.Main;
 using DbManagmentAMAC.Models;
 using DbManagmentAMAC.Repository;
@@ -25,9 +26,23 @@ namespace AMAC
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             QuestPDF.Settings.License = LicenseType.Community;
+
+
+            ILoginView login = new LoginView();
+            new LoginPresenter(login);
+            ((Form)login).ShowDialog();
+
+            if (!login.IsLogged) return;
+
+            string userName = login.UserName;
+            string password = login.Password;
+
+
+
             IMainView view = new MainView();
-            IRepository repository = new SqlServer("Server=ASUSTUF;Database=AMAC;Trusted_Connection=True;");
+            IRepository repository = new SqlServer($"Server=ASUSTUF;Database=AMAC;User Id={userName};Password={password}");
             new MainPresenter(view,repository);
+
             Application.Run((Form)view);
         }
     }
