@@ -22,6 +22,7 @@ namespace AMAC.Views.AnimalManagement
         public event EventHandler OnLoadForm;
         public event EventHandler OnChangedAdopterIdTextBox;
         public event EventHandler OnClickSelectRowGridControl;
+        public event EventHandler OnClickGenerateInsertButton;
 
         public AnimalManagementView()
         {
@@ -35,6 +36,7 @@ namespace AMAC.Views.AnimalManagement
             btnSaveAndEdit.Click += delegate { OnClickSaveAndEditAnimalButton.Invoke(btnSaveAndEdit, EventArgs.Empty); };
             btnDelete.Click += delegate { OnClickDeleteAnimalButton.Invoke(btnDelete, EventArgs.Empty); };           
             btnChoosePhoto.Click += delegate { OnClickChoosePhotoButton.Invoke(btnChoosePhoto, EventArgs.Empty); };
+            btnGenerateInsert.Click += delegate { OnClickGenerateInsertButton.Invoke(btnGenerateInsert, EventArgs.Empty); };
             gridView1.Click += delegate { OnClickSelectRowGridControl.Invoke(gridView1, EventArgs.Empty); };
             tbId.TextChanged += delegate { OnChangedAdopterIdTextBox.Invoke(tbId, EventArgs.Empty); };
         }
@@ -70,7 +72,7 @@ namespace AMAC.Views.AnimalManagement
         public bool Sterilized { get => chbSterilized.Checked; set => chbSterilized.Checked = value; }
         public string AnimalType { get => tbAnimalType.Text; set => tbAnimalType.Text = value; }
         public string AdditionalInformation { get => tbAdditionalInformation.Text; set => tbAdditionalInformation.Text = value; }
-        public string Status { get => tbStatus.Text; set => tbStatus.Text = value; }
+        public string Status { get => cbStatus.Text; set => cbStatus.Text = value; }
         public DateTime RescuedDate { get => dtFecha.Value; set => dtFecha.Value = value; }
         public string TemporaryHome { get => tbTempHome.Text; set => tbTempHome.Text = value; }
         public string Rescuer { get => tbRescuer.Text; set => tbRescuer.Text = value; }
@@ -96,10 +98,9 @@ namespace AMAC.Views.AnimalManagement
 
         public void ClearFields()
         {
-            tbId.Text = "";
             tbName.Text = "";
             tbAge.Text = "";
-            tbStatus.Text = "";
+            cbStatus.Text = "Sano";
             cbSex.Text = "";
             tbAnimalType.Text = "";
             tbAnimalBreed.Text = "";
@@ -108,7 +109,6 @@ namespace AMAC.Views.AnimalManagement
             tbRescuer.Text = "";
             tbTempHome.Text = "";
             tbVet.Text = "";
-
             chbSterilized.Checked = false;
             dtFecha.Value = DateTime.Now;
             peImage.Image = null;

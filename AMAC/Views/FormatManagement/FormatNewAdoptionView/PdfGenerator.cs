@@ -175,7 +175,7 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
                                 });
                                 row.RelativeItem().Text(text =>
                                 {
-                                    text.Span($"TIPO DE ANIMAL: ").FontSize(8).FontColor("#2F3872");
+                                    text.Span($"Categoria: ").FontSize(8).FontColor("#2F3872");
                                     text.Span($"{animal.AnimalType}").FontSize(8).FontColor("#2F3872").Bold();
                                 });
                                 row.RelativeItem().Text(text =>
@@ -229,7 +229,7 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
                 .ShrinkVertical()
                 .Layers(layers =>
                 {
-                    DrawTextHeader(layers, "DATOS GENERAL DEL ADOPTANTE");
+                    DrawTextHeader(layers, "DATOS GENERALES DEL ADOPTANTE");
                 });
         }
 
@@ -352,23 +352,23 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
                                     .PaddingTop(1)
                                     .Text(text =>
                                     {
-                                        text.Span($"-El (la) adoptante se compromete a dar el animal buena alimentacion; convivir con el animalito, atenciones que requiera; darle un lugar adecuado: seguro, protegido del frio, lluvia o sol, etc, donde vivir.{Environment.NewLine}-La mascota ").FontSize(8).FontColor("#2F3872");
+                                        text.Span($"-El (la) adoptante se compromete a dar al animal buena alimentacion; convivir con el animalito, atenciones que requiera; darle un lugar adecuado: seguro, protegido del frio, lluvia o sol, etc, donde vivir.{Environment.NewLine}-La mascota ").FontSize(8).FontColor("#2F3872");
                                         text.Span($"{animal.Name}").FontSize(8).Bold().FontColor("#2F3872");
-                                        text.Span($" recibira siempre la atencion medica necesaria; y estos gastos son a partir de hoy, a cargo del adoptante, salvo otros acuerdos (especificar)________________________________").FontSize(8).FontColor("#2F3872");
+                                        text.Span($" recibira siempre la atencion medica necesaria; y estos gastos son a partir de hoy, a cargo del adoptante").FontSize(8).FontColor("#2F3872");
                                     });
        
                             });
 
                             col.Item().Row(row =>
                             {
-                                row.RelativeItem().Text($"-La mascota llevara siempre en su cuello, un collar con identificacion y numero telefonico de su hogar.{Environment.NewLine}-Si se adopta un cachorro, se compromete a esterilizaro a la edad de seis meses (especificar fecha): ____________________________________")
+                                row.RelativeItem().Text($"-La mascota llevara siempre en su cuello, un collar con identificacion y numero telefonico de su hogar.{Environment.NewLine}-Si se adopta un cachorro, se compromete a esterilizaro a la edad de seis meses")
                                 .FontSize(8)
                                 .FontColor("#2F3872");
                             });
 
                             col.Item().Row(row =>
                             {
-                                row.RelativeItem().Text($"-Informamrnos de cambios de domicilio y numero telefonico {Environment.NewLine}-AMAC se reserva el derecho de llamar o visitar el hogar del animalito adoptado.")
+                                row.RelativeItem().Text($"-Informanos de cambios de domicilio y numero telefonico {Environment.NewLine}-AMAC se reserva el derecho de llamar o visitar el hogar del animalito adoptado.")
                                 .FontSize(8)
                                 .FontColor("#2F3872");
                             });
@@ -384,7 +384,7 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
                 .ShrinkVertical()
                 .Layers(layers =>
                 {
-                    DrawTextHeaderLeft(layers, "*Cualquiera de estas condiciones que NO fuese cumplidad, sera motivo para que el animal sea recogido por voluntari@s de AMAC Gsv AC; se haga publico el incumplimiento de algun acuerdo; o se levante denuncia de acuerdo a la Ley de Proteccion para los animales del Estado de Sinaloa, en caso de ser necesario.");
+                    DrawTextHeaderLeft(layers, "*Cualquiera de estas condiciones que NO fuese cumplida, sera motivo para que el animal sea recogido por voluntari@s de AMAC Gsv AC; se haga publico el incumplimiento de algun acuerdo; o se levante denuncia de acuerdo a la Ley de Proteccion para los animales del Estado de Sinaloa, en caso de ser necesario.");
                 });
         }
 

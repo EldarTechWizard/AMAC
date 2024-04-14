@@ -20,6 +20,7 @@ namespace AMAC.Views.AdopterManagement
         public event EventHandler OnLoadForm;
         public event EventHandler OnClickSelectRowGridControl;
         public event EventHandler OnChangedAdopterIdTextBox;
+        public event EventHandler OnClickGenerateInsertButton;
 
         public AdopterManagementView()
         {
@@ -31,6 +32,7 @@ namespace AMAC.Views.AdopterManagement
         {
             this.Load += delegate { OnLoadForm.Invoke(this, EventArgs.Empty); };
             btnSaveAndEdit.Click += delegate { OnClickSaveAndEditButton.Invoke(btnSaveAndEdit, EventArgs.Empty); };
+            btnGenerateInsert.Click += delegate { OnClickGenerateInsertButton.Invoke(btnGenerateInsert, EventArgs.Empty); };
             btnDelete.Click += delegate { OnClickDeleteButton.Invoke(btnDelete, EventArgs.Empty); };
             tbId.TextChanged += delegate { OnChangedAdopterIdTextBox.Invoke(tbId, EventArgs.Empty); };
             gridView1.Click += delegate { OnClickSelectRowGridControl.Invoke(gridView1, EventArgs.Empty); };
@@ -82,7 +84,6 @@ namespace AMAC.Views.AdopterManagement
             tbAddress.Text = "";
             tbNumber.Text = "";
             tbEmail.Text = "";
-            tbId.Text = "";
         }
 
         public void LoadInfoFromSelectedRow()

@@ -21,11 +21,11 @@ namespace DbManagmentAMAC.Models
         bool SelectRecord(DataTable data);
         bool DeleteRecord(int id);
         bool UpdateRecord(PetReport petReport);
-
         bool InsertPdfFormat(PdfFormat format);
         bool SelectPdfFormat(DataTable data);
         bool DeletePdfFormat(int id);
         bool UpdatePdfFormat(PdfFormat format);
+        bool GetIdentityNextValue(ref int value, string tableName);
 
     }
 }

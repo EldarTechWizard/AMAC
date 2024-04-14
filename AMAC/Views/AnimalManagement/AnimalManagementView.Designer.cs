@@ -38,6 +38,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btnGenerateInsert = new DevExpress.XtraEditors.SimpleButton();
             this.tbId = new DevExpress.XtraEditors.TextEdit();
             this.tbDiagnostic = new DevExpress.XtraEditors.TextEdit();
             this.label5 = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@
             this.tbAnimalBreed = new DevExpress.XtraEditors.TextEdit();
             this.tbAge = new DevExpress.XtraEditors.TextEdit();
             this.tbName = new DevExpress.XtraEditors.TextEdit();
-            this.tbStatus = new DevExpress.XtraEditors.TextEdit();
             this.btnChoosePhoto = new DevExpress.XtraEditors.SimpleButton();
             this.peImage = new DevExpress.XtraEditors.PictureEdit();
             this.chbSterilized = new System.Windows.Forms.CheckBox();
@@ -72,6 +72,7 @@
             this.btnSaveAndEdit = new System.Windows.Forms.Button();
             this.dgvAnimal = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.cbStatus = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -91,7 +92,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbAnimalBreed.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAge.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbStatus.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.peImage.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnimal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -205,6 +205,8 @@
             this.groupControl1.Appearance.Options.UseBackColor = true;
             this.groupControl1.Appearance.Options.UseBorderColor = true;
             this.groupControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.groupControl1.Controls.Add(this.cbStatus);
+            this.groupControl1.Controls.Add(this.btnGenerateInsert);
             this.groupControl1.Controls.Add(this.tbId);
             this.groupControl1.Controls.Add(this.tbDiagnostic);
             this.groupControl1.Controls.Add(this.label5);
@@ -217,7 +219,6 @@
             this.groupControl1.Controls.Add(this.tbAnimalBreed);
             this.groupControl1.Controls.Add(this.tbAge);
             this.groupControl1.Controls.Add(this.tbName);
-            this.groupControl1.Controls.Add(this.tbStatus);
             this.groupControl1.Controls.Add(this.btnChoosePhoto);
             this.groupControl1.Controls.Add(this.peImage);
             this.groupControl1.Controls.Add(this.chbSterilized);
@@ -244,11 +245,20 @@
             this.groupControl1.TabIndex = 158;
             this.groupControl1.Text = "Nuevo Registro";
             // 
+            // btnGenerateInsert
+            // 
+            this.btnGenerateInsert.ImageOptions.Image = global::AMAC.Properties.Resources.add_16x16;
+            this.btnGenerateInsert.Location = new System.Drawing.Point(544, 54);
+            this.btnGenerateInsert.Name = "btnGenerateInsert";
+            this.btnGenerateInsert.Size = new System.Drawing.Size(23, 23);
+            this.btnGenerateInsert.TabIndex = 342;
+            // 
             // tbId
             // 
             this.tbId.Location = new System.Drawing.Point(339, 54);
             this.tbId.Name = "tbId";
-            this.tbId.Size = new System.Drawing.Size(242, 22);
+            this.tbId.Properties.ReadOnly = true;
+            this.tbId.Size = new System.Drawing.Size(196, 22);
             this.tbId.TabIndex = 341;
             // 
             // tbDiagnostic
@@ -277,12 +287,12 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(1045, 97);
+            this.label2.Location = new System.Drawing.Point(1086, 95);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 23);
+            this.label2.Size = new System.Drawing.Size(137, 23);
             this.label2.TabIndex = 338;
-            this.label2.Text = "TIPO DE ANIMAL:";
+            this.label2.Text = "CATEGORIA:";
             // 
             // tbAnimalType
             // 
@@ -310,7 +320,7 @@
             // 
             this.tbVet.Location = new System.Drawing.Point(339, 185);
             this.tbVet.Name = "tbVet";
-            this.tbVet.Size = new System.Drawing.Size(242, 22);
+            this.tbVet.Size = new System.Drawing.Size(228, 22);
             this.tbVet.TabIndex = 334;
             // 
             // tbRescuer
@@ -324,7 +334,7 @@
             // 
             this.tbAnimalBreed.Location = new System.Drawing.Point(339, 139);
             this.tbAnimalBreed.Name = "tbAnimalBreed";
-            this.tbAnimalBreed.Size = new System.Drawing.Size(242, 22);
+            this.tbAnimalBreed.Size = new System.Drawing.Size(228, 22);
             this.tbAnimalBreed.TabIndex = 332;
             // 
             // tbAge
@@ -338,15 +348,8 @@
             // 
             this.tbName.Location = new System.Drawing.Point(339, 95);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(242, 22);
+            this.tbName.Size = new System.Drawing.Size(228, 22);
             this.tbName.TabIndex = 330;
-            // 
-            // tbStatus
-            // 
-            this.tbStatus.Location = new System.Drawing.Point(1230, 182);
-            this.tbStatus.Name = "tbStatus";
-            this.tbStatus.Size = new System.Drawing.Size(178, 22);
-            this.tbStatus.TabIndex = 329;
             // 
             // btnChoosePhoto
             // 
@@ -368,7 +371,7 @@
             // chbSterilized
             // 
             this.chbSterilized.AutoSize = true;
-            this.chbSterilized.Location = new System.Drawing.Point(1230, 262);
+            this.chbSterilized.Location = new System.Drawing.Point(1230, 267);
             this.chbSterilized.Name = "chbSterilized";
             this.chbSterilized.Size = new System.Drawing.Size(18, 17);
             this.chbSterilized.TabIndex = 325;
@@ -461,7 +464,7 @@
             "H",
             "M",
             "NA"});
-            this.cbSex.Location = new System.Drawing.Point(1230, 220);
+            this.cbSex.Location = new System.Drawing.Point(1232, 222);
             this.cbSex.Name = "cbSex";
             this.cbSex.Size = new System.Drawing.Size(176, 29);
             this.cbSex.TabIndex = 312;
@@ -615,6 +618,20 @@
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.OptionsView.ShowIndicator = false;
             // 
+            // cbStatus
+            // 
+            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStatus.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbStatus.FormattingEnabled = true;
+            this.cbStatus.Items.AddRange(new object[] {
+            "Sano",
+            "Enfermo",
+            "Fallecido"});
+            this.cbStatus.Location = new System.Drawing.Point(1232, 179);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(176, 29);
+            this.cbStatus.TabIndex = 343;
+            // 
             // AnimalManagementView
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
@@ -647,7 +664,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbAnimalBreed.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbAge.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tbStatus.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.peImage.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnimal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -689,7 +705,6 @@
         private DevExpress.XtraEditors.TextEdit tbAnimalBreed;
         private DevExpress.XtraEditors.TextEdit tbAge;
         private DevExpress.XtraEditors.TextEdit tbName;
-        private DevExpress.XtraEditors.TextEdit tbStatus;
         private System.Windows.Forms.RichTextBox tbAdditionalInformation;
         private DevExpress.XtraEditors.TextEdit tbTempHome;
         private DevExpress.XtraEditors.TextEdit tbVet;
@@ -701,5 +716,7 @@
         private DevExpress.XtraGrid.GridControl dgvAnimal;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.TextEdit tbId;
+        private DevExpress.XtraEditors.SimpleButton btnGenerateInsert;
+        private System.Windows.Forms.ComboBox cbStatus;
     }
 }

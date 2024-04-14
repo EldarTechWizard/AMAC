@@ -30,10 +30,50 @@ namespace AMAC.Presenters
         {
             view.OnClickSaveAndEditAnimalButton += OnClickSaveAndEditAnimalButton;
             view.OnClickDeleteAnimalButton += OnClickDeleteAnimalButton;
+            view.OnClickGenerateInsertButton += OnClickGenerateInsertButton;
             view.OnClickChoosePhotoButton += OnClickChoosePhotoButton;
             view.OnClickSelectRowGridControl += OnClickSelectRowGridControl;
             view.OnChangedAdopterIdTextBox += OnChangedAdopterIdTextBox;
             view.OnLoadForm += OnLoadForm;
+        }
+
+        private void OnLoadForm(object sender, EventArgs e)
+        {
+            try
+            {
+                ReloadInformation();
+                SetInsertMode();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void ReloadInformation()
+        {
+            DataTable data = new DataTable();
+            if (!repository.SelectRecord(data)) throw new Exception(repository.LastError);
+            view.DataSource = data;
+        }
+        private void OnClickGenerateInsertButton(object sender, EventArgs e)
+        {
+            try
+            {
+                SetInsertMode();
+            }            
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void SetInsertMode()
+        {
+            int value = 0;
+
+            if (!repository.GetIdentityNextValue(ref value, "animal")) throw new Exception(repository.LastError);
+
+            view.Id = value;
         }
 
         private void OnChangedAdopterIdTextBox(object sender, EventArgs e)
@@ -64,6 +104,8 @@ namespace AMAC.Presenters
                     return;
                 }
 
+
+                view.ClearFields();
                 view.ChangeEditMode(false);
             }
             catch (Exception ex)
@@ -83,26 +125,7 @@ namespace AMAC.Presenters
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void OnLoadForm(object sender, EventArgs e)
-        {
-            try
-            {
-                ReloadInformation();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void ReloadInformation()
-        {
-            DataTable data = new DataTable();
-            if (!repository.SelectRecord(data)) throw new Exception(repository.LastError);
-            view.DataSource = data;
-        }
+        }   
 
         private void OnClickChoosePhotoButton(object sender, EventArgs e)
         {

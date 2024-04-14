@@ -2,7 +2,6 @@
 using AMAC.Views.AnimalManagement;
 using AMAC.Views.FormatManagement;
 using AMAC.Views.Main;
-using AMAC.Views.RecordManagement;
 using DbManagmentAMAC.Models;
 using DbManagmentAMAC.Repository;
 using DevExpress.XtraEditors;
@@ -62,12 +61,7 @@ namespace AMAC.Presenters
                     tab = (Form)formatTab;
 
                     break;
-                case "Record":
-                    IRecordManagementView recordTab = new RecordManagementView();
-                    new RecordManagementPresenter(recordTab, repository);
-                    tab = (Form)recordTab;
-
-                    break;
+                
                 default:
                     throw new ArgumentException("Error al cambiar una nueva pestaña");
             }

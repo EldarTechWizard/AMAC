@@ -54,6 +54,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnGenerateInsert = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -204,6 +205,7 @@
             this.groupControl1.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.groupControl1.Appearance.Options.UseBackColor = true;
             this.groupControl1.Appearance.Options.UseBorderColor = true;
+            this.groupControl1.Controls.Add(this.btnGenerateInsert);
             this.groupControl1.Controls.Add(this.tbId);
             this.groupControl1.Controls.Add(this.tbAge);
             this.groupControl1.Controls.Add(this.tbEmail);
@@ -229,12 +231,13 @@
             // 
             this.tbId.Location = new System.Drawing.Point(194, 60);
             this.tbId.Name = "tbId";
-            this.tbId.Size = new System.Drawing.Size(93, 22);
+            this.tbId.Properties.ReadOnly = true;
+            this.tbId.Size = new System.Drawing.Size(96, 22);
             this.tbId.TabIndex = 336;
             // 
             // tbAge
             // 
-            this.tbAge.Location = new System.Drawing.Point(426, 105);
+            this.tbAge.Location = new System.Drawing.Point(456, 105);
             this.tbAge.Name = "tbAge";
             this.tbAge.Size = new System.Drawing.Size(296, 22);
             this.tbAge.TabIndex = 335;
@@ -262,7 +265,7 @@
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(426, 60);
+            this.tbName.Location = new System.Drawing.Point(456, 60);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(296, 22);
             this.tbName.TabIndex = 330;
@@ -273,7 +276,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(346, 100);
+            this.label11.Location = new System.Drawing.Point(376, 100);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(73, 23);
@@ -300,7 +303,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(53, 185);
+            this.btnDelete.Location = new System.Drawing.Point(50, 187);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(151, 64);
@@ -314,7 +317,7 @@
             this.btnSaveAndEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSaveAndEdit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnSaveAndEdit.ForeColor = System.Drawing.Color.White;
-            this.btnSaveAndEdit.Location = new System.Drawing.Point(244, 185);
+            this.btnSaveAndEdit.Location = new System.Drawing.Point(247, 187);
             this.btnSaveAndEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveAndEdit.Name = "btnSaveAndEdit";
             this.btnSaveAndEdit.Size = new System.Drawing.Size(202, 64);
@@ -367,12 +370,20 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(314, 59);
+            this.label6.Location = new System.Drawing.Point(344, 59);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(105, 23);
             this.label6.TabIndex = 280;
             this.label6.Text = "NOMBRE:";
+            // 
+            // btnGenerateInsert
+            // 
+            this.btnGenerateInsert.ImageOptions.Image = global::AMAC.Properties.Resources.add_16x16;
+            this.btnGenerateInsert.Location = new System.Drawing.Point(297, 59);
+            this.btnGenerateInsert.Name = "btnGenerateInsert";
+            this.btnGenerateInsert.Size = new System.Drawing.Size(23, 23);
+            this.btnGenerateInsert.TabIndex = 343;
             // 
             // AdopterManagementView
             // 
@@ -435,5 +446,6 @@
         private DevExpress.XtraGrid.GridControl dgvAdopter;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraEditors.TextEdit tbId;
+        private DevExpress.XtraEditors.SimpleButton btnGenerateInsert;
     }
 }

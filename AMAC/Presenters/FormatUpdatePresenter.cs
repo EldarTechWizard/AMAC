@@ -6,7 +6,6 @@ using AMAC.Views.FormatManagement.FormatControls.FormatAnimalView;
 using AMAC.Views.FormatManagement.FormatControls.FormatVolunterView;
 using AMAC.Views.FormatManagement.FormatNewAdoptionView;
 using AMAC.Views.FormatManagement.FormatUpdateView;
-using AMAC.Views.RecordManagement;
 using DbManagmentAMAC.Models;
 using DevExpress.XtraEditors;
 using DevExpress.XtraRichEdit.Import.Html;

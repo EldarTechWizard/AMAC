@@ -37,7 +37,6 @@ namespace AMAC.Views.Main
             Load += delegate { OnLoadMain.Invoke(this, EventArgs.Empty); };
             btnAnimalManagement.Click += delegate { OnClickTabButtons.Invoke(this.btnAnimalManagement, EventArgs.Empty); };
             btnFormatManagement.Click += delegate { OnClickTabButtons.Invoke(this.btnFormatManagement, EventArgs.Empty); };
-            btnRecordManagement.Click += delegate { OnClickTabButtons.Invoke(this.btnRecordManagement, EventArgs.Empty); };
             btnAdopterManagement.Click += delegate { OnClickTabButtons.Invoke(this.btnAdopterManagement, EventArgs.Empty); };
             btnCloseSesion.Click += delegate { OnClickCloseSesionButton.Invoke(this, EventArgs.Empty); };
          

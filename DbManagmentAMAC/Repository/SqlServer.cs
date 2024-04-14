@@ -269,7 +269,7 @@ namespace DbManagmentAMAC.Repository
                     cmd.CommandText = "spUpdateRecord";
                     cmd.CommandTimeout = 120;
 
-                    cmd.Parameters.AddWithValue("@animalId", record.PicturePath);
+                    cmd.Parameters.AddWithValue("@animalId", record.Id);
                     cmd.Parameters.AddWithValue("@photo", record.PicturePath);
                     cmd.Parameters.AddWithValue("@name", record.Name);
                     cmd.Parameters.AddWithValue("@breed", record.AnimalBreed);
@@ -409,5 +409,33 @@ namespace DbManagmentAMAC.Repository
                 return false;
             }
         }
+
+        public bool GetIdentityNextValue(ref int value, string tableName)
+        {
+            try
+            {
+                DataTable temp = new DataTable();
+
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.CommandText = $"SELECT IDENT_CURRENT( '{tableName}' );";
+                    temp.Load(cmd.ExecuteReader());
+                }
+
+                value = int.Parse(temp.Rows[0][0].ToString()) + 1;
+
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                lastError = ex.Message;
+                return false;
+            }
+        }
+      
     }
 }

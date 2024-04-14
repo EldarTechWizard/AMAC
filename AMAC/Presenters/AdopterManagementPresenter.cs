@@ -32,6 +32,19 @@ namespace AMAC.Presenters
             view.OnClickSaveAndEditButton += OnClickSaveAndEditButton;
             view.OnChangedAdopterIdTextBox += OnChangedAdopterIdTextBox;
             view.OnLoadForm += OnLoadForm;
+            view.OnClickGenerateInsertButton += OnClickGenerateInsertButton;
+        }
+
+        private void OnClickGenerateInsertButton(object sender, EventArgs e)
+        {
+            try
+            {
+                SetInsertMode();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void OnClickSelectRowGridControl(object sender, EventArgs e)
@@ -52,12 +65,21 @@ namespace AMAC.Presenters
             try
             {
                 ReloadInformation();
-              
+                SetInsertMode();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void SetInsertMode()
+        {
+            int value = 0;
+
+            if (!repository.GetIdentityNextValue(ref value, "adopter")) throw new Exception(repository.LastError);
+
+            view.Id = value;
         }
 
         private void ReloadInformation()
@@ -87,6 +109,7 @@ namespace AMAC.Presenters
                     return;
                 }
 
+                view.ClearFields();
                 view.ChangeEditMode(false);
             }
             catch (Exception ex)

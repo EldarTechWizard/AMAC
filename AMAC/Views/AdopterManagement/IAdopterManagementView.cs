@@ -18,9 +18,11 @@ namespace AMAC.Views.AdopterManagement
         string Number { get; set; }
         string Email { get; set; }
 
+        event EventHandler OnClickGenerateInsertButton;
         event EventHandler OnClickSelectRowGridControl;
         event EventHandler OnClickSaveAndEditButton;
         event EventHandler OnClickDeleteButton;
+
         event EventHandler OnChangedAdopterIdTextBox;
         event EventHandler OnLoadForm;
 

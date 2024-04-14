@@ -36,6 +36,8 @@ namespace AMAC.Views.AnimalManagement
         bool EditMode { get; set; }
 
         event EventHandler OnLoadForm;
+
+        event EventHandler OnClickGenerateInsertButton;
         event EventHandler OnClickSaveAndEditAnimalButton;
         event EventHandler OnClickDeleteAnimalButton;
         event EventHandler OnClickChoosePhotoButton;

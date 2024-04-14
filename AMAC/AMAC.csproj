@@ -121,7 +121,6 @@
     <Compile Include="Presenters\FormatVolunterPresenter.cs" />
     <Compile Include="Presenters\LoginPresenter.cs" />
     <Compile Include="Presenters\MainPresenter.cs" />
-    <Compile Include="Presenters\RecordManagementPresenter.cs" />
     <Compile Include="Presenters\SearchTablePresenter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -210,13 +209,6 @@
     <Compile Include="Views\Main\MainView.Designer.cs">
       <DependentUpon>MainView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\RecordManagement\IRecordManagementView.cs" />
-    <Compile Include="Views\RecordManagement\RecordManagementView.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\RecordManagement\RecordManagementView.Designer.cs">
-      <DependentUpon>RecordManagementView.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,9 +258,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Main\MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\RecordManagement\RecordManagementView.resx">
-      <DependentUpon>RecordManagementView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -328,6 +317,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\security_personalid.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actions_addcircled2.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0.1\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets" Condition="Exists('..\packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0.1\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets')" />
