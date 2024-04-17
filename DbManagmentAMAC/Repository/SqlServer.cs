@@ -112,6 +112,7 @@ namespace DbManagmentAMAC.Repository
                     cmd.Parameters.AddWithValue("@Rescuer", record.Rescuer);
                     cmd.Parameters.AddWithValue("@Veterinarian", record.Vet);
                     cmd.Parameters.AddWithValue("@Diagnostic", record.Diagnostic);
+                    cmd.Parameters.AddWithValue("@BirthDate", record.BirthDate);
 
                     cmd.ExecuteNonQuery();
 

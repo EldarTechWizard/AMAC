@@ -18,6 +18,7 @@ namespace DbManagmentAMAC.Models
         protected bool sterilized;
         protected string additionalInformation;
         protected string status;
+        protected DateTime birthDate;
 
 
         public int Id { get => id; set => id = value; }
@@ -30,5 +31,6 @@ namespace DbManagmentAMAC.Models
         public string AdditionalInformation { get => additionalInformation; set => additionalInformation = value; }
         public string PicturePath { get => picturePath; set => picturePath = value; }
         public string Status { get => status; set => status = value; }
+        public DateTime BirthDate { get => birthDate; set => birthDate = value; }
     }
 }
