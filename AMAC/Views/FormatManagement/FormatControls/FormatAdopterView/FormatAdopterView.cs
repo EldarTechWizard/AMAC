@@ -103,5 +103,11 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAdopterView
 
             return adopter;
         }
+
+
+        private void tbEmail_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
