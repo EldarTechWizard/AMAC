@@ -66,7 +66,7 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
                                 row.RelativeItem(2)
                                 .PaddingLeft(2, Unit.Centimetre)
                                 .AlignMiddle()
-                                .Text("CERTIFICADO DE ADOPCION")
+                                .Text("CERTIFICADO DE ADOPCIÓN")
                                 .FontSize(24)
                                 .FontColor("#2F3872")
                                 .Bold()
@@ -213,7 +213,7 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
                             {
                                 row.RelativeItem().Text(text =>
                                 {
-                                    text.Span($"INFORMACION ADICIONAL: ").FontSize(8).FontColor("#2F3872");
+                                    text.Span($"INFORMACIÓN ADICIONAL: ").FontSize(8).FontColor("#2F3872");
                                     text.Span($"{animal.AdditionalInformation}").FontSize(8).FontColor("#2F3872").Bold();
                                 });
                             });
@@ -331,7 +331,7 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
                             {
                                 row.RelativeItem()
                                     .PaddingTop(1)
-                                    .Text($"Me comprometo a encargarme de esta mascota: cuidarlo, quererlo y atender todas sus necesidades tanto de alimentacion, salud y convivencia. En caso de no poder cuidarlo, lo notificare a AMAC para tomar las medidas pertinentes. NO LO ENTREGARE A OTRA PERSONA SIN PREVIA NOTIFICACION NI AUTORIZACION.")
+                                    .Text($"Me comprometo a encargarme de esta mascota: cuidarlo, quererlo y atender todas sus necesidades tanto de alimentación, salud y convivencia. En caso de no poder cuidarlo, lo notificaré a AMAC para tomar las medidas pertinentes. NO LO ENTREGARÉ A OTRA PERSONA SIN PREVIA NOTIFICACIÓN NI AUTORIZACIÓN.")
                                     .FontSize(8)
                                     .FontColor("#2F3872");
                             });
@@ -352,23 +352,23 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
                                     .PaddingTop(1)
                                     .Text(text =>
                                     {
-                                        text.Span($"-El (la) adoptante se compromete a dar al animal buena alimentacion; convivir con el animalito, atenciones que requiera; darle un lugar adecuado: seguro, protegido del frio, lluvia o sol, etc, donde vivir.{Environment.NewLine}-La mascota ").FontSize(8).FontColor("#2F3872");
+                                        text.Span($"-El (la) adoptante se compromete a dar al animal buena alimentación; convivir con el animalito, atenciones que requiera; darle un lugar adecuado: seguro, protegido del frìo, lluvia o sol, etc, donde vivir.{Environment.NewLine}-La mascota ").FontSize(8).FontColor("#2F3872");
                                         text.Span($"{animal.Name}").FontSize(8).Bold().FontColor("#2F3872");
-                                        text.Span($" recibira siempre la atencion medica necesaria; y estos gastos son a partir de hoy, a cargo del adoptante").FontSize(8).FontColor("#2F3872");
+                                        text.Span($" recibirá siempre la atención médica necesaria; y estos gastos son a partir de hoy, a cargo del adoptante.").FontSize(8).FontColor("#2F3872");
                                     });
        
                             });
 
                             col.Item().Row(row =>
                             {
-                                row.RelativeItem().Text($"-La mascota llevara siempre en su cuello, un collar con identificacion y numero telefonico de su hogar.{Environment.NewLine}-Si se adopta un cachorro, se compromete a esterilizaro a la edad de seis meses")
+                                row.RelativeItem().Text($"-La mascota llevará siempre en su cuello, un collar con identificación y número telefónico de su hogar.{Environment.NewLine}-Si se adopta un cachorro, se compromete a esterilizarlo a la edad de seis meses")
                                 .FontSize(8)
                                 .FontColor("#2F3872");
                             });
 
                             col.Item().Row(row =>
                             {
-                                row.RelativeItem().Text($"-Informanos de cambios de domicilio y numero telefonico {Environment.NewLine}-AMAC se reserva el derecho de llamar o visitar el hogar del animalito adoptado.")
+                                row.RelativeItem().Text($"-Informanos de cambios de domicilio y número telefónico {Environment.NewLine}-AMAC se reserva el derecho de llamar o visitar el hogar del animalito adoptado.")
                                 .FontSize(8)
                                 .FontColor("#2F3872");
                             });
@@ -384,7 +384,7 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
                 .ShrinkVertical()
                 .Layers(layers =>
                 {
-                    DrawTextHeaderLeft(layers, "*Cualquiera de estas condiciones que NO fuese cumplida, sera motivo para que el animal sea recogido por voluntari@s de AMAC Gsv AC; se haga publico el incumplimiento de algun acuerdo; o se levante denuncia de acuerdo a la Ley de Proteccion para los animales del Estado de Sinaloa, en caso de ser necesario.");
+                    DrawTextHeaderLeft(layers, "*Cualquiera de estas condiciones que NO fuese cumplida, será motivo para que el animal sea recogido por voluntari@s de AMAC Gsv AC; se haga público el incumplimiento de algún acuerdo; o se levante denuncia de acuerdo a la Ley de Protección para los animales del Estado de Sinaloa, en caso de ser necesario.");
                 });
         }
 
@@ -439,7 +439,7 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
                                    .PaddingTop(1)
                                    .Text(text =>
                                    {
-                                       text.Span("Guasave, Sin, a ").FontSize(8).FontColor("#2F3872");
+                                       text.Span("Guasave, Sin., a ").FontSize(8).FontColor("#2F3872");
                                        text.Span($"{pdfFormat.AdoptionDate.Day}").FontSize(8).FontColor("#2F3872").Bold();
                                        text.Span($" de ").FontSize(8).FontColor("#2F3872");
                                        text.Span($"{pdfFormat.AdoptionDate.ToString("MMMM")}").FontSize(8).FontColor("#2F3872").Bold();
@@ -460,7 +460,7 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
 
                                row.RelativeItem()
                                .AlignCenter()
-                               .Text("VOLUNTARI@ A CARGO DE LA ADOPCION. (Nombre)").FontSize(8).FontColor("#2F3872").Bold();
+                               .Text("VOLUNTARI@ A CARGO DE LA ADOPCIÓN. (Nombre)").FontSize(8).FontColor("#2F3872").Bold();
                            });
 
                            col.Item()
@@ -482,7 +482,7 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
                            {
                                row.RelativeItem()
                                .AlignCenter()
-                               .Text("Firma del adoptante").FontSize(8).FontColor("#2F3872").Bold();
+                               .Text("FIRMA DEL ADOPTANTE").FontSize(8).FontColor("#2F3872").Bold();
 
                                row.RelativeItem()
                                .AlignCenter()

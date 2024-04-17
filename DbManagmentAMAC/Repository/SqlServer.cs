@@ -162,7 +162,7 @@ namespace DbManagmentAMAC.Repository
             {
                 connectionString = new SqlConnectionStringBuilder()
                 {
-                    DataSource = "ASUSTUF",
+                    DataSource = "LAPTOP-5C9UCS9L",
                     InitialCatalog = "Amac",
                     UserID = username,
                     Password = password

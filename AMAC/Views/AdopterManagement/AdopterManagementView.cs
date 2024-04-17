@@ -94,6 +94,8 @@ namespace AMAC.Views.AdopterManagement
                 this.Id = int.Parse(row["id"].ToString());   
             }
         }
+
+      
     }
         
 }
