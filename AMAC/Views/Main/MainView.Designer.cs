@@ -28,35 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.btnCloseSesion = new DevExpress.XtraEditors.SimpleButton();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.btnFormatManagement = new DevExpress.XtraEditors.SimpleButton();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.btnAdopterManagement = new DevExpress.XtraEditors.SimpleButton();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnAnimalManagement = new DevExpress.XtraEditors.SimpleButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.btnAnimalManagement = new DevExpress.XtraEditors.SimpleButton();
+            this.btnAdopterManagement = new DevExpress.XtraEditors.SimpleButton();
+            this.btnFormatManagement = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -94,96 +100,33 @@
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.panel12);
             this.panel10.Controls.Add(this.panel11);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel10.Location = new System.Drawing.Point(0, 318);
+            this.panel10.Location = new System.Drawing.Point(0, 301);
             this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(196, 198);
+            this.panel10.Size = new System.Drawing.Size(196, 215);
             this.panel10.TabIndex = 4;
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.btnCloseSesion);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(196, 73);
-            this.panel11.TabIndex = 0;
-            // 
-            // btnCloseSesion
-            // 
-            this.btnCloseSesion.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Danger;
-            this.btnCloseSesion.Appearance.BorderColor = System.Drawing.Color.White;
-            this.btnCloseSesion.Appearance.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCloseSesion.Appearance.Options.UseBackColor = true;
-            this.btnCloseSesion.Appearance.Options.UseBorderColor = true;
-            this.btnCloseSesion.Appearance.Options.UseFont = true;
-            this.btnCloseSesion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCloseSesion.Location = new System.Drawing.Point(0, 0);
-            this.btnCloseSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCloseSesion.Name = "btnCloseSesion";
-            this.btnCloseSesion.Size = new System.Drawing.Size(196, 73);
-            this.btnCloseSesion.TabIndex = 4;
-            this.btnCloseSesion.Text = "CERRAR SESION";
-            this.btnCloseSesion.Click += new System.EventHandler(this.btnCloseSesion_Click);
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.btnFormatManagement);
+            this.panel7.Controls.Add(this.btnAdopterManagement);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 212);
+            this.panel7.Location = new System.Drawing.Point(0, 166);
             this.panel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(196, 106);
+            this.panel7.Size = new System.Drawing.Size(196, 135);
             this.panel7.TabIndex = 2;
-            // 
-            // btnFormatManagement
-            // 
-            this.btnFormatManagement.Appearance.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnFormatManagement.Appearance.BorderColor = System.Drawing.Color.White;
-            this.btnFormatManagement.Appearance.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFormatManagement.Appearance.Options.UseBackColor = true;
-            this.btnFormatManagement.Appearance.Options.UseBorderColor = true;
-            this.btnFormatManagement.Appearance.Options.UseFont = true;
-            this.btnFormatManagement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnFormatManagement.ImageOptions.SvgImage = global::AMAC.Properties.Resources.bo_contact;
-            this.btnFormatManagement.Location = new System.Drawing.Point(0, 0);
-            this.btnFormatManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnFormatManagement.Name = "btnFormatManagement";
-            this.btnFormatManagement.Size = new System.Drawing.Size(196, 106);
-            this.btnFormatManagement.TabIndex = 3;
-            this.btnFormatManagement.Tag = "Format";
-            this.btnFormatManagement.Text = "GENERAR\r\n FORMATO\r\nDE ADOPCION\r\n";
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.btnAdopterManagement);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 106);
+            this.panel6.Location = new System.Drawing.Point(0, 135);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(196, 106);
+            this.panel6.Size = new System.Drawing.Size(196, 31);
             this.panel6.TabIndex = 1;
-            // 
-            // btnAdopterManagement
-            // 
-            this.btnAdopterManagement.Appearance.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnAdopterManagement.Appearance.BorderColor = System.Drawing.Color.White;
-            this.btnAdopterManagement.Appearance.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdopterManagement.Appearance.Options.UseBackColor = true;
-            this.btnAdopterManagement.Appearance.Options.UseBorderColor = true;
-            this.btnAdopterManagement.Appearance.Options.UseFont = true;
-            this.btnAdopterManagement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAdopterManagement.ImageOptions.SvgImage = global::AMAC.Properties.Resources.bo_employee;
-            this.btnAdopterManagement.Location = new System.Drawing.Point(0, 0);
-            this.btnAdopterManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAdopterManagement.Name = "btnAdopterManagement";
-            this.btnAdopterManagement.Size = new System.Drawing.Size(196, 106);
-            this.btnAdopterManagement.TabIndex = 2;
-            this.btnAdopterManagement.Tag = "Adopter";
-            this.btnAdopterManagement.Text = "GESTOR DE \r\nADOPTANTES";
             // 
             // panel5
             // 
@@ -192,74 +135,19 @@
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(196, 106);
+            this.panel5.Size = new System.Drawing.Size(196, 135);
             this.panel5.TabIndex = 0;
-            // 
-            // btnAnimalManagement
-            // 
-            this.btnAnimalManagement.Appearance.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnAnimalManagement.Appearance.BorderColor = System.Drawing.Color.White;
-            this.btnAnimalManagement.Appearance.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnimalManagement.Appearance.Options.UseBackColor = true;
-            this.btnAnimalManagement.Appearance.Options.UseBorderColor = true;
-            this.btnAnimalManagement.Appearance.Options.UseFont = true;
-            this.btnAnimalManagement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAnimalManagement.ImageOptions.SvgImage = global::AMAC.Properties.Resources.actions_addcircled;
-            this.btnAnimalManagement.Location = new System.Drawing.Point(0, 0);
-            this.btnAnimalManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAnimalManagement.Name = "btnAnimalManagement";
-            this.btnAnimalManagement.Size = new System.Drawing.Size(196, 106);
-            this.btnAnimalManagement.TabIndex = 1;
-            this.btnAnimalManagement.Tag = "Animal";
-            this.btnAnimalManagement.Text = "GESTOR DE \r\nMASCOTAS";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel3.Controls.Add(this.panel9);
-            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.tableLayoutPanel2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(205, 2);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(978, 90);
             this.panel3.TabIndex = 2;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.label5);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(657, 0);
-            this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(321, 90);
-            this.panel9.TabIndex = 96;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(0, 38);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(255, 52);
-            this.label5.TabIndex = 96;
-            this.label5.Text = "Juntos por una causa, \r\nuna pata a la vez.\r\n";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Orange;
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(499, 74);
-            this.label4.TabIndex = 91;
-            this.label4.Text = "AMAC AC GUASAVE, SINALOA\r\nBIENVENIDA/O\r\n";
             // 
             // panel2
             // 
@@ -294,28 +182,160 @@
             this.panel1.Size = new System.Drawing.Size(978, 516);
             this.panel1.TabIndex = 0;
             // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.1002F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.8998F));
+            this.tableLayoutPanel2.Controls.Add(this.panel8, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel9, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(978, 90);
+            this.tableLayoutPanel2.TabIndex = 97;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.pictureBox3);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(3, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(572, 84);
+            this.panel8.TabIndex = 0;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.pictureBox2);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(581, 3);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(394, 84);
+            this.panel9.TabIndex = 1;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(394, 84);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(572, 84);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // panel11
+            // 
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(196, 31);
+            this.panel11.TabIndex = 1;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.btnFormatManagement);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 31);
+            this.panel12.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(196, 135);
+            this.panel12.TabIndex = 2;
+            // 
+            // btnAnimalManagement
+            // 
+            this.btnAnimalManagement.Appearance.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnAnimalManagement.Appearance.BorderColor = System.Drawing.SystemColors.Window;
+            this.btnAnimalManagement.Appearance.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnimalManagement.Appearance.Options.UseBackColor = true;
+            this.btnAnimalManagement.Appearance.Options.UseBorderColor = true;
+            this.btnAnimalManagement.Appearance.Options.UseFont = true;
+            this.btnAnimalManagement.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAnimalManagement.ImageOptions.SvgImage = global::AMAC.Properties.Resources.actions_addcircled;
+            this.btnAnimalManagement.Location = new System.Drawing.Point(0, 0);
+            this.btnAnimalManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAnimalManagement.Name = "btnAnimalManagement";
+            this.btnAnimalManagement.Size = new System.Drawing.Size(196, 135);
+            this.btnAnimalManagement.TabIndex = 4;
+            this.btnAnimalManagement.Tag = "Animal";
+            this.btnAnimalManagement.Text = "GESTOR DE \r\nMASCOTAS";
+            // 
+            // btnAdopterManagement
+            // 
+            this.btnAdopterManagement.Appearance.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnAdopterManagement.Appearance.BorderColor = System.Drawing.Color.White;
+            this.btnAdopterManagement.Appearance.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdopterManagement.Appearance.Options.UseBackColor = true;
+            this.btnAdopterManagement.Appearance.Options.UseBorderColor = true;
+            this.btnAdopterManagement.Appearance.Options.UseFont = true;
+            this.btnAdopterManagement.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAdopterManagement.ImageOptions.SvgImage = global::AMAC.Properties.Resources.bo_employee;
+            this.btnAdopterManagement.Location = new System.Drawing.Point(0, 0);
+            this.btnAdopterManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdopterManagement.Name = "btnAdopterManagement";
+            this.btnAdopterManagement.Size = new System.Drawing.Size(196, 135);
+            this.btnAdopterManagement.TabIndex = 4;
+            this.btnAdopterManagement.Tag = "Adopter";
+            this.btnAdopterManagement.Text = "GESTOR DE \r\nADOPTANTES";
+            // 
+            // btnFormatManagement
+            // 
+            this.btnFormatManagement.Appearance.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnFormatManagement.Appearance.BorderColor = System.Drawing.Color.White;
+            this.btnFormatManagement.Appearance.Font = new System.Drawing.Font("Arial Rounded MT Bold", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFormatManagement.Appearance.Options.UseBackColor = true;
+            this.btnFormatManagement.Appearance.Options.UseBorderColor = true;
+            this.btnFormatManagement.Appearance.Options.UseFont = true;
+            this.btnFormatManagement.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnFormatManagement.ImageOptions.SvgImage = global::AMAC.Properties.Resources.bo_contact;
+            this.btnFormatManagement.Location = new System.Drawing.Point(0, 0);
+            this.btnFormatManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnFormatManagement.Name = "btnFormatManagement";
+            this.btnFormatManagement.Size = new System.Drawing.Size(196, 135);
+            this.btnFormatManagement.TabIndex = 5;
+            this.btnFormatManagement.Tag = "Format";
+            this.btnFormatManagement.Text = "GENERAR\r\n FORMATO\r\nDE ADOPCION\r\n";
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1186, 614);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("MainView.IconOptions.Image")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "MainView";
-            this.Text = "AMAC AC GUASAVE - BIENVENIDO";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "AMAC AC GUASAVE";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel12.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -325,19 +345,21 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
-        private DevExpress.XtraEditors.SimpleButton btnAnimalManagement;
         public System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel11;
-        private DevExpress.XtraEditors.SimpleButton btnCloseSesion;
-        private DevExpress.XtraEditors.SimpleButton btnAdopterManagement;
+        private System.Windows.Forms.Panel panel12;
         private DevExpress.XtraEditors.SimpleButton btnFormatManagement;
+        private DevExpress.XtraEditors.SimpleButton btnAdopterManagement;
+        private DevExpress.XtraEditors.SimpleButton btnAnimalManagement;
     }
 }

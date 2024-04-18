@@ -18,7 +18,7 @@ namespace AMAC.Views.Main
 
         public Form ActiveTab => throw new NotImplementedException();
 
-        public string WelcomeText { set => label4.Text = value; }
+        //public string WelcomeText { set => label4.Text = value; }
         public string UserName { get => userName; set => userName = value; }
 
         public event EventHandler OnLoadMain;
@@ -38,7 +38,7 @@ namespace AMAC.Views.Main
             btnAnimalManagement.Click += delegate { OnClickTabButtons.Invoke(this.btnAnimalManagement, EventArgs.Empty); };
             btnFormatManagement.Click += delegate { OnClickTabButtons.Invoke(this.btnFormatManagement, EventArgs.Empty); };
             btnAdopterManagement.Click += delegate { OnClickTabButtons.Invoke(this.btnAdopterManagement, EventArgs.Empty); };
-            btnCloseSesion.Click += delegate { OnClickCloseSesionButton.Invoke(this, EventArgs.Empty); };
+            ///btnCloseSesion.Click += delegate { OnClickCloseSesionButton.Invoke(this, EventArgs.Empty); };
          
         }             
 

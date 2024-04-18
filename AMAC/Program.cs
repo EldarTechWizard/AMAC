@@ -40,7 +40,7 @@ namespace AMAC
 
 
             IMainView view = new MainView();
-            IRepository repository = new SqlServer($"Server=LAPTOP-5C9UCS9L;Database=AMAC;User Id={userName};Password={password}");
+            IRepository repository = new SqlServer($"Server=LAPTOP-Q43T7L6C\\MSSQLSERVER01;Database=AMAC;User Id={userName};Password={password}");
             new MainPresenter(view,repository);
 
             Application.Run((Form)view);
