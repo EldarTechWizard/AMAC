@@ -125,8 +125,9 @@
             this.btnCloseSesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCloseSesion.Name = "btnCloseSesion";
             this.btnCloseSesion.Size = new System.Drawing.Size(196, 73);
-            this.btnCloseSesion.TabIndex = 100;
+            this.btnCloseSesion.TabIndex = 4;
             this.btnCloseSesion.Text = "CERRAR SESION";
+            this.btnCloseSesion.Click += new System.EventHandler(this.btnCloseSesion_Click);
             // 
             // panel7
             // 
@@ -152,7 +153,7 @@
             this.btnFormatManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFormatManagement.Name = "btnFormatManagement";
             this.btnFormatManagement.Size = new System.Drawing.Size(196, 106);
-            this.btnFormatManagement.TabIndex = 96;
+            this.btnFormatManagement.TabIndex = 3;
             this.btnFormatManagement.Tag = "Format";
             this.btnFormatManagement.Text = "GENERAR\r\n FORMATO\r\nDE ADOPCION\r\n";
             // 
@@ -180,7 +181,7 @@
             this.btnAdopterManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdopterManagement.Name = "btnAdopterManagement";
             this.btnAdopterManagement.Size = new System.Drawing.Size(196, 106);
-            this.btnAdopterManagement.TabIndex = 96;
+            this.btnAdopterManagement.TabIndex = 2;
             this.btnAdopterManagement.Tag = "Adopter";
             this.btnAdopterManagement.Text = "GESTOR DE \r\nADOPTANTES";
             // 
@@ -208,7 +209,7 @@
             this.btnAnimalManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAnimalManagement.Name = "btnAnimalManagement";
             this.btnAnimalManagement.Size = new System.Drawing.Size(196, 106);
-            this.btnAnimalManagement.TabIndex = 83;
+            this.btnAnimalManagement.TabIndex = 1;
             this.btnAnimalManagement.Tag = "Animal";
             this.btnAnimalManagement.Text = "GESTOR DE \r\nMASCOTAS";
             // 

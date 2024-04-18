@@ -175,7 +175,7 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
                                 });
                                 row.RelativeItem().Text(text =>
                                 {
-                                    text.Span($"Categoria: ").FontSize(8).FontColor("#2F3872");
+                                    text.Span($"CATEGORIA: ").FontSize(8).FontColor("#2F3872");
                                     text.Span($"{animal.AnimalType}").FontSize(8).FontColor("#2F3872").Bold();
                                 });
                                 row.RelativeItem().Text(text =>

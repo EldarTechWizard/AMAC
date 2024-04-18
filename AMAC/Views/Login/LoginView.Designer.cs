@@ -53,10 +53,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(496, 425);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(425, 345);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(158, 23);
+            this.label3.Size = new System.Drawing.Size(130, 18);
             this.label3.TabIndex = 79;
             this.label3.Text = "CONTRASEÑA:";
             // 
@@ -66,10 +65,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(496, 348);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(425, 283);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 23);
+            this.label1.Size = new System.Drawing.Size(90, 18);
             this.label1.TabIndex = 78;
             this.label1.Text = "USUARIO:";
             // 
@@ -79,10 +77,9 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogin.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(709, 519);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogin.Location = new System.Drawing.Point(608, 422);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(190, 34);
+            this.btnLogin.Size = new System.Drawing.Size(163, 28);
             this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "CONECTAR";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -93,31 +90,28 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel.Location = new System.Drawing.Point(512, 519);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Location = new System.Drawing.Point(439, 422);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(189, 34);
-            this.btnCancel.TabIndex = 76;
+            this.btnCancel.Size = new System.Drawing.Size(162, 28);
+            this.btnCancel.TabIndex = 4;
             this.btnCancel.Text = "CANCELAR";
             this.btnCancel.UseVisualStyleBackColor = false;
             // 
             // tbPassword
             // 
             this.tbPassword.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.tbPassword.Location = new System.Drawing.Point(500, 454);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.tbPassword.Location = new System.Drawing.Point(429, 369);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(362, 31);
+            this.tbPassword.Size = new System.Drawing.Size(311, 26);
             this.tbPassword.TabIndex = 2;
             this.tbPassword.UseSystemPasswordChar = true;
             // 
             // tbUser
             // 
             this.tbUser.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
-            this.tbUser.Location = new System.Drawing.Point(500, 375);
-            this.tbUser.Margin = new System.Windows.Forms.Padding(4);
+            this.tbUser.Location = new System.Drawing.Point(429, 305);
             this.tbUser.Name = "tbUser";
-            this.tbUser.Size = new System.Drawing.Size(399, 31);
+            this.tbUser.Size = new System.Drawing.Size(343, 26);
             this.tbUser.TabIndex = 1;
             // 
             // label2
@@ -125,9 +119,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(496, 567);
+            this.label2.Location = new System.Drawing.Point(425, 461);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 23);
+            this.label2.Size = new System.Drawing.Size(113, 18);
             this.label2.TabIndex = 82;
             this.label2.Text = "label AVISOS";
             this.label2.Visible = false;
@@ -138,16 +132,18 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(457, 619);
+            this.panel1.Size = new System.Drawing.Size(392, 503);
             this.panel1.TabIndex = 83;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AMAC.Properties.Resources.AMACAZUL;
-            this.pictureBox1.Location = new System.Drawing.Point(69, 144);
+            this.pictureBox1.Location = new System.Drawing.Point(59, 117);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(314, 304);
+            this.pictureBox1.Size = new System.Drawing.Size(269, 247);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -158,30 +154,27 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(514, 23);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(441, 19);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(328, 46);
+            this.label4.Size = new System.Drawing.Size(261, 37);
             this.label4.TabIndex = 84;
             this.label4.Text = "Inicio de Sesion";
             // 
             // pbHide
             // 
             this.pbHide.Image = global::AMAC.Properties.Resources.invisible;
-            this.pbHide.Location = new System.Drawing.Point(870, 454);
-            this.pbHide.Margin = new System.Windows.Forms.Padding(4);
+            this.pbHide.Location = new System.Drawing.Point(746, 369);
             this.pbHide.Name = "pbHide";
-            this.pbHide.Size = new System.Drawing.Size(29, 31);
+            this.pbHide.Size = new System.Drawing.Size(25, 25);
             this.pbHide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbHide.TabIndex = 85;
             this.pbHide.TabStop = false;
             // 
             // pbShow
             // 
-            this.pbShow.Location = new System.Drawing.Point(870, 454);
-            this.pbShow.Margin = new System.Windows.Forms.Padding(4);
+            this.pbShow.Location = new System.Drawing.Point(746, 369);
             this.pbShow.Name = "pbShow";
-            this.pbShow.Size = new System.Drawing.Size(29, 31);
+            this.pbShow.Size = new System.Drawing.Size(25, 25);
             this.pbShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbShow.TabIndex = 81;
             this.pbShow.TabStop = false;
@@ -190,10 +183,9 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::AMAC.Properties.Resources.Gender_Neutral_User_icon_icons_com_55902;
-            this.pictureBox2.Location = new System.Drawing.Point(560, 77);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(480, 63);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(248, 255);
+            this.pictureBox2.Size = new System.Drawing.Size(213, 207);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 80;
             this.pictureBox2.TabStop = false;
@@ -202,9 +194,9 @@
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 619);
+            this.ClientSize = new System.Drawing.Size(793, 503);
             this.Controls.Add(this.pbHide);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
@@ -217,7 +209,6 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbUser);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LoginView";

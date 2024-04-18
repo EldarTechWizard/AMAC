@@ -96,7 +96,7 @@
             this.btnVolunter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVolunter.Name = "btnVolunter";
             this.btnVolunter.Size = new System.Drawing.Size(356, 28);
-            this.btnVolunter.TabIndex = 105;
+            this.btnVolunter.TabIndex = 3;
             this.btnVolunter.Tag = "Responsability";
             this.btnVolunter.Text = "Responsabilidades";
             // 
@@ -123,7 +123,7 @@
             this.btnAdopter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdopter.Name = "btnAdopter";
             this.btnAdopter.Size = new System.Drawing.Size(354, 28);
-            this.btnAdopter.TabIndex = 104;
+            this.btnAdopter.TabIndex = 2;
             this.btnAdopter.Tag = "Adopter";
             this.btnAdopter.Text = "Datos del Adoptante";
             // 
@@ -150,7 +150,7 @@
             this.btnAnimal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAnimal.Name = "btnAnimal";
             this.btnAnimal.Size = new System.Drawing.Size(354, 28);
-            this.btnAnimal.TabIndex = 106;
+            this.btnAnimal.TabIndex = 1;
             this.btnAnimal.Tag = "Animal";
             this.btnAnimal.Text = "Datos de la Mascota";
             // 

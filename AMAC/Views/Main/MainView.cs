@@ -60,5 +60,10 @@ namespace AMAC.Views.Main
         {
             this.Close();
         }
+
+        private void btnCloseSesion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
