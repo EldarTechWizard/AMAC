@@ -190,6 +190,8 @@ namespace AMAC.Presenters
 
         private void SaveRecord(PetReport record)
         {
+            record.BirthDate = record.RescueDate.AddMonths(-record.Age);
+
             if (!repository.InsertRecord(record)) throw new Exception(repository.LastError);
 
             view.ClearFields();
