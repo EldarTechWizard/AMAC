@@ -39,13 +39,6 @@ namespace AMAC.Views.FormatManagement.SearchTableView
             gridView1.DoubleClick += delegate { OnClickSelectRowGridControl.Invoke(gridView1, EventArgs.Empty); };
         }
 
-        public void SetDataRow()
-        {
-            foreach (int i in gridView1.GetSelectedRows())
-            {
-                dataRow = gridView1.GetDataRow(i);
-            }
-        }
 
         public void CloseTab()
         {
