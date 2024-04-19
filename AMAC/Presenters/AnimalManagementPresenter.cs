@@ -98,6 +98,7 @@ namespace AMAC.Presenters
                     view.Rescuer = (string)row["rescatista"];
                     view.Veterinarian = (string)row["veterinario"];
                     view.Diagnostic = (string)row["diagnostico"];
+                    view.Sterilized = (bool)row["esterilizado"];
 
                     view.ChangeEditMode(true);
 
