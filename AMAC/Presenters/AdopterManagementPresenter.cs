@@ -152,6 +152,8 @@ namespace AMAC.Presenters
             if (!repository.InsertAdopter(adopter)) throw new Exception(repository.LastError);
             
             view.ClearFields();
+
+            SetInsertMode();
         }
 
         private void UpdateAdopter(Adopter adopter)
@@ -167,6 +169,8 @@ namespace AMAC.Presenters
                 if (!repository.DeleteAdopter(view.Id)) throw new Exception(repository.LastError);
 
                 ReloadInformation();
+
+                SetInsertMode();
 
                 MessageBox.Show("Correcto");
             }

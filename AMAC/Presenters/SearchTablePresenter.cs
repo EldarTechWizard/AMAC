@@ -27,22 +27,13 @@ namespace AMAC.Presenters
         {
             view.OnLoadForm += OnLoadForm;
             view.OnClickCloseButton += OnClickCloseButton;
-            view.OnChangeFilterTextTextBox += OnChangeFilterTextTextBox;
             view.OnClickSelectRowGridControl += OnClickSelectRowGridControl;
         }
 
         private void OnLoadForm(object sender, EventArgs e)
         {
-            try
-            {
-                view.DataSourceCb = data.Columns.Cast<DataColumn>().Select(column => column.ColumnName).ToList();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
 
+        }
       
         private void OnClickSelectRowGridControl(object sender, EventArgs e)
         {
@@ -50,19 +41,6 @@ namespace AMAC.Presenters
             {
                 view.SetDataRow();
                 view.CloseTab();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void OnChangeFilterTextTextBox(object sender, EventArgs e)
-        {
-            try
-            {
-                if (data.Rows.Count == 0 || view.SelectedColumn == "") return;
-                this.view.DataSource = this.data.AsEnumerable().Where(row => row.Field<string>(view.SelectedColumn).StartsWith(view.FilterText)).CopyToDataTable();
             }
             catch (Exception ex)
             {

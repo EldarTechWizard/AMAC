@@ -12,7 +12,8 @@ namespace DbManagmentAMAC.Models
 
         string LastError { get; }
 
-        bool Login(string username, string password);  
+        bool Login(string username, string password);
+        bool SelectUsers(DataTable data);
         bool InsertAdopter(Adopter adopter);
         bool SelectAdopter(DataTable data);
         bool DeleteAdopter(int id);

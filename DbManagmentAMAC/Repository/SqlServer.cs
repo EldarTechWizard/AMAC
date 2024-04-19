@@ -17,7 +17,7 @@ namespace DbManagmentAMAC.Repository
     {
         private string lastError;
         private string connectionString;
-        public string LastError => throw new NotImplementedException();
+        public string LastError => lastError;
 
         public SqlServer()
         {
@@ -437,6 +437,28 @@ namespace DbManagmentAMAC.Repository
                 return false;
             }
         }
-      
+
+        public bool SelectUsers(DataTable data)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                using (SqlCommand cmd = conn.CreateCommand())
+                {
+                    conn.Open();
+                    cmd.Connection = conn;
+                    cmd.CommandText = $"Select * from usersView";
+                    data.Load(cmd.ExecuteReader());
+                }
+
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                lastError = ex.Message;
+                return false;
+            }
+        }
     }
 }

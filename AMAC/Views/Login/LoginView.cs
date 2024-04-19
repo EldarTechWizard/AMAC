@@ -28,9 +28,11 @@ namespace AMAC.Views.Login
         public event EventHandler OnClickLoginButton;
         public event EventHandler OnClickCancelButton;
         public event EventHandler OnClickHidePasswordPb;
+        public event EventHandler OnLoadForm;
 
         private void AssociateAndRaisedEvents()
         {
+            this.Load += delegate { OnLoadForm.Invoke(this, EventArgs.Empty); };
             btnLogin.Click += delegate { OnClickLoginButton.Invoke(btnLogin, EventArgs.Empty); };
             btnCancel.Click += delegate { OnClickCancelButton.Invoke(btnCancel, EventArgs.Empty); };
             pbHide.Click += delegate { OnClickHidePasswordPb.Invoke(pbHide, EventArgs.Empty); };

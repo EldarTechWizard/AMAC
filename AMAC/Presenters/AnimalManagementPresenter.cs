@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Xml.Linq;
+using DevExpress.ClipboardSource.SpreadsheetML;
 
 namespace AMAC.Presenters
 {
@@ -43,6 +44,7 @@ namespace AMAC.Presenters
             {
                 ReloadInformation();
                 SetInsertMode();
+                SetStats();
             }
             catch (Exception ex)
             {
@@ -146,6 +148,7 @@ namespace AMAC.Presenters
                 MessageBox.Show("Correcto");
                 view.ChangeEditMode(false );
                 SetInsertMode();
+                SetStats();
             }
             catch (Exception ex)
             {
@@ -184,7 +187,7 @@ namespace AMAC.Presenters
                 view.ChangeEditMode(false);
                 SetInsertMode();
                 ReloadInformation();
-
+                SetStats();
             }
             catch (Exception ex)
             {
@@ -199,11 +202,23 @@ namespace AMAC.Presenters
             if (!repository.InsertRecord(record)) throw new Exception(repository.LastError);
 
             view.ClearFields();
+            SetInsertMode();
+            
         }
 
         private void UpdateRecord(PetReport record)
         {
             if (!repository.UpdateRecord(record)) throw new Exception(repository.LastError);
+        }
+
+        private void SetStats()
+        {
+            DataTable data = view.DataSource;
+            int adoptNumber = data.AsEnumerable().Count(rowD => rowD.Field<string>("estado") == "Adoptado");
+            int deceasedNumber = data.AsEnumerable().Count(rowD => rowD.Field<string>("estado") == "Fallecido");
+            int tempHomeNumber = data.AsEnumerable().Count(rowD => rowD.Field<string>("estado") == "Hogar temporal");
+
+            view.SetDisplayNumbers(adoptNumber, tempHomeNumber, deceasedNumber); 
         }
     }
 }

@@ -28,6 +28,10 @@ namespace AMAC.Views.AnimalManagement
         {
             InitializeComponent();
             AssociateAndRaisedEvents();
+
+            cbSex.SelectedIndex = 0;
+            cbStatus.SelectedIndex = 0;
+            cbAnimalType.SelectedIndex = 0;
         }
 
         private void AssociateAndRaisedEvents()
@@ -70,7 +74,7 @@ namespace AMAC.Views.AnimalManagement
         public int Age { get => int.Parse(tbAge.Text); set => tbAge.Text = value.ToString(); }
         public string Sex { get => cbSex.Text; set => cbSex.Text = value; }
         public bool Sterilized { get => chbSterilized.Checked; set => chbSterilized.Checked = value; }
-        public string AnimalType { get => tbAnimalType.Text; set => tbAnimalType.Text = value; }
+        public string AnimalType { get => cbAnimalType.Text; set => cbAnimalType.Text = value; }
         public string AdditionalInformation { get => tbAdditionalInformation.Text; set => tbAdditionalInformation.Text = value; }
         public string Status { get => cbStatus.Text; set => cbStatus.Text = value; }
         public DateTime RescuedDate { get => dtFecha.Value; set => dtFecha.Value = value; }
@@ -102,7 +106,7 @@ namespace AMAC.Views.AnimalManagement
             tbAge.Text = "";
             cbStatus.Text = "Sano";
             cbSex.Text = "";
-            tbAnimalType.Text = "";
+            cbAnimalType.Text = "";
             tbAnimalBreed.Text = "";
             tbAdditionalInformation.Text = "";
             tbDiagnostic.Text = "";
@@ -154,6 +158,11 @@ namespace AMAC.Views.AnimalManagement
 
         }
 
-       
+        public void SetDisplayNumbers(int adopted, int temphHome, int deceased)
+        {
+            lblCountAdop.Text = adopted.ToString();
+            lblCountFalle.Text = deceased.ToString();
+            lblCountHogar.Text = temphHome.ToString();
+        }
     }
 }

@@ -46,6 +46,8 @@ namespace AMAC.Views.AnimalManagement
         event EventHandler OnClickSelectRowGridControl;
         void ChooseImage();
         void ChangeEditMode(bool aux);
+
+        void SetDisplayNumbers(int adopted, int temphHome, int deceased);
         void LoadInfoFromSelectedRow();
         void ClearFields();
 
