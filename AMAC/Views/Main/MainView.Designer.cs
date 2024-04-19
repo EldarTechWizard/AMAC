@@ -265,7 +265,7 @@
             this.btnAnimalManagement.Appearance.Options.UseBorderColor = true;
             this.btnAnimalManagement.Appearance.Options.UseFont = true;
             this.btnAnimalManagement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAnimalManagement.ImageOptions.SvgImage = global::AMAC.Properties.Resources.actions_addcircled;
+
             this.btnAnimalManagement.Location = new System.Drawing.Point(0, 0);
             this.btnAnimalManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAnimalManagement.Name = "btnAnimalManagement";
@@ -283,7 +283,7 @@
             this.btnAdopterManagement.Appearance.Options.UseBorderColor = true;
             this.btnAdopterManagement.Appearance.Options.UseFont = true;
             this.btnAdopterManagement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAdopterManagement.ImageOptions.SvgImage = global::AMAC.Properties.Resources.bo_employee;
+
             this.btnAdopterManagement.Location = new System.Drawing.Point(0, 0);
             this.btnAdopterManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdopterManagement.Name = "btnAdopterManagement";
@@ -301,7 +301,7 @@
             this.btnFormatManagement.Appearance.Options.UseBorderColor = true;
             this.btnFormatManagement.Appearance.Options.UseFont = true;
             this.btnFormatManagement.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnFormatManagement.ImageOptions.SvgImage = global::AMAC.Properties.Resources.bo_contact;
+    
             this.btnFormatManagement.Location = new System.Drawing.Point(0, 0);
             this.btnFormatManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFormatManagement.Name = "btnFormatManagement";

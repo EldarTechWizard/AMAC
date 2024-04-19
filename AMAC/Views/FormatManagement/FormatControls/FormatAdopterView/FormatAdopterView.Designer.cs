@@ -72,7 +72,6 @@
             this.groupControl2.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.groupControl2.Appearance.Options.UseBackColor = true;
             this.groupControl2.Appearance.Options.UseBorderColor = true;
-            this.groupControl2.CaptionImageOptions.SvgImage = global::AMAC.Properties.Resources.bo_employee1;
             this.groupControl2.Controls.Add(this.peSeachAdopter);
             this.groupControl2.Controls.Add(this.tbAdopterlId);
             this.groupControl2.Controls.Add(this.tbEmail);

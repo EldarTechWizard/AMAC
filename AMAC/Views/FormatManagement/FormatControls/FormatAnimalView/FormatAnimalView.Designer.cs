@@ -97,7 +97,7 @@
             this.groupControl1.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.groupControl1.Appearance.Options.UseBackColor = true;
             this.groupControl1.Appearance.Options.UseBorderColor = true;
-            this.groupControl1.CaptionImageOptions.SvgImage = global::AMAC.Properties.Resources.actions_addcircled1;
+
             this.groupControl1.Controls.Add(this.label2);
             this.groupControl1.Controls.Add(this.peSeachAnimal);
             this.groupControl1.Controls.Add(this.tbAdditionalInformation);

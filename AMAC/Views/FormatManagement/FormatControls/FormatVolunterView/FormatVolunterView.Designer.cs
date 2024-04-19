@@ -44,7 +44,7 @@
             this.groupControl3.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.groupControl3.Appearance.Options.UseBackColor = true;
             this.groupControl3.Appearance.Options.UseBorderColor = true;
-            this.groupControl3.CaptionImageOptions.SvgImage = global::AMAC.Properties.Resources.security_personalid;
+
             this.groupControl3.Controls.Add(this.tbVolunter);
             this.groupControl3.Controls.Add(this.dtpDate);
             this.groupControl3.Controls.Add(this.label3);

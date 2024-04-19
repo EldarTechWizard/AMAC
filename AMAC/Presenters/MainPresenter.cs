@@ -30,7 +30,6 @@ namespace AMAC.Presenters
         {
             view.OnLoadMain += OnLoadMain;
             view.OnClickTabButtons += OnClickTabButtons;
-            view.OnClickCloseSesionButton += OnClickCloseSesionButton;
 
         }
 
@@ -76,9 +75,5 @@ namespace AMAC.Presenters
 
         
 
-        private void OnClickCloseSesionButton(object sender, EventArgs e)
-        {
-            view.CloseSesion();
-        }
     }
 }
