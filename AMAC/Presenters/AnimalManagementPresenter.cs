@@ -144,6 +144,8 @@ namespace AMAC.Presenters
                 view.ClearFields();
 
                 MessageBox.Show("Correcto");
+                view.ChangeEditMode(false );
+                SetInsertMode();
             }
             catch (Exception ex)
             {
@@ -179,7 +181,8 @@ namespace AMAC.Presenters
                 if (view.EditMode) UpdateRecord(record);
                 else SaveRecord(record);
 
-
+                view.ChangeEditMode(false);
+                SetInsertMode();
                 ReloadInformation();
 
             }

@@ -71,7 +71,7 @@ namespace AMAC.Presenters
 
         private void OnLoadMain(object sender, EventArgs e)
         {
-            view.WelcomeText = "AMAC AC GUASAVE, SINALOA\r\nBienvenida/o " + view.UserName;
+            //view.WelcomeText = "AMAC AC GUASAVE, SINALOA\r\nBienvenida/o " + view.UserName;
         }
 
         

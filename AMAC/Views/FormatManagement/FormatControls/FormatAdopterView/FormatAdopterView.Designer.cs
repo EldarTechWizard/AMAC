@@ -103,7 +103,7 @@
             this.peSeachAdopter.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.peSeachAdopter.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.peSeachAdopter.Size = new System.Drawing.Size(30, 20);
-            this.peSeachAdopter.TabIndex = 327;
+            this.peSeachAdopter.TabIndex = 2;
             // 
             // tbAdopterlId
             // 
@@ -111,7 +111,7 @@
             this.tbAdopterlId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbAdopterlId.Name = "tbAdopterlId";
             this.tbAdopterlId.Size = new System.Drawing.Size(107, 20);
-            this.tbAdopterlId.TabIndex = 326;
+            this.tbAdopterlId.TabIndex = 1;
             // 
             // tbEmail
             // 
@@ -120,7 +120,7 @@
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Properties.ReadOnly = true;
             this.tbEmail.Size = new System.Drawing.Size(243, 20);
-            this.tbEmail.TabIndex = 325;
+            this.tbEmail.TabIndex = 7;
             this.tbEmail.EditValueChanged += new System.EventHandler(this.tbEmail_EditValueChanged);
             // 
             // tbAddress
@@ -130,7 +130,7 @@
             this.tbAddress.Name = "tbAddress";
             this.tbAddress.Properties.ReadOnly = true;
             this.tbAddress.Size = new System.Drawing.Size(289, 20);
-            this.tbAddress.TabIndex = 323;
+            this.tbAddress.TabIndex = 5;
             // 
             // tbNumber
             // 
@@ -139,7 +139,7 @@
             this.tbNumber.Name = "tbNumber";
             this.tbNumber.Properties.ReadOnly = true;
             this.tbNumber.Size = new System.Drawing.Size(289, 20);
-            this.tbNumber.TabIndex = 322;
+            this.tbNumber.TabIndex = 4;
             // 
             // tbAge
             // 
@@ -147,8 +147,8 @@
             this.tbAge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbAge.Name = "tbAge";
             this.tbAge.Properties.ReadOnly = true;
-            this.tbAge.Size = new System.Drawing.Size(142, 20);
-            this.tbAge.TabIndex = 321;
+            this.tbAge.Size = new System.Drawing.Size(243, 20);
+            this.tbAge.TabIndex = 6;
             // 
             // tbName
             // 
@@ -157,7 +157,7 @@
             this.tbName.Name = "tbName";
             this.tbName.Properties.ReadOnly = true;
             this.tbName.Size = new System.Drawing.Size(289, 20);
-            this.tbName.TabIndex = 320;
+            this.tbName.TabIndex = 3;
             // 
             // label11
             // 

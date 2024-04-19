@@ -63,7 +63,7 @@
             this.tbVolunter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbVolunter.Name = "tbVolunter";
             this.tbVolunter.Size = new System.Drawing.Size(339, 20);
-            this.tbVolunter.TabIndex = 302;
+            this.tbVolunter.TabIndex = 1;
             // 
             // dtpDate
             // 
@@ -73,7 +73,7 @@
             this.dtpDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.Size = new System.Drawing.Size(277, 24);
-            this.dtpDate.TabIndex = 286;
+            this.dtpDate.TabIndex = 2;
             // 
             // label3
             // 

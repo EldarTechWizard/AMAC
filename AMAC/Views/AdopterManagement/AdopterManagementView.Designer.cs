@@ -245,7 +245,7 @@
             this.btnGenerateInsert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGenerateInsert.Name = "btnGenerateInsert";
             this.btnGenerateInsert.Size = new System.Drawing.Size(20, 19);
-            this.btnGenerateInsert.TabIndex = 343;
+            this.btnGenerateInsert.TabIndex = 2;
             // 
             // tbId
             // 
@@ -254,7 +254,7 @@
             this.tbId.Name = "tbId";
             this.tbId.Properties.ReadOnly = true;
             this.tbId.Size = new System.Drawing.Size(82, 20);
-            this.tbId.TabIndex = 336;
+            this.tbId.TabIndex = 1;
             // 
             // tbAge
             // 
@@ -262,7 +262,7 @@
             this.tbAge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbAge.Name = "tbAge";
             this.tbAge.Size = new System.Drawing.Size(123, 20);
-            this.tbAge.TabIndex = 335;
+            this.tbAge.TabIndex = 4;
             // 
             // tbEmail
             // 
@@ -270,7 +270,7 @@
             this.tbEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(254, 20);
-            this.tbEmail.TabIndex = 334;
+            this.tbEmail.TabIndex = 6;
             // 
             // tbAddress
             // 
@@ -278,7 +278,7 @@
             this.tbAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbAddress.Name = "tbAddress";
             this.tbAddress.Size = new System.Drawing.Size(254, 20);
-            this.tbAddress.TabIndex = 332;
+            this.tbAddress.TabIndex = 7;
             // 
             // tbNumber
             // 
@@ -286,7 +286,7 @@
             this.tbNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbNumber.Name = "tbNumber";
             this.tbNumber.Size = new System.Drawing.Size(253, 20);
-            this.tbNumber.TabIndex = 331;
+            this.tbNumber.TabIndex = 5;
             // 
             // tbName
             // 
@@ -294,7 +294,7 @@
             this.tbName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbName.Name = "tbName";
             this.tbName.Size = new System.Drawing.Size(254, 20);
-            this.tbName.TabIndex = 330;
+            this.tbName.TabIndex = 3;
             // 
             // label11
             // 
@@ -327,10 +327,10 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(728, 191);
+            this.btnDelete.Location = new System.Drawing.Point(744, 191);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(129, 52);
-            this.btnDelete.TabIndex = 294;
+            this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "ELIMINAR";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
@@ -343,7 +343,7 @@
             this.btnSaveAndEdit.Location = new System.Drawing.Point(924, 191);
             this.btnSaveAndEdit.Name = "btnSaveAndEdit";
             this.btnSaveAndEdit.Size = new System.Drawing.Size(129, 52);
-            this.btnSaveAndEdit.TabIndex = 290;
+            this.btnSaveAndEdit.TabIndex = 8;
             this.btnSaveAndEdit.Text = "GUARDAR";
             this.btnSaveAndEdit.UseVisualStyleBackColor = false;
             // 

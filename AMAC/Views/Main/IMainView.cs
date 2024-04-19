@@ -10,7 +10,7 @@ namespace AMAC.Views.Main
     public interface IMainView
     {
         string UserName { get; set; }
-        string WelcomeText { set; }
+        //string WelcomeText { set; }
         Form ActiveTab { get; }
 
         event EventHandler OnLoadMain;

@@ -147,7 +147,7 @@
             this.peSeachAnimal.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.peSeachAnimal.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.peSeachAnimal.Size = new System.Drawing.Size(30, 20);
-            this.peSeachAnimal.TabIndex = 312;
+            this.peSeachAnimal.TabIndex = 2;
             // 
             // tbAdditionalInformation
             // 
@@ -156,7 +156,7 @@
             this.tbAdditionalInformation.Name = "tbAdditionalInformation";
             this.tbAdditionalInformation.Properties.ReadOnly = true;
             this.tbAdditionalInformation.Size = new System.Drawing.Size(295, 78);
-            this.tbAdditionalInformation.TabIndex = 311;
+            this.tbAdditionalInformation.TabIndex = 10;
             // 
             // label12
             // 
@@ -177,7 +177,7 @@
             this.tbStatus.Name = "tbStatus";
             this.tbStatus.Properties.ReadOnly = true;
             this.tbStatus.Size = new System.Drawing.Size(157, 20);
-            this.tbStatus.TabIndex = 309;
+            this.tbStatus.TabIndex = 8;
             // 
             // tbName
             // 
@@ -186,7 +186,7 @@
             this.tbName.Name = "tbName";
             this.tbName.Properties.ReadOnly = true;
             this.tbName.Size = new System.Drawing.Size(145, 20);
-            this.tbName.TabIndex = 308;
+            this.tbName.TabIndex = 3;
             // 
             // label1
             // 
@@ -206,7 +206,7 @@
             this.tbId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbId.Name = "tbId";
             this.tbId.Size = new System.Drawing.Size(109, 20);
-            this.tbId.TabIndex = 306;
+            this.tbId.TabIndex = 1;
             // 
             // tbAge
             // 
@@ -215,7 +215,7 @@
             this.tbAge.Name = "tbAge";
             this.tbAge.Properties.ReadOnly = true;
             this.tbAge.Size = new System.Drawing.Size(79, 20);
-            this.tbAge.TabIndex = 305;
+            this.tbAge.TabIndex = 5;
             // 
             // tbSex
             // 
@@ -224,7 +224,7 @@
             this.tbSex.Name = "tbSex";
             this.tbSex.Properties.ReadOnly = true;
             this.tbSex.Size = new System.Drawing.Size(157, 20);
-            this.tbSex.TabIndex = 304;
+            this.tbSex.TabIndex = 7;
             // 
             // tbAnimalBreed
             // 
@@ -233,7 +233,7 @@
             this.tbAnimalBreed.Name = "tbAnimalBreed";
             this.tbAnimalBreed.Properties.ReadOnly = true;
             this.tbAnimalBreed.Size = new System.Drawing.Size(145, 20);
-            this.tbAnimalBreed.TabIndex = 303;
+            this.tbAnimalBreed.TabIndex = 4;
             // 
             // tbAnimalType
             // 
@@ -242,7 +242,7 @@
             this.tbAnimalType.Name = "tbAnimalType";
             this.tbAnimalType.Properties.ReadOnly = true;
             this.tbAnimalType.Size = new System.Drawing.Size(157, 20);
-            this.tbAnimalType.TabIndex = 302;
+            this.tbAnimalType.TabIndex = 6;
             // 
             // label5
             // 
@@ -264,7 +264,7 @@
             this.chbSterilized.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chbSterilized.Name = "chbSterilized";
             this.chbSterilized.Size = new System.Drawing.Size(15, 14);
-            this.chbSterilized.TabIndex = 300;
+            this.chbSterilized.TabIndex = 9;
             this.chbSterilized.UseVisualStyleBackColor = true;
             // 
             // label11
