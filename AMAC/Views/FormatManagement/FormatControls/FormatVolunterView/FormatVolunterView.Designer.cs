@@ -44,7 +44,6 @@
             this.groupControl3.Appearance.BorderColor = System.Drawing.Color.MidnightBlue;
             this.groupControl3.Appearance.Options.UseBackColor = true;
             this.groupControl3.Appearance.Options.UseBorderColor = true;
-
             this.groupControl3.Controls.Add(this.tbVolunter);
             this.groupControl3.Controls.Add(this.dtpDate);
             this.groupControl3.Controls.Add(this.label3);
@@ -62,6 +61,8 @@
             this.tbVolunter.Location = new System.Drawing.Point(237, 57);
             this.tbVolunter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbVolunter.Name = "tbVolunter";
+            this.tbVolunter.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
+            this.tbVolunter.Properties.MaskSettings.Set("mask", "\\p{L}+");
             this.tbVolunter.Size = new System.Drawing.Size(339, 20);
             this.tbVolunter.TabIndex = 1;
             // 

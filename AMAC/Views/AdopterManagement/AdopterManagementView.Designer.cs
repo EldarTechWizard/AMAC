@@ -252,7 +252,10 @@
             this.tbId.Location = new System.Drawing.Point(166, 49);
             this.tbId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbId.Name = "tbId";
+            this.tbId.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
+            this.tbId.Properties.MaskSettings.Set("mask", "\\d+");
             this.tbId.Properties.ReadOnly = true;
+            this.tbId.Properties.UseMaskAsDisplayFormat = true;
             this.tbId.Size = new System.Drawing.Size(82, 20);
             this.tbId.TabIndex = 1;
             // 
@@ -261,6 +264,8 @@
             this.tbAge.Location = new System.Drawing.Point(791, 47);
             this.tbAge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbAge.Name = "tbAge";
+            this.tbAge.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
+            this.tbAge.Properties.MaskSettings.Set("mask", "\\d+");
             this.tbAge.Size = new System.Drawing.Size(123, 20);
             this.tbAge.TabIndex = 4;
             // 
@@ -269,6 +274,7 @@
             this.tbEmail.Location = new System.Drawing.Point(437, 131);
             this.tbEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbEmail.Name = "tbEmail";
+            this.tbEmail.Properties.UseMaskAsDisplayFormat = true;
             this.tbEmail.Size = new System.Drawing.Size(254, 20);
             this.tbEmail.TabIndex = 6;
             // 
@@ -285,6 +291,9 @@
             this.tbNumber.Location = new System.Drawing.Point(439, 86);
             this.tbNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbNumber.Name = "tbNumber";
+            this.tbNumber.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
+            this.tbNumber.Properties.MaskSettings.Set("mask", "(\\d\\d\\d) \\d\\d\\d-\\d\\d\\d\\d");
+            this.tbNumber.Properties.UseMaskAsDisplayFormat = true;
             this.tbNumber.Size = new System.Drawing.Size(253, 20);
             this.tbNumber.TabIndex = 5;
             // 
@@ -293,6 +302,9 @@
             this.tbName.Location = new System.Drawing.Point(438, 47);
             this.tbName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbName.Name = "tbName";
+            this.tbName.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
+            this.tbName.Properties.MaskSettings.Set("mask", "\\p{L}+");
+            this.tbName.Properties.UseMaskAsDisplayFormat = true;
             this.tbName.Size = new System.Drawing.Size(254, 20);
             this.tbName.TabIndex = 3;
             // 
@@ -327,7 +339,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(744, 191);
+            this.btnDelete.Location = new System.Drawing.Point(728, 191);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(129, 52);
             this.btnDelete.TabIndex = 9;
@@ -340,7 +352,7 @@
             this.btnSaveAndEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSaveAndEdit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnSaveAndEdit.ForeColor = System.Drawing.Color.White;
-            this.btnSaveAndEdit.Location = new System.Drawing.Point(924, 191);
+            this.btnSaveAndEdit.Location = new System.Drawing.Point(903, 191);
             this.btnSaveAndEdit.Name = "btnSaveAndEdit";
             this.btnSaveAndEdit.Size = new System.Drawing.Size(129, 52);
             this.btnSaveAndEdit.TabIndex = 8;
