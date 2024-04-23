@@ -92,6 +92,7 @@
             this.btnVolunter.Appearance.Options.UseBorderColor = true;
             this.btnVolunter.Appearance.Options.UseFont = true;
             this.btnVolunter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnVolunter.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnVolunter.ImageOptions.Image")));
             this.btnVolunter.Location = new System.Drawing.Point(0, 0);
             this.btnVolunter.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnVolunter.Name = "btnVolunter";
@@ -119,6 +120,7 @@
             this.btnAdopter.Appearance.Options.UseBorderColor = true;
             this.btnAdopter.Appearance.Options.UseFont = true;
             this.btnAdopter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAdopter.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdopter.ImageOptions.Image")));
             this.btnAdopter.Location = new System.Drawing.Point(0, 0);
             this.btnAdopter.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnAdopter.Name = "btnAdopter";
@@ -146,6 +148,7 @@
             this.btnAnimal.Appearance.Options.UseBorderColor = true;
             this.btnAnimal.Appearance.Options.UseFont = true;
             this.btnAnimal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAnimal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAnimal.ImageOptions.Image")));
             this.btnAnimal.Location = new System.Drawing.Point(0, 0);
             this.btnAnimal.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnAnimal.Name = "btnAnimal";
@@ -194,12 +197,14 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.Location = new System.Drawing.Point(19, 32);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(162, 68);
+            this.btnDelete.Size = new System.Drawing.Size(184, 68);
             this.btnDelete.TabIndex = 309;
-            this.btnDelete.Text = "ELIMINAR";
+            this.btnDelete.Text = "        ELIMINAR";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // btnPrint
@@ -208,7 +213,7 @@
             this.btnPrint.Appearance.Options.UseBackColor = true;
             this.btnPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.ImageOptions.Image")));
             this.btnPrint.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnPrint.Location = new System.Drawing.Point(377, 32);
+            this.btnPrint.Location = new System.Drawing.Point(403, 32);
             this.btnPrint.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(94, 68);
@@ -220,12 +225,14 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSave.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(195, 32);
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(211, 32);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(162, 68);
+            this.btnSave.Size = new System.Drawing.Size(184, 68);
             this.btnSave.TabIndex = 306;
-            this.btnSave.Text = "GUARDAR";
+            this.btnSave.Text = "      GUARDAR";
             this.btnSave.UseVisualStyleBackColor = false;
             // 
             // label10

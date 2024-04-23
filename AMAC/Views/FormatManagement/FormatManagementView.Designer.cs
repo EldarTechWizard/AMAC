@@ -56,22 +56,22 @@
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.6566F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.3434F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1093, 640);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1275, 788);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panelprincipal
             // 
             this.panelprincipal.Controls.Add(this.panel1);
             this.panelprincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelprincipal.Location = new System.Drawing.Point(3, 70);
-            this.panelprincipal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelprincipal.Location = new System.Drawing.Point(4, 85);
+            this.panelprincipal.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panelprincipal.Name = "panelprincipal";
-            this.panelprincipal.Size = new System.Drawing.Size(1087, 568);
+            this.panelprincipal.Size = new System.Drawing.Size(1267, 701);
             this.panelprincipal.TabIndex = 2;
             // 
             // panel1
@@ -79,9 +79,9 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1087, 568);
+            this.panel1.Size = new System.Drawing.Size(1267, 701);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -89,9 +89,9 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1087, 568);
+            this.pictureBox1.Size = new System.Drawing.Size(1267, 701);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -103,10 +103,10 @@
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(4, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1087, 64);
+            this.panel2.Size = new System.Drawing.Size(1267, 79);
             this.panel2.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -118,11 +118,11 @@
             this.tableLayoutPanel2.Controls.Add(this.btnCreateNewAdoptionFormat, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(912, 64);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1063, 79);
             this.tableLayoutPanel2.TabIndex = 130;
             // 
             // btnUpdateAdoptionFormat
@@ -133,9 +133,12 @@
             this.btnUpdateAdoptionFormat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUpdateAdoptionFormat.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnUpdateAdoptionFormat.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateAdoptionFormat.Location = new System.Drawing.Point(459, 3);
+            this.btnUpdateAdoptionFormat.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateAdoptionFormat.Image")));
+            this.btnUpdateAdoptionFormat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdateAdoptionFormat.Location = new System.Drawing.Point(535, 4);
+            this.btnUpdateAdoptionFormat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdateAdoptionFormat.Name = "btnUpdateAdoptionFormat";
-            this.btnUpdateAdoptionFormat.Size = new System.Drawing.Size(450, 58);
+            this.btnUpdateAdoptionFormat.Size = new System.Drawing.Size(524, 71);
             this.btnUpdateAdoptionFormat.TabIndex = 5;
             this.btnUpdateAdoptionFormat.Text = "MODIFICAR DOCUMENTO";
             this.btnUpdateAdoptionFormat.UseVisualStyleBackColor = false;
@@ -148,9 +151,12 @@
             this.btnCreateNewAdoptionFormat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCreateNewAdoptionFormat.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnCreateNewAdoptionFormat.ForeColor = System.Drawing.Color.White;
-            this.btnCreateNewAdoptionFormat.Location = new System.Drawing.Point(3, 3);
+            this.btnCreateNewAdoptionFormat.Image = ((System.Drawing.Image)(resources.GetObject("btnCreateNewAdoptionFormat.Image")));
+            this.btnCreateNewAdoptionFormat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCreateNewAdoptionFormat.Location = new System.Drawing.Point(4, 4);
+            this.btnCreateNewAdoptionFormat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCreateNewAdoptionFormat.Name = "btnCreateNewAdoptionFormat";
-            this.btnCreateNewAdoptionFormat.Size = new System.Drawing.Size(450, 58);
+            this.btnCreateNewAdoptionFormat.Size = new System.Drawing.Size(523, 71);
             this.btnCreateNewAdoptionFormat.TabIndex = 1;
             this.btnCreateNewAdoptionFormat.Text = "CREAR FORMATO DE ADOPCION";
             this.btnCreateNewAdoptionFormat.UseVisualStyleBackColor = false;
@@ -159,10 +165,10 @@
             // 
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.pictureBox2.Image = global::AMAC.Properties.Resources.AMACPNG;
-            this.pictureBox2.Location = new System.Drawing.Point(912, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(1063, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(175, 64);
+            this.pictureBox2.Size = new System.Drawing.Size(204, 79);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 129;
             this.pictureBox2.TabStop = false;
@@ -173,9 +179,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(-2, 52);
+            this.label1.Location = new System.Drawing.Point(-2, 64);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(697, 37);
+            this.label1.Size = new System.Drawing.Size(880, 46);
             this.label1.TabIndex = 92;
             this.label1.Text = "GENERACION DE FORMATO DE ADOPCION";
             // 
@@ -183,12 +190,12 @@
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1093, 640);
+            this.ClientSize = new System.Drawing.Size(1275, 788);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "FormatManagementView";
             this.Text = "1591, 832";
             this.tableLayoutPanel1.ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormatAdopterView));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.peSeachAdopter = new DevExpress.XtraEditors.PictureEdit();
@@ -60,9 +61,9 @@
             this.panel1.Controls.Add(this.groupControl2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1083, 175);
+            this.panel1.Size = new System.Drawing.Size(1264, 215);
             this.panel1.TabIndex = 1;
             // 
             // groupControl2
@@ -86,84 +87,87 @@
             this.groupControl2.Controls.Add(this.label16);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(0, 0);
-            this.groupControl2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupControl2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(1083, 175);
+            this.groupControl2.Size = new System.Drawing.Size(1264, 215);
             this.groupControl2.TabIndex = 265;
             this.groupControl2.Text = "Datos generales del Adoptante";
             // 
             // peSeachAdopter
             // 
-            this.peSeachAdopter.Location = new System.Drawing.Point(249, 46);
-            this.peSeachAdopter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.peSeachAdopter.EditValue = ((object)(resources.GetObject("peSeachAdopter.EditValue")));
+            this.peSeachAdopter.Location = new System.Drawing.Point(290, 56);
+            this.peSeachAdopter.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.peSeachAdopter.Name = "peSeachAdopter";
+            this.peSeachAdopter.Properties.Appearance.BackColor = System.Drawing.Color.MidnightBlue;
+            this.peSeachAdopter.Properties.Appearance.Options.UseBackColor = true;
             this.peSeachAdopter.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.peSeachAdopter.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.peSeachAdopter.Size = new System.Drawing.Size(30, 20);
+            this.peSeachAdopter.Size = new System.Drawing.Size(35, 25);
             this.peSeachAdopter.TabIndex = 2;
             // 
             // tbAdopterlId
             // 
-            this.tbAdopterlId.Location = new System.Drawing.Point(136, 46);
-            this.tbAdopterlId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbAdopterlId.Location = new System.Drawing.Point(159, 57);
+            this.tbAdopterlId.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbAdopterlId.Name = "tbAdopterlId";
             this.tbAdopterlId.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.tbAdopterlId.Properties.MaskSettings.Set("mask", "\\d+");
-            this.tbAdopterlId.Size = new System.Drawing.Size(107, 20);
+            this.tbAdopterlId.Size = new System.Drawing.Size(125, 22);
             this.tbAdopterlId.TabIndex = 1;
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(807, 82);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbEmail.Location = new System.Drawing.Point(941, 101);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Properties.ReadOnly = true;
-            this.tbEmail.Size = new System.Drawing.Size(243, 20);
+            this.tbEmail.Size = new System.Drawing.Size(284, 22);
             this.tbEmail.TabIndex = 7;
             this.tbEmail.EditValueChanged += new System.EventHandler(this.tbEmail_EditValueChanged);
             // 
             // tbAddress
             // 
-            this.tbAddress.Location = new System.Drawing.Point(394, 115);
-            this.tbAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbAddress.Location = new System.Drawing.Point(460, 142);
+            this.tbAddress.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbAddress.Name = "tbAddress";
             this.tbAddress.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.tbAddress.Properties.MaskSettings.Set("mask", "\\p{L}+");
             this.tbAddress.Properties.ReadOnly = true;
-            this.tbAddress.Size = new System.Drawing.Size(289, 20);
+            this.tbAddress.Size = new System.Drawing.Size(337, 22);
             this.tbAddress.TabIndex = 6;
             // 
             // tbNumber
             // 
-            this.tbNumber.Location = new System.Drawing.Point(394, 83);
-            this.tbNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbNumber.Location = new System.Drawing.Point(460, 102);
+            this.tbNumber.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbNumber.Name = "tbNumber";
             this.tbNumber.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.tbNumber.Properties.MaskSettings.Set("mask", "\\p{L}+");
             this.tbNumber.Properties.ReadOnly = true;
-            this.tbNumber.Size = new System.Drawing.Size(289, 20);
+            this.tbNumber.Size = new System.Drawing.Size(337, 22);
             this.tbNumber.TabIndex = 4;
             // 
             // tbAge
             // 
-            this.tbAge.Location = new System.Drawing.Point(807, 49);
-            this.tbAge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbAge.Location = new System.Drawing.Point(941, 60);
+            this.tbAge.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbAge.Name = "tbAge";
             this.tbAge.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.tbAge.Properties.MaskSettings.Set("mask", "\\d+");
             this.tbAge.Properties.ReadOnly = true;
-            this.tbAge.Size = new System.Drawing.Size(243, 20);
+            this.tbAge.Size = new System.Drawing.Size(284, 22);
             this.tbAge.TabIndex = 12;
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(394, 49);
-            this.tbName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbName.Location = new System.Drawing.Point(460, 60);
+            this.tbName.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbName.Name = "tbName";
             this.tbName.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.tbName.Properties.MaskSettings.Set("mask", "\\p{L}+");
             this.tbName.Properties.ReadOnly = true;
-            this.tbName.Size = new System.Drawing.Size(289, 20);
+            this.tbName.Size = new System.Drawing.Size(337, 22);
             this.tbName.TabIndex = 3;
             // 
             // label11
@@ -172,9 +176,10 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(738, 48);
+            this.label11.Location = new System.Drawing.Point(861, 59);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 18);
+            this.label11.Size = new System.Drawing.Size(73, 23);
             this.label11.TabIndex = 319;
             this.label11.Text = "EDAD:";
             // 
@@ -184,9 +189,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(99, 45);
+            this.label5.Location = new System.Drawing.Point(115, 55);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 18);
+            this.label5.Size = new System.Drawing.Size(37, 23);
             this.label5.TabIndex = 317;
             this.label5.Text = "ID:";
             // 
@@ -196,9 +202,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(712, 81);
+            this.label4.Location = new System.Drawing.Point(831, 100);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 18);
+            this.label4.Size = new System.Drawing.Size(104, 23);
             this.label4.TabIndex = 313;
             this.label4.Text = "CORREO:";
             // 
@@ -208,9 +215,10 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label14.Location = new System.Drawing.Point(280, 81);
+            this.label14.Location = new System.Drawing.Point(327, 100);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(103, 18);
+            this.label14.Size = new System.Drawing.Size(126, 23);
             this.label14.TabIndex = 309;
             this.label14.Text = "TELEFONO:";
             // 
@@ -220,9 +228,10 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label15.Location = new System.Drawing.Point(280, 118);
+            this.label15.Location = new System.Drawing.Point(327, 145);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(101, 18);
+            this.label15.Size = new System.Drawing.Size(125, 23);
             this.label15.TabIndex = 307;
             this.label15.Text = "DOMICILIO:";
             // 
@@ -232,20 +241,21 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label16.Location = new System.Drawing.Point(297, 48);
+            this.label16.Location = new System.Drawing.Point(346, 59);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(86, 18);
+            this.label16.Size = new System.Drawing.Size(105, 23);
             this.label16.TabIndex = 305;
             this.label16.Text = "NOMBRE:";
             // 
             // FormatAdopterView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1083, 175);
+            this.ClientSize = new System.Drawing.Size(1264, 215);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "FormatAdopterView";
             this.Text = "ModificarDoc_Adopt";
             this.panel1.ResumeLayout(false);

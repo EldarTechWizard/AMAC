@@ -324,13 +324,21 @@
     <None Include="Resources\add_16x16.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\DOC_29680.ico" />
+    <Content Include="Resources\image %2810%29.png" />
+    <Content Include="Resources\image %2811%29.png" />
     <Content Include="Resources\image %285%29.png" />
     <Content Include="Resources\image %286%29.png" />
+    <Content Include="Resources\image %288%29.png" />
+    <Content Include="Resources\image %289%29.png" />
     <Content Include="Resources\image_2024-04-18_094252172-removebg-preview.png" />
     <Content Include="Resources\image_2024-04-18_185423470-removebg-preview.png" />
     <Content Include="Resources\logito.png" />
     <Content Include="Resources\logo.png" />
+    <Content Include="Resources\pdf-256_32_35904 %281%29.ico" />
     <Content Include="Resources\pixelcut-export %281%29.png" />
+    <Content Include="Resources\Save_Icon_icon-icons.com_69139 %285%29.ico" />
+    <Content Include="Resources\vcsconflicting_93497.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0.1\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets" Condition="Exists('..\packages\HarfBuzzSharp.NativeAssets.macOS.7.3.0.1\build\net462\HarfBuzzSharp.NativeAssets.macOS.targets')" />

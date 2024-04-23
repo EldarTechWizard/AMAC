@@ -48,9 +48,9 @@
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(813, 640);
+            this.panel1.Size = new System.Drawing.Size(948, 788);
             this.panel1.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -61,12 +61,12 @@
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.1492F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.8508F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(813, 640);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(948, 788);
             this.tableLayoutPanel1.TabIndex = 303;
             // 
             // panel3
@@ -76,19 +76,19 @@
             this.panel3.Controls.Add(this.btnClose);
             this.panel3.Controls.Add(this.btnSave);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 572);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(4, 704);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(807, 66);
+            this.panel3.Size = new System.Drawing.Size(940, 82);
             this.panel3.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AMAC.Properties.Resources.AMACPNG;
-            this.pictureBox1.Location = new System.Drawing.Point(338, 1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(394, 1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(110, 65);
+            this.pictureBox1.Size = new System.Drawing.Size(128, 80);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 304;
             this.pictureBox1.TabStop = false;
@@ -99,9 +99,10 @@
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(9, 11);
+            this.btnClose.Location = new System.Drawing.Point(10, 14);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(139, 52);
+            this.btnClose.Size = new System.Drawing.Size(162, 64);
             this.btnClose.TabIndex = 303;
             this.btnClose.Text = "REGRESAR";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -112,9 +113,10 @@
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSave.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(659, 11);
+            this.btnSave.Location = new System.Drawing.Point(769, 14);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(139, 52);
+            this.btnSave.Size = new System.Drawing.Size(162, 64);
             this.btnSave.TabIndex = 302;
             this.btnSave.Text = "CONFIRMAR";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -124,10 +126,10 @@
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.pdfViewer1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(4, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(807, 566);
+            this.panel2.Size = new System.Drawing.Size(940, 698);
             this.panel2.TabIndex = 3;
             // 
             // pdfViewer1
@@ -137,20 +139,20 @@
             this.pdfViewer1.AllowCommentSorting = false;
             this.pdfViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pdfViewer1.Location = new System.Drawing.Point(0, 0);
-            this.pdfViewer1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pdfViewer1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pdfViewer1.Name = "pdfViewer1";
-            this.pdfViewer1.Size = new System.Drawing.Size(807, 566);
+            this.pdfViewer1.Size = new System.Drawing.Size(940, 698);
             this.pdfViewer1.TabIndex = 281;
             this.pdfViewer1.ZoomMode = DevExpress.XtraPdfViewer.PdfZoomMode.FitToVisible;
             // 
             // FormatPreviewView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(813, 640);
+            this.ClientSize = new System.Drawing.Size(948, 788);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "FormatPreviewView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VistaPrevia";

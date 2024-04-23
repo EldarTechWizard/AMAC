@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdopterManagementView));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -344,16 +345,17 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnDelete.Enabled = false;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.Location = new System.Drawing.Point(849, 235);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(150, 64);
+            this.btnDelete.Size = new System.Drawing.Size(183, 64);
             this.btnDelete.TabIndex = 9;
-            this.btnDelete.Text = "ELIMINAR";
+            this.btnDelete.Text = "         ELIMINAR";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // btnSaveAndEdit
@@ -362,12 +364,14 @@
             this.btnSaveAndEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSaveAndEdit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnSaveAndEdit.ForeColor = System.Drawing.Color.White;
+            this.btnSaveAndEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveAndEdit.Image")));
+            this.btnSaveAndEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSaveAndEdit.Location = new System.Drawing.Point(1054, 235);
-            this.btnSaveAndEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSaveAndEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveAndEdit.Name = "btnSaveAndEdit";
-            this.btnSaveAndEdit.Size = new System.Drawing.Size(150, 64);
+            this.btnSaveAndEdit.Size = new System.Drawing.Size(183, 64);
             this.btnSaveAndEdit.TabIndex = 8;
-            this.btnSaveAndEdit.Text = "GUARDAR";
+            this.btnSaveAndEdit.Text = "       GUARDAR";
             this.btnSaveAndEdit.UseVisualStyleBackColor = false;
             // 
             // label2
