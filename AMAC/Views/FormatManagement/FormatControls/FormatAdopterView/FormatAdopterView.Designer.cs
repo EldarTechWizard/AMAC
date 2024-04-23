@@ -131,7 +131,7 @@
             this.tbAddress.Properties.MaskSettings.Set("mask", "\\p{L}+");
             this.tbAddress.Properties.ReadOnly = true;
             this.tbAddress.Size = new System.Drawing.Size(289, 20);
-            this.tbAddress.TabIndex = 5;
+            this.tbAddress.TabIndex = 6;
             // 
             // tbNumber
             // 
@@ -153,7 +153,7 @@
             this.tbAge.Properties.MaskSettings.Set("mask", "\\d+");
             this.tbAge.Properties.ReadOnly = true;
             this.tbAge.Size = new System.Drawing.Size(243, 20);
-            this.tbAge.TabIndex = 6;
+            this.tbAge.TabIndex = 12;
             // 
             // tbName
             // 

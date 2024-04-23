@@ -359,11 +359,11 @@
             this.cbAnimalType.Items.AddRange(new object[] {
             "Perro",
             "Gato"});
-            this.cbAnimalType.Location = new System.Drawing.Point(308, 160);
+            this.cbAnimalType.Location = new System.Drawing.Point(307, 98);
             this.cbAnimalType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbAnimalType.Name = "cbAnimalType";
             this.cbAnimalType.Size = new System.Drawing.Size(151, 24);
-            this.cbAnimalType.TabIndex = 345;
+            this.cbAnimalType.TabIndex = 5;
             // 
             // label4
             // 
@@ -389,7 +389,7 @@
             this.cbStatus.Location = new System.Drawing.Point(307, 222);
             this.cbStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(151, 24);
+            this.cbStatus.Size = new System.Drawing.Size(168, 24);
             this.cbStatus.TabIndex = 9;
             // 
             // btnGenerateInsert
@@ -438,7 +438,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(181, 162);
+            this.label2.Location = new System.Drawing.Point(181, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 18);
             this.label2.TabIndex = 338;
@@ -485,17 +485,17 @@
             // 
             // tbAnimalBreed
             // 
-            this.tbAnimalBreed.Location = new System.Drawing.Point(306, 101);
+            this.tbAnimalBreed.Location = new System.Drawing.Point(308, 156);
             this.tbAnimalBreed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbAnimalBreed.Name = "tbAnimalBreed";
             this.tbAnimalBreed.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.tbAnimalBreed.Properties.MaskSettings.Set("mask", "\\p{L}+");
             this.tbAnimalBreed.Size = new System.Drawing.Size(167, 20);
-            this.tbAnimalBreed.TabIndex = 5;
+            this.tbAnimalBreed.TabIndex = 7;
             // 
             // tbAge
             // 
-            this.tbAge.Location = new System.Drawing.Point(306, 130);
+            this.tbAge.Location = new System.Drawing.Point(308, 130);
             this.tbAge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbAge.Name = "tbAge";
             this.tbAge.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
@@ -519,7 +519,7 @@
             this.btnChoosePhoto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnChoosePhoto.Name = "btnChoosePhoto";
             this.btnChoosePhoto.Size = new System.Drawing.Size(112, 37);
-            this.btnChoosePhoto.TabIndex = 327;
+            this.btnChoosePhoto.TabIndex = 16;
             this.btnChoosePhoto.Text = "AGREGAR \r\nFOTOGRAFIA";
             this.btnChoosePhoto.Click += new System.EventHandler(this.btnChoosePhoto_Click);
             // 
@@ -610,7 +610,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label15.Location = new System.Drawing.Point(235, 100);
+            this.label15.Location = new System.Drawing.Point(235, 157);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(59, 18);
             this.label15.TabIndex = 314;
@@ -627,7 +627,7 @@
             this.cbSex.Location = new System.Drawing.Point(308, 190);
             this.cbSex.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbSex.Name = "cbSex";
-            this.cbSex.Size = new System.Drawing.Size(151, 24);
+            this.cbSex.Size = new System.Drawing.Size(167, 24);
             this.cbSex.TabIndex = 8;
             // 
             // label17
@@ -723,7 +723,7 @@
             this.btnDelete.Location = new System.Drawing.Point(849, 197);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(129, 52);
-            this.btnDelete.TabIndex = 17;
+            this.btnDelete.TabIndex = 18;
             this.btnDelete.Text = "ELIMINAR";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
@@ -736,7 +736,7 @@
             this.btnSaveAndEdit.Location = new System.Drawing.Point(1034, 197);
             this.btnSaveAndEdit.Name = "btnSaveAndEdit";
             this.btnSaveAndEdit.Size = new System.Drawing.Size(129, 52);
-            this.btnSaveAndEdit.TabIndex = 16;
+            this.btnSaveAndEdit.TabIndex = 17;
             this.btnSaveAndEdit.Text = "GUARDAR";
             this.btnSaveAndEdit.UseVisualStyleBackColor = false;
             // 

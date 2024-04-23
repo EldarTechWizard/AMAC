@@ -130,7 +130,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(235, 129);
+            this.label2.Location = new System.Drawing.Point(261, 136);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 18);
             this.label2.TabIndex = 313;
@@ -161,7 +161,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(365, 105);
+            this.label12.Location = new System.Drawing.Point(401, 105);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(105, 18);
             this.label12.TabIndex = 310;
@@ -169,7 +169,7 @@
             // 
             // tbStatus
             // 
-            this.tbStatus.Location = new System.Drawing.Point(488, 106);
+            this.tbStatus.Location = new System.Drawing.Point(512, 106);
             this.tbStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbStatus.Name = "tbStatus";
             this.tbStatus.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
@@ -186,7 +186,7 @@
             this.tbName.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.tbName.Properties.MaskSettings.Set("mask", "\\p{L}+");
             this.tbName.Properties.ReadOnly = true;
-            this.tbName.Size = new System.Drawing.Size(145, 20);
+            this.tbName.Size = new System.Drawing.Size(200, 20);
             this.tbName.TabIndex = 3;
             // 
             // label1
@@ -203,6 +203,7 @@
             // 
             // tbId
             // 
+            this.tbId.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tbId.Location = new System.Drawing.Point(149, 44);
             this.tbId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbId.Name = "tbId";
@@ -213,18 +214,18 @@
             // 
             // tbAge
             // 
-            this.tbAge.Location = new System.Drawing.Point(149, 126);
+            this.tbAge.Location = new System.Drawing.Point(149, 134);
             this.tbAge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbAge.Name = "tbAge";
             this.tbAge.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.tbAge.Properties.MaskSettings.Set("mask", "\\d+");
             this.tbAge.Properties.ReadOnly = true;
-            this.tbAge.Size = new System.Drawing.Size(79, 20);
+            this.tbAge.Size = new System.Drawing.Size(103, 20);
             this.tbAge.TabIndex = 5;
             // 
             // tbSex
             // 
-            this.tbSex.Location = new System.Drawing.Point(488, 77);
+            this.tbSex.Location = new System.Drawing.Point(512, 77);
             this.tbSex.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbSex.Name = "tbSex";
             this.tbSex.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
@@ -235,25 +236,25 @@
             // 
             // tbAnimalBreed
             // 
-            this.tbAnimalBreed.Location = new System.Drawing.Point(149, 103);
+            this.tbAnimalBreed.Location = new System.Drawing.Point(512, 48);
             this.tbAnimalBreed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbAnimalBreed.Name = "tbAnimalBreed";
             this.tbAnimalBreed.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.tbAnimalBreed.Properties.MaskSettings.Set("mask", "\\p{L}+");
             this.tbAnimalBreed.Properties.ReadOnly = true;
             this.tbAnimalBreed.Size = new System.Drawing.Size(145, 20);
-            this.tbAnimalBreed.TabIndex = 4;
+            this.tbAnimalBreed.TabIndex = 6;
             // 
             // tbAnimalType
             // 
-            this.tbAnimalType.Location = new System.Drawing.Point(488, 47);
+            this.tbAnimalType.Location = new System.Drawing.Point(149, 106);
             this.tbAnimalType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbAnimalType.Name = "tbAnimalType";
             this.tbAnimalType.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.tbAnimalType.Properties.MaskSettings.Set("mask", "\\p{L}+");
             this.tbAnimalType.Properties.ReadOnly = true;
-            this.tbAnimalType.Size = new System.Drawing.Size(157, 20);
-            this.tbAnimalType.TabIndex = 6;
+            this.tbAnimalType.Size = new System.Drawing.Size(200, 20);
+            this.tbAnimalType.TabIndex = 4;
             // 
             // label5
             // 
@@ -271,7 +272,7 @@
             // 
             this.chbSterilized.AutoSize = true;
             this.chbSterilized.Enabled = false;
-            this.chbSterilized.Location = new System.Drawing.Point(488, 140);
+            this.chbSterilized.Location = new System.Drawing.Point(512, 140);
             this.chbSterilized.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chbSterilized.Name = "chbSterilized";
             this.chbSterilized.Size = new System.Drawing.Size(15, 14);
@@ -284,7 +285,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(329, 136);
+            this.label11.Location = new System.Drawing.Point(365, 136);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(141, 18);
             this.label11.TabIndex = 299;
@@ -296,7 +297,7 @@
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label21.Location = new System.Drawing.Point(412, 76);
+            this.label21.Location = new System.Drawing.Point(448, 76);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(58, 18);
             this.label21.TabIndex = 298;
@@ -308,7 +309,7 @@
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label23.Location = new System.Drawing.Point(83, 129);
+            this.label23.Location = new System.Drawing.Point(79, 136);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(60, 18);
             this.label23.TabIndex = 297;
@@ -320,7 +321,7 @@
             this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label24.Location = new System.Drawing.Point(80, 103);
+            this.label24.Location = new System.Drawing.Point(447, 47);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(59, 18);
             this.label24.TabIndex = 296;
@@ -332,7 +333,7 @@
             this.label25.BackColor = System.Drawing.Color.Transparent;
             this.label25.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label25.Location = new System.Drawing.Point(357, 45);
+            this.label25.Location = new System.Drawing.Point(26, 105);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(113, 18);
             this.label25.TabIndex = 295;
