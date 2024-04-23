@@ -106,7 +106,7 @@ namespace AMAC.Views.AdopterManagement
             foreach (int i in gridView1.GetSelectedRows())
             {
                 DataRow row = gridView1.GetDataRow(i);
-                this.Id = int.Parse(row["id"].ToString());   
+                this.Id = int.Parse(row["idAdopter"].ToString());   
             }
         }
 

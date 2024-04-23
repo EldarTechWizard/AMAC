@@ -77,30 +77,30 @@ namespace AMAC.Presenters
 
         private PdfGenerator GetGeneratorWithAtributtes()
         {
-            DataRow animalRow = animalData.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("id") == (int)view.AnimalId);
-            DataRow adopterRow = adopterData.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("id") == (int)view.AdopterId);
+            DataRow animalRow = animalData.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAnimal") == (int)view.AnimalId);
+            DataRow adopterRow = adopterData.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAdopter") == (int)view.AdopterId);
 
             Animal animal = new Animal()
             {
                 Id = view.AnimalId,
-                Name = (string)animalRow["nombre"],
-                Age = (int)animalRow["edad"],
-                Sex = (string)animalRow["sexo"],
-                AnimalType = (string)animalRow["tipo de animal"],
-                AnimalBreed = (string)animalRow["raza"],
-                Sterilized = (bool)animalRow["esterilizado"],
-                AdditionalInformation = (string)animalRow["informacion adicional"],
-                Status = (string)animalRow["estado"],
+                Name = (string)animalRow["name"],
+                Age = (int)animalRow["age"],
+                Sex = (string)animalRow["sex"],
+                AnimalType = (string)animalRow["animalType"],
+                AnimalBreed = (string)animalRow["breed"],
+                Sterilized = (bool)animalRow["sterilized"],
+                AdditionalInformation = (string)animalRow["additionalInformation"],
+                Status = (string)animalRow["status"],
             };
 
             Adopter adopter = new Adopter()
             {
                 Id = view.AdopterId,
-                Name = (string)adopterRow["nombre"],
-                Address = (string)adopterRow["domicilio"],
-                Age = (int)adopterRow["edad"],
-                Email = (string)adopterRow["correo"],
-                Number = (string)adopterRow["numero"],
+                Name = (string)adopterRow["name"],
+                Address = (string)adopterRow["address"],
+                Age = (int)adopterRow["age"],
+                Email = (string)adopterRow["email"],
+                Number = (string)adopterRow["phone"],
             };
 
             PdfFormat pdfFormat = new PdfFormat()
@@ -134,8 +134,8 @@ namespace AMAC.Presenters
             view.Id = (int)row["idAdoptionForm"];
             view.AdopterId = (int)row["idAdopter"];
             view.AnimalId = (int)row["idAnimal"];
-            view.Volunter = (string)row["voluntario"];
-            view.AdoptionDate = (DateTime)row["fecha de adopcion"];
+            view.Volunter = (string)row["volunteer"];
+            view.AdoptionDate = (DateTime)row["adoptionDate"];
         }
 
         private void SetDataInsideTab()

@@ -37,22 +37,22 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAnimal = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panelSubTab = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.cbPdfFormats = new DevExpress.XtraEditors.LookUpEdit();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.panelSubTab = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.cbPdfFormats = new DevExpress.XtraEditors.LookUpEdit();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbPdfFormats.Properties)).BeginInit();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel2
@@ -175,37 +175,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1269, 693);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
-            // panelSubTab
-            // 
-            this.panelSubTab.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSubTab.Location = new System.Drawing.Point(4, 71);
-            this.panelSubTab.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.panelSubTab.Name = "panelSubTab";
-            this.panelSubTab.Size = new System.Drawing.Size(1261, 444);
-            this.panelSubTab.TabIndex = 4;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.cbPdfFormats);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(4, 2);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1261, 21);
-            this.panel4.TabIndex = 5;
-            // 
-            // cbPdfFormats
-            // 
-            this.cbPdfFormats.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbPdfFormats.Location = new System.Drawing.Point(0, 0);
-            this.cbPdfFormats.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.cbPdfFormats.Name = "cbPdfFormats";
-            this.cbPdfFormats.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbPdfFormats.Properties.NullText = "";
-            this.cbPdfFormats.Size = new System.Drawing.Size(1261, 22);
-            this.cbPdfFormats.TabIndex = 0;
-            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.btnDelete);
@@ -272,6 +241,42 @@
             this.label10.Text = "label AVISOS";
             this.label10.Visible = false;
             // 
+            // panelSubTab
+            // 
+            this.panelSubTab.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelSubTab.Location = new System.Drawing.Point(4, 71);
+            this.panelSubTab.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panelSubTab.Name = "panelSubTab";
+            this.panelSubTab.Size = new System.Drawing.Size(1261, 444);
+            this.panelSubTab.TabIndex = 4;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.cbPdfFormats);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(4, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1261, 21);
+            this.panel4.TabIndex = 5;
+            // 
+            // cbPdfFormats
+            // 
+            this.cbPdfFormats.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cbPdfFormats.Location = new System.Drawing.Point(0, 0);
+            this.cbPdfFormats.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.cbPdfFormats.Name = "cbPdfFormats";
+            this.cbPdfFormats.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbPdfFormats.Properties.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("volunteer", "Voluntario"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("animalName", "Mascota"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("adopterName", "Adoptante"),
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("adoptionDate", "Fecha de adopcion")});
+            this.cbPdfFormats.Properties.NullText = "";
+            this.cbPdfFormats.Size = new System.Drawing.Size(1261, 22);
+            this.cbPdfFormats.TabIndex = 0;
+            // 
             // FormatUpdateView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -287,10 +292,10 @@
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cbPdfFormats.Properties)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cbPdfFormats.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -56,8 +56,8 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAnimalView
         }
         public string Status { get => tbStatus.Text; set => tbStatus.Text = value; }
 
-        public event EventHandler OnChangeAdopterIdTextBox;
-        public event EventHandler OnClickSearchAdopterPictureEdit;
+        public event EventHandler OnChangeAnimalIdTextBox;
+        public event EventHandler OnClickSearchAnimalPictureEdit;
 
         public FormatAnimalView()
         {
@@ -67,8 +67,8 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAnimalView
 
         private void AssociateAndRaisedEvents()
         {
-            tbId.TextChanged += delegate { OnChangeAdopterIdTextBox.Invoke(tbId, EventArgs.Empty); };
-            peSeachAnimal.Click += delegate { OnClickSearchAdopterPictureEdit.Invoke(peSeachAnimal, EventArgs.Empty); };
+            tbId.TextChanged += delegate { OnChangeAnimalIdTextBox.Invoke(tbId, EventArgs.Empty); };
+            peSeachAnimal.Click += delegate { OnClickSearchAnimalPictureEdit.Invoke(peSeachAnimal, EventArgs.Empty); };
         }
 
        

@@ -81,7 +81,7 @@ namespace AMAC.Views.FormatManagement.FormatUpdateView
 
         public void SetLookUpEditPropierties()
         {
-            cbPdfFormats.Properties.DisplayMember = "idAdoptionForm";
+            cbPdfFormats.Properties.DisplayMember = "animalName";
         }
 
         public void SavePdf()

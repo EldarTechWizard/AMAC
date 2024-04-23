@@ -157,26 +157,6 @@ namespace AMAC.Views.AnimalManagement
             }
         }
 
-        private void peImage_EditValueChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void btnChoosePhoto_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public void SetDisplayNumbers(int adopted, int temphHome, int deceased)
-        {
-            lblCountAdop.Text = adopted.ToString();
-            lblCountFalle.Text = deceased.ToString();
-            lblCountHogar.Text = temphHome.ToString();
-        }
     }
 }

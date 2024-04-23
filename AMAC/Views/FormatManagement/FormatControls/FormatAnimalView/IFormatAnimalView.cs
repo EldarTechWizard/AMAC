@@ -20,8 +20,8 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAnimalView
         bool Sterilized { get; set; }
         string AdditionalInformation { get; set; }
 
-        event EventHandler OnChangeAdopterIdTextBox;
-        event EventHandler OnClickSearchAdopterPictureEdit;
+        event EventHandler OnChangeAnimalIdTextBox;
+        event EventHandler OnClickSearchAnimalPictureEdit;
         DataRow OpenSearchTableTab(DataTable data);
         Animal GetAnimal();
         void ClearAnimalFields();

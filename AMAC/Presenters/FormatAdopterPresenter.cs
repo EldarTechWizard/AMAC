@@ -32,7 +32,7 @@ namespace AMAC.Presenters
         {
             try
             {
-                DataRow row = adopters.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("id") == (int)view.Id);
+                DataRow row = adopters.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAdopter") == (int)view.Id);
 
                 if (row == null)
                 {
@@ -50,11 +50,11 @@ namespace AMAC.Presenters
 
         private void LoadAdopterFields(DataRow row)
         {
-            view.NameA = (string)row["nombre"];
-            view.Age = (int)row["edad"];
-            view.Email = (string)row["correo"];
-            view.Address = (string)row["domicilio"];
-            view.Number = (string)row["numero"];
+            view.NameA = (string)row["name"];
+            view.Age = (int)row["age"];
+            view.Email = (string)row["email"];
+            view.Address = (string)row["address"];
+            view.Number = (string)row["phone"];
         }
         private void OnClickSearchAdopterPictureEdit(object sender, EventArgs e)
         {
@@ -63,7 +63,7 @@ namespace AMAC.Presenters
                 DataRow row = view.OpenSearchTableTab(adopters);
                 if (row == null) return;
 
-                view.Id = (int)row["id"];
+                view.Id = (int)row["idAdopter"];
             }
             catch (Exception ex)
             {

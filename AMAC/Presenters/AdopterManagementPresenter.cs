@@ -94,15 +94,15 @@ namespace AMAC.Presenters
             try
             {
                 DataTable data = view.DataSource;
-                DataRow row = data.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("id") == (int)view.Id);
+                DataRow row = data.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAdopter") == (int)view.Id);
                 
                 if(row != null)
                 {
-                    view.NameA = (string)row["nombre"];
-                    view.Age = (int)row["edad"];
-                    view.Email = (string)row["correo"];
-                    view.Address = (string)row["domicilio"];
-                    view.Number = (string)row["numero"];
+                    view.NameA = (string)row["name"];
+                    view.Age = (int)row["age"];
+                    view.Email = (string)row["email"];
+                    view.Address = (string)row["address"];
+                    view.Number = (string)row["phone"];
                     
                     view.ChangeEditMode(true);
 
