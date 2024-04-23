@@ -83,12 +83,12 @@
             this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.98773F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.01227F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1093, 640);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1275, 788);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -97,10 +97,10 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(4, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1087, 85);
+            this.panel1.Size = new System.Drawing.Size(1267, 106);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -109,9 +109,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 29);
+            this.label1.Location = new System.Drawing.Point(10, 36);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(435, 37);
+            this.label1.Size = new System.Drawing.Size(550, 46);
             this.label1.TabIndex = 92;
             this.label1.Text = "GESTOR DE ADOPTANTES";
             // 
@@ -119,10 +120,10 @@
             // 
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(916, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(1067, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(171, 85);
+            this.panel2.Size = new System.Drawing.Size(200, 106);
             this.panel2.TabIndex = 0;
             // 
             // pictureBox2
@@ -130,9 +131,9 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = global::AMAC.Properties.Resources.AMACPNG;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(171, 85);
+            this.pictureBox2.Size = new System.Drawing.Size(200, 106);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 129;
             this.pictureBox2.TabStop = false;
@@ -141,10 +142,10 @@
             // 
             this.panel3.Controls.Add(this.tableLayoutPanel2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 91);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(4, 112);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1087, 547);
+            this.panel3.Size = new System.Drawing.Size(1267, 674);
             this.panel3.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -155,40 +156,39 @@
             this.tableLayoutPanel2.Controls.Add(this.panel4, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.20144F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.79856F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1087, 547);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1267, 674);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.dgvAdopter);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(3, 265);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Location = new System.Drawing.Point(4, 326);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1081, 280);
+            this.panel5.Size = new System.Drawing.Size(1259, 346);
             this.panel5.TabIndex = 1;
             // 
             // dgvAdopter
             // 
             this.dgvAdopter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvAdopter.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvAdopter.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dgvAdopter.Location = new System.Drawing.Point(0, 0);
             this.dgvAdopter.MainView = this.gridView1;
-            this.dgvAdopter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvAdopter.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dgvAdopter.Name = "dgvAdopter";
-            this.dgvAdopter.Size = new System.Drawing.Size(1081, 280);
+            this.dgvAdopter.Size = new System.Drawing.Size(1259, 346);
             this.dgvAdopter.TabIndex = 0;
             this.dgvAdopter.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
-            this.gridView1.DetailHeight = 284;
             this.gridView1.GridControl = this.dgvAdopter;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
@@ -203,10 +203,10 @@
             // 
             this.panel4.Controls.Add(this.groupControl1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 2);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Location = new System.Drawing.Point(4, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1081, 259);
+            this.panel4.Size = new System.Drawing.Size(1259, 320);
             this.panel4.TabIndex = 0;
             // 
             // groupControl1
@@ -232,80 +232,87 @@
             this.groupControl1.Controls.Add(this.label6);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1081, 259);
+            this.groupControl1.Size = new System.Drawing.Size(1259, 320);
             this.groupControl1.TabIndex = 158;
             this.groupControl1.Text = "Nuevo Adoptante";
             // 
             // btnGenerateInsert
             // 
             this.btnGenerateInsert.ImageOptions.Image = global::AMAC.Properties.Resources.add_16x16;
-            this.btnGenerateInsert.Location = new System.Drawing.Point(255, 48);
-            this.btnGenerateInsert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGenerateInsert.Location = new System.Drawing.Point(298, 59);
+            this.btnGenerateInsert.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnGenerateInsert.Name = "btnGenerateInsert";
-            this.btnGenerateInsert.Size = new System.Drawing.Size(20, 19);
+            this.btnGenerateInsert.Size = new System.Drawing.Size(23, 23);
             this.btnGenerateInsert.TabIndex = 2;
             // 
             // tbId
             // 
-            this.tbId.Location = new System.Drawing.Point(166, 49);
-            this.tbId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbId.Location = new System.Drawing.Point(194, 60);
+            this.tbId.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbId.Name = "tbId";
             this.tbId.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.tbId.Properties.MaskSettings.Set("mask", "\\d+");
             this.tbId.Properties.ReadOnly = true;
             this.tbId.Properties.UseMaskAsDisplayFormat = true;
-            this.tbId.Size = new System.Drawing.Size(82, 20);
+            this.tbId.Size = new System.Drawing.Size(96, 22);
             this.tbId.TabIndex = 1;
             // 
             // tbAge
             // 
-            this.tbAge.Location = new System.Drawing.Point(791, 47);
-            this.tbAge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbAge.Location = new System.Drawing.Point(923, 58);
+            this.tbAge.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbAge.Name = "tbAge";
             this.tbAge.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.tbAge.Properties.MaskSettings.Set("mask", "\\d+");
-            this.tbAge.Size = new System.Drawing.Size(123, 20);
+            this.tbAge.Properties.MaskSettings.Set("culture", "es-MX");
+            this.tbAge.Properties.MaskSettings.Set("showPlaceholders", false);
+            this.tbAge.Properties.UseMaskAsDisplayFormat = true;
+            this.tbAge.Size = new System.Drawing.Size(144, 22);
             this.tbAge.TabIndex = 4;
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(437, 131);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbEmail.Location = new System.Drawing.Point(510, 161);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Properties.UseMaskAsDisplayFormat = true;
-            this.tbEmail.Size = new System.Drawing.Size(254, 20);
+            this.tbEmail.Size = new System.Drawing.Size(296, 22);
             this.tbEmail.TabIndex = 6;
             // 
             // tbAddress
             // 
-            this.tbAddress.Location = new System.Drawing.Point(438, 169);
-            this.tbAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbAddress.Location = new System.Drawing.Point(511, 208);
+            this.tbAddress.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbAddress.Name = "tbAddress";
-            this.tbAddress.Size = new System.Drawing.Size(254, 20);
+            this.tbAddress.Size = new System.Drawing.Size(296, 22);
             this.tbAddress.TabIndex = 7;
             // 
             // tbNumber
             // 
-            this.tbNumber.Location = new System.Drawing.Point(439, 86);
-            this.tbNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbNumber.Location = new System.Drawing.Point(512, 106);
+            this.tbNumber.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbNumber.Name = "tbNumber";
             this.tbNumber.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.tbNumber.Properties.MaskSettings.Set("mask", "(\\d\\d\\d) \\d\\d\\d-\\d\\d\\d\\d");
             this.tbNumber.Properties.UseMaskAsDisplayFormat = true;
-            this.tbNumber.Size = new System.Drawing.Size(253, 20);
+            this.tbNumber.Size = new System.Drawing.Size(295, 22);
             this.tbNumber.TabIndex = 5;
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(438, 47);
-            this.tbName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbName.Location = new System.Drawing.Point(511, 58);
+            this.tbName.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbName.Name = "tbName";
             this.tbName.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.tbName.Properties.MaskSettings.Set("mask", "\\p{L}+");
+            this.tbName.Properties.MaskSettings.Set("culture", "es-MX");
+            this.tbName.Properties.MaskSettings.Set("allowBlankInput", true);
+            this.tbName.Properties.MaskSettings.Set("showPlaceholders", false);
+            this.tbName.Properties.MaskSettings.Set("placeholder", 'N');
             this.tbName.Properties.UseMaskAsDisplayFormat = true;
-            this.tbName.Size = new System.Drawing.Size(254, 20);
+            this.tbName.Size = new System.Drawing.Size(296, 22);
             this.tbName.TabIndex = 3;
             // 
             // label11
@@ -314,9 +321,10 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(725, 46);
+            this.label11.Location = new System.Drawing.Point(846, 57);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(60, 18);
+            this.label11.Size = new System.Drawing.Size(73, 23);
             this.label11.TabIndex = 298;
             this.label11.Text = "EDAD:";
             // 
@@ -326,9 +334,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(9, 46);
+            this.label5.Location = new System.Drawing.Point(10, 57);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(144, 18);
+            this.label5.Size = new System.Drawing.Size(176, 23);
             this.label5.TabIndex = 296;
             this.label5.Text = "IDENTIFICADOR:";
             // 
@@ -339,9 +348,10 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(728, 191);
+            this.btnDelete.Location = new System.Drawing.Point(849, 235);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(129, 52);
+            this.btnDelete.Size = new System.Drawing.Size(150, 64);
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "ELIMINAR";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -352,9 +362,10 @@
             this.btnSaveAndEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSaveAndEdit.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnSaveAndEdit.ForeColor = System.Drawing.Color.White;
-            this.btnSaveAndEdit.Location = new System.Drawing.Point(903, 191);
+            this.btnSaveAndEdit.Location = new System.Drawing.Point(1054, 235);
+            this.btnSaveAndEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSaveAndEdit.Name = "btnSaveAndEdit";
-            this.btnSaveAndEdit.Size = new System.Drawing.Size(129, 52);
+            this.btnSaveAndEdit.Size = new System.Drawing.Size(150, 64);
             this.btnSaveAndEdit.TabIndex = 8;
             this.btnSaveAndEdit.Text = "GUARDAR";
             this.btnSaveAndEdit.UseVisualStyleBackColor = false;
@@ -365,9 +376,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(341, 130);
+            this.label2.Location = new System.Drawing.Point(398, 160);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 18);
+            this.label2.Size = new System.Drawing.Size(104, 23);
             this.label2.TabIndex = 288;
             this.label2.Text = "CORREO:";
             // 
@@ -377,9 +389,10 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label8.Location = new System.Drawing.Point(325, 84);
+            this.label8.Location = new System.Drawing.Point(379, 103);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(103, 18);
+            this.label8.Size = new System.Drawing.Size(126, 23);
             this.label8.TabIndex = 284;
             this.label8.Text = "TELEFONO:";
             // 
@@ -389,9 +402,10 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label7.Location = new System.Drawing.Point(325, 168);
+            this.label7.Location = new System.Drawing.Point(379, 207);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 18);
+            this.label7.Size = new System.Drawing.Size(125, 23);
             this.label7.TabIndex = 282;
             this.label7.Text = "DOMICILIO:";
             // 
@@ -401,20 +415,21 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(342, 46);
+            this.label6.Location = new System.Drawing.Point(399, 57);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 18);
+            this.label6.Size = new System.Drawing.Size(105, 23);
             this.label6.TabIndex = 280;
             this.label6.Text = "NOMBRE:";
             // 
             // AdopterManagementView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1093, 640);
+            this.ClientSize = new System.Drawing.Size(1275, 788);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "AdopterManagementView";
             this.Text = "gestorAdopt";
             this.tableLayoutPanel1.ResumeLayout(false);

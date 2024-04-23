@@ -10,5 +10,7 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatVolunterView
     {
         string Volunter { get; set; }
         DateTime Date { get; set; }
+
+        void ClearFields();
     }
 }

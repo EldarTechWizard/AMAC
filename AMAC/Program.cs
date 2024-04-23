@@ -28,16 +28,21 @@ namespace AMAC
             QuestPDF.Settings.License = LicenseType.Community;
 
 
-            IRepository repository = new SqlServer("Server = LAPJuan; Database = AMAC; Trusted_Connection = True;");
-            ILoginView login = new LoginView();
-            new LoginPresenter(login,repository);
-            ((Form)login).ShowDialog();
+            IRepository repository = new SqlServer("Server = localhost; Database = AMAC; Trusted_Connection = True;");
 
-            if (!login.IsLogged) return;
+            //ILoginView login = new LoginView();
+            //new LoginPresenter(login, repository);
+            //((Form)login).ShowDialog();
+
+            //if (!login.IsLogged) return;
 
             IMainView view = new MainView();
-            new MainPresenter(view,repository);
+            new MainPresenter(view, repository);
             Application.Run((Form)view);
+
+
+            //Application.Run(new Form1(repository));
+
         }
     }
 }

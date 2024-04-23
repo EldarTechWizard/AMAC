@@ -71,7 +71,21 @@ namespace AMAC.Views.AnimalManagement
         }
         public string NameA { get => tbName.Text; set => tbName.Text = value; }
         public string AnimalBreed { get => tbAnimalBreed.Text; set => tbAnimalBreed.Text = value; }
-        public int Age { get => int.Parse(tbAge.Text); set => tbAge.Text = value.ToString(); }
+        public int Age {
+            get
+            {
+                int value = 0;
+
+                if (int.TryParse(tbAge.Text, out value))
+                {
+                    return value;
+                }
+
+                return -1;
+            }
+
+            set => tbAge.Text = value.ToString();
+        }
         public string Sex { get => cbSex.Text; set => cbSex.Text = value; }
         public bool Sterilized { get => chbSterilized.Checked; set => chbSterilized.Checked = value; }
         public string AnimalType { get => cbAnimalType.Text; set => cbAnimalType.Text = value; }
@@ -88,7 +102,7 @@ namespace AMAC.Views.AnimalManagement
         {
             if (aux)
             {
-                btnSaveAndEdit.Text = "EDITAR";
+                btnSaveAndEdit.Text = "GUARDAR CAMBIOS";
                 btnDelete.Enabled = true;
                 editMode = true;
             }
@@ -125,7 +139,7 @@ namespace AMAC.Views.AnimalManagement
             foreach (int i in gridView1.GetSelectedRows())
             {
                 DataRow row = gridView1.GetDataRow(i);
-                this.Id = (int)row["id"];              
+                this.Id = (int)row["idAnimal"];              
             }
         }
 

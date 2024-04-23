@@ -35,6 +35,25 @@ namespace AMAC.Presenters
         {
             view.OnLoadForm += OnLoadForm;
             view.OnClickGenerateNewAdoptionFormatButton += OnClickGenerateNewAdoptionFormatButton;
+            view.OnClickClearFieldsButton += OnClickClearFieldsButton;
+        }
+
+        private void OnClickClearFieldsButton(object sender, EventArgs e)
+        {
+            try
+            {
+                ((IFormatAnimalView)view.AnimalForm).ClearAnimalFields();
+
+                ((IFormatAdopterView)view.AdopterForm).ClearAdopterFields();
+
+                ((IFormatVolunterView)view.ResponsabilityForm).ClearFields();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void OnLoadForm(object sender, EventArgs e)

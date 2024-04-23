@@ -26,6 +26,11 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatVolunterView
         {
             
         }
-        
+
+        public void ClearFields()
+        {
+            tbVolunter.Text = "";
+            dtpDate.Value = DateTime.Now;
+        }
     }
 }

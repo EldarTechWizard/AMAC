@@ -16,6 +16,7 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
     
         event EventHandler OnLoadForm;
         event EventHandler OnClickGenerateNewAdoptionFormatButton;
+        event EventHandler OnClickClearFieldsButton;
 
         void LoadTabs(ref DataTable animalData, ref DataTable adopterData);
         void SavePdf();

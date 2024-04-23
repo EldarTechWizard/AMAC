@@ -16,7 +16,7 @@ namespace AMAC.Views.Main
         private string userName;
         private Form currentChildForm;
 
-        public Form ActiveTab => throw new NotImplementedException();
+        public Form ActiveTab => currentChildForm;
 
         public string UserName { get => userName; set => userName = value; }
 

@@ -83,24 +83,24 @@ namespace AMAC.Presenters
             try
             {
                 DataTable data = view.DataSource;
-                DataRow row = data.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("id") == (int)view.Id);
+                DataRow row = data.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAnimal") == (int)view.Id);
 
                 if (row != null)
                 {
-                    view.NameA = (string)row["nombre"];
-                    view.Age = (int)row["edad"];
-                    view.PicturePath = (string)row["foto"];
-                    view.Sex = (string)row["sexo"];
-                    view.AnimalBreed = (string)row["raza"];
-                    view.AnimalType = (string)row["tipo de animal"];
-                    view.Status = (string)row["estado"];
-                    view.AdditionalInformation = (string)row["informacion adicional"];
-                    view.RescuedDate = (DateTime)row["fecha de rescate"];
-                    view.TemporaryHome = (string)row["hogar temporal"];
-                    view.Rescuer = (string)row["rescatista"];
-                    view.Veterinarian = (string)row["veterinario"];
-                    view.Diagnostic = (string)row["diagnostico"];
-                    view.Sterilized = (bool)row["esterilizado"];
+                    view.NameA = (string)row["name"];
+                    view.Age = (int)row["age"];
+                    view.PicturePath = (string)row["photo"];
+                    view.Sex = (string)row["sex"];
+                    view.AnimalBreed = (string)row["breed"];
+                    view.AnimalType = (string)row["animalType"];
+                    view.Status = (string)row["status"];
+                    view.AdditionalInformation = (string)row["additionalInformation"];
+                    view.RescuedDate = (DateTime)row["rescueDate"];
+                    view.TemporaryHome = (string)row["temporaryHome"];
+                    view.Rescuer = (string)row["rescuer"];
+                    view.Veterinarian = (string)row["veterinarian"];
+                    view.Diagnostic = (string)row["diagnostic"];
+                    view.Sterilized = (bool)row["sterilized"];
 
                     view.ChangeEditMode(true);
 
@@ -214,9 +214,9 @@ namespace AMAC.Presenters
         private void SetStats()
         {
             DataTable data = view.DataSource;
-            int adoptNumber = data.AsEnumerable().Count(rowD => rowD.Field<string>("estado") == "Adoptado");
-            int deceasedNumber = data.AsEnumerable().Count(rowD => rowD.Field<string>("estado") == "Fallecido");
-            int tempHomeNumber = data.AsEnumerable().Count(rowD => rowD.Field<string>("estado") == "Hogar temporal");
+            int adoptNumber = data.AsEnumerable().Count(rowD => rowD.Field<string>("status") == "Adoptado");
+            int deceasedNumber = data.AsEnumerable().Count(rowD => rowD.Field<string>("status") == "Fallecido");
+            int tempHomeNumber = data.AsEnumerable().Count(rowD => rowD.Field<string>("status") == "Hogar temporal");
 
             view.SetDisplayNumbers(adoptNumber, tempHomeNumber, deceasedNumber); 
         }

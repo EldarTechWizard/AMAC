@@ -47,6 +47,7 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
         {
             this.Load += delegate { OnLoadForm.Invoke(this, EventArgs.Empty); };
             btnGenerate.Click += delegate { OnClickGenerateNewAdoptionFormatButton.Invoke(btnGenerate, EventArgs.Empty); };
+            btnClearField.Click += delegate { OnClickClearFieldsButton.Invoke(btnClearField, EventArgs.Empty); };
         }
 
         

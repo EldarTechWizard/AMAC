@@ -55,7 +55,22 @@ namespace AMAC.Views.AdopterManagement
             
             set => tbId.Text = value.ToString(); 
         }
-        public int Age { get => int.Parse(tbAge.Text); set => tbAge.Text = value.ToString(); }
+        public int Age 
+        {
+            get
+            {
+                int value = 0;
+
+                if (int.TryParse(tbAge.Text, out value))
+                {
+                    return value;
+                }
+
+                return -1;
+            }
+
+            set => tbAge.Text = value.ToString();
+        }
         public string Address { get => tbAddress.Text; set => tbAddress.Text = value; }
         public string Number { get => tbNumber.Text; set => tbNumber.Text = value; }
         public string Email { get => tbEmail.Text; set => tbEmail.Text = value; }
@@ -65,7 +80,7 @@ namespace AMAC.Views.AdopterManagement
         {
             if (aux)
             {
-                btnSaveAndEdit.Text = "EDITAR";
+                btnSaveAndEdit.Text = "GUARDAR CAMBIOS";
                 btnDelete.Enabled = true;
                 editMode = true;
             }
