@@ -50,30 +50,34 @@
             this.groupControl3.Controls.Add(this.label4);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(0, 0);
-            this.groupControl3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupControl3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1083, 113);
+            this.groupControl3.Size = new System.Drawing.Size(1264, 139);
             this.groupControl3.TabIndex = 293;
             this.groupControl3.Text = "Responsabilidades del Voluntario";
             // 
             // tbVolunter
             // 
-            this.tbVolunter.Location = new System.Drawing.Point(237, 57);
-            this.tbVolunter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbVolunter.Location = new System.Drawing.Point(276, 70);
+            this.tbVolunter.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbVolunter.Name = "tbVolunter";
             this.tbVolunter.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.tbVolunter.Properties.MaskSettings.Set("mask", "\\p{L}+");
-            this.tbVolunter.Size = new System.Drawing.Size(339, 20);
+            this.tbVolunter.Properties.MaskSettings.Set("isAutoComplete", false);
+            this.tbVolunter.Properties.MaskSettings.Set("showPlaceholders", false);
+            this.tbVolunter.Properties.MaskSettings.Set("culture", "es-MX");
+            this.tbVolunter.Properties.UseMaskAsDisplayFormat = true;
+            this.tbVolunter.Size = new System.Drawing.Size(396, 22);
             this.tbVolunter.TabIndex = 1;
             // 
             // dtpDate
             // 
             this.dtpDate.CalendarFont = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDate.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDate.Location = new System.Drawing.Point(707, 56);
-            this.dtpDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpDate.Location = new System.Drawing.Point(825, 69);
+            this.dtpDate.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(277, 24);
+            this.dtpDate.Size = new System.Drawing.Size(322, 28);
             this.dtpDate.TabIndex = 2;
             // 
             // label3
@@ -82,9 +86,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(631, 60);
+            this.label3.Location = new System.Drawing.Point(736, 74);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 18);
+            this.label3.Size = new System.Drawing.Size(85, 23);
             this.label3.TabIndex = 285;
             this.label3.Text = "FECHA:";
             // 
@@ -94,20 +99,21 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(12, 60);
+            this.label4.Location = new System.Drawing.Point(14, 74);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(205, 18);
+            this.label4.Size = new System.Drawing.Size(250, 23);
             this.label4.TabIndex = 283;
             this.label4.Text = "VOLUNTARIO A CARGO:";
             // 
             // FormatVolunterView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1083, 113);
+            this.ClientSize = new System.Drawing.Size(1264, 139);
             this.Controls.Add(this.groupControl3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "FormatVolunterView";
             this.Text = "ModificarDoc_Resp";
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();

@@ -39,7 +39,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.btnPrint = new DevExpress.XtraEditors.SimpleButton();
             this.btnSave = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.panelSubTab = new System.Windows.Forms.Panel();
@@ -92,6 +91,7 @@
             this.btnVolunter.Appearance.Options.UseBorderColor = true;
             this.btnVolunter.Appearance.Options.UseFont = true;
             this.btnVolunter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnVolunter.Enabled = false;
             this.btnVolunter.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnVolunter.ImageOptions.Image")));
             this.btnVolunter.Location = new System.Drawing.Point(0, 0);
             this.btnVolunter.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -120,6 +120,7 @@
             this.btnAdopter.Appearance.Options.UseBorderColor = true;
             this.btnAdopter.Appearance.Options.UseFont = true;
             this.btnAdopter.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAdopter.Enabled = false;
             this.btnAdopter.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAdopter.ImageOptions.Image")));
             this.btnAdopter.Location = new System.Drawing.Point(0, 0);
             this.btnAdopter.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -148,6 +149,7 @@
             this.btnAnimal.Appearance.Options.UseBorderColor = true;
             this.btnAnimal.Appearance.Options.UseFont = true;
             this.btnAnimal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAnimal.Enabled = false;
             this.btnAnimal.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAnimal.ImageOptions.Image")));
             this.btnAnimal.Location = new System.Drawing.Point(0, 0);
             this.btnAnimal.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -181,7 +183,6 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.btnDelete);
-            this.panel5.Controls.Add(this.btnPrint);
             this.panel5.Controls.Add(this.btnSave);
             this.panel5.Controls.Add(this.label10);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -194,6 +195,7 @@
             // btnDelete
             // 
             this.btnDelete.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnDelete.Enabled = false;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDelete.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
@@ -207,21 +209,10 @@
             this.btnDelete.Text = "        ELIMINAR";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
-            // btnPrint
-            // 
-            this.btnPrint.Appearance.BackColor = System.Drawing.Color.MidnightBlue;
-            this.btnPrint.Appearance.Options.UseBackColor = true;
-            this.btnPrint.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnPrint.ImageOptions.Image")));
-            this.btnPrint.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnPrint.Location = new System.Drawing.Point(403, 32);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(94, 68);
-            this.btnPrint.TabIndex = 308;
-            // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnSave.Enabled = false;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSave.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
@@ -232,7 +223,8 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(184, 68);
             this.btnSave.TabIndex = 306;
-            this.btnSave.Text = "      GUARDAR";
+            this.btnSave.Text = "GUARDAR CAMBIOS";
+            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
             // 
             // label10
@@ -240,7 +232,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(509, 55);
+            this.label10.Location = new System.Drawing.Point(429, 55);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(138, 23);
@@ -322,7 +314,6 @@
         private DevExpress.XtraEditors.LookUpEdit cbPdfFormats;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnDelete;
-        private DevExpress.XtraEditors.SimpleButton btnPrint;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label10;
     }

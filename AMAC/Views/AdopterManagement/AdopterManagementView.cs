@@ -14,6 +14,7 @@ namespace AMAC.Views.AdopterManagement
     public partial class AdopterManagementView : DevExpress.XtraEditors.XtraForm, IAdopterManagementView
     {
         private bool editMode = false;
+        private int adoptionCount = 0;
 
         public event EventHandler OnClickSaveAndEditButton;
         public event EventHandler OnClickDeleteButton;
@@ -75,21 +76,22 @@ namespace AMAC.Views.AdopterManagement
         public string Number { get => tbNumber.Text; set => tbNumber.Text = value; }
         public string Email { get => tbEmail.Text; set => tbEmail.Text = value; }
         public string NameA { get => tbName.Text; set => tbName.Text = value; }
+        public int AdoptionCount { get => adoptionCount; set => adoptionCount = value; }
 
         public void ChangeEditMode(bool aux)
         {
+            ChangeDeleteMode(aux);
+
             if (aux)
             {
                 btnSaveAndEdit.Text = "GUARDAR CAMBIOS";
-                btnDelete.Enabled = true;
                 editMode = true;
+                return;
             }
-            else
-            {
-                btnSaveAndEdit.Text = "GUARDAR";
-                btnDelete.Enabled = false;
-                editMode = false;
-            }
+
+            btnSaveAndEdit.Text = "GUARDAR";
+            editMode = false;
+            
         }
 
         public void ClearFields()
@@ -110,7 +112,10 @@ namespace AMAC.Views.AdopterManagement
             }
         }
 
-      
+        public void ChangeDeleteMode(bool aux)
+        {
+            btnDelete.Enabled = aux;           
+        }
     }
         
 }

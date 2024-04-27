@@ -7,6 +7,7 @@ using AMAC.Views.FormatManagement.FormatControls.FormatVolunterView;
 using AMAC.Views.FormatManagement.FormatNewAdoptionView;
 using AMAC.Views.FormatManagement.FormatUpdateView;
 using DbManagmentAMAC.Models;
+using DevExpress.Utils.Extensions;
 using DevExpress.XtraEditors;
 using DevExpress.XtraRichEdit.Import.Html;
 using System;
@@ -22,11 +23,14 @@ namespace AMAC.Presenters
 {
     public class FormatUpdatePresenter
     {
+
         private IFormatUpdateView view;
         private IRepository repository;
 
         private DataTable animalData = new DataTable();
         private DataTable adopterData = new DataTable();
+
+        private bool[] idStates = new bool[3];
 
         public FormatUpdatePresenter(IFormatUpdateView view, IRepository repository)
         {
@@ -41,7 +45,6 @@ namespace AMAC.Presenters
             view.OnClickTabButtons += OnClickTabButtons;
             view.OnClickSaveButton += OnClickSaveButton;
             view.OnChangeFormatIdLookUpEdit += OnChangeFormatIdLookUpEdit;
-            view.OnClickPrintPdfButton += OnClickPrintPdfButton;
             view.OnClickDeleteButton += OnClickDeleteButton;
         }
 
@@ -52,33 +55,28 @@ namespace AMAC.Presenters
                 if (!repository.DeletePdfFormat(view.Id)) throw new Exception(repository.LastError);
                 view.CloseCurrentTab();   
                 LoadFormatData();
+
+                view.ChangeDeleteButtonMode(false);
+                idStates[0] = false; idStates[1] = false; idStates[2] = false;
+                CheckChanges();
+
+                view.ChangeTabsButtonMode(false);
+
+                MessageBox.Show("Se ha eliminado correctamente");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void OnClickPrintPdfButton(object sender, EventArgs e)
-        {
-            try
-            {
-                PdfGenerator generator = GetGeneratorWithAtributtes();
-
-                if (!view.OpenPreviewTab(generator)) return; 
-
-                view.SavePdf();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+        }        
 
         private PdfGenerator GetGeneratorWithAtributtes()
         {
             DataRow animalRow = animalData.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAnimal") == (int)view.AnimalId);
             DataRow adopterRow = adopterData.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAdopter") == (int)view.AdopterId);
+
+
+            if (animalRow == null || adopterRow == null) return null;
 
             Animal animal = new Animal()
             {
@@ -119,7 +117,9 @@ namespace AMAC.Presenters
             try
             {
                 LoadActualDataInView();
-                SetDataInsideTab();                
+                SetDataInsideTab();
+                view.ChangeDeleteButtonMode(true);
+                view.ChangeTabsButtonMode(true);
             }
             catch (Exception ex)
             {
@@ -136,18 +136,21 @@ namespace AMAC.Presenters
             view.AnimalId = (int)row["idAnimal"];
             view.Volunter = (string)row["volunteer"];
             view.AdoptionDate = (DateTime)row["adoptionDate"];
+
+            idStates[0] = true; idStates[1] = true; idStates[2] = true;
+
+            CheckChanges();
         }
 
         private void SetDataInsideTab()
         {
             if (view.CurrentTab == null) return;
-            DataRowView row = view.CurrentData;
 
 
             switch (view.CurrentTab.Tag)
             {
                 case "Animal":
-
+                    
                     ((IFormatAnimalView)view.CurrentTab).Id = view.AnimalId;
 
                     break;
@@ -170,8 +173,12 @@ namespace AMAC.Presenters
         private void OnClickSaveButton(object sender, EventArgs e)
         {
             try
-            {
-                if (view.CurrentTab == null) return;
+            {              
+                PdfGenerator generator = GetGeneratorWithAtributtes();
+
+                if (generator == null) return;
+                if (!view.OpenPreviewTab(generator)) return;
+                view.SavePdf();
 
                 GetDataInsideATab();
                 UpdateFormatData();
@@ -234,26 +241,39 @@ namespace AMAC.Presenters
         {
             string buttonTag = ((SimpleButton)sender).Tag.ToString();
 
+
             Form tab = null;
 
             switch (buttonTag)
             {
                 case "Animal":
                     IFormatAnimalView animalTab = new FormatAnimalView();
-                    new FormatAnimalPresenter(animalTab, animalData);
+                    new FormatAnimalPresenter(animalTab, animalData,(bool aux) => {
+                        idStates[0] = aux;
+                        CheckChanges();
+                    });
+
                     tab = (Form)animalTab;
 
                     break;
                 case "Adopter":
                     IFormatAdopterView adopterTab = new FormatAdopterView();
-                    new FormatAdopterPresenter(adopterTab, adopterData);
+                    new FormatAdopterPresenter(adopterTab, adopterData, (bool aux) => {
+                        idStates[1] = aux;
+                        CheckChanges();
+                    });
+
                     tab = (Form)adopterTab;
 
                     break;
                 case "Responsability":
                     
                     IFormatVolunterView responsabilityTab = new FormatVolunterView();
-                    new FormatVolunterPresenter(responsabilityTab);
+                    new FormatVolunterPresenter(responsabilityTab, (bool aux) => {
+                        idStates[2] = aux;
+                        CheckChanges();
+                    });
+
                     tab = (Form)responsabilityTab;
                     
                     break;
@@ -272,23 +292,34 @@ namespace AMAC.Presenters
         private void GetDataInsideATab()
         {
             if (view.CurrentTab == null) return;
-            DataRowView row = view.CurrentData;
-
 
             switch (view.CurrentTab.Tag)
             {
                 case "Animal":
 
-                    view.AnimalId = ((IFormatAnimalView)view.CurrentTab).Id;
+                    int animalId = ((IFormatAnimalView)view.CurrentTab).Id;
+
+                    idStates[0] = animalData.AsEnumerable().Any(row => row.Field<int>("idAnimal") == animalId);
+
+                    view.AnimalId = animalId;
 
                     break;
                 case "Adopter":
-                    view.AdopterId = ((IFormatAdopterView)view.CurrentTab).Id;
+
+                    int adopterId = ((IFormatAdopterView)view.CurrentTab).Id;
+
+                    idStates[1] = adopterData.AsEnumerable().Any(row => row.Field<int>("idAdopter") == adopterId);
+
+                    view.AdopterId = adopterId;
 
                     break;
                 case "Responsability":
-                    
-                    view.Volunter = ((IFormatVolunterView)view.CurrentTab).Volunter;
+
+                    string volunter = ((IFormatVolunterView)view.CurrentTab).Volunter;
+
+                    idStates[2] = volunter != "";
+
+                    view.Volunter = volunter;
                     view.AdoptionDate = ((IFormatVolunterView)view.CurrentTab).Date;
                     
                     break;
@@ -296,6 +327,17 @@ namespace AMAC.Presenters
                 default:
                     break;
             }
+        }
+
+        public void CheckChanges()
+        {
+            if (idStates[0] && idStates[1] && idStates[2])
+            {
+                view.ChangeSaveButtonMode(true);
+                return;
+            }
+
+            view.ChangeSaveButtonMode(false);
         }
     }
 }

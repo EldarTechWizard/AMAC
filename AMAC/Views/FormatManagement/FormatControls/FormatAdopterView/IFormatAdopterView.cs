@@ -23,5 +23,6 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAdopterView
         DataRow OpenSearchTableTab(DataTable data);
         Adopter GetAdopter();
         void ClearAdopterFields();
+        void ClearId();
     }
 }

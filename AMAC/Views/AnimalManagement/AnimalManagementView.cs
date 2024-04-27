@@ -20,7 +20,7 @@ namespace AMAC.Views.AnimalManagement
         public event EventHandler OnClickDeleteAnimalButton;
         public event EventHandler OnClickChoosePhotoButton;
         public event EventHandler OnLoadForm;
-        public event EventHandler OnChangedAdopterIdTextBox;
+        public event EventHandler OnChangeAnimalIdTextBox;
         public event EventHandler OnClickSelectRowGridControl;
         public event EventHandler OnClickGenerateInsertButton;
 
@@ -42,7 +42,7 @@ namespace AMAC.Views.AnimalManagement
             btnChoosePhoto.Click += delegate { OnClickChoosePhotoButton.Invoke(btnChoosePhoto, EventArgs.Empty); };
             btnGenerateInsert.Click += delegate { OnClickGenerateInsertButton.Invoke(btnGenerateInsert, EventArgs.Empty); };
             gridView1.Click += delegate { OnClickSelectRowGridControl.Invoke(gridView1, EventArgs.Empty); };
-            tbId.TextChanged += delegate { OnChangedAdopterIdTextBox.Invoke(tbId, EventArgs.Empty); };
+            tbId.TextChanged += delegate { OnChangeAnimalIdTextBox.Invoke(tbId, EventArgs.Empty); };
         }
 
         public DataTable DataSource { get => (DataTable)dgvAnimal.DataSource; set => dgvAnimal.DataSource = value; }
@@ -66,6 +66,7 @@ namespace AMAC.Views.AnimalManagement
             get => filePath; 
             set { 
                 filePath = value;
+                peImage.Image = null;
                 if(value != null && value != "") peImage.Image = Image.FromFile(value); 
             } 
         }
@@ -100,18 +101,31 @@ namespace AMAC.Views.AnimalManagement
 
         public void ChangeEditMode(bool aux)
         {
+
+            ChangeDeleteMode(aux);
+
             if (aux)
             {
                 btnSaveAndEdit.Text = "GUARDAR CAMBIOS";
-                btnDelete.Enabled = true;
                 editMode = true;
+
+                return;
             }
-            else
+           
+            btnSaveAndEdit.Text = "GUARDAR";
+            editMode = false;
+            
+        }
+
+        public void ChangeDeleteMode(bool aux)
+        {
+            if (aux)
             {
-                btnSaveAndEdit.Text = "GUARDAR";
-                btnDelete.Enabled = false;
-                editMode = false;
+                btnDelete.Enabled = aux;
+                return;
             }
+
+            btnDelete.Enabled = aux;
         }
 
         public void ClearFields()

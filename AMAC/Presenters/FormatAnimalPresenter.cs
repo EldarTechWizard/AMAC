@@ -15,11 +15,13 @@ namespace AMAC.Presenters
     {
         private IFormatAnimalView view;
         private DataTable animals;
-        public FormatAnimalPresenter(IFormatAnimalView view, DataTable animals)
+        private Action<bool> CheckStateId;
+        public FormatAnimalPresenter(IFormatAnimalView view, DataTable animals, Action<bool> checkStateId)
         {
             this.view = view;
             this.animals = animals;
             AssociateAndRaisedEvents();
+            this.CheckStateId = checkStateId;
         }
 
         private void AssociateAndRaisedEvents()
@@ -52,10 +54,12 @@ namespace AMAC.Presenters
                 if (row == null)
                 {
                     view.ClearAnimalFields();
+                    CheckStateId(false);
                     return;
                 }
 
                 LoadAnimalFields(row);
+                CheckStateId(true);
             }
             catch (Exception ex)
             {

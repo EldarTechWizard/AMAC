@@ -32,16 +32,14 @@ namespace AMAC.Views.FormatManagement.FormatUpdateView
         public string Volunter { get => volunter; set => volunter = value; }
         public DateTime AdoptionDate { get => date; set => date = value; }
         public DataTable DataSource { get => (DataTable)cbPdfFormats.Properties.DataSource ; set => cbPdfFormats.Properties.DataSource = value; }
-
         public DataRowView CurrentData => (DataRowView)cbPdfFormats.EditValue;
-
         public int Id { get => reportId; set => reportId = value; }
 
         public event EventHandler OnClickTabButtons;
         public event EventHandler OnLoadForm;
         public event EventHandler OnClickSaveButton;
         public event EventHandler OnChangeFormatIdLookUpEdit;
-        public event EventHandler OnClickPrintPdfButton;
+
         public event EventHandler OnClickDeleteButton;
 
         public FormatUpdateView()
@@ -58,7 +56,6 @@ namespace AMAC.Views.FormatManagement.FormatUpdateView
             btnAnimal.Click += delegate { OnClickTabButtons.Invoke(btnAnimal, EventArgs.Empty); };
             btnVolunter.Click += delegate { OnClickTabButtons.Invoke(btnVolunter, EventArgs.Empty); };
             cbPdfFormats.EditValueChanged += delegate { OnChangeFormatIdLookUpEdit.Invoke(cbPdfFormats, EventArgs.Empty); };
-            btnPrint.Click += delegate { OnClickPrintPdfButton.Invoke(btnPrint, EventArgs.Empty); };
             btnDelete.Click += delegate { OnClickDeleteButton.Invoke(btnDelete, EventArgs.Empty); };
         }
 
@@ -128,6 +125,23 @@ namespace AMAC.Views.FormatManagement.FormatUpdateView
                 currentTab.Close();
                 currentTab = null;
             }
+        }
+
+        public void ChangeSaveButtonMode(bool aux)
+        {
+            btnSave.Enabled = aux;
+        }
+
+        public void ChangeDeleteButtonMode(bool aux)
+        {
+            btnDelete.Enabled = aux;
+        }
+
+        public void ChangeTabsButtonMode(bool aux)
+        {
+            btnAdopter.Enabled = aux;
+            btnAnimal.Enabled = aux;
+            btnVolunter.Enabled = aux;
         }
     }
 }

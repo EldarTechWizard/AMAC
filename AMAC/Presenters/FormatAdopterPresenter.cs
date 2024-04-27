@@ -15,10 +15,12 @@ namespace AMAC.Presenters
     {
         private IFormatAdopterView view;
         private DataTable adopters;
-        public FormatAdopterPresenter(IFormatAdopterView view, DataTable data)
+        private Action<bool> CheckStateId;
+        public FormatAdopterPresenter(IFormatAdopterView view, DataTable data, Action<bool> checkStateId)
         {
             this.view = view;
             this.adopters = data;
+            this.CheckStateId = checkStateId;
             AssociateAndRaisedEvents();
         }
 
@@ -37,10 +39,12 @@ namespace AMAC.Presenters
                 if (row == null)
                 {
                     view.ClearAdopterFields();
+                    CheckStateId(false);
                     return;
                 }
               
                 LoadAdopterFields(row);
+                CheckStateId(true);
             }
             catch (Exception ex)
             {

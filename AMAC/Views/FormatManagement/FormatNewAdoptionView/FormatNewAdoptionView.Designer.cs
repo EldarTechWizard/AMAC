@@ -86,6 +86,7 @@
             // btnGenerate
             // 
             this.btnGenerate.BackColor = System.Drawing.Color.MidnightBlue;
+            this.btnGenerate.Enabled = false;
             this.btnGenerate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGenerate.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F);
             this.btnGenerate.ForeColor = System.Drawing.Color.White;

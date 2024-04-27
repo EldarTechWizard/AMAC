@@ -34,7 +34,7 @@ namespace AMAC.Presenters
             view.OnClickGenerateInsertButton += OnClickGenerateInsertButton;
             view.OnClickChoosePhotoButton += OnClickChoosePhotoButton;
             view.OnClickSelectRowGridControl += OnClickSelectRowGridControl;
-            view.OnChangedAdopterIdTextBox += OnChangedAdopterIdTextBox;
+            view.OnChangeAnimalIdTextBox += OnChangeAnimalIdTextBox;
             view.OnLoadForm += OnLoadForm;
         }
 
@@ -77,7 +77,9 @@ namespace AMAC.Presenters
             view.Id = value;
         }
 
-        private void OnChangedAdopterIdTextBox(object sender, EventArgs e)
+
+
+        private void OnChangeAnimalIdTextBox(object sender, EventArgs e)
         {
             try
             {
@@ -103,6 +105,12 @@ namespace AMAC.Presenters
 
                     view.ChangeEditMode(true);
 
+                    if(view.Status == "Adoptado")
+                    {
+                        view.ChangeDeleteMode(false);
+                    }
+
+
                     return;
                 }
 
@@ -121,7 +129,6 @@ namespace AMAC.Presenters
             try
             {
                 view.LoadInfoFromSelectedRow();
-                view.ChangeEditMode(true);
             }
             catch (Exception ex)
             {

@@ -10,6 +10,8 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
 {
     public interface IFormatNewAdoptionView
     {
+        List<Action<bool>> Funcs { set; }
+
         Form AnimalForm { get; }
         Form AdopterForm { get; }
         Form ResponsabilityForm { get; }
@@ -21,6 +23,7 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
         void LoadTabs(ref DataTable animalData, ref DataTable adopterData);
         void SavePdf();
         bool OpenPreviewTab(PdfGenerator generator);
-        DataRow OpenSearchTableTab(DataTable data);
+
+        void ChangeSaveButtonMode(bool aux);
     }
 }

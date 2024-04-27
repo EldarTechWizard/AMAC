@@ -18,6 +18,7 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAdopterView
 {
     public partial class FormatAdopterView : DevExpress.XtraEditors.XtraForm , IFormatAdopterView
     {
+
         public int Id
         {
             get
@@ -29,10 +30,10 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAdopterView
                     return value;
                 }
 
-                return -1;
+                return 0;
             }
 
-            set => tbAdopterlId.Text = value.ToString();
+            set { tbAdopterlId.Text = value.ToString(); }
         }
         public string NameA { get => tbName.Text; set => tbName.Text = value; }
         public int Age
@@ -46,7 +47,7 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAdopterView
                     return value;
                 }
 
-                return -1;
+                return 0;
             }
             set => tbAge.Text = value.ToString();
         }
@@ -54,6 +55,8 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAdopterView
         public string Email { get => tbEmail.Text; set => tbEmail.Text = value; }
         public string Number { get => tbNumber.Text; set => tbNumber.Text = value; }
 
+        public event EventHandler OnChangeAdopterIdTextBox;
+        public event EventHandler OnClickSearchAdopterPictureEdit;
 
         public FormatAdopterView()
         {
@@ -61,13 +64,17 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAdopterView
             AssociateAndRaisedEvents();
         }
 
-        public event EventHandler OnChangeAdopterIdTextBox;
-        public event EventHandler OnClickSearchAdopterPictureEdit;
+        
 
         private void AssociateAndRaisedEvents()
         {
             tbAdopterlId.TextChanged += delegate { OnChangeAdopterIdTextBox.Invoke(tbAdopterlId, EventArgs.Empty); };
             peSeachAdopter.Click += delegate { OnClickSearchAdopterPictureEdit.Invoke(peSeachAdopter, EventArgs.Empty); };
+        }
+
+        public void ClearId()
+        {
+            tbAdopterlId.Text = "";
         }
 
         public void ClearAdopterFields()

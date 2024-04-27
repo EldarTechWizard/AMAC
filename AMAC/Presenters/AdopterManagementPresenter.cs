@@ -52,7 +52,6 @@ namespace AMAC.Presenters
             try
             {
                 view.LoadInfoFromSelectedRow();
-                view.ChangeEditMode(true);
             }
             catch(Exception ex)
             {
@@ -103,8 +102,14 @@ namespace AMAC.Presenters
                     view.Email = (string)row["email"];
                     view.Address = (string)row["address"];
                     view.Number = (string)row["phone"];
+                    view.AdoptionCount = (int)row["adoptionCount"];
                     
                     view.ChangeEditMode(true);
+
+                    if(view.AdoptionCount > 0)
+                    {
+                        view.ChangeDeleteMode(false);
+                    }
 
                     return;
                 }

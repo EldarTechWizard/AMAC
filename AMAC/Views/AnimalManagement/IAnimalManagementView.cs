@@ -42,10 +42,11 @@ namespace AMAC.Views.AnimalManagement
         event EventHandler OnClickDeleteAnimalButton;
         event EventHandler OnClickChoosePhotoButton;
 
-        event EventHandler OnChangedAdopterIdTextBox;
+        event EventHandler OnChangeAnimalIdTextBox;
         event EventHandler OnClickSelectRowGridControl;
         void ChooseImage();
         void ChangeEditMode(bool aux);
+        void ChangeDeleteMode(bool aux);
         void LoadInfoFromSelectedRow();
         void ClearFields();
 

@@ -216,6 +216,10 @@
             this.tbId.Name = "tbId";
             this.tbId.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.tbId.Properties.MaskSettings.Set("mask", "\\d+");
+            this.tbId.Properties.MaskSettings.Set("isAutoComplete", false);
+            this.tbId.Properties.MaskSettings.Set("showPlaceholders", false);
+            this.tbId.Properties.MaskSettings.Set("culture", "es-MX");
+            this.tbId.Properties.UseMaskAsDisplayFormat = true;
             this.tbId.Size = new System.Drawing.Size(127, 22);
             this.tbId.TabIndex = 1;
             // 

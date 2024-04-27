@@ -26,7 +26,6 @@ namespace AMAC.Views.FormatManagement.FormatUpdateView
         event EventHandler OnClickTabButtons;
         event EventHandler OnClickSaveButton;
         event EventHandler OnChangeFormatIdLookUpEdit;
-        event EventHandler OnClickPrintPdfButton;
         event EventHandler OnClickDeleteButton;
 
         void ChangeTab(Form tab);
@@ -34,5 +33,8 @@ namespace AMAC.Views.FormatManagement.FormatUpdateView
         bool OpenPreviewTab(PdfGenerator generator);
         void SavePdf();
         void CloseCurrentTab();
+        void ChangeSaveButtonMode(bool aux);
+        void ChangeDeleteButtonMode(bool aux);
+        void ChangeTabsButtonMode(bool aux);
     }
 }

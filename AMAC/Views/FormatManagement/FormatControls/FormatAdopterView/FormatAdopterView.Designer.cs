@@ -113,6 +113,11 @@
             this.tbAdopterlId.Name = "tbAdopterlId";
             this.tbAdopterlId.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.tbAdopterlId.Properties.MaskSettings.Set("mask", "\\d+");
+            this.tbAdopterlId.Properties.MaskSettings.Set("allowBlankInput", null);
+            this.tbAdopterlId.Properties.MaskSettings.Set("showPlaceholders", false);
+            this.tbAdopterlId.Properties.MaskSettings.Set("isAutoComplete", false);
+            this.tbAdopterlId.Properties.MaskSettings.Set("culture", "es-MX");
+            this.tbAdopterlId.Properties.UseMaskAsDisplayFormat = true;
             this.tbAdopterlId.Size = new System.Drawing.Size(125, 22);
             this.tbAdopterlId.TabIndex = 1;
             // 

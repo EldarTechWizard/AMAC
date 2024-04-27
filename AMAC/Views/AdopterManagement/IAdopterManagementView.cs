@@ -17,6 +17,7 @@ namespace AMAC.Views.AdopterManagement
         string Address { get; set; }
         string Number { get; set; }
         string Email { get; set; }
+        int AdoptionCount { get; set; }
 
         event EventHandler OnClickGenerateInsertButton;
         event EventHandler OnClickSelectRowGridControl;
@@ -27,6 +28,8 @@ namespace AMAC.Views.AdopterManagement
         event EventHandler OnLoadForm;
 
         void ChangeEditMode(bool aux);
+
+        void ChangeDeleteMode (bool aux);
         void ClearFields();
         void LoadInfoFromSelectedRow();
 

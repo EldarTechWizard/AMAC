@@ -24,6 +24,7 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAnimalView
         event EventHandler OnClickSearchAnimalPictureEdit;
         DataRow OpenSearchTableTab(DataTable data);
         Animal GetAnimal();
+        void ClearId();
         void ClearAnimalFields();
     }
 }

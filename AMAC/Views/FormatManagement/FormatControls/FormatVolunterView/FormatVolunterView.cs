@@ -22,10 +22,14 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatVolunterView
             AssociateAndRaisedEvents();
         }
 
+        public event EventHandler OnChangeTextBox;
+
         private void AssociateAndRaisedEvents()
         {
-            
+            tbVolunter.TextChanged += delegate { OnChangeTextBox(tbVolunter, EventArgs.Empty); };
         }
+
+
 
         public void ClearFields()
         {

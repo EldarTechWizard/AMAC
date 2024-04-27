@@ -28,7 +28,7 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAnimalView
                     return value;
                 }
 
-                return -1;
+                return 0;
             }
 
             set => tbId.Text = value.ToString();
@@ -50,7 +50,7 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAnimalView
                     return value;
                 }
 
-                return -1;
+                return 0;
             }
             set => tbAge.Text = value.ToString();
         }
@@ -113,7 +113,9 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAnimalView
             return animal;
         }
 
-   
-
+        public void ClearId()
+        {
+            tbId.Text = string.Empty;
+        }
     }
 }

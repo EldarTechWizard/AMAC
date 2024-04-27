@@ -22,20 +22,22 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
 {
     public partial class FormatNewAdoptionView : DevExpress.XtraEditors.XtraForm, IFormatNewAdoptionView
     {
+
+        private List<Action<bool>> funcs;
         private Form animalForm = null;
         private Form adopterForm = null;
         private Form responsabilityForm = null;    
         public Form AnimalForm => animalForm;
-
         public Form AdopterForm => adopterForm;
-
         public Form ResponsabilityForm => responsabilityForm;
 
+        public List<Action<bool>> Funcs { set => funcs = value; }
 
         public event EventHandler OnClickGenerateNewAdoptionFormatButton;
         public event EventHandler OnClickClearFieldsButton;
         public event EventHandler OnLoadForm;
 
+ 
 
         public FormatNewAdoptionView()
         {
@@ -91,18 +93,16 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
             return view.IsCorrect;
         }
 
-        public DataRow OpenSearchTableTab(DataTable data)
-        {
-            ISearchTableView view = new SearchTableView.SearchTableView();
-            new SearchTablePresenter(view, data);
-            Form temp = (Form)view;
-            temp.ShowDialog();
-
-            return view.DataRow;
-        }
 
         public void LoadTabs(ref DataTable animalData, ref DataTable adopterData)
         {
+            if(animalData.AsEnumerable().Any(row => row.Field<string>("status") != "Adoptado"))
+               animalData = animalData.AsEnumerable().Where(row => row.Field<string>("status") != "Adoptado").CopyToDataTable();
+            else
+                animalData.Rows.Clear();
+
+    
+
             LoadAnimalTab(ref animalData);
             LoadAdopterTab(ref adopterData);
             LoadResponsabilityTab();
@@ -111,7 +111,7 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
         private void LoadAnimalTab(ref DataTable animalData)
         {
             IFormatAnimalView animalTab = new FormatAnimalView();
-            new FormatAnimalPresenter(animalTab, animalData);
+            new FormatAnimalPresenter(animalTab, animalData, funcs[0]);
             this.animalForm = (Form)animalTab;
 
             animalForm.TopLevel = false;
@@ -123,7 +123,7 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
         private void LoadAdopterTab(ref DataTable adopterData)
         {
             IFormatAdopterView adopterTab = new FormatAdopterView();
-            new FormatAdopterPresenter(adopterTab, adopterData);
+            new FormatAdopterPresenter(adopterTab, adopterData, funcs[1]);
             this.adopterForm = (Form)adopterTab;
 
 
@@ -136,7 +136,7 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
         private void LoadResponsabilityTab()
         {
             IFormatVolunterView responsabilityTab = new FormatVolunterView();
-            new FormatVolunterPresenter(responsabilityTab);
+            new FormatVolunterPresenter(responsabilityTab, funcs[2]);
             this.responsabilityForm = (Form)responsabilityTab;
             
             responsabilityForm.TopLevel = false;
@@ -144,6 +144,11 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
             responsabilityForm.Dock = DockStyle.Fill;
             responsabilityForm.Show();
 
+        }
+
+        public void ChangeSaveButtonMode(bool aux)
+        {
+           btnGenerate.Enabled = aux;
         }
     }
 }

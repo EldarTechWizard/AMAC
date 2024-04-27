@@ -28,7 +28,7 @@ namespace AMAC
             QuestPDF.Settings.License = LicenseType.Community;
 
 
-            IRepository repository = new SqlServer("Server = LAPTOP-5C9UCS9L; Database = AMAC; Trusted_Connection = True;");
+            IRepository repository = new SqlServer("Server = localhost; Database = AMAC; Trusted_Connection = True;");
 
             //ILoginView login = new LoginView();
             //new LoginPresenter(login, repository);
