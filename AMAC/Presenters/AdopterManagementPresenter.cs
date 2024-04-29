@@ -164,12 +164,17 @@ namespace AMAC.Presenters
         private void UpdateAdopter(Adopter adopter)
         {
             if (!repository.UpdateAdopter(adopter)) throw new Exception(repository.LastError);
+
+            MessageBox.Show("Cambios guardados correctamente");
         }
 
         private void OnClickDeleteButton(object sender, EventArgs e)
         {
             try
             {
+                DialogResult dialogResult = MessageBox.Show("¿Esta seguro de eliminar este registro?", "Advertencia", MessageBoxButtons.YesNo);
+                
+                if (dialogResult == DialogResult.No) return;              
                 if (view.Id == -1) return;
                 if (!repository.DeleteAdopter(view.Id)) throw new Exception(repository.LastError);
 
@@ -177,7 +182,7 @@ namespace AMAC.Presenters
 
                 SetInsertMode();
 
-                MessageBox.Show("Correcto");
+                MessageBox.Show("Eliminado correctamente");
             }
             catch (Exception ex)
             {

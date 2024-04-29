@@ -14,12 +14,18 @@ namespace AMAC.Presenters
     public class FormatAdopterPresenter
     {
         private IFormatAdopterView view;
-        private DataTable adopters;
         private Action<bool> CheckStateId;
+        public FormatAdopterPresenter(IFormatAdopterView view,  Action<bool> checkStateId)
+        {
+            this.view = view;
+            this.CheckStateId = checkStateId;
+            AssociateAndRaisedEvents();
+        }
+
         public FormatAdopterPresenter(IFormatAdopterView view, DataTable data, Action<bool> checkStateId)
         {
             this.view = view;
-            this.adopters = data;
+            this.view.DataSource = data;
             this.CheckStateId = checkStateId;
             AssociateAndRaisedEvents();
         }
@@ -34,7 +40,7 @@ namespace AMAC.Presenters
         {
             try
             {
-                DataRow row = adopters.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAdopter") == (int)view.Id);
+                DataRow row = view.DataSource.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAdopter") == (int)view.Id);
 
                 if (row == null)
                 {
@@ -64,7 +70,7 @@ namespace AMAC.Presenters
         {
             try
             {
-                DataRow row = view.OpenSearchTableTab(adopters);
+                DataRow row = view.OpenSearchTableTab(view.DataSource);
                 if (row == null) return;
 
                 view.Id = (int)row["idAdopter"];

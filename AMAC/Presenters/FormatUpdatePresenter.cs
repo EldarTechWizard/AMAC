@@ -52,6 +52,9 @@ namespace AMAC.Presenters
         {
             try
             {
+                DialogResult dialogResult = MessageBox.Show("¿Esta seguro de eliminar este registro?", "Advertencia", MessageBoxButtons.YesNo);
+
+                if (dialogResult == DialogResult.No) return;
                 if (!repository.DeletePdfFormat(view.Id)) throw new Exception(repository.LastError);
                 view.CloseCurrentTab();   
                 LoadFormatData();
@@ -183,8 +186,9 @@ namespace AMAC.Presenters
                 GetDataInsideATab();
                 UpdateFormatData();
                 LoadFormatData();
+                view.CloseCurrentTab();
 
-                MessageBox.Show("Correcto");
+                MessageBox.Show("Cambios guardados correctamente");
             }
             catch (Exception ex)
             {
@@ -209,8 +213,8 @@ namespace AMAC.Presenters
         {
             try
             {
-                LoadAnimalInfo();
-                LoadAdopterInfo();
+                animalData = GetAnimalData();
+                adopterData = GetAdopterData();
                 LoadFormatData();
                 view.SetLookUpEditPropierties();
             }
@@ -220,14 +224,18 @@ namespace AMAC.Presenters
             }
         }
 
-        private void LoadAnimalInfo()
+        private DataTable GetAnimalData()
         {
-            if (!repository.SelectRecord(animalData)) throw new Exception(repository.LastError);
+            DataTable data = new DataTable();
+            if (!repository.SelectRecord(data)) throw new Exception(repository.LastError);
+            return data;
         }
 
-        private void LoadAdopterInfo()
+        private DataTable GetAdopterData()
         {
-            if (!repository.SelectAdopter(adopterData)) throw new Exception(repository.LastError);
+            DataTable data = new DataTable();
+            if (!repository.SelectAdopter(data)) throw new Exception(repository.LastError);
+            return data;
         }
 
         private void LoadFormatData()
@@ -253,6 +261,7 @@ namespace AMAC.Presenters
                         CheckChanges();
                     });
 
+                    animalTab.DataSource = GetAnimalData();
                     tab = (Form)animalTab;
 
                     break;
@@ -263,6 +272,7 @@ namespace AMAC.Presenters
                         CheckChanges();
                     });
 
+                    adopterTab.DataSource = GetAdopterData();   
                     tab = (Form)adopterTab;
 
                     break;

@@ -20,9 +20,6 @@ namespace AMAC.Presenters
         private IFormatNewAdoptionView view;
         private IRepository repository;
 
-        private DataTable AnimalData = new DataTable();
-        private DataTable AdopterData = new DataTable();
-
         private List<Action<bool>> funcs = new List<Action<bool>>();
         
         private bool[] idStates = new bool[3];
@@ -74,9 +71,8 @@ namespace AMAC.Presenters
         {
             try
             {
-                LoadAnimalInfo();
-                LoadAdopterInfo();
-                view.LoadTabs(ref AnimalData, ref AdopterData);
+                view.LoadTabs();
+                view.ReloadInfoTabs(GetAnimalData(), GetAdopterData());
             }
             catch (Exception ex)
             {
@@ -84,14 +80,19 @@ namespace AMAC.Presenters
             }
         }
 
-        private void LoadAnimalInfo()
+
+        private DataTable GetAnimalData()
         {
-            if (!repository.SelectRecord(AnimalData)) throw new Exception(repository.LastError);
+            DataTable animalData = new DataTable();
+            if (!repository.SelectRecord(animalData)) throw new Exception(repository.LastError);
+            return animalData;
         }
 
-        private void LoadAdopterInfo()
+        private DataTable GetAdopterData()
         {
-            if (!repository.SelectAdopter(AdopterData)) throw new Exception(repository.LastError);
+            DataTable adopterData = new DataTable();
+            if (!repository.SelectAdopter(adopterData)) throw new Exception(repository.LastError);
+            return adopterData;
         }
 
       
@@ -104,9 +105,12 @@ namespace AMAC.Presenters
 
                 view.SavePdf();
                 InsertFormatIntoDataBase();
-                MessageBox.Show("Correcto");
                 temp = null;
+
                 ClearFields();
+                view.ReloadInfoTabs(GetAnimalData(), GetAdopterData());
+
+                MessageBox.Show("Guardado Correctamente");
             }
             catch (Exception ex)
             {

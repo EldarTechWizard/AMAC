@@ -145,15 +145,18 @@ namespace AMAC.Presenters
         {
             try
             {
+                DialogResult dialogResult = MessageBox.Show("¿Esta seguro de eliminar este registro?", "Advertencia", MessageBoxButtons.YesNo);
+
+                if (dialogResult == DialogResult.No) return;
                 if (view.Id == -1) return;
                 if (!repository.DeleteRecord(view.Id)) throw new Exception(repository.LastError);
 
                 ReloadInformation();
-                view.ClearFields();
-
-                MessageBox.Show("Correcto");
+                view.ClearFields();              
                 view.ChangeEditMode(false );
                 SetInsertMode();
+
+                MessageBox.Show("Eliminado correctamente");
             }
             catch (Exception ex)
             {
@@ -213,6 +216,8 @@ namespace AMAC.Presenters
         private void UpdateRecord(PetReport record)
         {
             if (!repository.UpdateRecord(record)) throw new Exception(repository.LastError);
+
+            MessageBox.Show("Cambios guardados correctamente");
         }
 
     

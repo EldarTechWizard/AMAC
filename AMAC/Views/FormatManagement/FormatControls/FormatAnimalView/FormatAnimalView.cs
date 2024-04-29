@@ -16,7 +16,7 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAnimalView
 {
     public partial class FormatAnimalView : DevExpress.XtraEditors.XtraForm, IFormatAnimalView
     {
-
+        private DataTable dataSource;
         public int Id
         {
             get
@@ -55,6 +55,7 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAnimalView
             set => tbAge.Text = value.ToString();
         }
         public string Status { get => tbStatus.Text; set => tbStatus.Text = value; }
+        public DataTable DataSource { get => dataSource; set => dataSource = value; }
 
         public event EventHandler OnChangeAnimalIdTextBox;
         public event EventHandler OnClickSearchAnimalPictureEdit;

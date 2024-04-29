@@ -10,6 +10,7 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAdopterView
 {
     public interface IFormatAdopterView
     {
+        DataTable DataSource { get; set; }
         int Id { get; set; }
         string NameA { get; set; }
         int Age { get; set; }

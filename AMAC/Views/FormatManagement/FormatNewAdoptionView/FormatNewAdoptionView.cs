@@ -94,24 +94,28 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
         }
 
 
-        public void LoadTabs(ref DataTable animalData, ref DataTable adopterData)
+        public void LoadTabs()
         {
-            if(animalData.AsEnumerable().Any(row => row.Field<string>("status") != "Adoptado"))
-               animalData = animalData.AsEnumerable().Where(row => row.Field<string>("status") != "Adoptado").CopyToDataTable();
-            else
-                animalData.Rows.Clear();
-
-    
-
-            LoadAnimalTab(ref animalData);
-            LoadAdopterTab(ref adopterData);
+            LoadAnimalTab();
+            LoadAdopterTab();
             LoadResponsabilityTab();
         }
 
-        private void LoadAnimalTab(ref DataTable animalData)
+        public void ReloadInfoTabs(DataTable animalData, DataTable adopterData)
+        {
+            if (animalData.AsEnumerable().Any(row => row.Field<string>("status") != "Adoptado"))
+                animalData = animalData.AsEnumerable().Where(row => row.Field<string>("status") != "Adoptado").CopyToDataTable();
+            else
+                animalData.Rows.Clear();
+
+            ((IFormatAnimalView)this.animalForm).DataSource = animalData;
+            ((IFormatAdopterView)this.adopterForm).DataSource = adopterData;
+        }
+
+        private void LoadAnimalTab()
         {
             IFormatAnimalView animalTab = new FormatAnimalView();
-            new FormatAnimalPresenter(animalTab, animalData, funcs[0]);
+            new FormatAnimalPresenter(animalTab, funcs[0]);
             this.animalForm = (Form)animalTab;
 
             animalForm.TopLevel = false;
@@ -120,10 +124,10 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
             animalForm.Show();
         }
 
-        private void LoadAdopterTab(ref DataTable adopterData)
+        private void LoadAdopterTab()
         {
             IFormatAdopterView adopterTab = new FormatAdopterView();
-            new FormatAdopterPresenter(adopterTab, adopterData, funcs[1]);
+            new FormatAdopterPresenter(adopterTab, funcs[1]);
             this.adopterForm = (Form)adopterTab;
 
 

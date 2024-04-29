@@ -144,6 +144,7 @@ namespace AMAC.Views.AnimalManagement
             chbSterilized.Checked = false;
             dtFecha.Value = DateTime.Now;
             peImage.Image = null;
+            filePath = "";
 
             
         }

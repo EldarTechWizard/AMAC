@@ -14,12 +14,18 @@ namespace AMAC.Presenters
     public class FormatAnimalPresenter
     {
         private IFormatAnimalView view;
-        private DataTable animals;
         private Action<bool> CheckStateId;
-        public FormatAnimalPresenter(IFormatAnimalView view, DataTable animals, Action<bool> checkStateId)
+        public FormatAnimalPresenter(IFormatAnimalView view, Action<bool> checkStateId)
         {
             this.view = view;
-            this.animals = animals;
+            AssociateAndRaisedEvents();
+            this.CheckStateId = checkStateId;
+        }
+
+        public FormatAnimalPresenter(IFormatAnimalView view, DataTable data,Action<bool> checkStateId)
+        {
+            this.view = view;
+            this.view.DataSource = data;
             AssociateAndRaisedEvents();
             this.CheckStateId = checkStateId;
         }
@@ -34,7 +40,7 @@ namespace AMAC.Presenters
         {
             try
             {
-                DataRow row = view.OpenSearchTableTab(animals);
+                DataRow row = view.OpenSearchTableTab(view.DataSource);
                 if (row == null) return;
 
                 view.Id = (int)row["idAnimal"];
@@ -49,7 +55,7 @@ namespace AMAC.Presenters
         {
             try
             {
-                DataRow row = animals.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAnimal") == (int)view.Id);
+                DataRow row = view.DataSource.AsEnumerable().FirstOrDefault(rowD => rowD.Field<int>("idAnimal") == (int)view.Id);
 
                 if (row == null)
                 {

@@ -10,6 +10,7 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAnimalView
 {
     public interface IFormatAnimalView
     {
+        DataTable DataSource { get; set; }
         int Id { get; set; }
         string NameA { get; set; }
         int Age { get; set; }

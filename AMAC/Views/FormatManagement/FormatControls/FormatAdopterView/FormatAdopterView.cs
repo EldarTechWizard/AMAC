@@ -18,7 +18,7 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAdopterView
 {
     public partial class FormatAdopterView : DevExpress.XtraEditors.XtraForm , IFormatAdopterView
     {
-
+        private DataTable dataSource;
         public int Id
         {
             get
@@ -54,6 +54,7 @@ namespace AMAC.Views.FormatManagement.FormatControls.FormatAdopterView
         public string Address { get => tbAddress.Text; set => tbAddress.Text = value; }
         public string Email { get => tbEmail.Text; set => tbEmail.Text = value; }
         public string Number { get => tbNumber.Text; set => tbNumber.Text = value; }
+        public DataTable DataSource { get => dataSource; set => dataSource = value; }
 
         public event EventHandler OnChangeAdopterIdTextBox;
         public event EventHandler OnClickSearchAdopterPictureEdit;

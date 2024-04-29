@@ -20,10 +20,10 @@ namespace AMAC.Views.FormatManagement.FormatNewAdoptionView
         event EventHandler OnClickGenerateNewAdoptionFormatButton;
         event EventHandler OnClickClearFieldsButton;
 
-        void LoadTabs(ref DataTable animalData, ref DataTable adopterData);
+        void LoadTabs();
         void SavePdf();
         bool OpenPreviewTab(PdfGenerator generator);
-
+        void ReloadInfoTabs(DataTable animalData, DataTable adopterData);
         void ChangeSaveButtonMode(bool aux);
     }
 }
