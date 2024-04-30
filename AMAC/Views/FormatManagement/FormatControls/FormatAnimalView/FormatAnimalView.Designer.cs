@@ -190,7 +190,7 @@
             this.tbName.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbName.Name = "tbName";
             this.tbName.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
-            this.tbName.Properties.MaskSettings.Set("mask", "\\p{L}+");
+            this.tbName.Properties.MaskSettings.Set("mask", "([a-zA-Z]+)(\\s[a-zA-Z]+)*");
             this.tbName.Properties.ReadOnly = true;
             this.tbName.Size = new System.Drawing.Size(233, 22);
             this.tbName.TabIndex = 3;
@@ -251,7 +251,7 @@
             this.tbAnimalBreed.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbAnimalBreed.Name = "tbAnimalBreed";
             this.tbAnimalBreed.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
-            this.tbAnimalBreed.Properties.MaskSettings.Set("mask", "\\p{L}+");
+            this.tbAnimalBreed.Properties.MaskSettings.Set("mask", "([a-zA-Z]+)(\\s[a-zA-Z]+)*");
             this.tbAnimalBreed.Properties.ReadOnly = true;
             this.tbAnimalBreed.Size = new System.Drawing.Size(169, 22);
             this.tbAnimalBreed.TabIndex = 6;
@@ -262,7 +262,7 @@
             this.tbAnimalType.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbAnimalType.Name = "tbAnimalType";
             this.tbAnimalType.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
-            this.tbAnimalType.Properties.MaskSettings.Set("mask", "\\p{L}+");
+            this.tbAnimalType.Properties.MaskSettings.Set("mask", "([a-zA-Z]+)(\\s[a-zA-Z]+)*");
             this.tbAnimalType.Properties.ReadOnly = true;
             this.tbAnimalType.Size = new System.Drawing.Size(233, 22);
             this.tbAnimalType.TabIndex = 4;

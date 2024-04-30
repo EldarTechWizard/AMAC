@@ -170,7 +170,7 @@
             this.tbName.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbName.Name = "tbName";
             this.tbName.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
-            this.tbName.Properties.MaskSettings.Set("mask", "\\p{L}+");
+            this.tbName.Properties.MaskSettings.Set("mask", "([a-zA-Z]+)(\\s[a-zA-Z]+)*");
             this.tbName.Properties.ReadOnly = true;
             this.tbName.Size = new System.Drawing.Size(337, 22);
             this.tbName.TabIndex = 3;

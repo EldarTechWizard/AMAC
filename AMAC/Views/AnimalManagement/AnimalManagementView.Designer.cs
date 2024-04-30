@@ -116,9 +116,9 @@
             this.panel1.Controls.Add(this.tableLayoutPanel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1188, 640);
+            this.panel1.Size = new System.Drawing.Size(1386, 788);
             this.panel1.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -129,13 +129,13 @@
             this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.98773F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.01227F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1188, 640);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1386, 788);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // panel2
@@ -144,10 +144,10 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(4, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1182, 85);
+            this.panel2.Size = new System.Drawing.Size(1378, 106);
             this.panel2.TabIndex = 0;
             // 
             // label1
@@ -156,9 +156,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 29);
+            this.label1.Location = new System.Drawing.Point(10, 36);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(397, 37);
+            this.label1.Size = new System.Drawing.Size(501, 46);
             this.label1.TabIndex = 92;
             this.label1.Text = "GESTOR DE MASCOTAS";
             // 
@@ -166,10 +167,10 @@
             // 
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(1011, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Location = new System.Drawing.Point(1178, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(171, 85);
+            this.panel3.Size = new System.Drawing.Size(200, 106);
             this.panel3.TabIndex = 0;
             // 
             // pictureBox2
@@ -177,9 +178,9 @@
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox2.Image = global::AMAC.Properties.Resources.AMACPNG;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(171, 85);
+            this.pictureBox2.Size = new System.Drawing.Size(200, 106);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 129;
             this.pictureBox2.TabStop = false;
@@ -188,10 +189,10 @@
             // 
             this.panel4.Controls.Add(this.tableLayoutPanel2);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 91);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Location = new System.Drawing.Point(4, 112);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1182, 547);
+            this.panel4.Size = new System.Drawing.Size(1378, 674);
             this.panel4.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -202,23 +203,23 @@
             this.tableLayoutPanel2.Controls.Add(this.dgvAnimal, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.2977F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.7023F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1182, 547);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1378, 674);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.groupControl1);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(3, 2);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel6.Location = new System.Drawing.Point(4, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1176, 293);
+            this.panel6.Size = new System.Drawing.Size(1370, 361);
             this.panel6.TabIndex = 0;
             // 
             // groupControl1
@@ -264,9 +265,9 @@
             this.groupControl1.Controls.Add(this.btnSaveAndEdit);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
-            this.groupControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupControl1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1176, 293);
+            this.groupControl1.Size = new System.Drawing.Size(1370, 361);
             this.groupControl1.TabIndex = 158;
             this.groupControl1.Text = "Nuevo Registro";
             // 
@@ -278,10 +279,10 @@
             this.cbAnimalType.Items.AddRange(new object[] {
             "Perro ",
             "Gato "});
-            this.cbAnimalType.Location = new System.Drawing.Point(286, 184);
-            this.cbAnimalType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbAnimalType.Location = new System.Drawing.Point(334, 226);
+            this.cbAnimalType.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cbAnimalType.Name = "cbAnimalType";
-            this.cbAnimalType.Size = new System.Drawing.Size(151, 24);
+            this.cbAnimalType.Size = new System.Drawing.Size(176, 29);
             this.cbAnimalType.TabIndex = 345;
             // 
             // label4
@@ -290,9 +291,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(389, 153);
+            this.label4.Location = new System.Drawing.Point(454, 188);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 18);
+            this.label4.Size = new System.Drawing.Size(73, 23);
             this.label4.TabIndex = 344;
             this.label4.Text = "Meses";
             // 
@@ -305,38 +307,41 @@
             "Hogar temporal",
             "Adoptado",
             "Fallecido"});
-            this.cbStatus.Location = new System.Drawing.Point(285, 246);
-            this.cbStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbStatus.Location = new System.Drawing.Point(332, 303);
+            this.cbStatus.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(151, 24);
+            this.cbStatus.Size = new System.Drawing.Size(176, 29);
             this.cbStatus.TabIndex = 9;
             // 
             // btnGenerateInsert
             // 
             this.btnGenerateInsert.ImageOptions.Image = global::AMAC.Properties.Resources.add_16x16;
-            this.btnGenerateInsert.Location = new System.Drawing.Point(403, 59);
-            this.btnGenerateInsert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGenerateInsert.Location = new System.Drawing.Point(470, 73);
+            this.btnGenerateInsert.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnGenerateInsert.Name = "btnGenerateInsert";
-            this.btnGenerateInsert.Size = new System.Drawing.Size(20, 19);
+            this.btnGenerateInsert.Size = new System.Drawing.Size(23, 23);
             this.btnGenerateInsert.TabIndex = 2;
             // 
             // tbId
             // 
-            this.tbId.Location = new System.Drawing.Point(285, 60);
-            this.tbId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbId.Location = new System.Drawing.Point(332, 74);
+            this.tbId.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbId.Name = "tbId";
             this.tbId.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.tbId.Properties.MaskSettings.Set("mask", "\\d+");
             this.tbId.Properties.ReadOnly = true;
-            this.tbId.Size = new System.Drawing.Size(112, 20);
+            this.tbId.Size = new System.Drawing.Size(131, 22);
             this.tbId.TabIndex = 1;
             // 
             // tbDiagnostic
             // 
-            this.tbDiagnostic.Location = new System.Drawing.Point(635, 184);
-            this.tbDiagnostic.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbDiagnostic.Location = new System.Drawing.Point(741, 226);
+            this.tbDiagnostic.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbDiagnostic.Name = "tbDiagnostic";
-            this.tbDiagnostic.Size = new System.Drawing.Size(261, 20);
+            this.tbDiagnostic.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
+            this.tbDiagnostic.Properties.MaskSettings.Set("MaskManagerSignature", "isOptimistic=False");
+            this.tbDiagnostic.Properties.MaskSettings.Set("mask", "([a-zA-Z]+)(\\s[a-zA-Z]+)*");
+            this.tbDiagnostic.Size = new System.Drawing.Size(304, 22);
             this.tbDiagnostic.TabIndex = 13;
             // 
             // label5
@@ -345,9 +350,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label5.Location = new System.Drawing.Point(493, 183);
+            this.label5.Location = new System.Drawing.Point(575, 225);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(131, 18);
+            this.label5.Size = new System.Drawing.Size(161, 23);
             this.label5.TabIndex = 339;
             this.label5.Text = "DIAGNOSTICO:";
             // 
@@ -357,122 +363,123 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(159, 186);
+            this.label2.Location = new System.Drawing.Point(186, 229);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 18);
+            this.label2.Size = new System.Drawing.Size(137, 23);
             this.label2.TabIndex = 338;
             this.label2.Text = "CATEGORIA:";
             // 
             // tbAdditionalInformation
             // 
-            this.tbAdditionalInformation.Location = new System.Drawing.Point(912, 114);
-            this.tbAdditionalInformation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbAdditionalInformation.Location = new System.Drawing.Point(1064, 140);
+            this.tbAdditionalInformation.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbAdditionalInformation.Name = "tbAdditionalInformation";
-            this.tbAdditionalInformation.Size = new System.Drawing.Size(241, 70);
+            this.tbAdditionalInformation.Size = new System.Drawing.Size(280, 85);
             this.tbAdditionalInformation.TabIndex = 15;
             this.tbAdditionalInformation.Text = "";
             // 
             // tbTempHome
             // 
-            this.tbTempHome.Location = new System.Drawing.Point(635, 93);
-            this.tbTempHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbTempHome.Location = new System.Drawing.Point(741, 114);
+            this.tbTempHome.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbTempHome.Name = "tbTempHome";
             this.tbTempHome.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
-            this.tbTempHome.Properties.MaskSettings.Set("mask", "\\p{L}+");
+            this.tbTempHome.Properties.MaskSettings.Set("mask", "([a-zA-Z]+)(\\s[a-zA-Z]+)*");
             this.tbTempHome.Properties.MaskSettings.Set("culture", "es-MX");
             this.tbTempHome.Properties.MaskSettings.Set("showPlaceholders", false);
-            this.tbTempHome.Size = new System.Drawing.Size(261, 20);
+            this.tbTempHome.Size = new System.Drawing.Size(304, 22);
             this.tbTempHome.TabIndex = 10;
             // 
             // tbVet
             // 
-            this.tbVet.Location = new System.Drawing.Point(635, 154);
-            this.tbVet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbVet.Location = new System.Drawing.Point(741, 190);
+            this.tbVet.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbVet.Name = "tbVet";
             this.tbVet.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
-            this.tbVet.Properties.MaskSettings.Set("mask", "\\p{L}+");
+            this.tbVet.Properties.MaskSettings.Set("mask", "([a-zA-Z]+)(\\s[a-zA-Z]+)*");
             this.tbVet.Properties.MaskSettings.Set("showPlaceholders", false);
             this.tbVet.Properties.MaskSettings.Set("culture", "es-MX");
-            this.tbVet.Size = new System.Drawing.Size(261, 20);
+            this.tbVet.Size = new System.Drawing.Size(304, 22);
             this.tbVet.TabIndex = 12;
             // 
             // tbRescuer
             // 
-            this.tbRescuer.Location = new System.Drawing.Point(635, 122);
-            this.tbRescuer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbRescuer.Location = new System.Drawing.Point(741, 150);
+            this.tbRescuer.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbRescuer.Name = "tbRescuer";
             this.tbRescuer.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
-            this.tbRescuer.Properties.MaskSettings.Set("mask", "\\p{L}+");
+            this.tbRescuer.Properties.MaskSettings.Set("mask", "([a-zA-Z]+)(\\s[a-zA-Z]+)*");
             this.tbRescuer.Properties.MaskSettings.Set("culture", "es-MX");
             this.tbRescuer.Properties.MaskSettings.Set("showPlaceholders", false);
             this.tbRescuer.Properties.UseMaskAsDisplayFormat = true;
-            this.tbRescuer.Size = new System.Drawing.Size(261, 20);
+            this.tbRescuer.Size = new System.Drawing.Size(304, 22);
             this.tbRescuer.TabIndex = 11;
             // 
             // tbAnimalBreed
             // 
-            this.tbAnimalBreed.Location = new System.Drawing.Point(284, 125);
-            this.tbAnimalBreed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbAnimalBreed.Location = new System.Drawing.Point(331, 154);
+            this.tbAnimalBreed.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbAnimalBreed.Name = "tbAnimalBreed";
             this.tbAnimalBreed.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
-            this.tbAnimalBreed.Properties.MaskSettings.Set("mask", "\\p{L}+");
+            this.tbAnimalBreed.Properties.MaskSettings.Set("mask", "([a-zA-Z]+)(\\s[a-zA-Z]+)*");
             this.tbAnimalBreed.Properties.MaskSettings.Set("showPlaceholders", false);
             this.tbAnimalBreed.Properties.UseMaskAsDisplayFormat = true;
-            this.tbAnimalBreed.Size = new System.Drawing.Size(167, 20);
+            this.tbAnimalBreed.Size = new System.Drawing.Size(195, 22);
             this.tbAnimalBreed.TabIndex = 5;
             // 
             // tbAge
             // 
-            this.tbAge.Location = new System.Drawing.Point(284, 154);
-            this.tbAge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbAge.Location = new System.Drawing.Point(331, 190);
+            this.tbAge.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbAge.Name = "tbAge";
             this.tbAge.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
             this.tbAge.Properties.MaskSettings.Set("mask", "\\d+");
             this.tbAge.Properties.MaskSettings.Set("allowBlankInput", false);
             this.tbAge.Properties.MaskSettings.Set("showPlaceholders", false);
             this.tbAge.Properties.UseMaskAsDisplayFormat = true;
-            this.tbAge.Size = new System.Drawing.Size(97, 20);
+            this.tbAge.Size = new System.Drawing.Size(113, 22);
             this.tbAge.TabIndex = 6;
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(285, 93);
-            this.tbName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbName.Location = new System.Drawing.Point(332, 114);
+            this.tbName.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbName.Name = "tbName";
             this.tbName.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
-            this.tbName.Properties.MaskSettings.Set("mask", "\\p{L}+");
+            this.tbName.Properties.MaskSettings.Set("mask", "([a-zA-Z]+)(\\s[a-zA-Z]+)*");
             this.tbName.Properties.MaskSettings.Set("culture", "es-MX");
             this.tbName.Properties.MaskSettings.Set("showPlaceholders", false);
-            this.tbName.Size = new System.Drawing.Size(167, 20);
+            this.tbName.Size = new System.Drawing.Size(195, 22);
             this.tbName.TabIndex = 4;
             // 
             // btnChoosePhoto
             // 
             this.btnChoosePhoto.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnChoosePhoto.ImageOptions.SvgImage")));
-            this.btnChoosePhoto.Location = new System.Drawing.Point(17, 193);
-            this.btnChoosePhoto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnChoosePhoto.Location = new System.Drawing.Point(20, 238);
+            this.btnChoosePhoto.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btnChoosePhoto.Name = "btnChoosePhoto";
-            this.btnChoosePhoto.Size = new System.Drawing.Size(112, 56);
+            this.btnChoosePhoto.Size = new System.Drawing.Size(131, 69);
             this.btnChoosePhoto.TabIndex = 327;
             this.btnChoosePhoto.Text = "AGREGAR \r\nFOTOGRAFIA";
             // 
             // peImage
             // 
-            this.peImage.Location = new System.Drawing.Point(17, 59);
-            this.peImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.peImage.Location = new System.Drawing.Point(20, 73);
+            this.peImage.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.peImage.Name = "peImage";
             this.peImage.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
             this.peImage.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
-            this.peImage.Size = new System.Drawing.Size(112, 121);
+            this.peImage.Size = new System.Drawing.Size(131, 149);
             this.peImage.TabIndex = 326;
             // 
             // chbSterilized
             // 
             this.chbSterilized.AutoSize = true;
-            this.chbSterilized.Location = new System.Drawing.Point(640, 220);
-            this.chbSterilized.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chbSterilized.Location = new System.Drawing.Point(747, 271);
+            this.chbSterilized.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.chbSterilized.Name = "chbSterilized";
-            this.chbSterilized.Size = new System.Drawing.Size(15, 14);
+            this.chbSterilized.Size = new System.Drawing.Size(18, 17);
             this.chbSterilized.TabIndex = 14;
             this.chbSterilized.UseVisualStyleBackColor = true;
             // 
@@ -482,9 +489,10 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(488, 216);
+            this.label11.Location = new System.Drawing.Point(569, 266);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(141, 18);
+            this.label11.Size = new System.Drawing.Size(171, 23);
             this.label11.TabIndex = 324;
             this.label11.Text = "ESTERELIZADO:";
             // 
@@ -494,9 +502,10 @@
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label22.Location = new System.Drawing.Point(912, 89);
+            this.label22.Location = new System.Drawing.Point(1064, 110);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(229, 18);
+            this.label22.Size = new System.Drawing.Size(280, 23);
             this.label22.TabIndex = 322;
             this.label22.Text = "INFORMACION ADICIONAL:";
             // 
@@ -506,9 +515,10 @@
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label20.Location = new System.Drawing.Point(458, 92);
+            this.label20.Location = new System.Drawing.Point(534, 113);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(171, 18);
+            this.label20.Size = new System.Drawing.Size(208, 23);
             this.label20.TabIndex = 320;
             this.label20.Text = "HOGAR TEMPORAL:";
             // 
@@ -518,9 +528,10 @@
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label18.Location = new System.Drawing.Point(502, 153);
+            this.label18.Location = new System.Drawing.Point(586, 188);
+            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(127, 18);
+            this.label18.Size = new System.Drawing.Size(154, 23);
             this.label18.TabIndex = 318;
             this.label18.Text = "VETERINARIO:";
             // 
@@ -530,9 +541,10 @@
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label19.Location = new System.Drawing.Point(505, 122);
+            this.label19.Location = new System.Drawing.Point(589, 150);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(119, 18);
+            this.label19.Size = new System.Drawing.Size(144, 23);
             this.label19.TabIndex = 316;
             this.label19.Text = "RESCATISTA:";
             // 
@@ -542,9 +554,10 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label15.Location = new System.Drawing.Point(213, 124);
+            this.label15.Location = new System.Drawing.Point(248, 153);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(59, 18);
+            this.label15.Size = new System.Drawing.Size(71, 23);
             this.label15.TabIndex = 314;
             this.label15.Text = "RAZA:";
             // 
@@ -556,10 +569,10 @@
             this.cbSex.Items.AddRange(new object[] {
             "H",
             "M"});
-            this.cbSex.Location = new System.Drawing.Point(286, 214);
-            this.cbSex.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbSex.Location = new System.Drawing.Point(334, 263);
+            this.cbSex.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.cbSex.Name = "cbSex";
-            this.cbSex.Size = new System.Drawing.Size(151, 24);
+            this.cbSex.Size = new System.Drawing.Size(176, 29);
             this.cbSex.TabIndex = 8;
             // 
             // label17
@@ -568,9 +581,10 @@
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label17.Location = new System.Drawing.Point(214, 214);
+            this.label17.Location = new System.Drawing.Point(250, 263);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(58, 18);
+            this.label17.Size = new System.Drawing.Size(70, 23);
             this.label17.TabIndex = 311;
             this.label17.Text = "SEXO:";
             // 
@@ -580,9 +594,10 @@
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label16.Location = new System.Drawing.Point(214, 153);
+            this.label16.Location = new System.Drawing.Point(250, 188);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(60, 18);
+            this.label16.Size = new System.Drawing.Size(73, 23);
             this.label16.TabIndex = 310;
             this.label16.Text = "EDAD:";
             // 
@@ -592,9 +607,10 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label13.Location = new System.Drawing.Point(187, 92);
+            this.label13.Location = new System.Drawing.Point(218, 113);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(86, 18);
+            this.label13.Size = new System.Drawing.Size(105, 23);
             this.label13.TabIndex = 308;
             this.label13.Text = "NOMBRE:";
             // 
@@ -604,9 +620,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label3.Location = new System.Drawing.Point(135, 59);
+            this.label3.Location = new System.Drawing.Point(158, 73);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(144, 18);
+            this.label3.Size = new System.Drawing.Size(176, 23);
             this.label3.TabIndex = 306;
             this.label3.Text = "IDENTIFICADOR:";
             // 
@@ -615,10 +632,10 @@
             this.dtFecha.CalendarFont = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtFecha.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtFecha.Location = new System.Drawing.Point(635, 59);
-            this.dtFecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtFecha.Location = new System.Drawing.Point(741, 73);
+            this.dtFecha.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dtFecha.Name = "dtFecha";
-            this.dtFecha.Size = new System.Drawing.Size(309, 24);
+            this.dtFecha.Size = new System.Drawing.Size(360, 28);
             this.dtFecha.TabIndex = 3;
             // 
             // label14
@@ -627,9 +644,10 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label14.Location = new System.Drawing.Point(449, 59);
+            this.label14.Location = new System.Drawing.Point(524, 73);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(180, 18);
+            this.label14.Size = new System.Drawing.Size(218, 23);
             this.label14.TabIndex = 303;
             this.label14.Text = "FECHA DE RESCATE:";
             // 
@@ -639,9 +657,10 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(167, 246);
+            this.label12.Location = new System.Drawing.Point(195, 303);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(105, 18);
+            this.label12.Size = new System.Drawing.Size(129, 23);
             this.label12.TabIndex = 302;
             this.label12.Text = "SITUACION:";
             // 
@@ -653,9 +672,10 @@
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(798, 221);
+            this.btnDelete.Location = new System.Drawing.Point(931, 272);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(157, 52);
+            this.btnDelete.Size = new System.Drawing.Size(183, 64);
             this.btnDelete.TabIndex = 17;
             this.btnDelete.Text = "          ELIMINAR";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -668,9 +688,10 @@
             this.btnSaveAndEdit.ForeColor = System.Drawing.Color.White;
             this.btnSaveAndEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveAndEdit.Image")));
             this.btnSaveAndEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSaveAndEdit.Location = new System.Drawing.Point(984, 221);
+            this.btnSaveAndEdit.Location = new System.Drawing.Point(1148, 272);
+            this.btnSaveAndEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSaveAndEdit.Name = "btnSaveAndEdit";
-            this.btnSaveAndEdit.Size = new System.Drawing.Size(157, 52);
+            this.btnSaveAndEdit.Size = new System.Drawing.Size(183, 64);
             this.btnSaveAndEdit.TabIndex = 16;
             this.btnSaveAndEdit.Text = "       GUARDAR";
             this.btnSaveAndEdit.UseVisualStyleBackColor = false;
@@ -678,12 +699,12 @@
             // dgvAnimal
             // 
             this.dgvAnimal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvAnimal.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dgvAnimal.Location = new System.Drawing.Point(3, 299);
+            this.dgvAnimal.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.dgvAnimal.Location = new System.Drawing.Point(4, 367);
             this.dgvAnimal.MainView = this.gridView1;
-            this.dgvAnimal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvAnimal.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.dgvAnimal.Name = "dgvAnimal";
-            this.dgvAnimal.Size = new System.Drawing.Size(1176, 246);
+            this.dgvAnimal.Size = new System.Drawing.Size(1370, 305);
             this.dgvAnimal.TabIndex = 1;
             this.dgvAnimal.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -704,7 +725,6 @@
             this.gcRescuer,
             this.gcVeterinarian,
             this.gcDiagnostic});
-            this.gridView1.DetailHeight = 284;
             this.gridView1.GridControl = this.dgvAnimal;
             this.gridView1.GroupCount = 1;
             this.gridView1.GroupPanelText = "Presiona la lupa para abrir el buscador:";
@@ -743,10 +763,11 @@
             this.gcId.AppearanceHeader.Options.UseForeColor = true;
             this.gcId.Caption = "Id Animal";
             this.gcId.FieldName = "animalId";
-            this.gcId.MinWidth = 21;
+            this.gcId.MinWidth = 24;
             this.gcId.Name = "gcId";
             this.gcId.Visible = true;
             this.gcId.VisibleIndex = 0;
+            this.gcId.Width = 87;
             // 
             // gcName
             // 
@@ -758,11 +779,11 @@
             this.gcName.AppearanceHeader.Options.UseForeColor = true;
             this.gcName.Caption = "Nombre";
             this.gcName.FieldName = "name";
-            this.gcName.MinWidth = 21;
+            this.gcName.MinWidth = 24;
             this.gcName.Name = "gcName";
             this.gcName.Visible = true;
             this.gcName.VisibleIndex = 1;
-            this.gcName.Width = 70;
+            this.gcName.Width = 82;
             // 
             // gcAge
             // 
@@ -774,11 +795,11 @@
             this.gcAge.AppearanceHeader.Options.UseForeColor = true;
             this.gcAge.Caption = "Edad";
             this.gcAge.FieldName = "age";
-            this.gcAge.MinWidth = 21;
+            this.gcAge.MinWidth = 24;
             this.gcAge.Name = "gcAge";
             this.gcAge.Visible = true;
             this.gcAge.VisibleIndex = 2;
-            this.gcAge.Width = 70;
+            this.gcAge.Width = 82;
             // 
             // gcBreed
             // 
@@ -790,11 +811,11 @@
             this.gcBreed.AppearanceHeader.Options.UseForeColor = true;
             this.gcBreed.Caption = "Raza";
             this.gcBreed.FieldName = "breed";
-            this.gcBreed.MinWidth = 21;
+            this.gcBreed.MinWidth = 24;
             this.gcBreed.Name = "gcBreed";
             this.gcBreed.Visible = true;
             this.gcBreed.VisibleIndex = 3;
-            this.gcBreed.Width = 70;
+            this.gcBreed.Width = 82;
             // 
             // gcSex
             // 
@@ -806,11 +827,11 @@
             this.gcSex.AppearanceHeader.Options.UseForeColor = true;
             this.gcSex.Caption = "Sexo";
             this.gcSex.FieldName = "sex";
-            this.gcSex.MinWidth = 21;
+            this.gcSex.MinWidth = 24;
             this.gcSex.Name = "gcSex";
             this.gcSex.Visible = true;
             this.gcSex.VisibleIndex = 4;
-            this.gcSex.Width = 70;
+            this.gcSex.Width = 82;
             // 
             // gcSterilized
             // 
@@ -822,11 +843,11 @@
             this.gcSterilized.AppearanceHeader.Options.UseForeColor = true;
             this.gcSterilized.Caption = "Esterilizado?";
             this.gcSterilized.FieldName = "sterilized";
-            this.gcSterilized.MinWidth = 21;
+            this.gcSterilized.MinWidth = 24;
             this.gcSterilized.Name = "gcSterilized";
             this.gcSterilized.Visible = true;
             this.gcSterilized.VisibleIndex = 5;
-            this.gcSterilized.Width = 70;
+            this.gcSterilized.Width = 82;
             // 
             // gcAnimalType
             // 
@@ -838,11 +859,11 @@
             this.gcAnimalType.AppearanceHeader.Options.UseForeColor = true;
             this.gcAnimalType.Caption = "Categoria";
             this.gcAnimalType.FieldName = "animalType";
-            this.gcAnimalType.MinWidth = 21;
+            this.gcAnimalType.MinWidth = 24;
             this.gcAnimalType.Name = "gcAnimalType";
             this.gcAnimalType.Visible = true;
             this.gcAnimalType.VisibleIndex = 6;
-            this.gcAnimalType.Width = 70;
+            this.gcAnimalType.Width = 82;
             // 
             // gcStatus
             // 
@@ -855,11 +876,11 @@
             this.gcStatus.Caption = "Estado";
             this.gcStatus.FieldName = "status";
             this.gcStatus.GroupInterval = DevExpress.XtraGrid.ColumnGroupInterval.Value;
-            this.gcStatus.MinWidth = 21;
+            this.gcStatus.MinWidth = 24;
             this.gcStatus.Name = "gcStatus";
             this.gcStatus.Visible = true;
             this.gcStatus.VisibleIndex = 7;
-            this.gcStatus.Width = 70;
+            this.gcStatus.Width = 82;
             // 
             // gcRescueDate
             // 
@@ -871,11 +892,11 @@
             this.gcRescueDate.AppearanceHeader.Options.UseForeColor = true;
             this.gcRescueDate.Caption = "Fecha de rescate";
             this.gcRescueDate.FieldName = "rescueDate";
-            this.gcRescueDate.MinWidth = 21;
+            this.gcRescueDate.MinWidth = 24;
             this.gcRescueDate.Name = "gcRescueDate";
             this.gcRescueDate.Visible = true;
             this.gcRescueDate.VisibleIndex = 8;
-            this.gcRescueDate.Width = 70;
+            this.gcRescueDate.Width = 82;
             // 
             // gcTemporaryHome
             // 
@@ -887,11 +908,11 @@
             this.gcTemporaryHome.AppearanceHeader.Options.UseForeColor = true;
             this.gcTemporaryHome.Caption = "Hogar temporal";
             this.gcTemporaryHome.FieldName = "temporaryHome";
-            this.gcTemporaryHome.MinWidth = 21;
+            this.gcTemporaryHome.MinWidth = 24;
             this.gcTemporaryHome.Name = "gcTemporaryHome";
             this.gcTemporaryHome.Visible = true;
             this.gcTemporaryHome.VisibleIndex = 9;
-            this.gcTemporaryHome.Width = 70;
+            this.gcTemporaryHome.Width = 82;
             // 
             // gcRescuer
             // 
@@ -903,11 +924,11 @@
             this.gcRescuer.AppearanceHeader.Options.UseForeColor = true;
             this.gcRescuer.Caption = "Rescatista";
             this.gcRescuer.FieldName = "rescuer";
-            this.gcRescuer.MinWidth = 21;
+            this.gcRescuer.MinWidth = 24;
             this.gcRescuer.Name = "gcRescuer";
             this.gcRescuer.Visible = true;
             this.gcRescuer.VisibleIndex = 10;
-            this.gcRescuer.Width = 70;
+            this.gcRescuer.Width = 82;
             // 
             // gcVeterinarian
             // 
@@ -919,11 +940,11 @@
             this.gcVeterinarian.AppearanceHeader.Options.UseForeColor = true;
             this.gcVeterinarian.Caption = "Veterinario";
             this.gcVeterinarian.FieldName = "veterinarian";
-            this.gcVeterinarian.MinWidth = 21;
+            this.gcVeterinarian.MinWidth = 24;
             this.gcVeterinarian.Name = "gcVeterinarian";
             this.gcVeterinarian.Visible = true;
             this.gcVeterinarian.VisibleIndex = 11;
-            this.gcVeterinarian.Width = 70;
+            this.gcVeterinarian.Width = 82;
             // 
             // gcDiagnostic
             // 
@@ -935,22 +956,22 @@
             this.gcDiagnostic.AppearanceHeader.Options.UseForeColor = true;
             this.gcDiagnostic.Caption = "Diagnostico";
             this.gcDiagnostic.FieldName = "diagnostic";
-            this.gcDiagnostic.MinWidth = 21;
+            this.gcDiagnostic.MinWidth = 24;
             this.gcDiagnostic.Name = "gcDiagnostic";
             this.gcDiagnostic.Visible = true;
             this.gcDiagnostic.VisibleIndex = 12;
-            this.gcDiagnostic.Width = 79;
+            this.gcDiagnostic.Width = 92;
             // 
             // AnimalManagementView
             // 
             this.Appearance.BackColor = System.Drawing.Color.White;
             this.Appearance.Options.UseBackColor = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1188, 640);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "AnimalManagementView";
             this.Text = "NuevoRegistro";
             this.panel1.ResumeLayout(false);

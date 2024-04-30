@@ -62,7 +62,7 @@
             this.tbVolunter.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbVolunter.Name = "tbVolunter";
             this.tbVolunter.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
-            this.tbVolunter.Properties.MaskSettings.Set("mask", "\\p{L}+");
+            this.tbVolunter.Properties.MaskSettings.Set("mask", "([a-zA-Z]+)(\\s[a-zA-Z]+)*");
             this.tbVolunter.Properties.MaskSettings.Set("isAutoComplete", false);
             this.tbVolunter.Properties.MaskSettings.Set("showPlaceholders", false);
             this.tbVolunter.Properties.MaskSettings.Set("culture", "es-MX");
