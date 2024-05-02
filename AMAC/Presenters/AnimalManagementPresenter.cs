@@ -138,7 +138,14 @@ namespace AMAC.Presenters
 
         private void OnClickChoosePhotoButton(object sender, EventArgs e)
         {
-            view.ChooseImage();
+            try
+            {
+                view.ChooseImage();
+            }
+            catch(Exception ex) { 
+                MessageBox.Show(ex.Message); 
+            }
+            
         }
 
         private void OnClickDeleteAnimalButton(object sender, EventArgs e)

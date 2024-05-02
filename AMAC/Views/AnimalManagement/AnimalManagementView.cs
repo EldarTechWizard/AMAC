@@ -67,6 +67,8 @@ namespace AMAC.Views.AnimalManagement
             set { 
                 filePath = value;
                 peImage.Image = null;
+
+
                 if(value != null && value != "") peImage.Image = Image.FromFile(value); 
             } 
         }
@@ -91,7 +93,7 @@ namespace AMAC.Views.AnimalManagement
         public bool Sterilized { get => chbSterilized.Checked; set => chbSterilized.Checked = value; }
         public string AnimalType { get => cbAnimalType.Text; set => cbAnimalType.Text = value; }
         public string AdditionalInformation { get => tbAdditionalInformation.Text; set => tbAdditionalInformation.Text = value; }
-        public string Status { get => cbStatus.Text; set => cbStatus.Text = value; }
+        public string Status { get => cbStatus.Text; set { ChangeStatusMode(value); cbStatus.Text = value; } }
         public DateTime RescuedDate { get => dtFecha.Value; set => dtFecha.Value = value; }
         public string TemporaryHome { get => tbTempHome.Text; set => tbTempHome.Text = value; }
         public string Rescuer { get => tbRescuer.Text; set => tbRescuer.Text = value; }
@@ -146,7 +148,7 @@ namespace AMAC.Views.AnimalManagement
             peImage.Image = null;
             filePath = "";
 
-            
+            ChangeStatusMode("");
         }
 
         public void LoadInfoFromSelectedRow()
@@ -172,6 +174,21 @@ namespace AMAC.Views.AnimalManagement
             }
         }
 
-   
+        public void ChangeStatusMode(string aux)
+        {
+            cbStatus.Items.Clear();
+
+            if (aux == "Adoptado")
+            {
+                cbStatus.Items.Add("Adoptado");
+                cbStatus.Enabled = false;
+                return;
+            }
+            cbStatus.Items.AddRange(new string[] { "Hogar temporal", "Fallecido" });
+            cbStatus.Enabled = true;
+            cbStatus.SelectedIndex = 0;
+
+
+        }
     }
 }

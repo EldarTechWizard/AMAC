@@ -50,5 +50,7 @@ namespace AMAC.Views.AnimalManagement
         void LoadInfoFromSelectedRow();
         void ClearFields();
 
+        
+
     }
 }

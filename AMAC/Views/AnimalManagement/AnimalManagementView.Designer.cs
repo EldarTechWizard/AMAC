@@ -305,7 +305,6 @@
             this.cbStatus.FormattingEnabled = true;
             this.cbStatus.Items.AddRange(new object[] {
             "Hogar temporal",
-            "Adoptado",
             "Fallecido"});
             this.cbStatus.Location = new System.Drawing.Point(332, 303);
             this.cbStatus.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -673,7 +672,7 @@
             this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.Location = new System.Drawing.Point(931, 272);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(183, 64);
             this.btnDelete.TabIndex = 17;
@@ -689,7 +688,7 @@
             this.btnSaveAndEdit.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveAndEdit.Image")));
             this.btnSaveAndEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSaveAndEdit.Location = new System.Drawing.Point(1148, 272);
-            this.btnSaveAndEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSaveAndEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSaveAndEdit.Name = "btnSaveAndEdit";
             this.btnSaveAndEdit.Size = new System.Drawing.Size(183, 64);
             this.btnSaveAndEdit.TabIndex = 16;

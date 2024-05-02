@@ -7,6 +7,7 @@ using AMAC.Views.FormatManagement.FormatControls.FormatVolunterView;
 using AMAC.Views.FormatManagement.FormatNewAdoptionView;
 using AMAC.Views.FormatManagement.FormatUpdateView;
 using DbManagmentAMAC.Models;
+using DevExpress.ClipboardSource.SpreadsheetML;
 using DevExpress.Utils.Extensions;
 using DevExpress.XtraEditors;
 using DevExpress.XtraRichEdit.Import.Html;
@@ -228,6 +229,7 @@ namespace AMAC.Presenters
         {
             DataTable data = new DataTable();
             if (!repository.SelectRecord(data)) throw new Exception(repository.LastError);
+            
             return data;
         }
 
@@ -256,6 +258,8 @@ namespace AMAC.Presenters
             {
                 case "Animal":
                     IFormatAnimalView animalTab = new FormatAnimalView();
+                    animalData = animalData.AsEnumerable().Where(row => row.Field<string>("status") != "Adoptado" || row.Field<int>("idAnimal") == view.AnimalId).CopyToDataTable();
+
                     new FormatAnimalPresenter(animalTab, animalData,(bool aux) => {
                         idStates[0] = aux;
                         CheckChanges();
