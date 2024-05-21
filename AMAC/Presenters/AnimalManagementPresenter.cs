@@ -143,7 +143,9 @@ namespace AMAC.Presenters
                 view.ChooseImage();
             }
             catch(Exception ex) { 
-                MessageBox.Show(ex.Message); 
+
+                if(ex.Message == "Memoria insuficiente") MessageBox.Show("Error al cargar la imagen");
+                else MessageBox.Show(ex.Message); 
             }
             
         }

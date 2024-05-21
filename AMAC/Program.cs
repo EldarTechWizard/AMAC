@@ -30,11 +30,11 @@ namespace AMAC
 
             IRepository repository = new SqlServer("Server = localhost; Database = AMAC; Trusted_Connection = True;");
 
-            //ILoginView login = new LoginView();
-            //new LoginPresenter(login, repository);
-            //((Form)login).ShowDialog();
+            ILoginView login = new LoginView();
+            new LoginPresenter(login, repository);
+            ((Form)login).ShowDialog();
 
-            //if (!login.IsLogged) return;
+            if (!login.IsLogged) return;
 
             IMainView view = new MainView();
             new MainPresenter(view, repository);
