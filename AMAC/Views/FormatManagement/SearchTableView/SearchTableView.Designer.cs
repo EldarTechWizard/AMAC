@@ -49,6 +49,7 @@
             // gridView1
             // 
             this.gridView1.GridControl = this.dgvData;
+            this.gridView1.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsBehavior.KeepGroupExpandedOnSorting = false;

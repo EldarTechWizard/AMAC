@@ -110,6 +110,7 @@ namespace AMAC.Views.AdopterManagement
                 DataRow row = gridView1.GetDataRow(i);
                 this.Id = int.Parse(row["idAdopter"].ToString());   
             }
+            ChangeDeleteMode(true);
         }
 
         public void ChangeDeleteMode(bool aux)

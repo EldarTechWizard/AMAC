@@ -383,10 +383,6 @@
             this.tbTempHome.Location = new System.Drawing.Point(741, 114);
             this.tbTempHome.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.tbTempHome.Name = "tbTempHome";
-            this.tbTempHome.Properties.MaskSettings.Set("MaskManagerType", typeof(DevExpress.Data.Mask.RegExpMaskManager));
-            this.tbTempHome.Properties.MaskSettings.Set("mask", "([a-zA-Z]+)(\\s[a-zA-Z]+)*");
-            this.tbTempHome.Properties.MaskSettings.Set("culture", "es-MX");
-            this.tbTempHome.Properties.MaskSettings.Set("showPlaceholders", false);
             this.tbTempHome.Size = new System.Drawing.Size(304, 22);
             this.tbTempHome.TabIndex = 10;
             // 
@@ -729,6 +725,7 @@
             this.gridView1.GroupPanelText = "Presiona la lupa para abrir el buscador:";
             this.gridView1.GroupSummary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridGroupSummaryItem(DevExpress.Data.SummaryItemType.Count, "status", null, ": {0}")});
+            this.gridView1.HorzScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.AutoExpandAllGroups = true;
             this.gridView1.OptionsBehavior.AutoSelectAllInEditor = false;
